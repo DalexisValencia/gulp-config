@@ -1,14 +1,10 @@
-.main .main--sub {
-  color: red;
-  background-color: blue; }
-
 .span {
   color: blue; }
 
 h1 {
   border: 1px solid red;
   font-weight: 100;
-  color: yellow; }
+  color: white; }
 
 body {
   background-color: grey; }

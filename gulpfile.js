@@ -46,7 +46,7 @@ function compileNormalize(){
         .pipe(connect.reload());
 }
 function compileScss() {
-    return src(['src/scss/*.scss','!src/scss/normalize.scss'])
+    return src(['src/scss/**/*.scss','src/scss/**/*.scss', '!src/scss/normalize.scss'])
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('main.css'))
         .pipe(cleanCSS())
@@ -66,7 +66,7 @@ function compileJS() {
     .pipe(connect.reload());
 }
 function watcher() {
-    watch('src/scss/*.scss', {ignoreInitial: true}, series(clearCss, compileScss));
+    watch(['src/scss/*.scss', 'src/scss/**/*.scss'], {ignoreInitial: true}, series(clearCss, compileScss));
     watch('src/js/*.js', {ignoreInitial: true}, series(clearJS, compileJS));
     watch('src/*.html', {ignoreInitial: true}, compileHtml);
     connect.reload();

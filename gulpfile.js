@@ -4,6 +4,7 @@ const connect = require('gulp-connect');
 const del = require('del');
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
+const cleanCSS = require('gulp-clean-css');
 /* :::: START RUN SERVER :::: */
 exports.serve = function() {
     connect.server(
@@ -38,10 +39,17 @@ function compileHtml(){
 function clearCss() {
     return del(['public/css/']);
 }
+function compileNormalize(){
+    return src('src/scss/normalize.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(dest('public/css/'))
+        .pipe(connect.reload());
+}
 function compileScss() {
-    return src('src/scss/*.scss')
+    return src(['src/scss/*.scss','!src/scss/normalize.scss'])
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('main.css'))
+        .pipe(cleanCSS())
         .pipe(dest('public/css/'))
         .pipe(connect.reload());
 }
@@ -67,6 +75,7 @@ function watcher() {
 exports.default = function(){
     exports.clear();
     run();
+    compileNormalize();
     compileScss();
     compileHtml();
     compileJS();

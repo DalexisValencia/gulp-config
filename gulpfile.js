@@ -2,22 +2,7 @@ const { src, dest, gulp, watch, series } = require('gulp');
 const sass = require('gulp-sass');
 var connect = require('gulp-connect');
 var del = require('del');
-function moveFiles(){
-    return src('src/assets/**/*.*')
-    .pipe(dest('public/assets'));
-}
-function compileHtml(){
-    return src('src/*.html')
-    .pipe(dest('public/'))
-    .pipe(connect.reload());
-}
-function compileScss() {
-    return src('src/scss/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(dest('public/css/'))
-        .pipe(connect.reload());
-}
-
+/* :::: START RUN SERVER :::: */
 exports.serve = function() {
     connect.server(
         {
@@ -30,20 +15,44 @@ exports.serve = function() {
 function run() {
     exports.serve();
 }
-exports.deleteAll = function() {
+/* :::: END RUN SERVER :::: */
+exports.clear = function() {
     return del([
         'public/**',
     ]);
 }
 
+function moveFiles(){
+    return src('src/assets/**/*.*')
+    .pipe(dest('public/assets'));
+}
+function compileHtml(){
+    return src('src/*.html')
+    .pipe(dest('public/'))
+    .pipe(connect.reload());
+}
+
+/* :::: START WORK WITH SCSS :::: */
+function clearCss() {
+    return del(['public/css/']);
+}
+function compileScss() {
+    return src('src/scss/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(dest('public/css/'))
+        .pipe(connect.reload());
+}
+/* :::: END WORK WITH SCSS :::: */
+
+
 function watcher() {
-    watch('src/scss/*.scss', {ignoreInitial: true}, compileScss);
-    watch('src/*.html', compileHtml);
+    watch('src/scss/*.scss', {ignoreInitial: true}, series(clearCss, compileScss));
+    watch('src/*.html', {ignoreInitial: true}, compileHtml);
     connect.reload();
 }
 
 exports.default = function(){
-    exports.deleteAll();
+    exports.clear();
     run();
     compileScss();
     compileHtml();

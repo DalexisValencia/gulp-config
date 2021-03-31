@@ -6,4 +6,14 @@
   color: blue; }
 
 h1 {
-  border: 1px solid red; }
+  border: 1px solid red;
+  font-weight: 100;
+  color: yellow; }
+
+body {
+  background-color: grey; }
+
+html {
+  box-sizing: border-box;
+  border-color: transparent;
+  border-width: 2px; }

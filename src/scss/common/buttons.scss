@@ -1,0 +1,10 @@
+button[class*="el-custom"]{
+    &:focus, &:active{
+        outline:0;
+        outline-color: transparent !important;
+    }
+}
+
+input[class*="el-custom"]{
+    
+}

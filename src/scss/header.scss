@@ -1,1 +1,14 @@
-ul li{text-decoration: none;}
+header.el-custom--header{
+    padding: 20px;
+    ul li{
+        list-style: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    figure.el-custom--main-logo{
+        width: 100px;
+        img{
+            max-width: 100%;
+        }
+    }
+}

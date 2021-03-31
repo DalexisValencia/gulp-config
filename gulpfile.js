@@ -41,6 +41,7 @@ function clearCss() {
 function compileScss() {
     return src('src/scss/*.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(concat('main.css'))
         .pipe(dest('public/css/'))
         .pipe(connect.reload());
 }

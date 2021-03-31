@@ -1,7 +1,9 @@
 const { src, dest, gulp, watch, series } = require('gulp');
 const sass = require('gulp-sass');
-var connect = require('gulp-connect');
-var del = require('del');
+const connect = require('gulp-connect');
+const del = require('del');
+const concat = require('gulp-concat');
+const minify = require('gulp-minify');
 /* :::: START RUN SERVER :::: */
 exports.serve = function() {
     connect.server(
@@ -44,9 +46,19 @@ function compileScss() {
 }
 /* :::: END WORK WITH SCSS :::: */
 
-
+function clearJS() {
+    return del(['public/css/']);
+}
+function compileJS() {
+    return src('src/js/*.js')
+    .pipe(concat('main.js'))
+    .pipe(minify())
+    .pipe(dest('public/js/'))
+    .pipe(connect.reload());
+}
 function watcher() {
     watch('src/scss/*.scss', {ignoreInitial: true}, series(clearCss, compileScss));
+    watch('src/js/*.js', {ignoreInitial: true}, series(clearJS, compileJS));
     watch('src/*.html', {ignoreInitial: true}, compileHtml);
     connect.reload();
 }
@@ -56,6 +68,7 @@ exports.default = function(){
     run();
     compileScss();
     compileHtml();
+    compileJS();
     watcher();
     moveFiles();
 }

@@ -1,0 +1,21 @@
+.register{
+    position: relative;
+    background-image: url('../assets/fondo_formulario.png');
+    background-position-y: -208px;
+    background-repeat: no-repeat;
+    padding-top: 34px;
+    top: -264px;
+    z-index: 2;
+    img.rasgado{
+        position: absolute;
+        top: -135px;
+    }
+    img.register-photos{
+        position: relative;
+        z-index:1;
+        top: -123px;
+    }
+    img{
+        width: 100%;
+    }
+}

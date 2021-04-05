@@ -1,0 +1,19 @@
+.banner{
+    border: 1px solid red;
+    margin-top: -50px;
+    img {
+        width: 100%;
+    }
+}
+
+.guarana-banner{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 300px;
+    background-image: url('../assets/textura.png');
+    top: -120px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+}

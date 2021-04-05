@@ -1,9 +1,30 @@
 header.el-custom--header{
-    padding: 20px;
+    padding: 28px 20px;
+    background-image: url('../assets/rasgado.png');
+    background-position: inherit;
+    background-position-y: -7px;
+    background-repeat-y: no-repeat;
+    background-size: contain;
+    border: 1px solid white;
+    z-index: 1;
+    ul{
+        align-items: center;
+        border: 1px dashed black;
+    }
     ul li{
         list-style: none;
-        padding: 5px 10px;
         cursor: pointer;
+        border: 1px dashed black;
+        &:not(.img){
+            padding: 5px 20px;
+        }
+        &.img{
+            width: 141px;
+            border: 1px dashed black;
+            img{
+                width: 100%;
+            }
+        }
     }
     figure.el-custom--main-logo{
         width: 100px;

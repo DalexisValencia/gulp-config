@@ -1,0 +1,54 @@
+.flavors{
+    position: relative;
+    top: -258px;
+    background-size: cover;
+    background-position-y: -308px;
+    // background-position: center;
+    background-image: url('../assets/fondo_sabores.png');
+    background-repeat: no-repeat;
+    height: auto;
+    border: 3px solid magenta;
+    padding: 160px 40px;
+    z-index: 2;
+    .flavors--title{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+.flavors--card{
+    border: 1px solid red;
+    height: 200px;
+    max-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .flavors--card__image{
+        background-image: url('../assets/sabores/circulo1.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+        border: 1px solid magenta;
+        text-align: center;
+        img.img-flavor{
+            width: 75%;
+            margin-bottom: 20%;
+        }
+    }
+    .flavors--card__description{
+        text-align: center;
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .el-custom--button{
+            background-color: #FFCC00;
+            border: 1px solid red;
+            text-transform: uppercase;
+            padding: 5px 5px;
+            font-size: 1rem;
+        }
+    }
+}

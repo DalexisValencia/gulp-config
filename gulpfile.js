@@ -26,7 +26,7 @@ exports.clear = function() {
 }
 
 function moveFiles(){
-    return src('src/assets/**/*.*')
+    return src('src/assets/**/*.*', 'src/assets/*.*')
     .pipe(dest('public/assets'));
 }
 function compileHtml(){

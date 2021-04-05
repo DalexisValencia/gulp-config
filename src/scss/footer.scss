@@ -1,0 +1,43 @@
+.el-custom--footer{
+    background-color: grey;
+    padding: 20px 10px;
+    background-image: url('../assets/bg_footer.png');
+    background-position-x: center;
+    background-position-y: -80px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    ::before{
+        content: "";
+        background-color: red;
+    }
+}
+
+figure.el-custom--logo{
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    img{
+        min-width: 200px;
+        max-width: 200px;
+    }
+}
+.el-custom--footer-nav{
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        li {
+            list-style: none;
+            a{
+                color: black;
+                font-size: 0.7rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.el-custom--footer-legal{
+    padding: 80px 10px;
+    text-align: center;
+    font-size: 0.8rem;
+}

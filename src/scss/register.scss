@@ -1,5 +1,44 @@
-.register{
+@import './vars/colors.scss';
+.el-custom--banner-register{
     position: relative;
+    z-index: 3;
+    border: 1px solid black;
+    margin-top: -20%;
+    img{
+        width: 100%;
+    }
+    header.el-custom--banner-register-yellow-banner{
+        background-image: url('../assets/home/back_form.png');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        padding: 90px $padding-horizontal 100px;
+        text-align: center;
+        margin-top: -13%;
+        z-index: -1;
+        h5, h3, p{
+            color: $fifth-brand-color;
+            font-size: 3vw;
+            font-family: Poppins,sans-serif;
+        }
+        p {
+            font-size: 1.8vw;
+        }
+        h5{
+            font-size: 2vw;
+            font-style: italic;
+            font-weight: bold;
+            font-family: Poppins,sans-serif;
+        }
+
+        button{
+            padding: 10px 20px;
+            margin-top: 20px;
+            color: $fourtiary-brand-color;
+            background-color: $tertiary-brand-color;
+        }
+    }
+   /* position: relative;
     background-image: url('../assets/fondo_formulario.png');
     background-position-y: -208px;
     background-repeat: no-repeat;
@@ -17,5 +56,5 @@
     }
     img{
         width: 100%;
-    }
+    }*/
 }

@@ -1,62 +1,88 @@
-.flavors{
+@import './vars/colors.scss';
+.el-custom--banner-tagimage{
+    // border: 3px dashed darkcyan;
     position: relative;
-    background-size: cover;
-    background-image: url(../assets/fondo_sabores_&_guarana.png);
-    background-repeat: no-repeat;
-    height: auto;
-    padding: 160px 40px;
-    z-index: 2;
-    background-position-y: -201px;
-    margin-top: -84px;
-    // &::before{
-    //     content: "";
-    //     background-color: red;
-    //     width: 100%;
-    //     position: absolute;
-    //     height: 400px;
-    //     left: 0px;
-    //     top: 0px;
-    //     z-index: -1;
-    // }
-    .flavors--title{
-        text-align: center;
-        margin-bottom: 20px;
+    img{
+        margin-top: -22%;
     }
-}
-.flavors--card{
-    border: 1px solid red;
-    height: 200px;
-    max-width: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    .flavors--card__image{
-        background-image: url('../assets/sabores/circulo1.png');
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-size: contain;
-        border: 1px solid magenta;
-        text-align: center;
-        img.img-flavor{
-            width: 75%;
-            margin-bottom: 20%;
+    article.el-custom--flavors-wrapper{
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        padding: 0px $padding-horizontal;
+        header.el-custom--flavors-header{
+            text-align: center;
+            margin-bottom: 120px;
+            h5{
+                font-size: 3vw;
+                font-family: Poppins,sans-serif;
+                color: $fourtiary-brand-color;
+                font-style: italic;
+            }
+            h3 {
+                font-size: 4vw;
+                font-family: Poppins,sans-serif;
+                color: $fourtiary-brand-color;
+                font-weight: bold;
+                font-style: italic;
+            }
+            p{
+                margin-top: 30px;
+                padding: 0px 20%;
+                font-size: 1.5vw; 
+                font-style: italic;
+                font-weight: 300; 
+                font-family: Poppins,sans-serif;
+                color: $fourtiary-brand-color;
+                line-height: 1.2;
+            }
         }
-    }
-    .flavors--card__description{
-        text-align: center;
-        h3 {
-            margin-top: 10px;
-            margin-bottom: 20px;
-            color: #fff;
-            text-transform: uppercase;
-        }
-        .el-custom--button{
-            background-color: #FFCC00;
-            border: 1px solid red;
-            text-transform: uppercase;
-            padding: 5px 5px;
-            font-size: 1rem;
+        section.el-custom--flavors-card{
+            display: flex;
+            .flavors--card{
+                max-width: 25%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                &:first-child{
+                    border: 1px solid red;
+                }
+                .flavors--card__image{
+                    margin: 0px 10px;
+                    width: 100%;
+                    background-image: url('../assets/sabores/circulo1.png');
+                    background-repeat: no-repeat;
+                    background-position: bottom;
+                    background-size: contain;
+                    text-align: center;
+                    img.img-flavor{
+                        width: 75%;
+                        margin-bottom: 20%;
+                    }
+                }
+                .flavors--card__description{
+                    text-align: center;
+                    h3 {
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                        font-family: Poppins,sans-serif;
+                        color: $fourtiary-brand-color;
+                        text-transform: uppercase;
+                        font-size: 2.5vw;
+                    }
+                    .el-custom--button{
+                        text-transform: uppercase;
+                        padding: 10px 20px;
+                        font-size: 1.8vw;
+                        font-family: Poppins,sans-serif;
+                        font-weight: 700;
+                        color: $fifth-brand-color;
+                        font-style: italic;
+                        background-color: $secondary-brand-color;
+                    }
+                }
+            }
         }
     }
 }

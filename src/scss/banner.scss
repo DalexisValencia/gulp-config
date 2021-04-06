@@ -79,13 +79,13 @@
     .el-custom-button-gradient{
         margin-top: 10px !important;
         border-radius: 50px;
-        background: linear-gradient(to bottom, rgba(#FFFFFF, 0.5), #514E4E);
+        background: linear-gradient(to bottom, darken($secondary-brand-color,20), rgba(#FFFFFF, 0.5), #514E4E);
     }
     .el-custom-button{
         margin: 3px !important;
         border-radius: 50px;
         border-color: transparent;
-        padding: 10px 20px !important;
+        padding: 13px 20px !important;
         background-color: $secondary-brand-color;
         font-size: 20px;
         font-family: Nunito;

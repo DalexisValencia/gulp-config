@@ -1,3 +1,10 @@
+
+.mobile-tejedora{
+    display: none;
+}
+.desktop-tejedora{
+    display: block;
+}
 @media only screen and (max-width: 1240px) {
     .mobile-tejedora{
         display: none;
@@ -78,7 +85,7 @@
                     .el-custom-button-gradient{
                         width: 80%;
                         button{
-                            width: 99%;
+                            width: -webkit-fill-available;
                             font-size: 4.1vw !important;
                         }
                     }

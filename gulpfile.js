@@ -37,7 +37,7 @@ function compileHtml(){
 
 /* :::: START WORK WITH SCSS :::: */
 function clearCss() {
-    return del(['public/css/']);
+    return del(['public/css/main.css']);
 }
 function compileNormalize(){
     return src('src/scss/normalize.scss')
@@ -56,7 +56,7 @@ function compileScss() {
 /* :::: END WORK WITH SCSS :::: */
 
 function clearJS() {
-    return del(['public/css/']);
+    return del(['public/js/']);
 }
 function compileJS() {
     return src('src/js/*.js')

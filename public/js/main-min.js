@@ -1,1 +1,1 @@
-var a="example",r="robot";
+function resizeBanner(){var n=$("#wrapper-banner"),e=n.innerWidth();n.css("height",.58*e+"px"),console.info(e,"banner")}$(document).ready(function(){setTimeout(()=>{console.info("llamado")},2e3)});

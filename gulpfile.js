@@ -56,7 +56,7 @@ function compileScss() {
 /* :::: END WORK WITH SCSS :::: */
 
 function clearJS() {
-    return del(['public/css/']);
+    return del(['public/js/main.js']);
 }
 function compileJS() {
     return src('src/js/*.js')

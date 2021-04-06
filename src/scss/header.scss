@@ -1,35 +1,43 @@
+@import './vars/colors.scss';
+
 header.el-custom--header{
-    padding: 28px 20px;
+    padding: 36px $padding-horizontal 60px;
     background-image: url('../assets/rasgado.png');
     background-position: inherit;
-    background-position-y: -7px;
+    background-position-y: -11px;
     background-repeat-y: no-repeat;
     background-size: contain;
-    border: 1px solid white;
+    position: relative;
     z-index: 1;
     ul{
         align-items: center;
-        border: 1px dashed black;
     }
     ul li{
         list-style: none;
         cursor: pointer;
-        border: 1px dashed black;
+        font-family: 'Poppins', sans-serif;
+        &.active{
+            color: $primary-brand-color;
+            font-weight: bold;
+        }
         &:not(.img){
             padding: 5px 20px;
         }
         &.img{
             width: 141px;
-            border: 1px dashed black;
-            img{
-                width: 100%;
-            }
+            height: 50px;
+            background-image: url('../assets/bacusya.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+           
         }
     }
-    figure.el-custom--main-logo{
-        width: 100px;
-        img{
-            max-width: 100%;
-        }
+    div.el-custom--main-logo{
+        width: 150px;
+        height: 100px;
+        background-image: url('../assets/logo.png');
+        background-position: center;
+        background-size: cover;
     }
 }

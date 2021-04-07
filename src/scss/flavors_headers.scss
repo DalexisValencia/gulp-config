@@ -1,0 +1,30 @@
+@import './vars/colors.scss';
+@mixin header_flavor{
+    header.el-custom--flavors-header{
+        text-align: center;
+        margin-bottom: 120px;
+        h5{
+            font-size: 3vw;
+            font-family: Poppins,sans-serif;
+            color: $fourtiary-brand-color;
+            font-style: italic;
+        }
+        h3 {
+            font-size: 4vw;
+            font-family: Poppins,sans-serif;
+            color: $fourtiary-brand-color;
+            font-weight: bold;
+            font-style: italic;
+        }
+        p{
+            margin-top: 30px;
+            padding: 0px 20%;
+            font-size: 1.5vw; 
+            font-style: italic;
+            font-weight: 300; 
+            font-family: Poppins,sans-serif;
+            color: $fourtiary-brand-color;
+            line-height: 1.2;
+        }
+    }
+}

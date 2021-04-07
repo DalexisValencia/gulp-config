@@ -1,0 +1,24 @@
+@import 'flavors_cards.scss';
+@import 'flavors_headers.scss';
+.el-custom--banner-sku{
+    position: relative;
+    background-image: url('../assets/home/back_sku.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: -20%;
+    z-index: 3;
+    &::AFTER{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        background-color: #ff5c00;
+        bottom: 8%;
+    }
+    @include header_flavor;
+    @include flavors-card;
+    .el-custom--flavors-wrapper{
+        border: 1px solid red;
+        padding: 17% $padding-horizontal 28%;
+    }
+}

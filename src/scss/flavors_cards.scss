@@ -1,0 +1,50 @@
+@import './vars/colors.scss';
+@mixin flavors-card {
+    section.el-custom--flavors-card{
+        display: flex;
+        .flavors--card{
+            max-width: 25%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            &:first-child{
+                border: 1px solid red;
+            }
+            .flavors--card__image{
+                margin: 0px 10px;
+                width: 100%;
+                background-image: url('../assets/sabores/circulo1.png');
+                background-repeat: no-repeat;
+                background-position: bottom;
+                background-size: contain;
+                text-align: center;
+                img.img-flavor{
+                    width: 75%;
+                    margin-bottom: 20%;
+                }
+            }
+            .flavors--card__description{
+                text-align: center;
+                h3 {
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    font-family: Poppins,sans-serif;
+                    color: $fourtiary-brand-color;
+                    text-transform: uppercase;
+                    font-size: 2.5vw;
+                }
+                .el-custom--button{
+                    text-transform: uppercase;
+                    padding: 10px 20px;
+                    font-size: 1.8vw;
+                    font-family: Poppins,sans-serif;
+                    font-weight: 700;
+                    color: $fifth-brand-color;
+                    font-style: italic;
+                    background-color: $secondary-brand-color;
+                }
+            }
+        }
+    }
+}

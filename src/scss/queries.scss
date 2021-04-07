@@ -6,12 +6,12 @@
     display: block;
 }
 @media only screen and (max-width: 1240px) {
-    .mobile-tejedora{
-        display: none;
-    }
-    .desktop-tejedora{
-        display: block;
-    }
+    // .mobile-tejedora{
+    //     display: none;
+    // }
+    // .desktop-tejedora{
+    //     display: block;
+    // }
     .el-custom--banner{
         .el-custom--banner-header-content{
             h1{
@@ -46,7 +46,7 @@
         }
     }
 }
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 768px) {
     .mobile-tejedora{
         display: block;
     }
@@ -55,6 +55,8 @@
     }
     .el-custom--banner{
         .el-custom--banner-header{
+            background-image: url('../assets/tejedora-mobile.png');
+            background-position: top;
             .el-custom--banner-header-content{
                 padding-bottom: 0px !important;
                 top: 19% !important;

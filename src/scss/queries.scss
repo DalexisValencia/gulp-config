@@ -36,8 +36,8 @@
 @media only screen and (max-width: 768px) {
     .el-custom--banner{
         .el-custom--sticky-banner{
-            width: 40%;
-            right: 10px !important;
+            width: 45%;
+            right: 6px !important;
             top: 0px !important;
             background-image: url('../assets/threads.png');
             background-position: top;
@@ -47,7 +47,7 @@
             background-position: top;
             .el-custom--banner-header-content{
                 padding-bottom: 0px !important;
-                top: 19% !important;
+                top: 25% !important;
                 background: transparent !important;
                 height: auto !important;
                 h1{
@@ -76,7 +76,7 @@
                         width: 80%;
                         button{
                             width: -webkit-fill-available;
-                            font-size: 4.1vw !important;
+                            font-size: 3.8vw !important;
                         }
                     }
                 }

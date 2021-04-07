@@ -9,14 +9,23 @@ html, body{
     background-repeat: no-repeat;
     position: relative;
     height: 100%;
-    .el-custom--banner-header{
-        border:2px solid red;
+    .el-custom--sticky-banner{
+        position: absolute;
+        width: 100%;
         height: 100%;
-        background-image: url('../assets/tejedora-1.png');
+        background-image: url('../assets/threads-desktop.png');
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .el-custom--banner-header{
+        height: 100%;
+        background-image: url('../assets/tejedora-desktop.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         .el-custom--banner-header-content{
+            overflow: hidden;
             position: absolute;
             top: 0px;
             padding: 50px !important;

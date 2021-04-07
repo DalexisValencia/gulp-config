@@ -1,17 +1,4 @@
-
-.mobile-tejedora{
-    display: none;
-}
-.desktop-tejedora{
-    display: block;
-}
 @media only screen and (max-width: 1240px) {
-    // .mobile-tejedora{
-    //     display: none;
-    // }
-    // .desktop-tejedora{
-    //     display: block;
-    // }
     .el-custom--banner{
         .el-custom--banner-header-content{
             h1{
@@ -47,13 +34,14 @@
     }
 }
 @media only screen and (max-width: 768px) {
-    .mobile-tejedora{
-        display: block;
-    }
-    .desktop-tejedora{
-        display: none;
-    }
     .el-custom--banner{
+        .el-custom--sticky-banner{
+            width: 40%;
+            right: 10px !important;
+            top: 0px !important;
+            background-image: url('../assets/threads.png');
+            background-position: top;
+        }
         .el-custom--banner-header{
             background-image: url('../assets/tejedora-mobile.png');
             background-position: top;
@@ -95,4 +83,24 @@
             }
         }
     }
+}
+
+@media only screen and (max-height: 720px) and (min-width: 1240px){
+    .el-custom--banner{
+        h1{
+            font-size: 5vw;
+        }
+        h2{
+            font-size: 4.05vw;
+        }
+        p.regards{
+            font-size: 1.5vw;
+        }
+        .el-custom--button-group{
+            margin-top: 1% !important;
+        }
+    }
+    // .el-custom--banner-header-content{
+    //     border: 5px solid yellow;
+    // } 
 }

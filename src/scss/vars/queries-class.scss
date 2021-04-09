@@ -5,7 +5,9 @@
     * hide-tablet-down : hide elements from 900px and down
     * show-tablet-up : show elements from 900px and up
 */
-
+.show-tablet-down{
+    display: none;
+}
 @include for-tablet-landscape-down('.hide-tablet-down') {
     display: none !important;
 }

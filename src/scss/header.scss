@@ -2,13 +2,37 @@
 
 header.el-custom--header{
     padding: 36px $padding-horizontal 60px;
-    background-image: url('../assets/rasgado.png');
-    background-position: inherit;
-    background-position-y: -11px;
-    background-repeat-y: no-repeat;
-    background-size: contain;
     position: relative;
     z-index: 1;
+    background-image: url('../assets/rasgado.png');
+    background-position: inherit;
+    background-position-y: 63%;
+    background-repeat-y: no-repeat;
+    background-size: contain;
+    &::after{
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        content: "";
+        background-color: $fourtiary-brand-color;
+        top: 0px;
+        left: 0px;
+    }
+    // &::before{
+    //     content: '';
+    //     position: absolute;
+    //     border: 1px solid red;
+    //     width: 100%;
+    //     height: 76%;
+    //     right: 0;
+    //     bottom: -26%;
+    //     background-image: url(../assets/rasgado.png);
+    //     background-position: inherit;
+    //     background-position-y: -11px;
+    //     background-repeat-y: no-repeat;
+    //     background-size: contain;
+    //     z-index: -1;
+    // }
     ul{
         align-items: center;
     }
@@ -39,5 +63,13 @@ header.el-custom--header{
         background-image: url('../assets/logo.png');
         background-position: center;
         background-size: cover;
+    }
+}
+
+.burger-menu{
+    display: none;
+    i{
+        color: $primary-brand-color;
+        font-size: 35px;
     }
 }

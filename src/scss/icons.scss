@@ -1,0 +1,75 @@
+@import "vars/icons.scss";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?epohx3');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?epohx3#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?epohx3') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?epohx3') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?epohx3##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="i-"], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-arrow-left {
+  &:before {
+    content: $i-arrow-left; 
+  }
+}
+.i-arrow-right {
+  &:before {
+    content: $i-arrow-right; 
+  }
+}
+.i-check {
+  &:before {
+    content: $i-check; 
+  }
+}
+.i-facebook {
+  &:before {
+    content: $i-facebook; 
+  }
+}
+.i-instagram {
+  &:before {
+    content: $i-instagram; 
+  }
+}
+.i-menu {
+  &:before {
+    content: $i-menu; 
+  }
+}
+.i-spotify {
+  &:before {
+    content: $i-spotify; 
+  }
+}
+.i-tiktok {
+  &:before {
+    content: $i-tiktok; 
+  }
+}
+.i-twitter {
+  &:before {
+    content: $i-twitter; 
+  }
+}
+

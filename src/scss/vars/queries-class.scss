@@ -1,0 +1,14 @@
+@import '../common/queries.scss';
+
+/*  
+    classes definition
+    * hide-tablet-down : hide elements from 900px and down
+    * show-tablet-up : show elements from 900px and up
+*/
+
+@include for-tablet-landscape-down('.hide-tablet-down') {
+    display: none !important;
+}
+@include for-tablet-landscape-down('.show-tablet-down') {
+    display: flex !important;
+}

@@ -1,7 +1,11 @@
+@import './common/queries.scss';
+.el-custom--banners{
+    position: relative;
+    margin-top: -50px;
+}
 .banner{
     border: 1px solid red;
-    margin-top: -50px;
-    position: relative;
+    // margin-top: -50px;
     img {
         width: 100%;
     }
@@ -17,4 +21,8 @@
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: cover;
+}
+
+@include for-tablet-landscape-down('.el-custom--banners') {
+    margin-top: -70px;
 }

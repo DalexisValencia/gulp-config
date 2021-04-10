@@ -26,7 +26,7 @@
     }
     .el-custom--footer-right-section{
         width: 100%;
-        padding-bottom: 20px;
+        padding-bottom: 35px;
         .el-custom--footer-social{
             display: flex;
             justify-content: center;
@@ -34,7 +34,7 @@
             i {
                 font-size: 30px;
                 color: $primary-brand-color;
-                margin: 0px 6px;
+                margin: 0px 3px;
             }
         }
     }
@@ -78,40 +78,66 @@ figure.el-custom--logo{
 
 //Media queries
 @include for-tablet-landscape-down('.el-custom--footer') {
-    padding: 30px $padding-horizontal / 2 0px;
-}
-@include for-tablet-landscape-down('.el-custom--footer .el-custom--footer-nav') {
-    width: 70%;
-    border: 1px dashed red;
-    ul {
-        flex-wrap: wrap;
-        li{
-            width: 100%;
-            a {
-                font-weight: 700 !important;
-                font-size: 2vw;
+    padding: 35px $padding-horizontal / 2 0px;
+    .el-custom--footer-right-section{
+        width: 30%;
+        .el-custom--logo{
+            margin-top: -18px;
+            padding-bottom: 10px;
+            img{
+                width: 100px;
             }
-            margin-bottom: 2%;
         }
+        .el-custom--footer-social{
+            i {
+                font-size: 3vw;
+            }
+        }
+    }
+    .el-custom--footer-nav{
+        width: 70%;
+        ul {
+            flex-wrap: wrap;
+            li{
+                width: 100%;
+                a {
+                    font-weight: 700 !important;
+                    font-size: 1.5vw;
+                }
+                margin-bottom: 2px;
+            }
+        }
+    }
+    .el-custom--footer-legal{
+        padding: 25px 0;
     }
 }
 
-@include for-tablet-landscape-down('.el-custom--footer .el-custom--footer-right-section') {
-    width: 30%;
-    border: 1px dashed black;
-    .el-custom--logo{
-        padding-bottom: 10px;
-        img{
-            width: 100px;
+@include for-phone-only ('.el-custom--footer') {
+    padding-top: 15px;
+    .el-custom--footer-right-section{
+        width: 40%;
+        .el-custom--logo{
+            img{
+                width: 60%;
+            }
+        }
+        .el-custom--footer-social{
+            i{
+                font-size: 4vw;
+            }
         }
     }
-    .el-custom--footer-social{
-        i {
-            font-size: 3vw;
+    .el-custom--footer-nav{
+        width: 60%;
+        ul {
+            li{
+                margin-bottom: 2.4%;
+                a {
+                    font-size: 2vw;
+                    display: inherit;
+                }
+            }
         }
     }
-}
-
-@include for-tablet-landscape-down('.el-custom--footer .el-custom--footer-legal') {
-    padding: 25px 0;
 }

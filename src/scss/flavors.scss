@@ -1,18 +1,86 @@
 @import './vars/colors.scss';
 @import 'flavors_cards.scss';
 @import 'flavors_headers.scss';
+@import './common/queries.scss';
 .el-custom--banner-tagimage{
     // border: 3px dashed darkcyan;
+    // padding-bottom: 10%;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        background-color: $primary-brand-color;
+        bottom: -20px;
+    }
     position: relative;
-    img{
-        margin-top: -22%;
+    > img{
+        margin-top: -24%;
     }
     article.el-custom--flavors-wrapper{
         width: 100%;
         position: absolute;
-        top: 25%;
+        top: 20%;
         padding: 0px $padding-horizontal;
         @include header_flavor;
         @include flavors-card;
+    }
+}
+
+@include for-tablet-landscape-down ('.el-custom--flavors-wrapper'){
+    padding-left: $padding-horizontal / 2 !important;
+    padding-right: $padding-horizontal / 2 !important;
+}
+@include for-tablet-landscape-down ('.el-custom--banner-tagimage'){
+    padding-bottom: 18%;
+    article.el-custom--flavors-wrapper{
+        header.el-custom--flavors-header{
+            h5{
+                font-size: 3.2vw;
+            }
+            h3{
+                font-size: 5.5vw;
+            }
+            p{
+                font-size: 2vw;
+               // display: none !important;
+            }
+        }
+    }
+}
+
+@include  for-phone-only ('.el-custom--banner-tagimage') {
+    padding-bottom: 20%;
+    &::before{
+        height: 30%;
+        background-color: $primary-brand-color;
+        bottom: 0px;
+    }
+    article.el-custom--flavors-wrapper{
+        header.el-custom--flavors-header{
+            h5{
+                font-size: 4.2vw;
+            }
+            h3{
+                font-size: 7.5vw;
+            }
+            p{
+                display: none !important;
+            }
+        }
+        section.el-custom--flavors-card{
+            .flavors--card{
+                .flavors--card__description{
+                    h3 {
+                        margin-bottom: 5px;
+                        font-size: 2.8vw;
+                    }
+                    button.el-custom--button{
+                        font-size: 2.45vw;
+                        width: 90%;
+                    }
+                }
+            }
+        }
     }
 }

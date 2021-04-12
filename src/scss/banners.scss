@@ -1,7 +1,8 @@
 @import './common/queries.scss';
+@import './vars/colors.scss';
 .el-custom--banners{
     position: relative;
-    margin-top: -50px;
+    margin-top: -7%;
 }
 .banner{
     border: 1px solid red;
@@ -21,6 +22,48 @@
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: cover;
+}
+
+.el-custom--banners-dots{
+    position: absolute;
+    width: 100%;
+    bottom: 15%;
+    z-index: 2;
+    ul.slick-dots{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // border:1px solid red;
+        li{
+            button[role="tab"]{
+                border: 1px solid transparent;
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+                font-size: 1px;
+                margin: 0px 5px;
+                &:active,
+                &:hover,
+                &:focus,
+                &:visited{
+                    outline: transparent !important;
+                }
+            }
+            &.slick-active{
+                button[role="tab"]{
+                    background-color: $secondary-brand-color;
+                }
+            }
+            &:not(.slick-active){
+                button[role="tab"]{
+                    background-color: $fourtiary-brand-color;
+                }
+            }
+        }
+    }
 }
 
 @include for-tablet-landscape-down('.el-custom--banners') {

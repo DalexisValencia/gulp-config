@@ -1,4 +1,3 @@
-var r = 'robot';
 $( document ).ready(function() {
     console.log( "ready!" );
     $('.el-custom--banners-slides').slick({

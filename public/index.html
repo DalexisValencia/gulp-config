@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap" rel="stylesheet">
 </head>
 
@@ -29,9 +30,15 @@
             </nav>
         </header>
         <section class="el-custom--banners">
-            <div class="banner">
-                <img src="assets/banners/home/banner1.png"/>
-            </div>
+            <section class="el-custom--banners-slides">
+                <div class="banner">
+                    <img src="assets/banners/home/banner1.png"/>
+                </div>
+                <div class="banner">
+                    <img src="assets/banners/home/banner1.png"/>
+                </div>
+            </section>
+            <section class="el-custom--banners-dots"></section>
         </section>
         <section class="el-custom--banner-tagimage">
             <img src="assets/fondo_sabores_&_guarana.png" style="width: 100%;"/>
@@ -47,6 +54,17 @@
                             <img src="assets/sabores/original.png" alt="Sabor original" class="img-flavor"/>
                         </div>
                         <div class="flavors--card__description">
+                            <h3>ORIGINAL</h3>
+                            <button class="el-custom--button">
+                                Descubre más
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flavors--card">
+                        <div class="flavors--card__image">
+                            <img src="assets/sabores/camu-camu.png" alt="Sabor original" class="img-flavor"/>
+                        </div>
+                        <div class="flavors--card__description">
                             <h3>CAMU - CAMU</h3>
                             <button class="el-custom--button">
                                 Descubre más
@@ -55,10 +73,10 @@
                     </div>
                     <div class="flavors--card">
                         <div class="flavors--card__image">
-                            <img src="assets/sabores/original.png" alt="Sabor original" class="img-flavor"/>
+                            <img src="assets/sabores/zero.png" alt="Sabor original" class="img-flavor"/>
                         </div>
                         <div class="flavors--card__description">
-                            <h3>NAME</h3>
+                            <h3>ZERO</h3>
                             <button class="el-custom--button">
                                 Descubre más
                             </button>
@@ -66,21 +84,10 @@
                     </div>
                     <div class="flavors--card">
                         <div class="flavors--card__image">
-                            <img src="assets/sabores/original.png" alt="Sabor original" class="img-flavor"/>
+                            <img src="assets/sabores/copo.png" alt="Sabor original" class="img-flavor"/>
                         </div>
                         <div class="flavors--card__description">
-                            <h3>NAME</h3>
-                            <button class="el-custom--button">
-                                Descubre más
-                            </button>
-                        </div>
-                    </div>
-                    <div class="flavors--card">
-                        <div class="flavors--card__image">
-                            <img src="assets/sabores/original.png" alt="Sabor original" class="img-flavor"/>
-                        </div>
-                        <div class="flavors--card__description">
-                            <h3>NAME</h3>
+                            <h3>COPOAZÚ</h3>
                             <button class="el-custom--button">
                                 Descubre más
                             </button>
@@ -193,5 +200,7 @@
         </footer>
     </main>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 <script src="js/main-min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </html>

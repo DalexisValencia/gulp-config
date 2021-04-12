@@ -1,1 +1,1 @@
-var a="example",r="robot";
+var r="robot";$(document).ready(function(){console.log("ready!"),$(".el-custom--banners-slides").slick({dots:!0,appendDots:$(".el-custom--banners-dots"),arrows:!1,autoplay:!0}),$(".el-custom--flavors-card").slick({slidesToShow:4,dots:!0,appendDots:$(".no-one"),arrows:!1,autoplay:!1,responsive:[{breakpoint:600,settings:{slidesToShow:2.5,slidesPerRow:2.5,swipe:!0,infinite:!1}}]})});

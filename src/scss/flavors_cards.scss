@@ -2,16 +2,6 @@
 @import './common/queries.scss';
 @mixin flavors-card {
     section.el-custom--flavors-card{
-        .slick-list.draggable{
-            // border: 1px dashed red;
-            // width: 100%;
-            // .slick-track{
-            //     width: 100% !important;
-            //     .flavors--card.slick-slide{
-            //         width: 25% !important;
-            //     }
-            // }
-        }
         display: flex;
         .flavors--card{
             max-width: 25%;
@@ -19,9 +9,6 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            // &:first-child{
-            //     border: 1px solid red;
-            // }
             .flavors--card__image{
                 margin: 0px 10px;
                 width: 100%;

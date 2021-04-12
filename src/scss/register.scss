@@ -1,5 +1,5 @@
 @import './vars/colors.scss';
-
+@import './common/queries.scss';
 .el-custom--banner-register{
     position: relative;
     z-index: 3;
@@ -12,26 +12,21 @@
         background-position: center;
         background-size: 100%;
         background-repeat: no-repeat;
-        padding: 20% $padding-horizontal;
+        padding: 10% $padding-horizontal 17%;
         text-align: center;
         margin-top: -13%;
         z-index: -1;
-        // &::before{
-        //     content: "";
-        //     position: absolute;
-        //     width: 100%;
-        //     /* border: 1px solid red; */
-        //     height: 20%;
-        //     background-color: #ff5c00;
-        //     z-index: -1;
-        // }
+
         h5, h3, p{
             color: $fifth-brand-color;
-            font-size: 3vw;
             font-family: Poppins,sans-serif;
         }
         p {
             font-size: 1.8vw;
+        }
+        h3 {
+            font-size: 4vw;
+            font-weight: bold;
         }
         h5{
             font-size: 2vw;
@@ -40,30 +35,53 @@
             font-family: Poppins,sans-serif;
         }
 
-        button{
-            padding: 10px 20px;
-            margin-top: 20px;
+        button.el-custom--button{
+            z-index: 3;
+            padding: 10px 40px;
+            margin-top: 30px;
+            font-size: 1.5vw;
+            font-style: italic;
+            font-family: Poppins,sans-serif;
             color: $fourtiary-brand-color;
             background-color: $tertiary-brand-color;
         }
     }
-   /* position: relative;
-    background-image: url('../assets/fondo_formulario.png');
-    background-position-y: -208px;
-    background-repeat: no-repeat;
-    padding-top: 34px;
-    top: -264px;
-    z-index: 2;
-    img.rasgado{
-        position: absolute;
-        top: -135px;
+}
+
+@include for-tablet-landscape-down ('.el-custom--banner-register'){
+    header.el-custom--banner-register-yellow-banner{
+        p {
+            font-size: 2vw;
+        }
+        h3 {
+            font-size: 5.1vw;
+            font-weight: bold;
+        }
+        h5{
+            font-size: 3.2vw;
+        }
+        button.el-custom--button{
+            font-size: 2.5vw;
+        }
     }
-    img.register-photos{
-        position: relative;
-        z-index:1;
-        top: -123px;
+}
+
+@include for-phone-only('.el-custom--banner-register'){
+    header.el-custom--banner-register-yellow-banner{
+        padding: 12% 57px 20%;
+        p {
+            font-size: 2vw;
+            display: none;
+        }
+        h3 {
+            font-size: 7.1vw;
+            font-weight: bold;
+        }
+        h5{
+            font-size: 4.2vw;
+        }
+        button.el-custom--button{
+            margin-top: 10px;
+        }
     }
-    img{
-        width: 100%;
-    }*/
 }

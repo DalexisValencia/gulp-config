@@ -1,5 +1,6 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
+@import './logo.scss';
 
 header.el-custom--header{
     padding: 36px $padding-horizontal 60px;
@@ -44,14 +45,7 @@ header.el-custom--header{
            
         }
     }
-    div.el-custom--main-logo{
-        width: 150px;
-        height: 100px;
-        background-image: url('../assets/logo.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+    @include header-logo();
 }
 
 .burger-menu{

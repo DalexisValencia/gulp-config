@@ -1,5 +1,6 @@
 @import 'flavors_cards.scss';
 @import 'flavors_headers.scss';
+@import './common/queries.scss';
 .el-custom--banner-sku{
     position: relative;
     background-image: url('../assets/home/back_sku.png');
@@ -7,7 +8,7 @@
     background-repeat: no-repeat;
     margin-top: -20%;
     z-index: 3;
-    &::AFTER{
+    &::after{
         content: "";
         position: absolute;
         width: 100%;
@@ -18,7 +19,66 @@
     @include header_flavor;
     @include flavors-card;
     .el-custom--flavors-wrapper{
-        border: 1px solid red;
-        padding: 17% $padding-horizontal 28%;
+        padding: 17% $padding-horizontal 35%;
+    }
+}
+
+@include for-tablet-portrait-up ('.el-custom--banner-sku') {
+    .el-custom--flavors-wrapper{
+        section.el-custom--flavors-card.slick-initialized.slick-slider{
+            button.slick-arrow{
+                border: 2px dashed transparent;
+                position: relative;
+                font-size: 1px;
+                color: transparent;
+                width: 15%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:active,
+                &:hover,
+                &:focus,
+                &:visited{
+                    outline: transparent !important;
+                }
+                &::before{
+                    font-size: 10vw;
+                    position: absolute;
+                    color: $fourtiary-brand-color !important;
+                    font-family: icon!important;
+                }
+            }
+            button.slick-prev.slick-arrow{
+                padding-right: 1%;
+                &::before{
+                    content: "\e900";
+                }
+            }
+            button.slick-next.slick-arrow{
+                padding-left: 5%;
+                &::before{
+                    content: "\e901";
+                }
+            }
+        }
+    }
+}
+
+@include  for-phone-only ('.el-custom--banner-sku') {
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 22%;
+        background-color: $primary-brand-color;
+        z-index: -1;
+        bottom: 8%;
+    }
+    .el-custom--flavors-wrapper{
+        section.el-custom--flavors-card.slick-initialized.slick-slider{
+            button.slick-arrow{
+                display: none !important;
+            }
+        }
     }
 }

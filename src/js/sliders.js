@@ -6,7 +6,7 @@ $( document ).ready(function() {
         arrows: false,
         autoplay: true,
     });
-    $('.el-custom--flavors-card').slick({
+    $('#el-custom--flavors-card').slick({
         slidesToShow: 4,
         dots: true,
         appendDots: $('.no-one'),
@@ -16,53 +16,31 @@ $( document ).ready(function() {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2.5,
-                    slidesPerRow: 2.5,
+                    slidesToShow: 2.35,
+                    slidesPerRow: 2.35,
                     swipe: true,
                     infinite: false,
-                    // adaptiveHeight: true,
                 }
             }
         ]
    });
-//    $(window).resize(function() {
-//        console.error($( window ).width(), '$( window ).width()')
-//    })
-//    $('.el-custom--flavors-card').slick({
-//         dots: false,
-//         appendDots: $('.no-e'),
-//         arrows: false,
-//         infinite: false,
-//         speed: 300,
-//         slidesToShow: 4,
-//         slidesToScroll: 4,
-//         responsive: [
-//           {
-//             breakpoint: 1024,
-//             settings: {
-//               slidesToShow: 3,
-//               slidesToScroll: 3,
-//               infinite: true,
-//               dots: true
-//             }
-//           },
-//           {
-//             breakpoint: 600,
-//             settings: {
-//               slidesToShow: 2,
-//               slidesToScroll: 2
-//             }
-//           },
-//           {
-//             breakpoint: 480,
-//             settings: {
-//               slidesToShow: 1,
-//               slidesToScroll: 1
-//             }
-//           }
-//           // You can unslick at a given breakpoint now by adding:
-//           // settings: "unslick"
-//           // instead of a settings object
-//         ]
-//       });
+   $('#el-custom--flavors__big-slide')                                                                                                                       .slick({
+        slidesToShow: 3,
+        dots: false,
+        // appendDots: $('.no-one'),
+        arrows: true,
+        autoplay: false,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2.35,
+                    slidesPerRow: 2.35,
+                    swipe: true,
+                    infinite: false,
+                    arrows: false,
+                }
+            }
+        ]
+    });
 });

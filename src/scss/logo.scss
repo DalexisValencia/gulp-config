@@ -1,0 +1,10 @@
+@mixin header-logo {
+    div.el-custom--main-logo{
+        width: 150px;
+        height: 100px;
+        background-image: url('../assets/logo.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

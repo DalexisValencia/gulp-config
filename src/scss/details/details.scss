@@ -4,7 +4,16 @@ $copoazu-bg-color: #77BD1E;
 $camucamu-bg-color : #FF2574;
 $zerozero-bg-color: #848484;
 
-@mixin slider-navigation () {
+@mixin before-navigation-button ($text){
+    content: $text;
+    font-size: 2.5vw;
+    color: $fifth-brand-color;
+    font-family: Poppins,sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+@mixin slider-header () {
     header.el-custom--flavors-page__slider-navigation{
         &.header-0{
             background-image: url('../assets/details/header-back-0.png');
@@ -34,6 +43,13 @@ $zerozero-bg-color: #848484;
 }
 @mixin slider-page () {
     #el-custom--flavors-page__sliders{
+        background-position-y: -200px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-top: -5%;
+        z-index: 2;
+        position: relative;
+        transition: 0.3s all;
         &.bg-0, &.bg-1{
             background-image: url('../assets/details/bg-1.png');
         }
@@ -43,22 +59,8 @@ $zerozero-bg-color: #848484;
         &.bg-3{
             background-image: url('../assets/details/bg-3.png');
         }
-        background-position-y: -200px;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        margin-top: -10%;
-        z-index: 2;
-        position: relative;
-        transition: 0.3s all;
         .el-custom--flavors-page__sliders-slide{
             position: relative;
-            img.el-custom--flavors-page__sliders-image-like-bg{
-                width: 100%;
-                z-index: 2;
-                display: block;
-                position: relative;
-                margin-bottom: 100px;
-            }
             .el-custom--flavors-page__sliders-slide-body{
                 padding: 28% $padding-horizontal 35%;
                 article{
@@ -125,70 +127,63 @@ $zerozero-bg-color: #848484;
         }
     }
 }
-
-.el-custom--flavors-page__main{
-    // overflow: hidden;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    @include slider-navigation();
-    @include slider-page();
-}
-@mixin before-navigation-button ($text){
-    content: $text;
-    font-size: 2.5vw;
-    color: $fifth-brand-color;
-    font-family: Poppins,sans-serif;
-    font-style: italic;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.el-custom--flavors-slider--navigation{
-    position: absolute;
-    border: 2px solid red;
-    z-index: 3;
-    width: 100%;
-    top: 8.5%;
-    ul{
+@mixin slider-navigation () {
+    .el-custom--flavors-slider--navigation{
+        position: absolute;
+        z-index: 3;
         width: 100%;
-        margin: 0px;
-        padding: 0px $padding-horizontal;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        // padding-top: 10%;
-        // position: relative;
-        // top: 15%;
-        li{
-            &.slick-active{
-                button::before,
-                button::after,
-                {
-                    color: $tertiary-brand-color !important;
-                }
-            }
-            width: 25%;
-            &:nth-child(1){
-                button{
-                    &::before{
-                        @include before-navigation-button('ORIGINAL')
+        top:5%;
+        ul{
+            width: 100%;
+            margin: 0px;
+            padding: 0px $padding-horizontal;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            li{
+                &.slick-active{
+                    button::before,
+                    button::after{
+                        color: $tertiary-brand-color !important;
                     }
                 }
-            }
-            &:nth-child(2){
-                button{
-                    &::before{
-                        @include before-navigation-button('zero')
+                width: 25%;
+                &:nth-child(1){
+                    button{
+                        &::before{
+                            @include before-navigation-button('ORIGINAL')
+                        }
                     }
                 }
-            }
-            &:nth-child(3){
-                button{
-                    &::before{
-                        @include before-navigation-button('CAMU-CAMU');
-                        top:2px;
+                &:nth-child(2){
+                    button{
+                        &::before{
+                            @include before-navigation-button('zero')
+                        }
                     }
+                }
+                &:nth-child(3){
+                    button{
+                        &::before{
+                            @include before-navigation-button('CAMU-CAMU');
+                            top:2px;
+                        }
+                    }
+                }
+                &:nth-child(4){
+                    button{
+                        &::before{
+                            @include before-navigation-button('copoAzú');
+                        }
+                        
+                    }
+                }
+                display: flex;
+                justify-content: center;
+                &:nth-child(4),
+                &:nth-child(3){
                     &::after{
+                        text-align: center;
                         position: absolute;
                         content: "Nuevo";
                         text-transform: uppercase;
@@ -196,44 +191,48 @@ $zerozero-bg-color: #848484;
                         font-family: Poppins,sans-serif;
                         font-style: italic;
                         font-weight: bold;
-                        bottom: 20px;
+                        bottom: 19%;
                         font-size: 1.5vw;
                     }
                 }
-            }
-            &:nth-child(4){
+    
                 button{
-                    &::before{
-                        @include before-navigation-button('copoAzú')
+                    border-color: transparent;
+                    background-image: url('../assets/details/btn_original.png'); 
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-position: center;
+                    min-width: 150px;
+                    max-width: 400px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    height: 96px;
+                    color: transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:active,
+                    &:hover,
+                    &:focus,
+                    &:visited{
+                        outline: transparent !important;
                     }
-                }
-            }
-
-            button{
-                border-color: transparent;
-                background-image: url('../assets/details/btn_original.png'); 
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: center;
-                min-width: 150px;
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                height: 96px;
-                color: transparent;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                &:active,
-                &:hover,
-                &:focus,
-                &:visited{
-                    outline: transparent !important;
                 }
             }
         }
     }
 }
+
+.el-custom--flavors-page__main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include slider-header();
+    @include slider-navigation();
+    @include slider-page();
+}
+
 .el-custom-flavors-page{
     &.color-0{
         background-color: $secondary-brand-color;
@@ -249,15 +248,22 @@ $zerozero-bg-color: #848484;
     }
 }
 
+@include for-desktop-up('.el-custom--flavors-page__main') {
+    border: 6px solid red;
+}
+
 @include for-tablet-landscape-down ('.el-custom--flavors-page__main') {
-    header.el-custom--flavors-page__slider-navigation{
-        top: -21%;
-        ul{
-            display: none;
-        }
+    .el-custom--flavors-slider--navigation{
+        display: none;
     }
-    .el-custom--flavors-page__sliders{
-        background-position-y: -100px;
+    header.el-custom--flavors-page__slider-navigation{
+        top: -18%;
+    }
+    #el-custom--flavors-page__sliders{
+        &[class*="bg"]{
+            background-image: url('../assets/details/fondo-sabores-mobile.png') !important;
+            background-position-y: 100px;
+        }
         .el-custom--flavors-page__sliders-slide{
             .el-custom--flavors-page__sliders-slide-body{
                 padding-top: 37%;
@@ -313,13 +319,16 @@ $zerozero-bg-color: #848484;
     }
 }
 @include for-phone-only ('.el-custom--flavors-page__main') {
-    .el-custom--flavors-page__sliders{
+    header.el-custom--flavors-page__slider-navigation{
+        top: -20%;
+    }
+    #el-custom--flavors-page__sliders{
         background-image: url('../assets/details/fondo-sabores-mobile.png');
         background-position-y: -15%;
         background-size: cover;
         .el-custom--flavors-page__sliders-slide{
             .el-custom--flavors-page__sliders-slide-body{
-                padding-top: 28%;
+                // padding-top: 40%;
                 .el-custom--flex.slider-body--detail-image{
                     margin-top: -30px;
                 }

@@ -60,6 +60,17 @@ $( document ).ready(function() {
         appendDots: $('.el-custom--flavors-slider--navigation'),
         arrows: false,
         autoplay: false,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    dots: false,
+                    swipe: true,
+                    infinite: false,
+                    arrows: true,
+                }
+            }
+        ]
     }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
         console.log(nextSlide, 'pilas');
         $("header.el-custom--flavors-page__slider-navigation").attr('class', 'el-custom--flavors-page__slider-navigation');

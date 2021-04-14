@@ -1,0 +1,246 @@
+@import '../vars/colors.scss';
+@import '../common/queries.scss';
+
+@mixin slider-navigation () {
+    header.el-custom--flavors-page__slider-navigation{
+        justify-content: space-between;
+        align-items: center;
+        background-image: url('../assets/details/original_bg_back.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        background-position-y: 23%;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        top: -221px;
+        padding: 0px $padding-horizontal;
+    }
+    ul{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        padding-top: 10%;
+        position: relative;
+        top: 15%;
+        li{
+            width: 25%;
+            // border: 1px dashed black;
+            button{
+                color: $fifth-brand-color;
+                font-family: Poppins,sans-serif;
+                background-image: url('../assets/details/btn_original.png'); 
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                min-width: 150px;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 96px;
+                span.text-span{
+                    display: block;
+                    // border: 1px solid black;
+                    font-weight: bold;
+                    font-style: italic;
+                    font-size: 2.5vw;
+                    position: relative;
+                    &.with-small{
+                        margin-top: -10px;
+                        display: flex;
+                        justify-content: center;
+                        &::before{
+                            position: absolute;
+                            bottom: -17px;
+                            content: "NUEVO";
+                            text-align: center;
+                            font-size: 1.4vw;
+                        }
+                    }
+                }
+                small{
+                    display: block;
+                    width: 100%;
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+}
+@mixin slider-page () {
+    .el-custom--flavors-page__sliders{
+        background-image: url('../assets/details/original_bg_front.png');
+        background-position-y: -200px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-top: -10%;
+        z-index: 2;
+        position: relative;
+        .el-custom--flavors-page__sliders-slide{
+            position: relative;
+            img.el-custom--flavors-page__sliders-image-like-bg{
+                width: 100%;
+                z-index: 2;
+                display: block;
+                position: relative;
+                margin-bottom: 100px;
+            }
+            .el-custom--flavors-page__sliders-slide-body{
+                padding: 28% $padding-horizontal 35%;
+                article{
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                article.slider-body--playlist{
+                    margin-top: 18%;
+                    justify-content: space-between;
+                    div.slider-body--playlist__description{
+                        width: 33%;
+                        h1, p {
+                            color: $fifth-brand-color;
+                            font-family: 'Poppins', sans-serif;
+                        }
+                        h1{
+                            font-weight: bold;
+                            font-size: 4vw;
+                            font-style: italic;
+                        }
+                        p{
+                            margin-top: 20px;
+                            font-size: 2vw;
+                        }
+                        button{
+                            margin-top: 20px;
+                            padding: 10px 30px;
+                            background-color: $secondary-brand-color;
+                            font-size: 1.8vw;
+                        }
+                    }
+                    div.slider-body--playlist__reproductor{
+                        width: 50%;
+                        > img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .description{
+                    width: 50%;
+                    h1, p {
+                        color: $fifth-brand-color;
+                        font-family: 'Poppins', sans-serif;
+                    }
+                    h1{
+                        font-weight: bold;
+                        font-size: 4vw;
+                        font-style: italic;
+                    }
+                    p{
+                        margin-top: 20px;
+                        font-size: 2vw;
+                    }
+                }
+                .wrapper-image{
+                    width: 40%;
+                    > img{
+                        display: inline-block;
+                        position: relative;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.el-custom--flavors-page__main{
+    // overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include slider-navigation();
+    @include slider-page();
+}
+.el-custom-flavors-page{
+    background-color: $secondary-brand-color;
+}
+
+@include for-tablet-landscape-down ('.el-custom--flavors-page__main') {
+    header.el-custom--flavors-page__slider-navigation{
+        top: -21%;
+        ul{
+            display: none;
+        }
+    }
+    .el-custom--flavors-page__sliders{
+        background-position-y: -100px;
+        .el-custom--flavors-page__sliders-slide{
+            .el-custom--flavors-page__sliders-slide-body{
+                padding-top: 37%;
+                padding-bottom: 28%;
+                .el-custom--flex{
+                    flex-direction: column-reverse;
+                    flex-wrap: wrap;
+                    &.slider-body--detail-image{
+                        margin-top: -10px;
+                        .wrapper-image{
+                            text-align: center;
+                            img{
+                                width: 75%;
+                            }
+                        }
+                        .wrapper-image,
+                        .description{
+                            width: 100%;
+                        }
+                        .description{
+                            text-align: center;
+                            h1{
+                                font-size: 5vw;
+                            }
+                            p{
+                                font-size: 3vw;
+                            }
+                        }
+                    }
+                    &.slider-body--playlist{
+                        margin-bottom: 10%;
+                        .slider-body--playlist__description,
+                        .slider-body--playlist__reproductor{
+                            width: 100%;
+                            text-align: center;
+                        }
+                        .slider-body--playlist__description{
+                            margin-top: 20px;
+                            h1{
+                                font-size: 5vw;
+                            }
+                            p{
+                                font-size: 3vw;
+                            }
+                            button{
+                                font-size: 3vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include for-phone-only ('.el-custom--flavors-page__main') {
+    .el-custom--flavors-page__sliders{
+        background-image: url('../assets/details/fondo-sabores-mobile.png');
+        background-position-y: -15%;
+        background-size: cover;
+        .el-custom--flavors-page__sliders-slide{
+            .el-custom--flavors-page__sliders-slide-body{
+                padding-top: 28%;
+                .el-custom--flex.slider-body--detail-image{
+                    margin-top: -30px;
+                }
+            }
+        }
+    }
+}

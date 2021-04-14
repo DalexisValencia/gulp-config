@@ -1,6 +1,16 @@
-var r = 'robot';
 $( document ).ready(function() {
-    console.log( "ready!" );
+    $('.burger-menu').click(function(){
+        console.error('la info!!');
+        $('.el-custom--mobile-menu').show('slow');
+    })
+
+    $(window).resize(function(){
+        if ($( window ).width() > 900) {
+            $('.el-custom--mobile-menu').hide('slow');
+        }
+    })
+})
+$( document ).ready(function() {
     $('.el-custom--banners-slides').slick({
         dots: true,
         appendDots: $('.el-custom--banners-dots'),

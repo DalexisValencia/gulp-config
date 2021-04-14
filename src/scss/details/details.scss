@@ -1,11 +1,26 @@
 @import '../vars/colors.scss';
 @import '../common/queries.scss';
+$copoazu-bg-color: #77BD1E;
+$camucamu-bg-color : #FF2574;
+$zerozero-bg-color: #848484;
 
 @mixin slider-navigation () {
     header.el-custom--flavors-page__slider-navigation{
+        &.header-0{
+            background-image: url('../assets/details/header-back-0.png');
+        }
+        &.header-1{
+            background-image: url('../assets/details/header-back-1.png');
+        }
+        &.header-2{
+            background-image: url('../assets/details/header-back-2.png');
+        }
+        &.header-3{
+            background-image: url('../assets/details/header-back-3.png');
+        }
+        transition: 0.5s all;
         justify-content: space-between;
         align-items: center;
-        background-image: url('../assets/details/original_bg_back.png');
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;
@@ -15,69 +30,26 @@
         z-index: 1;
         position: absolute;
         top: -221px;
-        padding: 0px $padding-horizontal;
-    }
-    ul{
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
-        list-style: none;
-        padding-top: 10%;
-        position: relative;
-        top: 15%;
-        li{
-            width: 25%;
-            // border: 1px dashed black;
-            button{
-                color: $fifth-brand-color;
-                font-family: Poppins,sans-serif;
-                background-image: url('../assets/details/btn_original.png'); 
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: center;
-                min-width: 150px;
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                height: 96px;
-                span.text-span{
-                    display: block;
-                    // border: 1px solid black;
-                    font-weight: bold;
-                    font-style: italic;
-                    font-size: 2.5vw;
-                    position: relative;
-                    &.with-small{
-                        margin-top: -10px;
-                        display: flex;
-                        justify-content: center;
-                        &::before{
-                            position: absolute;
-                            bottom: -17px;
-                            content: "NUEVO";
-                            text-align: center;
-                            font-size: 1.4vw;
-                        }
-                    }
-                }
-                small{
-                    display: block;
-                    width: 100%;
-                    font-size: 1vw;
-                }
-            }
-        }
     }
 }
 @mixin slider-page () {
-    .el-custom--flavors-page__sliders{
-        background-image: url('../assets/details/original_bg_front.png');
+    #el-custom--flavors-page__sliders{
+        &.bg-0, &.bg-1{
+            background-image: url('../assets/details/bg-1.png');
+        }
+        &.bg-2{
+            background-image: url('../assets/details/bg-2.png');
+        }
+        &.bg-3{
+            background-image: url('../assets/details/bg-3.png');
+        }
         background-position-y: -200px;
         background-size: 100%;
         background-repeat: no-repeat;
         margin-top: -10%;
         z-index: 2;
         position: relative;
+        transition: 0.3s all;
         .el-custom--flavors-page__sliders-slide{
             position: relative;
             img.el-custom--flavors-page__sliders-image-like-bg{
@@ -94,7 +66,7 @@
                     align-items: center;
                 }
                 article.slider-body--playlist{
-                    margin-top: 18%;
+                    margin-top: 11%;
                     justify-content: space-between;
                     div.slider-body--playlist__description{
                         width: 33%;
@@ -162,8 +134,119 @@
     @include slider-navigation();
     @include slider-page();
 }
+@mixin before-navigation-button ($text){
+    content: $text;
+    font-size: 2.5vw;
+    color: $fifth-brand-color;
+    font-family: Poppins,sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.el-custom--flavors-slider--navigation{
+    position: absolute;
+    border: 2px solid red;
+    z-index: 3;
+    width: 100%;
+    top: 8.5%;
+    ul{
+        width: 100%;
+        margin: 0px;
+        padding: 0px $padding-horizontal;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        // padding-top: 10%;
+        // position: relative;
+        // top: 15%;
+        li{
+            &.slick-active{
+                button::before,
+                button::after,
+                {
+                    color: $tertiary-brand-color !important;
+                }
+            }
+            width: 25%;
+            &:nth-child(1){
+                button{
+                    &::before{
+                        @include before-navigation-button('ORIGINAL')
+                    }
+                }
+            }
+            &:nth-child(2){
+                button{
+                    &::before{
+                        @include before-navigation-button('zero')
+                    }
+                }
+            }
+            &:nth-child(3){
+                button{
+                    &::before{
+                        @include before-navigation-button('CAMU-CAMU');
+                        top:2px;
+                    }
+                    &::after{
+                        position: absolute;
+                        content: "Nuevo";
+                        text-transform: uppercase;
+                        color: $fifth-brand-color;
+                        font-family: Poppins,sans-serif;
+                        font-style: italic;
+                        font-weight: bold;
+                        bottom: 20px;
+                        font-size: 1.5vw;
+                    }
+                }
+            }
+            &:nth-child(4){
+                button{
+                    &::before{
+                        @include before-navigation-button('copoAzú')
+                    }
+                }
+            }
+
+            button{
+                border-color: transparent;
+                background-image: url('../assets/details/btn_original.png'); 
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                min-width: 150px;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 96px;
+                color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:active,
+                &:hover,
+                &:focus,
+                &:visited{
+                    outline: transparent !important;
+                }
+            }
+        }
+    }
+}
 .el-custom-flavors-page{
-    background-color: $secondary-brand-color;
+    &.color-0{
+        background-color: $secondary-brand-color;
+    }
+    &.color-1{
+        background-color: $zerozero-bg-color;
+    }
+    &.color-2{
+        background-color: $camucamu-bg-color;
+    }
+    &.color-3{
+        background-color: $copoazu-bg-color;
+    }
 }
 
 @include for-tablet-landscape-down ('.el-custom--flavors-page__main') {

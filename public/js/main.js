@@ -54,4 +54,18 @@ $( document ).ready(function() {
             }
         ]
     });
+    //prueba:
+    $('#el-custom--flavors-page__sliders').slick({
+        dots: true,
+        appendDots: $('.el-custom--flavors-slider--navigation'),
+        arrows: false,
+        autoplay: false,
+    }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        console.log(nextSlide, 'pilas');
+        $("header.el-custom--flavors-page__slider-navigation").attr('class', 'el-custom--flavors-page__slider-navigation');
+        $("header.el-custom--flavors-page__slider-navigation").addClass('header-'+nextSlide)
+
+        $("#el-custom--flavors-page__sliders").removeClass().addClass('slick-initialized slick-slider bg-'+nextSlide)
+        $('.el-custom-flavors-page').removeClass().addClass('el-custom-flavors-page color-'+nextSlide);
+      });
 });

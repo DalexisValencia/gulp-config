@@ -1,6 +1,6 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
-.el-custom--footer{
+.el-custom--footer {
     padding: 0px $padding-horizontal;
     position: relative;
     z-index: 3;
@@ -10,7 +10,7 @@
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row-reverse;
-    &::before{
+    &::before {
         content: "";
         /* background-color: red; */
         background-image: url(../assets/home/footer.png);
@@ -24,10 +24,15 @@
         z-index: -1;
         top: -45%
     }
-    .el-custom--footer-right-section{
+    &.el-custom--details-footer {
+        &::before {
+            background-image: url('../assets/details/footer.png');
+        }
+    }
+    .el-custom--footer-right-section {
         width: 100%;
         padding-bottom: 35px;
-        .el-custom--footer-social{
+        .el-custom--footer-social {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,7 +43,7 @@
             }
         }
     }
-    .el-custom--footer-nav{
+    .el-custom--footer-nav {
         width: 100%;
         ul {
             margin: 0px !important;
@@ -47,18 +52,18 @@
             justify-content: space-evenly;
             li {
                 list-style: none;
-                a{
+                a {
                     color: black;
                     font-size: 0.7rem;
                     text-transform: uppercase;
                     text-decoration: none;
-                    font-family: Poppins,sans-serif;
+                    font-family: Poppins, sans-serif;
                     font-weight: 400;
                 }
             }
         }
     }
-    .el-custom--footer-legal{
+    .el-custom--footer-legal {
         width: 100%;
         padding: 80px 10px 70px;
         text-align: center;
@@ -67,38 +72,37 @@
     }
 }
 
-figure.el-custom--logo{
+figure.el-custom--logo {
     text-align: center;
     padding-bottom: 30px;
-    img{
+    img {
         width: 210px;
     }
 }
 
-
 //Media queries
 @include for-tablet-landscape-down('.el-custom--footer') {
     padding: 35px $padding-horizontal / 2 0px;
-    .el-custom--footer-right-section{
+    .el-custom--footer-right-section {
         width: 30%;
-        .el-custom--logo{
+        .el-custom--logo {
             margin-top: -18px;
             padding-bottom: 10px;
-            img{
+            img {
                 width: 100px;
             }
         }
-        .el-custom--footer-social{
+        .el-custom--footer-social {
             i {
                 font-size: 3vw;
             }
         }
     }
-    .el-custom--footer-nav{
+    .el-custom--footer-nav {
         width: 70%;
         ul {
             flex-wrap: wrap;
-            li{
+            li {
                 width: 100%;
                 a {
                     font-weight: 700 !important;
@@ -108,30 +112,30 @@ figure.el-custom--logo{
             }
         }
     }
-    .el-custom--footer-legal{
+    .el-custom--footer-legal {
         padding: 15px 0;
     }
 }
 
 @include for-phone-only ('.el-custom--footer') {
     padding-top: 15px;
-    .el-custom--footer-right-section{
+    .el-custom--footer-right-section {
         width: 40%;
-        .el-custom--logo{
-            img{
+        .el-custom--logo {
+            img {
                 width: 60%;
             }
         }
-        .el-custom--footer-social{
-            i{
+        .el-custom--footer-social {
+            i {
                 font-size: 4vw;
             }
         }
     }
-    .el-custom--footer-nav{
+    .el-custom--footer-nav {
         width: 60%;
         ul {
-            li{
+            li {
                 margin-bottom: 2.4%;
                 a {
                     font-size: 2vw;

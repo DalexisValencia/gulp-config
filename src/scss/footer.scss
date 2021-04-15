@@ -36,6 +36,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            a {
+                text-decoration: none;
+            }
             i {
                 font-size: 30px;
                 color: $primary-brand-color;

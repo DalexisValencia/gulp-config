@@ -1,0 +1,108 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.el-custom-news-page {
+    background-color: $primary-brand-color;
+}
+
+.el-custom--news-page__main {
+    padding: 25% 0px 50%;
+    border: 1px solid red;
+    background-image: url('../assets/news/background.png');
+    background-position: center;
+    position: relative;
+    margin-top: -6%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.el-custom--news-stick-banner {
+    width: 60%;
+    height: 450px;
+    background-image: url('../assets/news/sticky.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    header {
+        // background-color: magenta;
+        padding: 0px 10%;
+        margin-top: 5%;
+    }
+    h1,
+    p {
+        text-align: center;
+        color: $fifth-brand-color;
+        font-family: Poppins, sans-serif;
+    }
+    h1 {
+        font-weight: bold;
+        font-size: 3vw;
+    }
+    p {
+        margin: 10px 0px;
+        font-size: 1.3vw;
+        padding: 0px 25px;
+    }
+}
+
+@include for-tablet-landscape-only('.el-custom-news-page') {
+    .el-custom--news-stick-banner {
+        width: 80%;
+        header {
+            h1 {
+                font-size: 4vw;
+            }
+            p {
+                font-size: 1.8vw;
+            }
+        }
+    }
+}
+
+@include for-tablet-landscape-down('.el-custom-news-page') {
+    .el-custom--news-page__main {
+        padding: 15% 0px 30%;
+        border: 1px solid blue;
+    }
+    .el-custom--news-stick-banner {
+        height: 350px;
+        width: 90%;
+        header {
+            h1 {
+                font-size: 4vw;
+            }
+            p {
+                font-size: 1.8vw;
+            }
+        }
+    }
+}
+
+@include for-phone-only('.el-custom-news-page') {
+    .el-custom--news-page__main {
+        padding: 15% 0px 30%;
+        margin-top: -18%;
+        .el-custom--news-stick-banner {
+            height: 250px;
+            header {
+                p {
+                    font-size: 2.5vw;
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-small('.el-custom-news-page') {
+    .el-custom--news-page__main {
+        margin-top: -25%;
+        border: 3px solid black;
+        background-size: 150%;
+    }
+}

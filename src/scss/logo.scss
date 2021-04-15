@@ -1,5 +1,6 @@
 @mixin header-logo {
-    div.el-custom--main-logo{
+    a.el-custom--main-logo {
+        display: inline-block;
         width: 150px;
         height: 100px;
         background-image: url('../assets/logo.png');

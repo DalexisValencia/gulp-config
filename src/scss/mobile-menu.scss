@@ -1,6 +1,6 @@
 @import './vars/colors.scss';
 @import './logo.scss';
-.el-custom--mobile-menu{
+.el-custom--mobile-menu {
     position: fixed;
     top: 0px;
     width: 100%;
@@ -10,20 +10,35 @@
     text-align: center;
     padding: $padding-horizontal / 2 10px;
     display: none;
-    ul{
+    .close-mobile-menu {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $fourtiary-brand-color;
+        font-family: 'Arial';
+        font-size: 60px;
+        position: absolute;
+        right: 20px;
+    }
+    ul {
         width: 100%;
         margin: 0px;
         padding: 0px;
         list-style: none;
-        li{
-            font-size: 7vw;
+        li {
             padding: 20px 0px;
-            color: $fourtiary-brand-color;
-            font-family: 'Poppins', sans-serif;
+            a {
+                font-size: 7vw;
+                color: $fourtiary-brand-color;
+                font-family: 'Poppins', sans-serif;
+                text-decoration: none
+            }
         }
     }
     @include header-logo();
-    .el-custom--main-logo{
+    .el-custom--main-logo {
         display: inline-block;
         margin-bottom: $padding-horizontal / 2;
     }

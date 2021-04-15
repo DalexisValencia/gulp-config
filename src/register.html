@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <main class="el-custom--main el-custom-news-page">
+    <main class="el-custom--main el-custom-register-page">
         <section class="el-custom--mobile-menu">
             <div class="el-custom--main-logo"></div>
             <ul class="">
@@ -103,23 +103,24 @@
                                 " required="required " aria-required="true ">
                         </fieldset>
                     </div>
-                    <div class="el-custom--block-terms ">
-                        <div class="block-term ">
-                            <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-terms form-item-terms ">
-                                <input td-type="TC-PP " data-drupal-selector="edit-terms " type="checkbox " id="edit-terms " name="terms " value="1 " class="form-checkbox required form-check-input " required="required " aria-required="true ">
-                                <label class="form-check-label " for="edit-terms ">
-                                Acepto <a href="https://www.backus.pe/sites/g/files/yrakuj241/files/2020-08/TERMINOS%20Y%20CONDICIONES%20GENERALES%20-%20PA%CC%81GINAS%20Y%20APLICACIONES%20%28PERU%29.pdf " target="_blank
-                                ">términos y condiciones</a> y <a href="https://www.mikesperu.com.pe/abilegal/politica-deproteccion-de-datos-personales " target="_blank ">políticas de privacidad</a> *
+                    <div class="el-custom--block-terms">
+                        <div class="block-term">
+                            <label class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-terms form-item-terms el-custom--checkbox" for="acept-terms">
+                                <input type="checkbox" id="edit-terms" name="acept-terms" value="1" class="form-checkbox required form-check-input" required="required">
+                                <label class="form-check-label" for="edit-terms">
+                                    <span class="checkmark"></span>
+                                    <span>Acepto <a href="" target="_blank">términos y condiciones</a> y <a href="" target="_blank">políticas de privacidad</a> *</span>
                                 </label>
-                            </div>
+                            </label>
                         </div>
-                        <div class="block-term ">
-                            <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-marketing form-item-marketing ">
-                                <input td-type="marketing-activation " data-drupal-selector="edit-marketing " type="checkbox " id="edit-marketing " name="marketing " value="1 " class="form-checkbox form-check-input ">
-                                <label class="form-check-label " for="edit-marketing ">
-                                    Deseo recibir información comercial y eventos de Backus y sus marcas asociadas
+                        <div class="block-term">
+                            <label class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-terms form-item-terms el-custom--checkbox" for="get-information">
+                                <input type="checkbox" id="get-information" name="get-information" value="1" class="form-checkbox required form-check-input" required="required">
+                                <label class="form-check-label" for="get-information">
+                                    <span class="checkmark"></span>
+                                    <span>Deseo recibir información comercial y eventos de Backus y sus marcas asociadas</span>
                                 </label>
-                            </div>
+                            </label>
                         </div>
                     </div>
                     <div data-drupal-selector="edit-actions " class="form-actions js-form-wrapper form-group " id="edit-actions ">

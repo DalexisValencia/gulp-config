@@ -12,13 +12,16 @@
         .block-term {
             margin-bottom: 10px;
             padding: 0px 12px;
-            div.js-form-item {
-                label {
+            label.js-form-item {
+                display: flex;
+                label.form-check-label:not(.error) {
+                    display: flex;
+                    align-items: center;
                     font-family: Poppins, sans-serif;
                     font-size: 14px;
                     color: $fifth-brand-color;
-                    margin-left: 15px;
                     a {
+                        margin: 0px 4px;
                         text-decoration: none;
                         color: $fifth-brand-color;
                     }
@@ -82,6 +85,7 @@
             sans-serif;
             font-weight: bolder;
             width: 100%;
+            // margin-bottom: 10px
         }
         @include form-select();
         input:not(.form-checkbox) {
@@ -97,11 +101,14 @@
     }
 }
 
-.el-custom--register-page__main {
-    background-image: url('../assets/fondo-registro.png');
+.el-custom-register-page {
     background-repeat: no-repeat;
+    background-image: url('../assets/fondo-registro.png');
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
+}
+
+.el-custom--register-page__main {
     padding: 10% 0px 20%;
     header {
         h1,
@@ -118,16 +125,61 @@
         }
     }
     article.el-custom--register-page__form {
-        border: 5px solid black;
         padding: 0px $padding-horizontal * 2;
         .el-custom-brand-register-form {
             .block-form-group {
-                border: 1.5px dashed black;
                 display: flex;
                 @include form-item();
             }
         }
         @include block-terms();
         @include form-actions();
+    }
+}
+
+@include for-tablet-landscape-down('.el-custom--register-page__main') {
+    article.el-custom--register-page__form {
+        padding: 0px $padding-horizontal;
+        .el-custom-brand-register-form {
+            .block-form-group {
+                flex-wrap: wrap;
+                .js-form-item {
+                    width: 100%;
+                    &.js-form-type-select {
+                        label {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only('.el-custom-register-page') {
+    background-image: url('../assets/fondo-registro-mobile.png');
+    background-position-y: -42px;
+    background-color: $secondary-brand-color;
+}
+
+@include for-phone-only('.el-custom--register-page__main') {
+    article.el-custom--register-page__form {
+        padding: 0px $padding-horizontal / 2;
+        .el-custom--block-terms {
+            .block-term label.js-form-item {
+                label.form-check-label:not(.error) {
+                    *,
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .form-actions {
+            button.el-custom--button {
+                font-size: 18px;
+                padding: 10px 30px;
+            }
+        }
     }
 }

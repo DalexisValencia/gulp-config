@@ -1,10 +1,11 @@
 @import './common/queries.scss';
 @import './vars/colors.scss';
-.el-custom--banners{
+.el-custom--banners {
     position: relative;
     margin-top: -7%;
 }
-.banner{
+
+.banner {
     border: 1px solid red;
     // margin-top: -50px;
     img {
@@ -12,7 +13,7 @@
     }
 }
 
-.guarana-banner{
+.guarana-banner {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -24,12 +25,12 @@
     background-size: cover;
 }
 
-.el-custom--banners-dots{
+.el-custom--banners-dots {
     position: absolute;
     width: 100%;
     bottom: 15%;
     z-index: 2;
-    ul.slick-dots{
+    ul.slick-dots {
         margin: 0px;
         padding: 0px;
         list-style: none;
@@ -37,8 +38,8 @@
         justify-content: center;
         align-items: center;
         // border:1px solid red;
-        li{
-            button[role="tab"]{
+        li {
+            button[role="tab"] {
                 border: 1px solid transparent;
                 border-radius: 50%;
                 width: 15px;
@@ -48,17 +49,17 @@
                 &:active,
                 &:hover,
                 &:focus,
-                &:visited{
+                &:visited {
                     outline: transparent !important;
                 }
             }
-            &.slick-active{
-                button[role="tab"]{
+            &.slick-active {
+                button[role="tab"] {
                     background-color: $secondary-brand-color;
                 }
             }
-            &:not(.slick-active){
-                button[role="tab"]{
+            &:not(.slick-active) {
+                button[role="tab"] {
                     background-color: $fourtiary-brand-color;
                 }
             }
@@ -68,4 +69,74 @@
 
 @include for-tablet-landscape-down('.el-custom--banners') {
     margin-top: -70px;
+    .el-custom--banners-dots {
+        bottom: 5%;
+        ul.slick-dots {
+            display: none;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .slick-arrow {
+            border: 1px solid transparent;
+            background-size: contain;
+            font-size: 1px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            &:hover,
+            &:focus,
+            &:active {
+                outline: 0;
+                outline-color: transparent !important;
+            }
+            &.slick-prev {
+                background-image: url('../assets/banners/home/back.png');
+                &::before {
+                    font-size: 32px;
+                    color: $primary-brand-color;
+                    content: "\e900";
+                    font-family: icon!important;
+                }
+            }
+            &.slick-next {
+                background-image: url('../assets/banners/home/next.png');
+                &::before {
+                    font-size: 25px;
+                    color: $fourtiary-brand-color;
+                    content: "\e901";
+                    font-family: icon!important;
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only('.el-custom--banners') {
+    .el-custom--banners-dots {
+        bottom: 1%;
+    }
+}
+
+@include for-phone-small('.el-custom--banners') {
+    .el-custom--banners-dots {
+        bottom: -3%;
+        .slick-arrow {
+            width: 60px;
+            height: 60px;
+            &.slick-prev {
+                &::before {
+                    font-size: 25px;
+                }
+            }
+            &.slick-next {
+                &::before {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
 }

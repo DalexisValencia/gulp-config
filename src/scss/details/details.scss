@@ -6,7 +6,7 @@ $zerozero-bg-color: #848484;
 
 @mixin before-navigation-button ($text){
     content: $text;
-    font-size: 2.5vw;
+    font-size: 30px;
     color: $fifth-brand-color;
     font-family: Poppins,sans-serif;
     font-style: italic;
@@ -30,7 +30,7 @@ $zerozero-bg-color: #848484;
         transition: 0.5s all;
         justify-content: space-between;
         align-items: center;
-        background-repeat: no-repeat;
+        background-repeat: repeat-y;
         background-size: 100%;
         background-position: center;
         background-position-y: 23%;
@@ -87,9 +87,13 @@ $zerozero-bg-color: #848484;
                         }
                         button{
                             margin-top: 20px;
-                            padding: 10px 30px;
+                            padding: 12px 8px;
                             background-color: $secondary-brand-color;
                             font-size: 1.8vw;
+                            font-style: italic;
+                            i{
+                                margin-left: 5px;
+                            }
                         }
                     }
                     div.slider-body--playlist__reproductor{
@@ -192,7 +196,7 @@ $zerozero-bg-color: #848484;
                         font-style: italic;
                         font-weight: bold;
                         bottom: 19%;
-                        font-size: 1.5vw;
+                        font-size: 18px;
                     }
                 }
     
@@ -203,7 +207,7 @@ $zerozero-bg-color: #848484;
                     background-size: 100%;
                     background-position: center;
                     min-width: 150px;
-                    max-width: 400px;
+                    max-width: 250px;
                     display: flex;
                     flex-wrap: wrap;
                     width: 100%;
@@ -249,9 +253,53 @@ $zerozero-bg-color: #848484;
 }
 
 @include for-desktop-up('.el-custom--flavors-page__main') {
-    border: 6px solid red;
+    header.el-custom--flavors-page__slider-navigation{
+        background-position-y: inherit;
+    }
+    .el-custom--flavors-slider--navigation{
+        top: 7%;
+    }
+    #el-custom--flavors-page__sliders{
+        background-position-y: 105%;
+        .el-custom--flavors-page__sliders-slide{
+            .el-custom--flavors-page__sliders-slide-body{
+                padding-top: 15%;
+                .el-custom--flex.slider-body--detail-image{
+                    padding-top: 10%;
+                }
+            }
+        }
+    }
 }
 
+@include for-tablet-landscape-only('.el-custom--flavors-page__main') {
+    .el-custom--flavors-slider--navigation{
+        top: 5.5%;
+        ul.slick-dots{
+            li{
+                button{
+                    &::before{
+                        font-size: 2.2vw;
+                    }
+                }
+                &:nth-child(3),
+                &:nth-child(4){
+                    button {
+                        &::before{
+                            margin-top: -15px;
+                        }
+                    }
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        &::after{
+                            bottom: 23%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @include for-tablet-landscape-down ('.el-custom--flavors-page__main') {
     .el-custom--flavors-slider--navigation{
         display: none;

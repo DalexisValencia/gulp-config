@@ -50,12 +50,13 @@ $( document ).ready(function() {
         autoplay: false,
         responsive: [
             {
-                breakpoint: 600,
+                breakpoint: 900,
                 settings: {
                     dots: false,
                     swipe: true,
                     infinite: false,
                     arrows: true,
+                    appendArrows: $('.el-custom--flavors-slider--navigation'),
                 }
             }
         ]

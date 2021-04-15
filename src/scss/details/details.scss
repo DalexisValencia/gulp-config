@@ -302,7 +302,49 @@ $zerozero-bg-color: #848484;
 }
 @include for-tablet-landscape-down ('.el-custom--flavors-page__main') {
     .el-custom--flavors-slider--navigation{
-        display: none;
+        ul.slick-dots{
+            display: none;
+        }
+        width: 100%;
+        top: 12%;
+        height: 30%;
+        display: flex;
+        justify-content: space-between;
+        button{
+            border: 1px solid transparent;
+            width: 80px;
+            color: transparent;
+            font-size: 1px;
+            &[aria-disabled="true"]{
+                &::before{
+                    color: $zerozero-bg-color !important;
+                }
+            }
+            &.slick-prev.slick-arrow{
+                margin-right: 5%;
+                &::before{
+                    font-size: 50px;
+                    color: $fifth-brand-color;
+                    content: "\e900";
+                    font-family: icon!important;
+                }
+            }
+            &.slick-next.slick-arrow{
+                margin-left: 5%;
+                &::before{
+                    font-size: 50px;
+                    color: $fifth-brand-color;
+                    content: "\e901";
+                    font-family: icon!important;
+                }
+            }
+            &:hover,
+            &:focus,
+            &:active{
+                outline:0;
+                outline-color: transparent !important;
+            }
+        }
     }
     header.el-custom--flavors-page__slider-navigation{
         top: -18%;
@@ -372,13 +414,25 @@ $zerozero-bg-color: #848484;
     }
     #el-custom--flavors-page__sliders{
         background-image: url('../assets/details/fondo-sabores-mobile.png');
-        background-position-y: -15%;
+        background-position-y: 40px !important;
         background-size: cover;
         .el-custom--flavors-page__sliders-slide{
             .el-custom--flavors-page__sliders-slide-body{
-                // padding-top: 40%;
                 .el-custom--flex.slider-body--detail-image{
                     margin-top: -30px;
+                }
+            }
+        }
+    }
+}
+@include for-phone-small ('.el-custom--flavors-page__main') {
+    .el-custom--flavors-slider--navigation{
+        top: 10%;
+        button{
+            &.slick-prev.slick-arrow,
+            &.slick-next.slick-arrow{
+                &::before{
+                    font-size: 40px;
                 }
             }
         }

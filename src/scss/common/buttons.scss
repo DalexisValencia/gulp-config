@@ -22,7 +22,9 @@ button.el-custom--button{
     vertical-align: middle;
     white-space: nowrap;
     border: 0px solid transparent;
-    &:focus, &:active{
+    &:hover,
+    &:focus,
+    &:active{
         outline:0;
         outline-color: transparent !important;
     }

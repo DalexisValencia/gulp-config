@@ -6,21 +6,19 @@
     background-color: $primary-brand-color;
     background-position: center;
     background-size: 100%;
-    header {
-        h1,
-        p {
-            font-family: Poppins, sans-serif;
-            color: $fourtiary-brand-color;
-        }
-        h1 {
-            margin-bottom: 50px;
-            text-align: center;
-            font-size: 35px;
-        }
-        p {
-            font-size: 17px;
-            margin-bottom: 20px;
-        }
+    h1,
+    p {
+        font-family: Poppins, sans-serif;
+        color: $fourtiary-brand-color;
+    }
+    h1 {
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 35px;
+    }
+    p {
+        font-size: 17px;
+        margin-bottom: 20px;
     }
 }
 
@@ -31,14 +29,12 @@
 @include for-tablet-landscape-down('.el-custom--terms-page__main') {
     padding: 10% $padding-horizontal / 2 20%;
     background-image: none;
-    header {
-        h1 {
-            text-align: left;
-            margin-bottom: 25px;
-            font-size: 30px;
-        }
-        p {
-            font-size: 16px;
-        }
+    h1 {
+        text-align: left;
+        margin-bottom: 25px;
+        font-size: 30px;
+    }
+    p {
+        font-size: 16px;
     }
 }

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::GUARANA DEV::</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="el-custom--main el-custom-news-page">
+        <section class="el-custom--mobile-menu">
+            <div class="el-custom--main-logo"></div>
+            <ul class="">
+                <li class="active">Home</li>
+                <li>Sabores</li>
+                <li>Registro</li>
+                <li>Backusya</li>
+            </ul>
+        </section>
+        <header class="el-custom--header">
+            <nav class="el-custom--flex justify-between">
+                <div class="el-custom--main-logo"></div>
+                <ul class="el-custom--flex hide-tablet-down">
+                    <li class="active">Home</li>
+                    <li>Sabores</li>
+                    <li>Registro</li>
+                    <li class="img"></li>
+                </ul>
+                <div class="burger-menu show-tablet-down">
+                    <i class="i-menu"></i>
+                </div>
+            </nav>
+        </header>
+        <section class="el-custom--register-page__main">
+            <header>
+                <h3> REGÍSTRATE Y SIGUE DESCUBRIENDO </h3>
+                <h1>NUESTRAS PRÓXIMAS NOVEDADES</h1>
+                <p>Ingresa tus datos para seguir manteniendo esa sed de siempre con las próximas novedades que tendremos para ti.</p>
+            </header>
+            <article class="el-custom--register-page__form">
+                <form class="el-custom-brand-register-form" action="/" method="post" accept-charset="UTF-8">
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name form-no-label form-group">
+                            <label for="name">Nombre</label>
+                            <input placeholder="" autocomplete="off" type="text" id="edit-name" name="name" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                        </fieldset>
+
+                        <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-lastname form-item-lastname form-no-label form-group">
+                            <label for="lastname">Apellido</label>
+                            <input placeholder="" autocomplete="off" type="text" name="lastname" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                        </fieldset>
+                    </div>
+
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-document form-item-document form-no-label form-group">
+                            <label for="document">DNI / CARNET DE EXTRANJERÍA</label>
+                            <input placeholder="" autocomplete="off" type="number" name="document" value="" step="1" class="form-number required form-control el-custom--input" required="required" aria-required="true">
+                        </fieldset>
+                        <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-gender form-item-gender form-no-label form-group">
+                            <label for="document">Género</label>
+                            <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" selected="selected">Género</option>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                            </select>
+                        </fieldset>
+                    </div>
+
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-birthday form-item-birthday form-group">
+                            <label for="birthday">Fecha de nacimiento</label>
+                            <input placeholder="DÍA/MES/AÑO" autocomplete="off" type="text" name="birthday" value="" size="60" maxlength="10" class="required form-control el-custom--input" required="required">
+                        </fieldset>
+                        <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-city form-item-city form-no-label form-group">
+                            <label for="city">Ciudad</label>
+                            <select autocomplete="off" name="city" class="form-select required form-control" required="required" aria-required="true">
+                                <option value="" selected="selected">Ciudad</option>
+                                <option value="1838">Amazonas</option>
+                                <option value="1839">Áncash</option>
+                            </select>
+                        </fieldset>
+                    </div>
+
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-email form-type-email js-form-item-email form-item-email form-no-label form-group">
+                            <label for="edit-birthday">Correo electrónico</label>
+                            <input placeholder="CORREO" td-type="email" autocomplete="off" data-drupal-selector="edit-email" type="email" id="edit-email" name="email" value="" size="60" maxlength="50" class="form-email required form-control el-custom--input" required="required"
+                                aria-required="true">
+                        </fieldset>
+
+                        <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-phone form-item-phone form-no-label form-group">
+                            <label for="edit-birthday">Teléfono</label>
+                            <input placeholder="CELULAR" min="1" step="1" autocomplete="off" data-drupal-selector="edit-phone" type="number" id="edit-phone" name="phone" value="" class="form-number required form-control el-custom--input" required="required" aria-required="true">
+                        </fieldset>
+                    </div>
+                    <div class="el-custom--block-terms">
+                        <div class="block-term">
+                            <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-terms form-item-terms">
+                                <input td-type="TC-PP" data-drupal-selector="edit-terms" type="checkbox" id="edit-terms" name="terms" value="1" class="form-checkbox required form-check-input" required="required" aria-required="true">
+                                <label class="form-check-label" for="edit-terms">
+                                Acepto <a href="https://www.backus.pe/sites/g/files/yrakuj241/files/2020-08/TERMINOS%20Y%20CONDICIONES%20GENERALES%20-%20PA%CC%81GINAS%20Y%20APLICACIONES%20%28PERU%29.pdf" target="_blank">términos y condiciones</a> y <a href="https://www.mikesperu.com.pe/abilegal/politica-deproteccion-de-datos-personales" target="_blank">políticas de privacidad</a> *
+                                </label>
+                            </div>
+                        </div>
+                        <div class="block-term">
+                            <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-marketing form-item-marketing">
+                                <input td-type="marketing-activation" data-drupal-selector="edit-marketing" type="checkbox" id="edit-marketing" name="marketing" value="1" class="form-checkbox form-check-input">
+                                <label class="form-check-label" for="edit-marketing">
+                                    Deseo recibir información comercial y eventos de Backus y sus marcas asociadas
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-group" id="edit-actions">
+                        <button type="submit" value="ENVIAR" class="el-custom--button button button--primary js-form-submit form-submit btn btn-primary">
+                            ENVIAR
+                        </button>
+                    </div>
+                </form>
+            </article>
+        </section>
+        <footer class="el-custom--footer el-custom--terms-footer">
+            <section class="el-custom--footer-right-section">
+                <figure class="el-custom--logo">
+                    <img src="assets/logo.png" alt="Logo Guarana">
+                </figure>
+                <div class="el-custom--footer-social">
+                    <a href=""> <i class="i-facebook"></i> </a>
+                    <a href=""> <i class="i-twitter"></i> </a>
+                    <a href=""> <i class="i-instagram"></i> </a>
+                    <a href=""> <i class="i-tiktok"></i> </a>
+                </div>
+            </section>
+            <nav class="el-custom--footer-nav">
+                <ul>
+                    <li>
+                        <a href="">TÉRMINOS Y CONDICIONES GENERALES</a>
+                    </li>
+                    <li>
+                        <a href="">CONTACTO</a>
+                    </li>
+                    <li>
+                        <a href="">POLÍTICA DE PROTECCIÓN DE DATOS PERSONALES</a>
+                    </li>
+                    <li>
+                        <a href="">SOLICITUD DE EJERCICIO DERECHOS ARCO</a>
+                    </li>
+                    <li class="show-tablet-down">
+                        <a href=""> ANHEUSER-BUSCH INBEV © 2021</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="el-custom--footer-legal">
+                <span class="hide-tablet-down">ANHEUSER-BUSCH INBEV © 2021</span>
+            </div>
+        </footer>
+    </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+<script src="js/main-min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</html>

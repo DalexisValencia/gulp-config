@@ -1,5 +1,6 @@
 button[class*="el-custom"],
-button.el-custom--button{
+input[type="button"].el-custom--button,
+button.el-custom--button {
     flex: 0 0 auto;
     align-items: center;
     display: inline-flex;
@@ -13,8 +14,8 @@ button.el-custom--button{
     text-indent: .0892857143em;
     text-transform: uppercase;
     transition-duration: .28s;
-    transition-property: box-shadow,transform,opacity;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-property: box-shadow, transform, opacity;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -24,13 +25,12 @@ button.el-custom--button{
     border: 0px solid transparent;
     &:hover,
     &:focus,
-    &:active{
-        outline:0;
+    &:active {
+        outline: 0;
         outline-color: transparent !important;
     }
 }
 
 // input[class*="el-custom"],
 // input.el-custom--button {
-    
 // }

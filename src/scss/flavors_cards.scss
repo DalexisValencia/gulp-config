@@ -3,6 +3,17 @@
 @mixin flavors-card {
     section.el-custom--flavors-card{
         display: flex;
+        a{
+            text-decoration: none !important;
+            &:active,
+            &:focus,
+            &:hover,
+            &:visited
+            {
+                outline: 0;
+                outline-color: transparent !important;
+            }
+        }
         .flavors--card{
             max-width: 25%;
             display: flex;

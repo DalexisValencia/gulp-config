@@ -74,7 +74,7 @@ $(document).ready(function() {
             settings: {
                 dots: false,
                 swipe: true,
-                infinite: false,
+                infinite: true,
                 arrows: true,
                 appendArrows: $('.el-custom--flavors-slider--navigation'),
             }

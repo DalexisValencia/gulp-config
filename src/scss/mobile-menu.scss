@@ -1,4 +1,5 @@
 @import './vars/colors.scss';
+@import './common/queries.scss';
 @import './logo.scss';
 .el-custom--mobile-menu {
     position: fixed;
@@ -41,5 +42,13 @@
     .el-custom--main-logo {
         display: inline-block;
         margin-bottom: $padding-horizontal / 2;
+    }
+}
+
+@include for-tablet-landscape-down('.el-custom--mobile-menu') {
+    a.el-custom--main-logo{
+        width: 50%;
+        min-width: 100px;
+        max-width: 150px;
     }
 }

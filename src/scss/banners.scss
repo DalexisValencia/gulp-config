@@ -6,8 +6,6 @@
 }
 
 .banner {
-    border: 1px solid red;
-    // margin-top: -50px;
     img {
         width: 100%;
     }
@@ -37,7 +35,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // border:1px solid red;
         li {
             button[role="tab"] {
                 border: 1px solid transparent;
@@ -79,14 +76,15 @@
         align-items: center;
         .slick-arrow {
             border: 1px solid transparent;
-            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:contain;
             font-size: 1px;
-            width: 80px;
-            height: 80px;
+            width: 75px;
+            height: 75px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-position: center;
             &:hover,
             &:focus,
             &:active {

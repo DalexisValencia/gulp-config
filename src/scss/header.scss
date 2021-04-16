@@ -8,7 +8,7 @@ header.el-custom--header {
     background-image: url('../assets/rasgado.png');
     background-position: inherit;
     background-position-y: 63%;
-    background-repeat: repeat-y;
+    background-repeat-y: no-repeat;
     background-size: contain;
     &::after {
         z-index: -1;

@@ -74,6 +74,7 @@
             &:not(.error) {
                 font-style: italic;
                 font-size: 15px;
+                font-family: 'Poppins-Bold';
             }
             &.error {
                 color: $tertiary-brand-color;
@@ -97,6 +98,9 @@
                 font-weight: bold;
                 font-family: Poppins, sans-serif;
             }
+            &.error{
+                border-color: $tertiary-brand-color;
+            }
         }
     }
 }
@@ -111,7 +115,13 @@
 .el-custom--register-page__main {
     padding: 10% 0px 20%;
     header {
-        h1,
+        margin: 0px $padding-horizontal * 2;
+        h1{
+            font-family: 'Poppins-Bold';
+            color: $fifth-brand-color;
+            font-style: italic;
+            text-align: center;
+        }
         h3,
         p {
             text-align: center;
@@ -127,7 +137,10 @@
     }
     article.el-custom--register-page__form {
         padding: 0px $padding-horizontal * 2;
+        display: flex;
+        justify-content: center;
         .el-custom-brand-register-form {
+            max-width: 1000px;
             .block-form-group {
                 display: flex;
                 @include form-item();
@@ -139,6 +152,23 @@
 }
 
 @include for-tablet-landscape-down('.el-custom--register-page__main') {
+    padding: 5% 0 21%;
+    header{
+        margin: 0px $padding-horizontal / 2;
+        h3{
+            font-size: 18px;
+            span.d-none{
+                display: inline-flex;
+            }
+        }
+        h1{
+            font-size: 40px;
+        }
+        p {
+            display: none;
+        }
+        margin-bottom: 20px;
+    }
     article.el-custom--register-page__form {
         padding: 0px $padding-horizontal;
         .el-custom-brand-register-form {
@@ -153,6 +183,12 @@
                     }
                 }
             }
+            .form-actions {
+                width: 100%;
+                button.el-custom--button {
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -164,6 +200,18 @@
 }
 
 @include for-phone-only('.el-custom--register-page__main') {
+    header{
+        h3{
+            font-size: 3vw;
+        }
+        h1{
+            font-size: 6.8vw;
+        }
+        p {
+            display: none;
+        }
+        margin-bottom: 20px;
+    }
     article.el-custom--register-page__form {
         padding: 0px $padding-horizontal / 2;
         .el-custom--block-terms {
@@ -178,7 +226,7 @@
         }
         .form-actions {
             button.el-custom--button {
-                font-size: 18px;
+                font-size: 15px;
                 padding: 10px 30px;
             }
         }

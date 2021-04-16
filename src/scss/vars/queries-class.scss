@@ -5,6 +5,9 @@
     * hide-tablet-down : hide elements from 900px and down
     * show-tablet-up : show elements from 900px and up
 */
+.d-none{
+    display: none;
+}
 .show-tablet-down{
     display: none;
 }

@@ -10,10 +10,24 @@
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row-reverse;
+    &.yellow {
+        &::before {
+            background-image: url(../assets/footers/yellow-footer.png);
+        }
+    }
+    &.red {
+        &::before {
+            background-image: url(../assets/footers/red-footer.png);
+        }
+    }
+    &.orange {
+        &::before {
+            background-image: url(../assets/footers/orange-footer.png);
+        }
+    }
     &::before {
         content: "";
-        /* background-color: red; */
-        background-image: url(../assets/home/footer.png);
+        background-image: url(../assets/footers/footer.png);
         background-position-x: center;
         background-position-y: 14%;
         background-repeat: no-repeat;
@@ -23,11 +37,6 @@
         height: 54%;
         z-index: -1;
         top: -45%
-    }
-    &.el-custom--details-footer {
-        &::before {
-            background-image: url('../assets/details/footer.png');
-        }
     }
     .el-custom--footer-right-section {
         width: 100%;
@@ -72,6 +81,7 @@
         text-align: center;
         font-size: 0.8rem;
         background-color: $fourtiary-brand-color;
+        font-family: Poppins,sans-serif;
     }
 }
 
@@ -110,6 +120,7 @@ figure.el-custom--logo {
                 a {
                     font-weight: 700 !important;
                     font-size: 1.5vw;
+                    font-family: 'Encode Sans', sans-serif;
                 }
                 margin-bottom: 2px;
             }

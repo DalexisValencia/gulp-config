@@ -47,6 +47,7 @@ $(document).ready(function() {
         }]
     });
     //prueba:
+    
     $('#el-custom--flavors-page__sliders').slick({
         dots: true,
         appendDots: $('.el-custom--flavors-slider--navigation'),

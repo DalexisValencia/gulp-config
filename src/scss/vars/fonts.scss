@@ -4,3 +4,8 @@ $secondary-font: '';
 $heading-size: 32px;
 $subheading-size: $heading-size - 4px;
 $pharagraph-size: ($heading-size / 2) - 2;
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../assets/fonts/Poppins-Bold.otf');
+}

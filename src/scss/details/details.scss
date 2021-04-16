@@ -77,22 +77,23 @@ $zerozero-bg-color: #848484;
                         h1,
                         p {
                             color: $fifth-brand-color;
-                            font-family: 'Poppins', sans-serif;
                         }
                         h1 {
                             font-weight: bold;
                             font-size: 4vw;
                             font-style: italic;
+                            font-family: 'Poppins-Bold';
                         }
                         p {
                             margin-top: 20px;
                             font-size: 2vw;
+                            font-family: 'Poppins', sans-serif;
                         }
                         button {
                             margin-top: 20px;
                             padding: 12px 8px;
                             background-color: $secondary-brand-color;
-                            font-size: 1.8vw;
+                            font-size: 2vw;
                             font-style: italic;
                             i {
                                 margin-left: 5px;
@@ -111,14 +112,14 @@ $zerozero-bg-color: #848484;
                     h1,
                     p {
                         color: $fifth-brand-color;
-                        font-family: 'Poppins', sans-serif;
                     }
                     h1 {
-                        font-weight: bold;
+                        font-family: 'Poppins-Bold';
                         font-size: 4vw;
                         font-style: italic;
                     }
                     p {
+                        font-family: 'Poppins', sans-serif;
                         margin-top: 20px;
                         font-size: 2vw;
                     }

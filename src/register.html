@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300,1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendor/nice-select.css">
 </head>
 
@@ -42,8 +43,8 @@
         </header>
         <section class="el-custom--register-page__main">
             <header>
-                <h3> REGÍSTRATE Y SIGUE DESCUBRIENDO </h3>
-                <h1>NUESTRAS PRÓXIMAS NOVEDADES</h1>
+                <h3> REGÍSTRATE Y SIGUE DESCUBRIENDO <span class="d-none">NUESTRAS</span></h3>
+                <h1><span class="hide-tablet-down">NUESTRAS</span>  PRÓXIMAS NOVEDADES</h1>
                 <p>Ingresa tus datos para seguir manteniendo esa sed de siempre con las próximas novedades que tendremos para ti.</p>
             </header>
             <article class="el-custom--register-page__form">
@@ -51,22 +52,22 @@
                     <div class="block-form-group">
                         <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name form-no-label form-group">
                             <label for="name">Nombre</label>
-                            <input placeholder="" autocomplete="off" type="text" id="edit-name" name="name" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                            <input placeholder="" autocomplete="off" type="text" id="register-name" name="name" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
                         </fieldset>
 
                         <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-lastname form-item-lastname form-no-label form-group">
                             <label for="lastname">Apellido</label>
-                            <input placeholder="" autocomplete="off" type="text" name="lastname" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                            <input placeholder="" autocomplete="off" type="text" id="register-lastname" name="lastname" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
                         </fieldset>
                     </div>
 
                     <div class="block-form-group">
                         <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-document form-item-document form-no-label form-group">
                             <label for="document">DNI / CARNET DE EXTRANJERÍA</label>
-                            <input placeholder="" autocomplete="off" type="number" name="document" value="" step="1" class="form-number required form-control el-custom--input" required="required" aria-required="true">
+                            <input placeholder="" autocomplete="off" type="number" id="register-document" name="document" value="" step="1" class="form-number required form-control el-custom--input" required="required">
                         </fieldset>
                         <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-gender form-item-gender form-no-label form-group">
-                            <label for="document">Género</label>
+                            <label for="gender">Género</label>
                             <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
                                 <option value="" selected="selected">Género</option>
                                 <option value="F">Femenino</option>
@@ -78,11 +79,11 @@
                     <div class="block-form-group">
                         <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-birthday form-item-birthday form-group">
                             <label for="birthday">Fecha de nacimiento</label>
-                            <input placeholder="DÍA/MES/AÑO" autocomplete="off" type="text" name="birthday" value="" size="60" maxlength="10" class="required form-control el-custom--input" required="required">
+                            <input placeholder="DÍA/MES/AÑO" autocomplete="off" type="text" id="register-birthday" name="birthday" value="" size="60" maxlength="10" class="required form-control el-custom--input" required="required">
                         </fieldset>
                         <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-city form-item-city form-no-label form-group">
                             <label for="city">Ciudad</label>
-                            <select autocomplete="off" name="city" class="form-select required form-control" required="required" aria-required="true">
+                            <select autocomplete="off" name="city" id="register-city" class="form-select required form-control" required="required">
                                 <option value="" selected="selected">Ciudad</option>
                                 <option value="1838">Amazonas</option>
                                 <option value="1839">Áncash</option>
@@ -92,16 +93,14 @@
 
                     <div class="block-form-group">
                         <fieldset class="js-form-item js-form-type-email form-type-email js-form-item-email form-item-email form-no-label form-group">
-                            <label for="edit-birthday">Correo electrónico</label>
+                            <label for="email">Correo electrónico</label>
                             <label class="error">*correo electronico invalido</label>
-                            <input placeholder="CORREO " td-type="email " autocomplete="off " data-drupal-selector="edit-email " type="email " id="edit-email " name="email " value=" " size="60 " maxlength="50 " class="form-email required form-control
-                                el-custom--input " required="required " aria-required="true ">
+                            <input placeholder="" autocomplete="off" type="email" id="register-email" name="email" value=" " size="60" maxlength="50" class="form-email required form-control el-custom--input error" required="required">
                         </fieldset>
 
-                        <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-phone form-item-phone form-no-label form-group ">
-                            <label for="edit-birthday ">Teléfono</label>
-                            <input placeholder="CELULAR " min="1 " step="1 " autocomplete="off " data-drupal-selector="edit-phone " type="number " id="edit-phone " name="phone " value=" " class="form-number required form-control el-custom--input
-                                " required="required " aria-required="true ">
+                        <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-phone form-item-phone form-no-label form-group">
+                            <label for="phone">Teléfono</label>
+                            <input placeholder="CELULAR" min="1" step="1" autocomplete="off" type="number" id="register-phone" name="phone" value=" " class="form-number required form-control el-custom--input" required="required">
                         </fieldset>
                     </div>
                     <div class="el-custom--block-terms">

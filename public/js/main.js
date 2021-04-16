@@ -12,9 +12,9 @@ $(document).ready(function() {
         }
     })
 })
-// $(document).ready(function() {
-//     $('select').niceSelect();
-// });
+$(document).ready(function() {
+    $('select').niceSelect();
+});
 $(document).ready(function() {
     $('.el-custom--banners-slides').slick({
         dots: true,

@@ -20,13 +20,14 @@
         h5, h3, p{
             color: $fifth-brand-color;
             font-family: Poppins,sans-serif;
+            font-style: italic;
         }
         p {
             font-size: 1.8vw;
         }
         h3 {
             font-size: 4vw;
-            font-weight: bold;
+            font-family: 'Poppins-Bold';
         }
         h5{
             font-size: 2vw;

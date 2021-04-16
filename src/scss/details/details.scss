@@ -386,10 +386,11 @@ $zerozero-bg-color: #848484;
                         .description {
                             text-align: center;
                             h1 {
-                                font-size: 5vw;
+                                font-size: 6vw;
                             }
                             p {
-                                font-size: 3vw;
+                                font-size: 3.5vw;
+                                line-height: 1.3;
                             }
                         }
                     }
@@ -401,12 +402,13 @@ $zerozero-bg-color: #848484;
                             text-align: center;
                         }
                         .slider-body--playlist__description {
-                            margin-top: 20px;
+                            margin-top: 40px;
                             h1 {
-                                font-size: 5vw;
+                                font-size: 6vw;
                             }
                             p {
-                                font-size: 3vw;
+                                font-size: 3.5vw;
+                                line-height: 1.5;
                             }
                             button {
                                 font-size: 3vw;

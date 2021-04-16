@@ -42,7 +42,8 @@ header.el-custom--header {
         &:not(.img) {
             padding: 5px 20px;
         }
-        &.img {
+        a.img {
+            display: block;
             width: 141px;
             height: 50px;
             background-image: url('../assets/bacusya.png');

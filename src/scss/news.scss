@@ -42,11 +42,14 @@
     h1 {
         font-weight: bold;
         font-size: 3vw;
+        font-family: 'Poppins-Bold';
+        font-style: italic
     }
     p {
         margin: 10px 0px;
         font-size: 1.3vw;
         padding: 0px 25px;
+        font-style: italic;
     }
 }
 
@@ -55,7 +58,7 @@
         width: 80%;
         header {
             h1 {
-                font-size: 4vw;
+                font-size: 3.9vw;
             }
             p {
                 font-size: 1.8vw;

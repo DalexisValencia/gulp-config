@@ -66,7 +66,7 @@
                 list-style: none;
                 a {
                     color: black;
-                    font-size: 0.7rem;
+                    font-size:1rem;
                     text-transform: uppercase;
                     text-decoration: none;
                     font-family: Poppins, sans-serif;
@@ -79,7 +79,7 @@
         width: 100%;
         padding: 80px 10px 70px;
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 1.05rem;
         background-color: $fourtiary-brand-color;
         font-family: Poppins,sans-serif;
     }
@@ -93,7 +93,20 @@ figure.el-custom--logo {
     }
 }
 
-//Media queries
+@include for-tablet-landscape-only('.el-custom--footer'){
+    .el-custom--footer-nav{
+        ul {
+            li {
+                a{
+                    font-size: 1.1vw;
+                }
+            }
+        }
+    }
+    .el-custom--footer-legal {
+        font-size: 1.1rem;
+    }
+}
 @include for-tablet-landscape-down('.el-custom--footer') {
     padding: 35px $padding-horizontal / 2 0px;
     .el-custom--footer-right-section {

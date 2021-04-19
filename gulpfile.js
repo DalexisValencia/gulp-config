@@ -34,7 +34,7 @@ exports.clear = function() {
     });
 }
 function clearAssets() {
-    return del(['src/assets/**/*.*', 'public/assets/*.*']);
+    return del(['public/assets/**/*.*', 'public/assets/*.*']);
 }
 function moveFiles(){
     return src('src/assets/**/*.*', 'src/assets/*.*')

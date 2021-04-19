@@ -22,9 +22,20 @@ function run() {
 exports.clear = function() {
     return del([
         'public/**',
-    ]);
+    ]).then(()=>{
+        console.info('Despues de limpiar podemos ejecutar el resto');
+        moveFiles();
+        compileNormalize();
+        compileScss();
+        compileHtml();
+        compileJS();
+        watcher();
+        run();
+    });
 }
-
+function clearAssets() {
+    return del(['src/assets/**/*.*', 'public/assets/*.*']);
+}
 function moveFiles(){
     return src('src/assets/**/*.*', 'src/assets/*.*')
     .pipe(dest('public/assets'));
@@ -66,6 +77,7 @@ function compileJS() {
     .pipe(connect.reload());
 }
 function watcher() {
+    watch(['src/assets/**/*.*', 'src/assets/*.*'], {ignoreInitial: true}, series(clearAssets, moveFiles));
     watch(['src/scss/*.scss', 'src/scss/**/*.scss'], {ignoreInitial: true}, series(clearCss, compileScss));
     watch('src/js/*.js', {ignoreInitial: true}, series(clearJS, compileJS));
     watch('src/*.html', {ignoreInitial: true}, compileHtml);
@@ -74,11 +86,4 @@ function watcher() {
 
 exports.default = function(){
     exports.clear();
-    run();
-    compileNormalize();
-    compileScss();
-    compileHtml();
-    compileJS();
-    watcher();
-    moveFiles();
 }

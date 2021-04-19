@@ -22,11 +22,22 @@ function run() {
 exports.clear = function() {
     return del([
         'public/**',
-    ]);
+    ]).then(()=>{
+        console.info('Despues de limpiar podemos ejecutar el resto');
+        moveFiles();
+        compileNormalize();
+        compileScss();
+        compileHtml();
+        compileJS();
+        watcher();
+        run();
+    });
 }
-
+function clearAssets() {
+    return del(['public/assets/**/*.*', 'public/assets/*.*']);
+}
 function moveFiles(){
-    return src('src/assets/**/*.*')
+    return src('src/assets/**/*.*', 'src/assets/*.*')
     .pipe(dest('public/assets'));
 }
 function compileHtml(){
@@ -37,7 +48,7 @@ function compileHtml(){
 
 /* :::: START WORK WITH SCSS :::: */
 function clearCss() {
-    return del(['public/css/']);
+    return del(['public/css/main.css']);
 }
 function compileNormalize(){
     return src('src/scss/normalize.scss')
@@ -56,7 +67,7 @@ function compileScss() {
 /* :::: END WORK WITH SCSS :::: */
 
 function clearJS() {
-    return del(['public/css/']);
+    return del(['public/js/main.js']);
 }
 function compileJS() {
     return src('src/js/*.js')
@@ -66,6 +77,7 @@ function compileJS() {
     .pipe(connect.reload());
 }
 function watcher() {
+    watch(['src/assets/**/*.*', 'src/assets/*.*'], {ignoreInitial: true}, series(clearAssets, moveFiles));
     watch(['src/scss/*.scss', 'src/scss/**/*.scss'], {ignoreInitial: true}, series(clearCss, compileScss));
     watch('src/js/*.js', {ignoreInitial: true}, series(clearJS, compileJS));
     watch('src/*.html', {ignoreInitial: true}, compileHtml);
@@ -74,11 +86,4 @@ function watcher() {
 
 exports.default = function(){
     exports.clear();
-    run();
-    compileNormalize();
-    compileScss();
-    compileHtml();
-    compileJS();
-    watcher();
-    moveFiles();
 }

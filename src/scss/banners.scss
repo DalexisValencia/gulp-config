@@ -9,19 +9,76 @@
     img {
         width: 100%;
     }
+    a.el-custom--banners-anchor{
+        display: block;
+        width: 100%;
+        position: relative;
+        .el-custom--banners-content{
+            // background-color: rgba(0,0,0,0.6);
+            position: absolute;
+            z-index: 2;
+            top: 18%;
+            right: 10%;
+            width: 40%;
+            text-align: center;
+            &:nth-child(1){
+                // border: 2px solid black;
+                // background-color: rgba(240,110,20,0.7);
+                right: 5%;
+            }
+            h1, p, button{
+                text-transform: uppercase;
+            }
+            h1{
+                font-family: 'Poppins-Bold';
+                color: $fourtiary-brand-color;
+                font-style: italic;
+                font-size: 4.2vw;
+                line-height: 1.15;
+                margin-bottom: 10px;
+                &.black{
+                    padding-top: 10%;
+                    color: $fifth-brand-color;
+                    line-height: 0.98;
+                    span{
+                        display: block;
+                        font-size: 4.6vw;
+                    }
+                    margin-bottom: 20px;
+                }
+            }
+            p{
+                font-family: Poppins,sans-serif;
+                color: $fourtiary-brand-color;
+                font-style: italic;
+                font-size: 2.2vw;
+                &.black{
+                    color: $fifth-brand-color;
+                    line-height: 1.1;
+                    padding: 0px 2%;
+                    text-transform: inherit !important;
+                }
+            }
+            button{
+                &:not(.orange){
+                    background-color: $secondary-brand-color;
+                    color: $fifth-brand-color;
+                }
+                &.orange{
+                    background-color: $primary-brand-color;
+                    color: $fourtiary-brand-color;
+                }
+                font-family: Poppins,sans-serif;
+                font-style: italic;
+                padding: 10px 20px;
+                font-size: 2.4vw;
+                font-weight: normal;
+                margin-top: 10%;
+            }
+        }
+    }
 }
 
-// .guarana-banner {
-//     position: relative;
-//     z-index: 1;
-//     width: 100%;
-//     height: 480px;
-//     background-image: url('../assets/textura.png');
-//     top: -120px;
-//     background-repeat: no-repeat;
-//     background-position-x: center;
-//     background-size: cover;
-// }
 
 .el-custom--banners-dots {
     position: absolute;
@@ -58,6 +115,18 @@
             &:not(.slick-active) {
                 button[role="tab"] {
                     background-color: $fourtiary-brand-color;
+                }
+            }
+        }
+    }
+}
+
+@include for-big-desktop-up('.el-custom--banners'){
+    .banner {
+        a.el-custom--banners-anchor{
+            .el-custom--banners-content{
+                button{
+                    font-size: 30px;
                 }
             }
         }
@@ -116,6 +185,55 @@
 @include for-phone-only('.el-custom--banners') {
     .el-custom--banners-dots {
         bottom: 1%;
+    }
+    .banner {
+        a.el-custom--banners-anchor{
+            .el-custom--banners-content{
+                width: 60%;
+                &:nth-child(1){
+                    width: 37%;
+                    h1{
+                        margin-bottom: 0px;
+                        text-align: left;
+                        span:nth-child(1){
+                            display: block;
+                            padding-left: 10%;
+                        }
+                        span:nth-child(2){
+                            display: block;
+                            padding-left: 20%;
+                        }
+                    }
+                }
+                &:not(:nth-child(1)){
+                    width: 50%;
+                    padding-top: 9%;
+                    h1{
+                        font-size: 5.2vw;
+                        text-align: left;
+                        margin-bottom: 0px;
+                        span{
+                            display: block;
+                            &:nth-child(1){
+                                padding-left: 10%;
+                            }
+                            &:nth-child(2){
+                                padding-left: 20%;
+                            }
+                        }
+                    }
+                }
+                p{
+                    font-size: 3vw;
+                    display: none;
+                }
+                button{
+                    padding: 10px;
+                    font-size: 2.4vw;
+                    margin-top: 10px;
+                }
+            }
+        }
     }
 }
 

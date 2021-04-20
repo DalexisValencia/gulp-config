@@ -20,7 +20,7 @@ $(document).ready(function() {
         dots: true,
         appendDots: $('.el-custom--banners-dots'),
         arrows: false,
-        autoplay: true,
+        autoplay: false,
         responsive: [{
             breakpoint: 900,
             settings: {

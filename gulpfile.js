@@ -23,7 +23,6 @@ exports.clear = function() {
     return del([
         'public/**',
     ]).then(()=>{
-        console.info('Despues de limpiar podemos ejecutar el resto');
         moveFiles();
         compileNormalize();
         compileScss();

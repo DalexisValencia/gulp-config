@@ -79,9 +79,13 @@
         width: 100%;
         padding: 80px 10px 70px;
         text-align: center;
-        font-size: 1.05rem;
         background-color: $fourtiary-brand-color;
-        font-family: Poppins,sans-serif;
+        * {
+            color: $fifth-brand-color;
+            font-size: 1.05rem;
+            font-family: Poppins,sans-serif;
+            text-decoration: none !important;
+        }
     }
 }
 
@@ -165,7 +169,7 @@ figure.el-custom--logo {
             li {
                 margin-bottom: 2.4%;
                 a {
-                    font-size: 2vw;
+                    font-size: 2.2vw;
                     display: inherit;
                 }
             }

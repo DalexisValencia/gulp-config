@@ -1,5 +1,20 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
+// Ajustes drupal
+.guarana-page{
+    #block-mainpagecontent{
+        margin-top: -4%;
+        .el-custom--main.el-custom-register-page{
+            margin-bottom: 5%;
+            background-color: $secondary-brand-color;
+            article.el-custom--register-page__form .el-custom-brand-register-form .block-form-group .js-form-item{
+                &::before{
+                    content: inherit !important;
+                }
+            }
+        }
+    }
+}
 .apply-to-form-inputs {
     font-size: 15px;
     font-family: Poppins, sans-serif;
@@ -43,9 +58,38 @@
         }
     }
 }
-
+@mixin nice-select-for-drupal {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #fff !important;
+    border-radius: 5px;
+    border: solid 1px #e8e8e8;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    height: 42px;
+    line-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    white-space: nowrap;
+    width: auto;
+}
 @mixin form-select {
     .nice-select {
+        @include nice-select-for-drupal;
         width: 100%;
         border-radius: 0px;
         border: 2px solid #C5C5C5;
@@ -91,6 +135,7 @@
         @include form-select();
         input:not(.form-checkbox) {
             border: 2px solid #C5C5C5;
+            background-color: $fourtiary-brand-color !important;
             @extend .apply-to-form-inputs;
             &::placeholder {
                 color: #9A9A9A;
@@ -99,7 +144,7 @@
                 font-family: Poppins, sans-serif;
             }
             &.error{
-                border-color: $tertiary-brand-color;
+                border-color: $tertiary-brand-color !important;
             }
         }
     }
@@ -151,6 +196,16 @@
         @include form-actions();
     }
 }
+@include for-tablet-landscape-down('.guarana-page') {
+    #block-mainpagecontent{
+        margin-top: -6%;
+        .el-custom--main.el-custom-register-page{
+            padding-top: 5%;
+        }
+    }
+    background-image: url(../assets/fondo-registro-mobile.png);
+    background-position-y: 30%;
+}
 
 @include for-tablet-landscape-down('.el-custom--register-page__main') {
     padding: 5% 0 21%;
@@ -178,6 +233,9 @@
                 .js-form-item {
                     width: 100%;
                     &.js-form-type-select {
+                        &::before{
+                            content: inherit !important;
+                        }
                         label {
                             margin-bottom: 15px;
                         }
@@ -197,7 +255,18 @@
 @include for-phone-only('.el-custom-register-page') {
     background-image: url('../assets/fondo-registro-mobile.png');
     background-position-y: -42px;
-    background-color: $secondary-brand-color;
+    background-color: $secondary-brand-color !important;
+}
+//Ajustes drupal
+@include for-phone-only('.guarana-page') {
+    #block-mainpagecontent{
+        margin-top: -10%;
+        .el-custom--main.el-custom-register-page{
+            background-image: url(../assets/fondo-registro-mobile.png);
+            background-position-y: 30%;
+            padding-top: 7%;
+        }
+    } 
 }
 
 @include for-phone-only('.el-custom--register-page__main') {

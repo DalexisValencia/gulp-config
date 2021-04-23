@@ -1,48 +1,56 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 @import './logo.scss';
-.el-custom--mobile-menu {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: $primary-brand-color;
-    z-index: 5;
-    text-align: center;
-    padding: $padding-horizontal / 2 10px;
-    display: none;
-    .close-mobile-menu {
-        width: 50px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $fourtiary-brand-color;
-        font-family: 'Arial';
-        font-size: 60px;
-        position: absolute;
-        right: 20px;
-    }
-    ul {
+@mixin mobile-menu {
+        position: fixed;
+        margin: 0px;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: $primary-brand-color;
+        z-index: 5;
+        text-align: center;
+        padding: $padding-horizontal / 2 10px;
+        display: none;
+        left: 0px;
+        flex-wrap: wrap !important;
+        .close-mobile-menu {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $fourtiary-brand-color;
+            font-family: 'Arial';
+            font-size: 60px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
         width: 100%;
         margin: 0px;
         padding: 0px;
         list-style: none;
         li {
+            width: 100%;
             padding: 20px 0px;
             a {
                 font-size: 7vw;
                 color: $fourtiary-brand-color;
                 font-family: 'Poppins', sans-serif;
-                text-decoration: none
+                text-decoration: none;
+               
+            }
+            &.active a{
+                color: $fourtiary-brand-color !important; 
             }
         }
-    }
-    @include header-logo();
-    .el-custom--main-logo {
-        display: inline-block;
-        margin-bottom: $padding-horizontal / 2;
-    }
+        @include header-logo();
+        .el-custom--main-logo {
+            display: inline-block;
+            margin-bottom: $padding-horizontal / 2;
+        }
 }
 
 @include for-tablet-landscape-down('.el-custom--mobile-menu') {

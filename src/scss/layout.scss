@@ -1,6 +1,7 @@
 @import './vars/colors.scss';
 .el-custom--main{
-    &:not(.el-custom-404-page){
+    &:not(.el-custom-404-page),
+    &:not(.el-custom-news-page){
         background-color: $fourtiary-brand-color;
     }
     width: 100%;

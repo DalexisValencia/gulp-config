@@ -37,7 +37,7 @@
                     color: $fifth-brand-color;
                     a {
                         margin: 0px 4px;
-                        text-decoration: none;
+                        text-decoration: underline !important;
                         color: $fifth-brand-color;
                     }
                 }
@@ -48,7 +48,8 @@
 
 @mixin form-actions {
     .form-actions {
-        button.el-custom--button {
+        button.el-custom--button,
+        input.el-custom--button {
             background-color: $tertiary-brand-color;
             font-family: Poppins, sans-serif;
             font-size: 20px;
@@ -103,6 +104,8 @@
         ul {
             width: 100%;
             border-radius: 0px;
+            max-height: 200px;
+            overflow: scroll;
         }
     }
 }
@@ -114,6 +117,17 @@
         display: flex;
         flex-wrap: wrap;
         position: relative;
+        div.js-form-item{
+            width: 100%;
+        }
+        &.form-item-birthday{
+            // width: 100%;
+            justify-content: space-between;
+            display: flex;
+            div.js-form-item{
+                width: 30% !important;
+            }
+        }
         label {
             &:not(.error) {
                 font-style: italic;
@@ -123,7 +137,7 @@
             &.error {
                 color: $tertiary-brand-color;
                 position: absolute;
-                bottom: 0px;
+                bottom: -6px;
                 font-size: 12px;
             }
             font-family: Poppins,
@@ -134,9 +148,15 @@
         }
         @include form-select();
         input:not(.form-checkbox) {
+            height: 42px;
             border: 2px solid #C5C5C5;
             background-color: $fourtiary-brand-color !important;
             @extend .apply-to-form-inputs;
+            color: $fifth-brand-color;
+            &:focus,
+            &:active{
+                color: $fifth-brand-color !important;
+            }
             &::placeholder {
                 color: #9A9A9A;
                 font-size: 13px;
@@ -145,6 +165,11 @@
             }
             &.error{
                 border-color: $tertiary-brand-color !important;
+            }
+            &[type="number"]{
+                -webkit-appearance: none;
+                margin: 0;
+                -moz-appearance: textfield;
             }
         }
     }
@@ -244,11 +269,41 @@
             }
             .form-actions {
                 width: 100%;
-                button.el-custom--button {
+                button.el-custom--button,
+                input.el-custom--button {
                     width: 100%;
                 }
             }
         }
+    }
+}
+.js-form-item.js-form-type-select.form-type-select {
+    align-items: flex-start;
+    select {
+        border: 2px solid #c5c5c5;
+        background-color: $fourtiary-brand-color;
+        background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E) !important;
+        background-repeat: no-repeat, repeat !important;
+        background-position: right .7em top 50%, 0 0 !important;
+        background-size: .65em auto, 100% !important;
+        height: 44px;
+        width: 100%;
+        border-radius: 0px;
+        padding-left: 10px;
+        font-family: Poppins, sans-serif;
+        -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            &:hover,
+            &:focus,
+            &:focus-visible,
+            &:active {
+                outline: 0;
+                outline-color: transparent !important;
+            }
+    }
+    label{
+        height: 17px;
     }
 }
 
@@ -295,7 +350,8 @@
             }
         }
         .form-actions {
-            button.el-custom--button {
+            button.el-custom--button,
+            input.el-custom--button {
                 font-size: 15px;
                 padding: 10px 30px;
             }

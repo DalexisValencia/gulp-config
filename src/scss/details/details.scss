@@ -45,7 +45,7 @@ $zerozero-bg-color: #848484;
 @mixin slider-page () {
     #el-custom--flavors-page__sliders {
         background-position-y: -200px;
-        background-size: 100%;
+        background-size: 100% 112%;
         background-repeat: no-repeat;
         margin-top: -5%;
         z-index: 2;
@@ -89,18 +89,24 @@ $zerozero-bg-color: #848484;
                             font-size: 2vw;
                             font-family: 'Poppins', sans-serif;
                         }
-                        button {
+                        button,
+                        a {
                             margin-top: 20px;
                             padding: 12px 8px;
                             background-color: $secondary-brand-color;
                             font-size: 2vw;
                             font-style: italic;
+                            font-family: 'Poppins', sans-serif;
                             i {
                                 margin-left: 5px;
                             }
                         }
                     }
                     div.slider-body--playlist__reproductor {
+                        iframe{
+                            width: 100% !important;
+                        }
+                        overflow: hidden;
                         width: 50%;
                         >img {
                             width: 100%;

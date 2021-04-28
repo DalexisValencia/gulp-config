@@ -3,6 +3,7 @@
 @mixin flavors-card {
     section.el-custom--flavors-card{
         display: flex;
+        pointer-events: auto;
         a{
             text-decoration: none !important;
             &:active,
@@ -31,8 +32,11 @@
                 display: flex;
                 justify-content: center;
                 img.img-flavor{
+                    // width: 75%; //quitar este en safari para probar
                     width: 75%;
+                    height: 100%;
                     margin-bottom: 20%;
+                    object-fit: cover;
                 }
             }
             .flavors--card__description{
@@ -49,7 +53,7 @@
                 .el-custom--button{
                     text-transform: uppercase;
                     padding: 10px 20px;
-                    font-size: 1.8vw;
+                    font-size: 1.6vw;
                     font-family: Poppins,sans-serif;
                     font-weight: 700;
                     color: $fifth-brand-color;

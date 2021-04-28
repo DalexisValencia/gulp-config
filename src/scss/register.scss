@@ -36,7 +36,8 @@
             font-family: Poppins,sans-serif;
         }
 
-        button.el-custom--button{
+        button.el-custom--button,
+        a.el-custom--button{
             z-index: 3;
             padding: 10px 40px;
             margin-top: 30px;

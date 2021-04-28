@@ -2,6 +2,9 @@
 @import './common/queries.scss';
 @import './logo.scss';
 @import './mobile-menu.scss';
+.visually-hidden#block-menuuser-menu{
+    display: none;
+}
 header.el-custom--header {
     padding: 36px $padding-horizontal 60px;
     position: relative;
@@ -39,6 +42,8 @@ header.el-custom--header {
                 font-family: 'Poppins', sans-serif;
                 text-decoration: none;
                 color: $fifth-brand-color;
+                font-weight: 700;
+                font-size: 18px;
             }
             &.active {
                 *,
@@ -62,6 +67,15 @@ header.el-custom--header {
                 // background-position: center;
                 // background-repeat: no-repeat;
                 // background-size: contain;
+            }
+            button.el-custom--button{
+                background-color: $tertiary-brand-color;
+                font-family: 'Poppins', sans-serif;
+                padding: 10px 15px;
+                span{
+                    color: $fourtiary-brand-color;
+                    font-size: 14px;
+                }
             }
         }
     }

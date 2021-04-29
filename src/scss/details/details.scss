@@ -121,13 +121,13 @@ $zerozero-bg-color: #848484;
                     }
                     h1 {
                         font-family: 'Poppins-Bold';
-                        font-size: 4vw;
+                        font-size: 52px;
                         font-style: italic;
                     }
                     p {
                         font-family: 'Poppins', sans-serif;
                         margin-top: 20px;
-                        font-size: 2vw;
+                        font-size: 25px;
                     }
                 }
                 .wrapper-image {
@@ -431,6 +431,9 @@ $zerozero-bg-color: #848484;
     header.el-custom--flavors-page__slider-navigation {
         top: -20%;
     }
+    .el-custom--flavors-slider--navigation{
+        height: 25%;
+    }
     #el-custom--flavors-page__sliders {
         background-image: url('../assets/details/fondo-sabores-mobile.png');
         background-position-y: 40px !important;
@@ -448,6 +451,7 @@ $zerozero-bg-color: #848484;
 @include for-phone-small ('.el-custom--flavors-page__main') {
     .el-custom--flavors-slider--navigation {
         top: 10%;
+        height: 22%;
         button {
             &.slick-prev.slick-arrow,
             &.slick-next.slick-arrow {

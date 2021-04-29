@@ -24,8 +24,10 @@ $(document).ready(function() {
             settings: {
                 slidesToShow: 2.35,
                 slidesPerRow: 2.35,
+                adaptiveHeight: false,
                 swipe: true,
                 infinite: false,
+                rows: 1,
             }
         }]
     });

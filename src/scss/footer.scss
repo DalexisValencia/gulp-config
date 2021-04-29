@@ -66,7 +66,8 @@
                 list-style: none;
                 a {
                     color: black;
-                    font-size:0.8rem;
+                    // font-size:0.8rem;
+                    font-size: 10px;
                     text-transform: uppercase;
                     text-decoration: none;
                     font-family: Poppins, sans-serif;
@@ -82,7 +83,8 @@
         background-color: $fourtiary-brand-color;
         * {
             color: $fifth-brand-color;
-            font-size: 1.05rem;
+            // font-size: 1.05rem;
+            font-size: 12.7px;
             font-family: Poppins,sans-serif;
             text-decoration: none !important;
         }
@@ -97,22 +99,22 @@ figure.el-custom--logo {
     }
 }
 
-@include for-tablet-landscape-only('.el-custom--footer'){
-    .el-custom--footer-nav{
-        ul {
-            li {
-                a{
-                    font-size: 1.1vw;
-                }
-            }
-        }
-    }
-    .el-custom--footer-legal {
-        font-size: 1.1rem;
-    }
-}
+// @include for-tablet-landscape-only('.el-custom--footer'){
+//     .el-custom--footer-nav{
+//         ul {
+//             li {
+//                 a{
+//                     font-size: 1.1vw;
+//                 }
+//             }
+//         }
+//     }
+//     .el-custom--footer-legal {
+//         font-size: 1.1rem;
+//     }
+// }
 @include for-tablet-landscape-down('.el-custom--footer') {
-    padding: 35px $padding-horizontal / 2 0px;
+    padding: 35px 27px 0px;
     .el-custom--footer-right-section {
         width: 30%;
         .el-custom--logo {
@@ -136,7 +138,8 @@ figure.el-custom--logo {
                 width: 100%;
                 a {
                     font-weight: 700 !important;
-                    font-size: 1.5vw;
+                    // font-size: 1.5vw;
+                    font-size: 9px;
                     font-family: 'Encode Sans', sans-serif;
                 }
                 margin-bottom: 2px;
@@ -151,10 +154,12 @@ figure.el-custom--logo {
 @include for-phone-only ('.el-custom--footer') {
     padding-top: 15px;
     .el-custom--footer-right-section {
-        width: 40%;
+        justify-content: space-around;
+        width: 110px;
         .el-custom--logo {
+            margin-top: -9px;
             img {
-                width: 60%;
+                width: 100%;
             }
         }
         .el-custom--footer-social {
@@ -164,15 +169,32 @@ figure.el-custom--logo {
         }
     }
     .el-custom--footer-nav {
-        width: 60%;
+        width:190px;
         ul {
             li {
                 margin-bottom: 2.4%;
-                a {
-                    font-size: 2.2vw;
-                    display: inherit;
-                }
             }
         }
+    }
+}
+
+@include for-phone-small('.el-custom--footer'){
+    &::before {
+        top: -36%;
+    }
+    padding-bottom: 60px !important;
+    .el-custom--footer-right-section {
+        width: 40%;
+        .el-custom--footer-social {
+            i {
+                font-size: 5vw;
+            }
+        }
+    }
+    .el-custom--footer-nav {
+        width:60%;
+    }
+    .el-custom--footer-legal{
+        display: none;
     }
 }

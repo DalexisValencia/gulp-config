@@ -155,14 +155,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            &:hover,
-            &:focus,
-            &:active {
-                outline: 0;
-                outline-color: transparent !important;
-            }
-            &.slick-prev {
-                background-image: url('../assets/banners/home/back.png');
+            background-image: url('../assets/banners/home/back.png');
+            &.slick-prev{
                 &::before {
                     font-size: 32px;
                     color: $primary-brand-color;
@@ -171,14 +165,47 @@
                 }
             }
             &.slick-next {
-                background-image: url('../assets/banners/home/next.png');
                 &::before {
-                    font-size: 25px;
-                    color: $fourtiary-brand-color;
+                    font-size: 32px;
+                    color: $primary-brand-color;
                     content: "\e901";
                     font-family: icon!important;
                 }
             }
+            // &::before {
+            //     font-size: 25px;
+            //     color: $fourtiary-brand-color;
+            //     content: "\e901";
+            //     font-family: icon!important;
+            // }
+            &:hover,
+            &:focus,
+            &:active {
+                outline: 0;
+                outline-color: transparent !important;
+                background-image: url('../assets/banners/home/next.png');
+                &::before {
+                    color: $fourtiary-brand-color !important;
+                }
+            }
+            // &.slick-prev {
+            //     background-image: url('../assets/banners/home/back.png');
+            //     &::before {
+            //         font-size: 32px;
+            //         color: $primary-brand-color;
+            //         content: "\e900";
+            //         font-family: icon!important;
+            //     }
+            // }
+            // &.slick-next {
+            //     background-image: url('../assets/banners/home/next.png');
+            //     &::before {
+            //         font-size: 25px;
+            //         color: $fourtiary-brand-color;
+            //         content: "\e901";
+            //         font-family: icon!important;
+            //     }
+            // }
         }
     }
 }

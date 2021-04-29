@@ -4,6 +4,11 @@
     section.el-custom--flavors-card{
         display: flex;
         pointer-events: auto;
+        .slick-list.draggable{
+            .slick-track{
+                height: 100%;
+            }
+        }
         a{
             text-decoration: none !important;
             &:active,
@@ -16,6 +21,7 @@
             }
         }
         .flavors--card{
+            height: 100%;
             max-width: 25%;
             display: flex;
             flex-wrap: wrap;
@@ -41,24 +47,29 @@
             }
             .flavors--card__description{
                 text-align: center;
+                width: 100%;
                 h3 {
                     margin-top: 10px;
                     margin-bottom: 20px;
                     font-family: Poppins,sans-serif;
                     color: $fourtiary-brand-color;
                     text-transform: uppercase;
-                    font-size: 2.5vw;
+                    font-size: 35px;
                     font-style: italic;
                 }
                 .el-custom--button{
                     text-transform: uppercase;
                     padding: 10px 20px;
-                    font-size: 1.6vw;
+                    font-size: 24px;
                     font-family: Poppins,sans-serif;
-                    font-weight: 700;
+                    // font-weight: 700;
                     color: $fifth-brand-color;
                     font-style: italic;
                     background-color: $secondary-brand-color;
+                    width: 90%;
+                    max-width: 351px;
+                    min-width: 211px;
+                    height: 41px;
                 }
             }
         }
@@ -77,3 +88,17 @@
         }
     }
 }
+
+// @media (min-width: 901px) and (max-width: 980px){
+//     .el-custom--banner-tagimage, .el-custom--banner-sku{
+//         article.el-custom--flavors-wrapper{
+//             section.el-custom--flavors-card{
+//                 .flavors--card__description{
+//                     .el-custom--button{
+//                         width: 100% !important;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

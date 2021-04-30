@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300,1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendor/nice-select.css">
 </head>
 
@@ -19,22 +19,27 @@
     <main class="el-custom--main">
         <header class="el-custom--header">
             <nav class="el-custom--flex justify-between">
-                <a class="el-custom--main-logo" href="index.html"></a>
+                <div class="el-custom--flex el-custom--up-menu">
+                    <a class="el-custom--main-logo" href="index.html"></a>
+                    <div class="burger-menu show-tablet-down">
+                        <i class="i-menu"></i>
+                    </div>
+                </div>
                 <ul class="el-custom--flex el-custom--main-menu">
                     <div class="close-mobile-menu">x</div>
                     <a class="el-custom--main-logo" href=""></a>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="details.html">Sabores</a></li>
-                    <li><a href="register.html">Registro</a></li>
-                    <li class="backusYabtn"><a class="img"></a></li>
+                    <li class="active show-tablet-down"><a href="index.html">HOME</a></li>
+                    <li><a href="details.html">CRISTAL</a></li>
+                    <li><a href="register.html">HISTORIA</a></li>
+                    <li><a href="register.html">BICOLOR</a></li>
+                    <div class="el-custom--buttons-transform">
+                        <a href="" class="el-custom--button backusYa">Basackys</a>
+                        <a href="" class="el-custom--button">Registro</a>
+                    </div>
                 </ul>
-                <div class="burger-menu show-tablet-down">
-                    <i class="i-menu"></i>
-                </div>
             </nav>
         </header>
         <section class="el-custom--banners">
-            <div class="spotify-banner-button"></div>
             <section class="el-custom--banners-slides">
                 <div class="banner">
                     <a href="" class="el-custom--banners-anchor">
@@ -62,7 +67,7 @@
             </section>
             <section class="el-custom--banners-dots"></section>
         </section>
-        <section class="el-custom--banner-tagimage">
+        <!-- <section class="el-custom--banner-tagimage">
             <img src="assets/fondo_sabores_&_guarana.png" style="width: 100%;" />
             <article class="el-custom--flavors-wrapper">
                 <header class="el-custom--flavors-header">
@@ -240,40 +245,58 @@
                     </a>
                 </section>
             </article>
-        </section>
-        <footer class="el-custom--footer yellow">
-            <section class="el-custom--footer-right-section">
-                <figure class="el-custom--logo">
+        </section> -->
+        <footer class="el-custom--footer">
+            <section class="el-custom--footer-above-section">
+                <div class="el-custom--logo">
+                    <ul class="dont-share">
+                        <li>
+                            <a href="">NO COMPARTA ESTE CONTENIDO CON MENORES DE EDAD</a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="desktop">
+                                    ADVERTENCIA: TOMAR BEBIDAS ALCOHÓLICAS EN EXCESO ES DAÑINO
+                                </span>
+                                <span class="mobile">
+                                    ADVERTENCIA: EL CONSUMO EXCESIVO DE ALCOHOL LIMITA SU CAPACIDAD DE CONDUCIR Y
+                                    OPERAR MAQUINARIAS, PUEDE CAUSAR DAÑOS A SU SALUD Y PERJUDICAR A SU FAMILIA.
+                                    MINISTERIO DE SALUD PÚBLICA DEL PERÚ.
+                                </span> 
+                            </a>
+                        </li>
+                    </ul>
                     <img src="assets/logo.png" alt="Logo Guarana">
-                </figure>
+                </div>
+                <nav class="el-custom--footer-nav">
+                    <ul>
+                        <li>
+                            <a href="">TERMINOS DE USO PERÚ</a>
+                        </li>
+                        <li>
+                            <a href="">HABLEMOS DE ALCOHOL</a>
+                        </li>
+                        <li>
+                            <a href="">POLÍTICA DE PROTECCIÓN DE DATOS PERÚ</a>
+                        </li>
+                        <li>
+                            <a href="">CONTÁCTENOS</a>
+                        </li>
+                        <li>
+                            <a href="">DERECHOS ARCO</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <div class="el-custom--footer-warning el-custom--flex justify-between">
+                <img src="assets/adult-legal.png" alt="Solo mayores de 18 años">
                 <div class="el-custom--footer-social">
                     <a href=""> <i class="i-facebook"></i> </a>
                     <a href=""> <i class="i-twitter"></i> </a>
                     <a href=""> <i class="i-instagram"></i> </a>
                     <a href=""> <i class="i-tiktok"></i> </a>
                 </div>
-            </section>
-            <nav class="el-custom--footer-nav">
-                <ul>
-                    <li>
-                        <a href="">TÉRMINOS Y CONDICIONES GENERALES</a>
-                    </li>
-                    <li>
-                        <a href="">CONTACTO</a>
-                    </li>
-                    <li>
-                        <a href="">POLÍTICA DE PROTECCIÓN DE DATOS PERSONALES</a>
-                    </li>
-                    <li>
-                        <a href="">SOLICITUD DE EJERCICIO DERECHOS ARCO</a>
-                    </li>
-                    <li class="show-tablet-down">
-                        <a href=""> ANHEUSER-BUSCH INBEV © 2021</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="el-custom--footer-legal">
-                <a class="hide-tablet-down">ANHEUSER-BUSCH INBEV © 2021</a>
             </div>
         </footer>
     </main>

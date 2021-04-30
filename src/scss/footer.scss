@@ -1,60 +1,47 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
+.dont-share{
+    position: absolute;
+    list-style: none;
+    bottom: 0px;
+    width: 270px;
+    height: 33px;
+    margin: 0px;
+    padding: 0px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    > li:first-child{
+        margin-bottom: 6px;
+    }
+    li{
+        text-align: center;
+        a{
+            color: $fourtiary-brand-color;
+            font-size: 8px;
+            display: block;
+            font-family: 'Roboto', sans-serif;
+            .desktop{
+                display: block;
+            }
+            .mobile{
+                display: none;
+            }
+        }
+    }
+}
 .el-custom--footer {
-    padding: 0px $padding-horizontal;
     position: relative;
     z-index: 3;
-    background-color: white;
-    margin-top: -13%;
+    background-color: $secondary-brand-color;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row-reverse;
-    &.yellow {
-        &::before {
-            background-image: url(../assets/footers/yellow-footer.png);
-        }
-    }
-    &.red {
-        &::before {
-            background-image: url(../assets/footers/red-footer.png);
-        }
-    }
-    &.orange {
-        &::before {
-            background-image: url(../assets/footers/orange-footer.png);
-        }
-    }
-    &::before {
-        content: "";
-        background-image: url(../assets/footers/footer.png);
-        background-position-x: center;
-        background-position-y: 14%;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        position: absolute;
+    .el-custom--footer-above-section{
         width: 100%;
-        height: 54%;
-        z-index: -1;
-        top: -45%;
-        pointer-events: none;
-    }
-    .el-custom--footer-right-section {
-        width: 100%;
-        padding-bottom: 35px;
-        .el-custom--footer-social {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            a {
-                text-decoration: none;
-            }
-            i {
-                font-size: 30px;
-                color: $primary-brand-color;
-                margin: 0px 3px;
-            }
-        }
+        height: 93px;
     }
     .el-custom--footer-nav {
         width: 100%;
@@ -71,131 +58,208 @@
                     font-size: 10px;
                     text-transform: uppercase;
                     text-decoration: none;
-                    font-family: Poppins, sans-serif;
+                    font-family: 'Roboto', sans-serif;
                     font-weight: 400;
                 }
             }
         }
     }
-    .el-custom--footer-legal {
+    .el-custom--footer-warning{
+        padding: 0px $padding-horizontal;
+        background-color: $primary-brand-color;
         width: 100%;
-        padding: 80px 10px 70px;
-        text-align: center;
-        background-color: $fourtiary-brand-color;
-        * {
-            color: $fifth-brand-color;
-            // font-size: 1.05rem;
-            font-size: 12.7px;
+        height: 42px;
+        &::before{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            content: "Anheuser-Busch InBev © 2021";
+            position: absolute;
+            color: #000;
+            font-size: 9.6px;
             font-family: Poppins,sans-serif;
-            text-decoration: none !important;
+            text-decoration: none!important;
+            margin-top: -75px;
         }
     }
 }
 
-figure.el-custom--logo {
+div.el-custom--logo {
     text-align: center;
-    padding-bottom: 30px;
+    padding-top: 12px;
     img {
-        width: 210px;
+        width: 25px;
+        height: 25px;
     }
 }
 
-// @include for-tablet-landscape-only('.el-custom--footer'){
-//     .el-custom--footer-nav{
+@include for-tablet-landscape-down('.el-custom--footer') {
+    .el-custom--logo{
+        display: flex;
+        padding: 30px 45px;
+        justify-content: space-between;
+        .dont-share{
+            position: unset;
+            width: 140px;
+            left: unset;
+            right: unset;
+            margin-left: unset;
+            margin-right: unset;
+            li:first-child{
+                border: 2px solid blue;
+                a{
+                    font-size: 10px;
+                }
+            }
+            li:last-child{
+                border: 2px solid blue;
+                a{
+                    font-size: 6px;
+                }
+            }
+            li{
+                height: auto;
+                text-align: left;
+                a{
+                    color: $primary-brand-color;
+                    .desktop{
+                        display: none;
+                    }
+                    .mobile{
+                        display: block;
+                    }
+                }
+            }
+        }
+        img{
+            width: 57px;
+            height: 57px; 
+        }
+    }
+    .el-custom--footer-above-section{
+        height: unset;
+        .el-custom--footer-nav{
+            background-color: $primary-brand-color;
+            padding-top: 15px;
+            ul{
+                flex-wrap: wrap;
+                li{
+                    width: 100%;
+                    text-align: center;
+                    height: 31px;
+                    a{
+                        font-size: 11px;
+                        color: $fourtiary-brand-color;
+                    }
+                }
+            }
+        }
+    }
+    .el-custom--footer-warning{
+        height: auto;
+        padding-bottom: 30px;
+        flex-wrap: wrap;
+        justify-content: center !important;
+        flex-direction: column-reverse;
+        &::before{
+            color: $fourtiary-brand-color;
+            margin-top: 84px;
+            font-size: 10.43px;
+        }
+        img{
+            margin: 10px 0px;
+        }
+        .el-custom--footer-social{
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+    }
+}
+// @include for-tablet-landscape-down('.el-custom--footer') {
+//     padding: 35px 27px 0px;
+//     .el-custom--footer-right-section {
+//         width: 30%;
+//         .el-custom--logo {
+//             margin-top: -18px;
+//             padding-bottom: 10px;
+//             img {
+//                 width: 100px;
+//             }
+//         }
+//         .el-custom--footer-social {
+//             i {
+//                 font-size: 3vw;
+//             }
+//         }
+//     }
+//     .el-custom--footer-nav {
+//         width: 70%;
 //         ul {
+//             flex-wrap: wrap;
 //             li {
-//                 a{
-//                     font-size: 1.1vw;
+//                 width: 100%;
+//                 a {
+//                     font-weight: 700 !important;
+//                     // font-size: 1.5vw;
+//                     font-size: 9px;
+//                     font-family: 'Encode Sans', sans-serif;
 //                 }
+//                 margin-bottom: 2px;
 //             }
 //         }
 //     }
 //     .el-custom--footer-legal {
-//         font-size: 1.1rem;
+//         padding: 15px 0;
 //     }
 // }
-@include for-tablet-landscape-down('.el-custom--footer') {
-    padding: 35px 27px 0px;
-    .el-custom--footer-right-section {
-        width: 30%;
-        .el-custom--logo {
-            margin-top: -18px;
-            padding-bottom: 10px;
-            img {
-                width: 100px;
-            }
-        }
-        .el-custom--footer-social {
-            i {
-                font-size: 3vw;
-            }
-        }
-    }
-    .el-custom--footer-nav {
-        width: 70%;
-        ul {
-            flex-wrap: wrap;
-            li {
-                width: 100%;
-                a {
-                    font-weight: 700 !important;
-                    // font-size: 1.5vw;
-                    font-size: 9px;
-                    font-family: 'Encode Sans', sans-serif;
-                }
-                margin-bottom: 2px;
-            }
-        }
-    }
-    .el-custom--footer-legal {
-        padding: 15px 0;
-    }
-}
 
-@include for-phone-only ('.el-custom--footer') {
-    padding-top: 15px;
-    .el-custom--footer-right-section {
-        justify-content: space-around;
-        width: 110px;
-        .el-custom--logo {
-            margin-top: -9px;
-            img {
-                width: 100%;
-            }
-        }
-        .el-custom--footer-social {
-            i {
-                font-size: 4vw;
-            }
-        }
-    }
-    .el-custom--footer-nav {
-        width:190px;
-        ul {
-            li {
-                margin-bottom: 2.4%;
-            }
-        }
-    }
-}
+// @include for-phone-only ('.el-custom--footer') {
+//     padding-top: 15px;
+//     .el-custom--footer-right-section {
+//         justify-content: space-around;
+//         width: 110px;
+//         .el-custom--logo {
+//             margin-top: -9px;
+//             img {
+//                 width: 100%;
+//             }
+//         }
+//         .el-custom--footer-social {
+//             i {
+//                 font-size: 4vw;
+//             }
+//         }
+//     }
+//     .el-custom--footer-nav {
+//         width:190px;
+//         ul {
+//             li {
+//                 margin-bottom: 2.4%;
+//             }
+//         }
+//     }
+// }
 
-@include for-phone-small('.el-custom--footer'){
-    &::before {
-        top: -36%;
-    }
-    padding-bottom: 60px !important;
-    .el-custom--footer-right-section {
-        width: 40%;
-        .el-custom--footer-social {
-            i {
-                font-size: 5vw;
-            }
-        }
-    }
-    .el-custom--footer-nav {
-        width:60%;
-    }
-    .el-custom--footer-legal{
-        display: none;
-    }
-}
+// @include for-phone-small('.el-custom--footer'){
+//     &::before {
+//         top: -36%;
+//     }
+//     padding-bottom: 60px !important;
+//     .el-custom--footer-right-section {
+//         width: 40%;
+//         .el-custom--footer-social {
+//             i {
+//                 font-size: 5vw;
+//             }
+//         }
+//     }
+//     .el-custom--footer-nav {
+//         width:60%;
+//     }
+//     .el-custom--footer-legal{
+//         display: none;
+//     }
+// }

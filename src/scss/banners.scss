@@ -97,7 +97,7 @@
 .el-custom--banners-dots {
     position: absolute;
     width: 100%;
-    bottom: 15%;
+    bottom: 16px;
     z-index: 2;
     ul.slick-dots {
         margin: 0px;
@@ -109,9 +109,9 @@
         li {
             button[role="tab"] {
                 border: 1px solid transparent;
-                border-radius: 50%;
-                width: 15px;
-                height: 15px;
+                // border-radius: 50%;
+                width: 32px;
+                height: 8px;
                 font-size: 1px;
                 margin: 0px 5px;
                 &:active,
@@ -123,12 +123,12 @@
             }
             &.slick-active {
                 button[role="tab"] {
-                    background-color: $secondary-brand-color;
+                    background-color: $sixth-brand-color;
                 }
             }
             &:not(.slick-active) {
                 button[role="tab"] {
-                    background-color: $fourtiary-brand-color;
+                    background-color: $eighth-brand-color;
                 }
             }
         }

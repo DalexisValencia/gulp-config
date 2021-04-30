@@ -1,0 +1,35 @@
+@import "vars/twicth-vars.scss";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/twich.eot?qgfu85');
+  src:  url('#{$icomoon-font-path}/twich.eot?qgfu85#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/twich.ttf?qgfu85') format('truetype'),
+    url('#{$icomoon-font-path}/twich.woff?qgfu85') format('woff'),
+    url('#{$icomoon-font-path}/twich.svg?qgfu85#twich') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="i-"], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-twitch-2178 {
+  &:before {
+    content: $i-twitch-2178; 
+  }
+}
+

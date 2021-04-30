@@ -36,7 +36,8 @@
         width: 100%;
         height: 54%;
         z-index: -1;
-        top: -45%
+        top: -45%;
+        pointer-events: none;
     }
     .el-custom--footer-right-section {
         width: 100%;

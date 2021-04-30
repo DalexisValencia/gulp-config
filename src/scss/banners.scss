@@ -4,6 +4,18 @@
     position: relative;
     margin-top: -7%;
 }
+.el-custom--banners{
+    position: relative;
+    .spotify-banner-button{
+        position: absolute;
+        width: 100px;
+        height: 20px;
+        background-color: $fifth-brand-color;
+        top: 12%;
+        z-index: 3;
+        right: 20px;
+    }
+}
 
 .banner {
     img {
@@ -66,6 +78,7 @@
                     color: $fifth-brand-color;
                 }
                 &.orange{
+                    // display: none;
                     background-color: $primary-brand-color;
                     color: $fourtiary-brand-color;
                 }

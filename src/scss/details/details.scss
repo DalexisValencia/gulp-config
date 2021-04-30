@@ -97,6 +97,7 @@ $zerozero-bg-color: #848484;
                             font-size: 2vw;
                             font-style: italic;
                             font-family: 'Poppins', sans-serif;
+                            color: $fifth-brand-color;
                             i {
                                 margin-left: 5px;
                             }
@@ -392,10 +393,10 @@ $zerozero-bg-color: #848484;
                         .description {
                             text-align: center;
                             h1 {
-                                font-size: 6vw;
+                                font-size: 25px;
                             }
                             p {
-                                font-size: 3.5vw;
+                                font-size: 15px;
                                 line-height: 1.3;
                             }
                         }
@@ -410,14 +411,14 @@ $zerozero-bg-color: #848484;
                         .slider-body--playlist__description {
                             margin-top: 40px;
                             h1 {
-                                font-size: 6vw;
+                                font-size: 25px;
                             }
                             p {
-                                font-size: 3.5vw;
+                                font-size: 14px;
                                 line-height: 1.5;
                             }
                             button {
-                                font-size: 3vw;
+                                font-size: 15px;
                             }
                         }
                     }

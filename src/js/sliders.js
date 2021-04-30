@@ -73,4 +73,15 @@ $(document).ready(function() {
         $("#el-custom--flavors-page__sliders").removeClass().addClass('slick-initialized slick-slider bg-' + nextSlide)
         $('.el-custom-flavors-page').removeClass().addClass('el-custom-flavors-page color-' + nextSlide);
     });
+
+    var pathname = window.location.pathname;
+
+    if(pathname.indexOf('sabores') != -1) {
+        var findIndex = pathname.split("/")[2];
+        console.error(findIndex, 'indes');
+        if(findIndex != null){
+            console.info('ahora vamos')
+            // $('#el-custom--flavors-page__sliders').slick('slickGoTo', 3);
+        }
+    }
 });

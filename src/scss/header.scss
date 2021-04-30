@@ -56,17 +56,17 @@ header.el-custom--header {
                 padding: 5px 20px;
             }
             a.img {
-                background-color: $tertiary-brand-color;
+                // background-color: $tertiary-brand-color;
                 display: block;
                 width: 141px;
                 height: 35px;
                 text-align: center;
                 line-height: 35px;
                 color: $fourtiary-brand-color;
-                // background-image: url('../assets/bacusya.png');
-                // background-position: center;
-                // background-repeat: no-repeat;
-                // background-size: contain;
+                background-image: url('../assets/bacusya.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
             }
             button.el-custom--button{
                 background-color: $tertiary-brand-color;

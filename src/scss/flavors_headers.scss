@@ -16,7 +16,7 @@
             font-family: 'Poppins-SemiBoldItalic';
             color: $fourtiary-brand-color;
         }
-        p{
+        p,h2{
             margin-top: 15px;
             padding: 0px 10%;
             font-size: 25px; 
@@ -48,7 +48,7 @@
         h3{
             font-size: 4.5vw !important;
         }
-        p{
+        p, h2{
             padding: 0 10% !important;
             font-size: 2vw !important;
             line-height: 1.4 !important;
@@ -106,7 +106,7 @@
     h3 {
         font-size: 25px !important;
     }
-    p{
+    p,h2{
         display: none;
     }
 }

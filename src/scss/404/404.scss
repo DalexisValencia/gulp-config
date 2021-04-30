@@ -9,6 +9,7 @@
     padding-bottom: 30%;
     background-image: url('../assets/404/rasgado-404.png');
     background-position: center;
+    background-color: $primary-brand-color;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -36,12 +37,13 @@
         h5{
             font-size: 1.6vw;
         }
-        button{
+        button,
+        a{
             background-color: $secondary-brand-color;
             padding: 10px 25px;
             margin-top: 2%;
             font-family: Poppins,sans-serif;
-            font-size: 1.4vw;
+            font-size: 30px;
             font-weight: bold;
             font-style: italic;
         }
@@ -71,7 +73,8 @@
             font-size: 2.6vw;
             padding: 0px 10%;
         }
-        button{
+        button,
+        a{
             font-size: 2.4vw;
         }
     }
@@ -106,15 +109,31 @@
         // border: 2px dashed black;
         top: 15%;
         h1{
-            font-size: 5.5vw;
+            font-size: 25px;
         }
         h5{
             margin-top: 2%;
-            font-size:3.5vw;
+            font-size:15px;
             padding: 0px 15%;
         }
-        button{
-            font-size: 3vw;
+        button,
+        a{
+            font-size: 15px;
+        }
+    }
+}
+
+@include for-phone-small('.el-custom--page404') {
+    header.el-custom--page404__header{
+        h1{
+            font-size: 5vw;
+        }
+        h5{
+            font-size:3vw;
+        }
+        button,
+        a{
+            font-size: 2vw;
         }
     }
 }

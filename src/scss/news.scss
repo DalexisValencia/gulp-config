@@ -5,6 +5,7 @@
 }
 
 .el-custom--news-page__main {
+    background-color: $primary-brand-color !important;
     padding: 15% 0px 40%;
     background-image: url('../assets/news/background.png');
     background-position: center;
@@ -18,8 +19,8 @@
 }
 
 .el-custom--news-stick-banner {
-    width: 60%;
-    height: 450px;
+    width: 70%;
+    height: 550px;
     background-image: url('../assets/news/sticky.png');
     background-size: 100%;
     background-position: center;
@@ -29,7 +30,6 @@
     align-items: center;
     flex-wrap: wrap;
     header {
-        // background-color: magenta;
         padding: 0px 10%;
         margin-top: 5%;
     }
@@ -41,13 +41,13 @@
     }
     h1 {
         font-weight: bold;
-        font-size: 3vw;
+        font-size: 52px;
         font-family: 'Poppins-Bold';
         font-style: italic
     }
     p {
         margin: 10px 0px;
-        font-size: 1.3vw;
+        font-size: 25px;
         padding: 0px 25px;
         font-style: italic;
     }
@@ -55,13 +55,13 @@
 
 @include for-tablet-landscape-only('.el-custom-news-page') {
     .el-custom--news-stick-banner {
-        width: 80%;
+        width: 90%;
         header {
             h1 {
-                font-size: 3.9vw;
+                font-size: 52px;
             }
             p {
-                font-size: 1.8vw;
+                font-size: 25px;
             }
         }
     }
@@ -76,10 +76,10 @@
         width: 90%;
         header {
             h1 {
-                font-size: 4vw;
+                font-size: 25px;
             }
             p {
-                font-size: 1.8vw;
+                font-size: 15px;
             }
         }
     }
@@ -92,8 +92,11 @@
         .el-custom--news-stick-banner {
             height: 250px;
             header {
+                h1{
+                    font-size: 5.3vw;
+                }
                 p {
-                    font-size: 2.5vw;
+                    font-size: 2.9vw;
                 }
             }
         }

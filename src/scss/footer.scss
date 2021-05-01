@@ -4,12 +4,21 @@
     padding: 0px $padding-horizontal;
     position: relative;
     z-index: 3;
-    background-color: white;
+    background-color: $fourtiary-brand-color;
     margin-top: -13%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row-reverse;
+    &::after{
+        content: "";
+        width: 100%;
+        background-color: $fourtiary-brand-color;
+        height: 100px;
+        z-index: -1;
+        position: absolute;
+        top: 17px;
+    }
     &.yellow {
         &::before {
             background-image: url(../assets/footers/yellow-footer.png);
@@ -24,13 +33,13 @@
         &::before {
             background-image: url(../assets/footers/orange-footer.png);
         }
+        background-color: $primary-brand-color;
     }
     &::before {
         content: "";
         background-image: url(../assets/footers/footer.png);
-        background-color: $primary-brand-color;
         background-position-x: center;
-        background-position-y: 14%;
+        background-position-y: 13.5%;
         background-repeat: no-repeat;
         background-size: 100%;
         position: absolute;
@@ -108,15 +117,6 @@ figure.el-custom--logo {
     }
     .el-custom--footer-right-section {
         width: 30%;
-        // &::before{
-        //     content: "";
-        //     height: 100%;
-        //     width: 100%;
-        //     background: white;
-        //     position: absolute;
-        //     right: 0px;
-        //     z-index: -1;
-        // }
         .el-custom--logo {
             margin-top: -18px;
             padding-bottom: 10px;
@@ -153,6 +153,7 @@ figure.el-custom--logo {
 
 @include for-phone-only ('.el-custom--footer') {
     padding-top: 15px;
+    justify-content: space-around;
     .el-custom--footer-right-section {
         justify-content: space-around;
         width: 110px;

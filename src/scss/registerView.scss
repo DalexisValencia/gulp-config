@@ -159,10 +159,10 @@
         label {
             &:not(.error) {
                 font-style: italic;
-                font-size: 22px;
+                font-size: 15px;
                 font-family: 'Poppins-SemiBold';
                 display: block;
-                height: 27px;
+                height: 20px;
             }
             &.error {
                 color: $tertiary-brand-color;
@@ -307,10 +307,10 @@
                 display: inline-flex;
             }
             span.small-title{
-                font-size: 40px;
+                font-size: 12px;
             }
             span.title{
-                font-size: 18px;
+                font-size: 23px;
             }
         }
         h2 {
@@ -390,28 +390,48 @@
         .form-actions {
             button.el-custom--button,
             input.el-custom--button {
-                font-size: 15px;
+                font-size: 15px !important;
                 padding: 10px 30px;
             }
-        }
-    }
-}
-
-@media (max-width: 1000px) {
-    .el-custom--register-page__main{
-        header{
-            font-size: 20px;
         }
         article.el-custom--register-page__form{
             .el-custom-brand-register-form{
                 .block-form-group{
                     .js-form-item{
                         label:not(.error){
-                            font-size: 15px !important;
+                            font-size: 11px !important;
                         }
                     }
                 }
             }
         }
-    }    
+    }
 }
+
+@include for-phone-small('.el-custom--register-page__main'){
+    header{
+        h3 {
+            span.small-title{
+                font-size: 5vw !important;
+            }
+        }
+    }
+}
+// @media (max-width: 1000px) {
+//     .el-custom--register-page__main{
+//         header{
+//             font-size: 20px;
+//         }
+//         article.el-custom--register-page__form{
+//             .el-custom-brand-register-form{
+//                 .block-form-group{
+//                     .js-form-item{
+//                         label:not(.error){
+//                             font-size: 15px !important;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }    
+// }

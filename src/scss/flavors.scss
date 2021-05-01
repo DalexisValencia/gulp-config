@@ -3,8 +3,6 @@
 @import 'flavors_headers.scss';
 @import './common/queries.scss';
 .el-custom--banner-tagimage{
-    // border: 3px dashed darkcyan;
-    // padding-bottom: 10%;
     &::before{
         content: "";
         position: absolute;
@@ -27,12 +25,56 @@
     }
 }
 
+@include for-desktop-up ('.el-custom--banner-tagimage'){
+    height: calc(78rem);
+    .el-custom--flavors-wrapper{
+        top: 25% !important;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        header.el-custom--flavors-header{
+            margin-bottom: 0px;
+        }
+        section.el-custom--flavors-card.slick-initialized.slick-slider{
+            .slick-list{
+                .slick-track{
+                    a.flavors--card{
+                        max-width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+@include for-desktop-up ('.el-custom--banner-sku'){
+    height: calc(85rem);
+    .el-custom--flavors-wrapper{
+        .el-custom--flavors-card.slick-initialized.slick-slider{
+            // border: 5px dashed blue;
+            .slick-list.draggable{
+                // border: 4px dashed pink;
+                .slick-track{
+                    .flavors--card{
+                        max-width: 310px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @include for-tablet-landscape-down ('.el-custom--flavors-wrapper'){
     padding-left: $padding-horizontal / 2 !important;
     padding-right: $padding-horizontal / 2 !important;
 }
 @include for-tablet-landscape-down ('.el-custom--banner-tagimage'){
     padding-bottom: 8%;
+}
+@include for-tablet-landscape-down ('.el-custom--banner-sku'){ 
+    .el-custom--flavors-wrapper{
+        padding-bottom: 26% !important;
+    }
 }
 
 @include  for-phone-only ('.el-custom--banner-tagimage, .el-custom--banner-sku') {

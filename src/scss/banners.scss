@@ -3,18 +3,6 @@
 .el-custom--banners {
     position: relative;
 }
-.el-custom--banners{
-    position: relative;
-    .spotify-banner-button{
-        position: absolute;
-        width: 100px;
-        height: 20px;
-        background-color: $fifth-brand-color;
-        top: 12%;
-        z-index: 3;
-        right: 20px;
-    }
-}
 
 .banner {
     img {
@@ -135,6 +123,7 @@
 }
 
 .el-custom--banners-arrows{
+    transition: 0.5s all;
     position: absolute;
     width: 100%;
     padding: 0px 70px;
@@ -146,10 +135,16 @@
     bottom: 0;
     right: 0;
     margin: auto;
+    display: flex;
+    align-items: center;
     button.slick-arrow {
         border: 1px solid transparent;
         color: transparent;
-        font-size: 12px;
+        font-size: 1px;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        padding: 0px;
         &::before{
             content: "";
         }
@@ -191,7 +186,9 @@
 }
 
 @include for-tablet-landscape-down('.el-custom--banners') {
-    // margin-top: -70px;
+    .el-custom--banners-arrows{
+        padding: 0px;
+    }
     .el-custom--banners-dots {
         ul.slick-dots {
             padding-bottom: 16px;
@@ -207,45 +204,6 @@
                 }
             }
         }
-        // .slick-arrow {
-        //     border: 1px solid transparent;
-        //     background-position: center;
-        //     background-repeat: no-repeat;
-        //     background-size:contain;
-        //     font-size: 1px;
-        //     width: 75px;
-        //     height: 75px;
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-        //     background-image: url('../assets/banners/home/back.png');
-        //     &.slick-prev{
-        //         &::before {
-        //             font-size: 32px;
-        //             color: $primary-brand-color;
-        //             content: "\e900";
-        //             font-family: icon!important;
-        //         }
-        //     }
-        //     &.slick-next {
-        //         &::before {
-        //             font-size: 32px;
-        //             color: $primary-brand-color;
-        //             content: "\e901";
-        //             font-family: icon!important;
-        //         }
-        //     }
-        //     &:hover,
-        //     &:focus,
-        //     &:active {
-        //         outline: 0;
-        //         outline-color: transparent !important;
-        //         background-image: url('../assets/banners/home/next.png');
-        //         &::before {
-        //             color: $fourtiary-brand-color !important;
-        //         }
-        //     }
-        // }
     }
 }
 

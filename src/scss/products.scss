@@ -5,7 +5,6 @@
 
 .el-custom--products{
     position: relative;
-    border: 2px solid red;
     padding: 0 33px;
     display: flex;
     justify-content: center;
@@ -19,24 +18,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 2px solid magenta;
             padding: 0px 53px;
             height: 100%;
             .slick-list{
                 height: 88%;
                 .slick-track{
                     height: 100%;
-                    // background-color: red;
                     @include products-card;
                 }
             }
         }
         .el-custom--products-arrows{
-            // background-color: blue;
             display: flex;
             justify-content: space-between;
             width: 100%;
-            border: 1px dashed black;
             position: absolute;
             z-index: 1;
             top: 0;
@@ -109,66 +104,24 @@
 //     }
 // }
 
-// @include for-tablet-landscape-down ('.el-custom--flavors-wrapper'){
-//     padding-left: $padding-horizontal / 2 !important;
-//     padding-right: $padding-horizontal / 2 !important;
-// }
-// @include for-tablet-landscape-down ('.el-custom--banner-tagimage'){
-//     padding-bottom: 8%;
-// }
+@include for-tablet-landscape-down ('.el-custom--products'){
+   padding: 0px;
+   .el-custom--products-wrapper{
+       .el-custom--products-slide.slick-slider{
+           padding: 0px;
+       }
+       .el-custom--products-arrows{
+           padding: 0px 20px;
+       }
+   }
+}
 
-// @include  for-phone-only ('.el-custom--banner-tagimage, .el-custom--banner-sku') {
-//     &:not(.el-custom--banner-sku){
-//         padding-bottom: 30%;
-//         &::before{
-//             height: 30%;
-//             background-color: $primary-brand-color;
-//             bottom: 0px;
-//         }
-//     }
-//     article.el-custom--flavors-wrapper{
-//         padding-right: 0px !important;
-//         section.el-custom--flavors-card{
-//             .flavors--card{
-//                 .flavors--card__description{
-//                     h3 {
-//                         margin-bottom: 5px;
-//                         font-size: 13px;
-//                     }
-//                     button.el-custom--button{
-//                         font-size: 13px;
-//                         width: 90%;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+
+@include  for-phone-only ('.el-custom--products') {
+    border: 1px solid magenta;
+    height: 503px;
+}
 
 // @include  for-phone-small ('.el-custom--banner-tagimage, .el-custom--banner-sku') {
-//     article.el-custom--flavors-wrapper{
-//         header.el-custom--flavors-header{
-//             h5{
-//                 font-size: 4.03vw!important;
-//             }
-//             h3{
-//                 font-size: 7.5vw!important;
-//             }
-//         }
-//         section.el-custom--flavors-card{
-//             .flavors--card{
-//                 .flavors--card__description{
-//                     h3{
-//                         font-size: 3.2vw;
-//                     }
-//                     button.el-custom--button{
-//                         font-size: 3.3vw !important;
-//                         width: 83%;
-//                         height: auto;
-//                     }
-//                 }
-//             }
-//         }
-//     }
 // }
 

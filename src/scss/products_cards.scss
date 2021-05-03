@@ -6,18 +6,16 @@
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
-        &.slick-active.slick-center{
-            // border: 1px solid blue;
-            width: 222px !important;
-            .products--card__image{
-                img.img-producto{
-                    width: 90%;
-                }
-            }
-        }
+        // &.slick-active.slick-center{
+        //     width: 222px !important;
+        //     .products--card__image{
+        //         img.img-producto{
+        //             width: 90%;
+        //         }
+        //     }
+        // }
         &:not(.slick-center){
             padding-top: 30px;
-            // border: 2px solid magenta;
         }
         &:active,
         &:focus,
@@ -53,46 +51,23 @@
                 height: 48px;
             }
         }
-        
-        // .products--card{
-        //     height: 100%;
-        //     max-width: 25%;
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     align-items: center;
-        //     justify-content: center;
-            .products--card__image{
-                margin: 0px 10px;
-                width: 100%;
-                background-image: url('../assets/sabores/circulo1.png');
-                background-repeat: no-repeat;
-                background-position: bottom;
-                background-size: contain;
-                text-align: center;
-                display: flex;
-                justify-content: center;
-                img.img-producto{
-                    transition: 0.5s all;
-                    width: 75%;
-                    height: 100%;
-                    margin-bottom: 20%;
-                    object-fit: cover;
-                    // border: 1px solid red;
-                }
+        .products--card__image{
+            margin: 0px 10px;
+            width: 100%;
+            background-image: url('../assets/sabores/circulo1.png');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: contain;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            img.img-producto{
+                transition: 0.5s all;
+                width: 75%;
+                height: 100%;
+                margin-bottom: 20%;
+                object-fit: cover;
             }
-        // }
+        }
     }
 }
-// @include for-tablet-portrait-up ('.el-custom--banner-tagimage article.el-custom--flavors-wrapper') {
-//     section.el-custom--flavors-card{
-//         .slick-list.draggable{
-//             width: 100% !important;
-//             .slick-track{
-//                 width: 100% !important;
-//                 .flavors--card.slick-slide{
-//                     width: 25% !important;
-//                 }
-//             }
-//         }
-//     }
-// }

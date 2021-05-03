@@ -2,7 +2,6 @@
 @import './vars/colors.scss';
 .el-custom--banners {
     position: relative;
-    margin-top: -7%;
 }
 .el-custom--banners{
     position: relative;
@@ -135,6 +134,50 @@
     }
 }
 
+.el-custom--banners-arrows{
+    position: absolute;
+    width: 100%;
+    padding: 0px 70px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    button.slick-arrow {
+        border: 1px solid transparent;
+        color: transparent;
+        font-size: 12px;
+        &::before{
+            content: "";
+        }
+        &.slick-prev{
+            &::before {
+                color: $tertiary-brand-color;
+                font-size: 32px;
+                content: "\e901";
+                font-family: icon!important;
+            }
+        }
+        &.slick-next {
+            &::before {
+                color: $tertiary-brand-color;
+                font-size: 32px;
+                content: "\e902";
+                font-family: icon!important;
+            }
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            outline: 0;
+            outline-color: transparent !important;
+        }
+    }
+}
+
 @include for-big-desktop-up('.el-custom--banners'){
     .banner {
         a.el-custom--banners-anchor{
@@ -148,85 +191,65 @@
 }
 
 @include for-tablet-landscape-down('.el-custom--banners') {
-    margin-top: -70px;
+    // margin-top: -70px;
     .el-custom--banners-dots {
-        bottom: 5%;
         ul.slick-dots {
-            display: none;
-        }
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .slick-arrow {
-            border: 1px solid transparent;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size:contain;
-            font-size: 1px;
-            width: 75px;
-            height: 75px;
-            display: flex;
+            padding-bottom: 16px;
+            width: 100%;
+            display: flex !important;
             justify-content: center;
             align-items: center;
-            background-image: url('../assets/banners/home/back.png');
-            &.slick-prev{
-                &::before {
-                    font-size: 32px;
-                    color: $primary-brand-color;
-                    content: "\e900";
-                    font-family: icon!important;
+            li{
+                button{
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
                 }
             }
-            &.slick-next {
-                &::before {
-                    font-size: 32px;
-                    color: $primary-brand-color;
-                    content: "\e901";
-                    font-family: icon!important;
-                }
-            }
-            // &::before {
-            //     font-size: 25px;
-            //     color: $fourtiary-brand-color;
-            //     content: "\e901";
-            //     font-family: icon!important;
-            // }
-            &:hover,
-            &:focus,
-            &:active {
-                outline: 0;
-                outline-color: transparent !important;
-                background-image: url('../assets/banners/home/next.png');
-                &::before {
-                    color: $fourtiary-brand-color !important;
-                }
-            }
-            // &.slick-prev {
-            //     background-image: url('../assets/banners/home/back.png');
-            //     &::before {
-            //         font-size: 32px;
-            //         color: $primary-brand-color;
-            //         content: "\e900";
-            //         font-family: icon!important;
-            //     }
-            // }
-            // &.slick-next {
-            //     background-image: url('../assets/banners/home/next.png');
-            //     &::before {
-            //         font-size: 25px;
-            //         color: $fourtiary-brand-color;
-            //         content: "\e901";
-            //         font-family: icon!important;
-            //     }
-            // }
         }
+        // .slick-arrow {
+        //     border: 1px solid transparent;
+        //     background-position: center;
+        //     background-repeat: no-repeat;
+        //     background-size:contain;
+        //     font-size: 1px;
+        //     width: 75px;
+        //     height: 75px;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     background-image: url('../assets/banners/home/back.png');
+        //     &.slick-prev{
+        //         &::before {
+        //             font-size: 32px;
+        //             color: $primary-brand-color;
+        //             content: "\e900";
+        //             font-family: icon!important;
+        //         }
+        //     }
+        //     &.slick-next {
+        //         &::before {
+        //             font-size: 32px;
+        //             color: $primary-brand-color;
+        //             content: "\e901";
+        //             font-family: icon!important;
+        //         }
+        //     }
+        //     &:hover,
+        //     &:focus,
+        //     &:active {
+        //         outline: 0;
+        //         outline-color: transparent !important;
+        //         background-image: url('../assets/banners/home/next.png');
+        //         &::before {
+        //             color: $fourtiary-brand-color !important;
+        //         }
+        //     }
+        // }
     }
 }
 
 @include for-phone-only('.el-custom--banners') {
-    .el-custom--banners-dots {
-        bottom: 1%;
-    }
     .banner {
         a.el-custom--banners-anchor{
             .el-custom--banners-content{
@@ -280,7 +303,6 @@
 
 @include for-phone-small('.el-custom--banners') {
     .el-custom--banners-dots {
-        bottom: -3%;
         .slick-arrow {
             width: 60px;
             height: 60px;

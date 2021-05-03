@@ -82,6 +82,14 @@
             text-decoration: none!important;
             margin-top: -75px;
         }
+       .el-custom--footer-social{
+        a {
+            margin-left: 6px;
+            i{
+                color: $fourtiary-brand-color;
+            }
+        }
+       }
     }
 }
 

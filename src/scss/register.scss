@@ -98,3 +98,6 @@
         }
     }
 }
+@include for-big-desktop-middle('.el-custom--banner-register'){
+    margin-top: -10% !important;
+}

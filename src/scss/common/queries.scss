@@ -70,6 +70,14 @@
     }
 }
 
+@mixin for-big-desktop-middle ($property) {
+    @media (min-width: 1500px){
+        #{$property} {
+            @content;
+        }
+    }
+}
+
 @mixin for-big-desktop-up ($property) {
     @media (min-width: 1800px) {
         #{$property} {

@@ -199,3 +199,7 @@ figure.el-custom--logo {
         display: none;
     }
 }
+
+@include for-big-desktop-middle('.el-custom--footer'){
+    margin-top: 0px !important;
+}

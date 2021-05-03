@@ -43,6 +43,10 @@
     }
 }
 
+#block-footer-menu{
+    display: none !important;
+}
+
 body.user-login{
     .el-custom--header{
         padding-bottom: 25px;
@@ -52,7 +56,7 @@ body.user-login{
         z-index: auto !important;
     } 
     #block-footer-menu{
-        display: none;
+        display: none !important;
     }
     @include login-admin();
 }

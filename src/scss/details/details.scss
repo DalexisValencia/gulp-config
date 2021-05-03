@@ -463,3 +463,17 @@ $zerozero-bg-color: #848484;
         }
     }
 }
+
+@include for-big-desktop-middle ('.el-custom--flavors-page__main') {
+    #el-custom--flavors-page__sliders{
+        // background-size: 100% 100% !important;
+        // &::after{
+        //     content: "";
+        //     position: absolute;
+        //     width: 100%;
+        //     height: 500px;
+        //     background-color: red;
+        //     bottom: 0px;
+        // }
+    }
+}

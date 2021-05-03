@@ -200,6 +200,21 @@ figure.el-custom--logo {
     }
 }
 
-@include for-big-desktop-middle('.el-custom--footer'){
-    margin-top: 0px !important;
+@include for-big-desktop-middle('.ab-guarana-pe-core-SaborOriginal .el-custom--footer'){
+    &::before{
+        top: -87%;
+        height: 100%;
+    }
+}
+
+@include for-big-desktop-middle('.ab-guarana-pe-core-home'){
+    .el-custom--footer{
+        &::before{
+            top: -48%;
+        }
+        #block-footer-menu{
+            display: none;
+        }
+        margin-top: 0px !important;
+    }
 }

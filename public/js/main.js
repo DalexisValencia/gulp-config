@@ -110,18 +110,18 @@ $(document).ready(function() {
                         rows: 1,
                     },
                 },
-                // {
-                //     breakpoint: 600,
-                //     settings: {
-                //         centerMode: true,
-                //         slidesToShow: 1,
-                //         slidesPerRow: 1,
-                //         adaptiveHeight: false,
-                //         swipe: true,
-                //         infinite: true,
-                //         rows: 1,
-                //     },
-                // },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        centerMode: true,
+                        slidesToShow: 2,
+                        slidesPerRow: 2,
+                        adaptiveHeight: true,
+                        swipe: true,
+                        infinite: true,
+                        rows: 1,
+                    },
+                },
             ]
         });
     }

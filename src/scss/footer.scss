@@ -143,10 +143,10 @@ img.for-big-desktop{
 }
 @include for-big-desktop-middle('.el-custom--footer'){
     margin-top: 10vw !important;
-    &::before{
+    // &::before{
         // content: unset;
         // background-color: $primary-brand-color;
-    }
+    // }
     &::after {
         content: "";
         background-color: white;

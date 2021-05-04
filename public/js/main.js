@@ -55,6 +55,7 @@ $(document).ready(function() {
         // appendDots: $('.no-one'),
         arrows: true,
         autoplay: false,
+        adaptiveHeight: true,
         responsive: [{
             breakpoint: 600,
             settings: {

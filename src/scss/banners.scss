@@ -2,7 +2,7 @@
 @import './vars/colors.scss';
 .el-custom--banners {
     position: relative;
-    margin-top: -3%;
+    margin-top:-37px;
 }
 .el-custom--banners{
     position: relative;
@@ -141,7 +141,6 @@
     .banner {
         a.el-custom--banners-anchor{
             .el-custom--banners-content{
-                border: 1px solid red;
                 h1{
                     font-size: 35px;
                 }
@@ -178,17 +177,10 @@
         }
     }
 }
-// @include for-desktop-only('.banner') {
-//     a.el-custom--banners-anchor{
-//         .el-custom--banners-content{
-//             border: 1px solid red;
-//         }
-//     }
-// }
 @include for-tablet-landscape-down('.el-custom--banners') {
-    margin-top: -44px;
+    margin-top: -31px;
     .el-custom--banners-dots {
-        bottom: 5%;
+        bottom: -9%;
         ul.slick-dots {
             display: none;
         }
@@ -201,8 +193,8 @@
             background-repeat: no-repeat;
             background-size:contain;
             font-size: 1px;
-            width: 75px;
-            height: 75px;
+            width: 14vw;
+            height: 14vw;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -239,7 +231,7 @@
 
 @include for-phone-only('.el-custom--banners') {
     .el-custom--banners-dots {
-        bottom: 1%;
+        bottom: -8%;
     }
     .banner {
         a.el-custom--banners-anchor{
@@ -264,6 +256,7 @@
                 &:not(:nth-child(1)){
                     width: 50%;
                     h1{
+                        text-shadow: 1px 1px rgba(#000000, 0.5);
                         font-size: 20px;
                         text-align: left;
                         margin-bottom: 0px;
@@ -290,19 +283,20 @@
 }
 
 @include for-phone-small('.el-custom--banners') {
+    margin-top: -30px;
     .el-custom--banners-dots {
         bottom: -3%;
         .slick-arrow {
-            width: 60px;
-            height: 60px;
+            width: 45px;
+            height: 45px;
             &.slick-prev {
                 &::before {
-                    font-size: 25px;
+                    font-size: 18px;
                 }
             }
             &.slick-next {
                 &::before {
-                    font-size: 25px;
+                    font-size: 18px;
                 }
             }
         }
@@ -314,7 +308,8 @@
                     a.el-custom--banners-anchor{
                         .el-custom--banners-content{
                             h1{
-                                font-size: 4vw;
+                                font-size: 4.5vw;
+                                text-shadow: 1px 1px rgba(#000000, 0.5);
                             }
                             button{
                                 margin-top: 3px;

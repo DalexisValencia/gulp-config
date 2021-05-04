@@ -1,17 +1,15 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .el-custom--footer {
-    padding: 0px $padding-horizontal;
     position: relative;
     z-index: 3;
-    background-color: $fourtiary-brand-color;
     margin-top: -13%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row-reverse;
     &::after{
-        content: "";
+        // content: "";
         width: 100%;
         background-color: $fourtiary-brand-color;
         height: 100px;
@@ -44,12 +42,19 @@
         background-size: 100%;
         position: absolute;
         width: 100%;
-        height: 47%;
+        height: 12vw;
         z-index: -1;
-        top: -45%;
+        top: -11vw;
         pointer-events: none;
     }
+    .el-custom--footer-nav,
+    .el-custom--footer-right-section,
+    .el-custom--footer-legal
+    {
+        padding: 0px $padding-horizontal;
+    }
     .el-custom--footer-right-section {
+        background-color: $fourtiary-brand-color;
         width: 100%;
         padding-bottom: 35px;
         .el-custom--footer-social {
@@ -89,7 +94,7 @@
     }
     .el-custom--footer-legal {
         width: 100%;
-        padding: 20px 10px 70px;
+        padding: 20px 10px;
         text-align: center;
         background-color: $fourtiary-brand-color;
         * {
@@ -106,14 +111,68 @@ figure.el-custom--logo {
     text-align: center;
     padding-bottom: 30px;
     img {
-        width: 210px;
+        width: 170px;
+    }
+}
+img.for-big-desktop{
+    display: none;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: -17vw;
+}
+@include for-big-desktop-middle('body.system-404, body.guarana-page'){
+    main.el-custom--main{
+        background-color: $secondary-brand-color;
+        #block-footer{
+            .el-custom--footer.yellow{
+                background-color: $secondary-brand-color;
+            }
+        }
+    }
+}
+@include for-big-desktop-middle('body.ab-guarana-pe-core-home'){
+    main.el-custom--main{
+        background-color: $primary-brand-color;
+        #block-footer{
+            .el-custom--footer.yellow{
+                background-color: $primary-brand-color;
+            }
+        }
+    }
+}
+@include for-big-desktop-middle('.el-custom--footer'){
+    margin-top: 10vw !important;
+    &::before{
+        // content: unset;
+        // background-color: $primary-brand-color;
+    }
+    &::after {
+        content: "";
+        background-color: white;
+        width: 100%;
+        height: 50%;
+        z-index: -1;
+        top: 128px;
+        position: absolute;
+    }
+    img.for-big-desktop{
+        // display: block;
+        background-color: $primary-brand-color;
     }
 }
 
 @include for-tablet-landscape-down('.el-custom--footer') {
-    padding: 35px 27px 0px;
+    padding: 45px 27px 30px !important;
     &::before{
-        top: -36%;
+        top: -9vw;
+        height: 29vw;
+    }
+    .el-custom--footer-nav,
+    .el-custom--footer-right-section,
+    .el-custom--footer-legal
+    {
+        padding: 0px !important;
     }
     .el-custom--footer-right-section {
         width: 30%;
@@ -154,6 +213,16 @@ figure.el-custom--logo {
 @include for-phone-only ('.el-custom--footer') {
     padding-top: 15px;
     justify-content: space-around;
+    &::after {
+        content: "";
+        background-color: white;
+        width: 100%;
+        height: 80%;
+        z-index: -1;
+        top: 41px;
+        position: absolute;
+        pointer-events: none;
+    }
     .el-custom--footer-right-section {
         justify-content: space-around;
         width: 110px;
@@ -180,9 +249,6 @@ figure.el-custom--logo {
 }
 
 @include for-phone-small('.el-custom--footer'){
-    &::before {
-        top: -36%;
-    }
     padding-bottom: 60px !important;
     .el-custom--footer-right-section {
         width: 40%;
@@ -207,14 +273,14 @@ figure.el-custom--logo {
     }
 }
 
-@include for-big-desktop-middle('.ab-guarana-pe-core-home'){
-    .el-custom--footer{
-        &::before{
-            top: -45%;
-        }
-        #block-footer-menu{
-            display: none;
-        }
-        margin-top: 0px !important;
-    }
-}
+// @include for-big-desktop-middle('.ab-guarana-pe-core-home'){
+//     .el-custom--footer{
+//         &::before{
+//             top: -45%;
+//         }
+//         #block-footer-menu{
+//             display: none;
+//         }
+//         margin-top: 0px !important;
+//     }
+// }

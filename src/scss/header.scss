@@ -126,10 +126,27 @@ header.el-custom--header {
     }
     nav {
         a.el-custom--main-logo{
-            width: 38%;
+            width: 31%;
             max-width: 100px;
-            min-width: 80px;
+            min-width: 70px;
             height: 68px;
         }
     }
+}
+
+@include for-phone-only('header.el-custom--header') {
+    padding-left: $padding-horizontal / 2;
+    padding-right: $padding-horizontal / 2;
+    padding-top: 2px;
+    padding-bottom: 25px;
+    .burger-menu {
+        i {
+            font-size: 25px;
+        }
+    }
+}
+
+@include for-phone-small('header.el-custom--header'){
+    padding-left: $padding-horizontal / 3;
+    padding-right: $padding-horizontal / 3;
 }

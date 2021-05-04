@@ -2,7 +2,7 @@
 @import './vars/colors.scss';
 .el-custom--banners {
     position: relative;
-    margin-top: -7%;
+    margin-top: -3%;
 }
 .el-custom--banners{
     position: relative;
@@ -29,7 +29,7 @@
             // background-color: rgba(0,0,0,0.6);
             position: absolute;
             z-index: 2;
-            top: 18%;
+            top: 15%;
             right: 10%;
             width: 40%;
             text-align: center;
@@ -43,20 +43,20 @@
                 font-family: 'Poppins-Bold';
                 color: $fourtiary-brand-color;
                 font-style: italic;
-                font-size: 4.2vw;
+                font-size: 52px;
                 line-height: 1.15;
                 margin-bottom: 10px;
                 span{
                     display: block;
                 }
                 &.black{
-                    padding-top: 10%;
+                    // padding-top: 10%;
                     color: $fifth-brand-color;
                     line-height: 0.98;
-                    span{
-                        display: block;
-                        font-size: 4.6vw;
-                    }
+                    // span{
+                    //     display: block;
+                    //     font-size: 4.6vw;
+                    // }
                     margin-bottom: 20px;
                 }
             }
@@ -64,7 +64,7 @@
                 font-family: Poppins,sans-serif;
                 color: $fourtiary-brand-color;
                 font-style: italic;
-                font-size: 2.2vw;
+                font-size: 25px;
                 &.black{
                     color: $fifth-brand-color;
                     line-height: 1.1;
@@ -85,7 +85,9 @@
                 font-family: Poppins,sans-serif;
                 font-style: italic;
                 padding: 10px 20px;
-                font-size: 2.4vw;
+                font-size: 30px;
+                // width: 249px;
+                height: 59px;
                 font-weight: normal;
                 margin-top: 10%;
             }
@@ -135,20 +137,56 @@
     }
 }
 
-@include for-big-desktop-up('.el-custom--banners'){
+@include for-tablet-landscape-only('.el-custom--banners'){
     .banner {
         a.el-custom--banners-anchor{
             .el-custom--banners-content{
+                border: 1px solid red;
+                h1{
+                    font-size: 35px;
+                }
+                p, h2{
+                    font-size: 12px;
+                }
                 button{
-                    font-size: 30px;
+                    font-size: 15px;
+                    height: 43px;
                 }
             }
         }
     }
 }
 
+@include for-tablet-landscape-down('.el-custom--banners'){
+    .banner {
+        a.el-custom--banners-anchor{
+            .el-custom--banners-content{
+                top: 25%;
+                h1{
+                    font-size: 25px;
+                }
+                p, h2{
+                    font-size: 12px;
+                    display: none;
+                }
+                button{
+                    font-size: 13px;
+                    height: 43px;
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}
+// @include for-desktop-only('.banner') {
+//     a.el-custom--banners-anchor{
+//         .el-custom--banners-content{
+//             border: 1px solid red;
+//         }
+//     }
+// }
 @include for-tablet-landscape-down('.el-custom--banners') {
-    margin-top: -70px;
+    margin-top: -44px;
     .el-custom--banners-dots {
         bottom: 5%;
         ul.slick-dots {
@@ -185,12 +223,6 @@
                     font-family: icon!important;
                 }
             }
-            // &::before {
-            //     font-size: 25px;
-            //     color: $fourtiary-brand-color;
-            //     content: "\e901";
-            //     font-family: icon!important;
-            // }
             &:hover,
             &:focus,
             &:active {
@@ -201,24 +233,6 @@
                     color: $fourtiary-brand-color !important;
                 }
             }
-            // &.slick-prev {
-            //     background-image: url('../assets/banners/home/back.png');
-            //     &::before {
-            //         font-size: 32px;
-            //         color: $primary-brand-color;
-            //         content: "\e900";
-            //         font-family: icon!important;
-            //     }
-            // }
-            // &.slick-next {
-            //     background-image: url('../assets/banners/home/next.png');
-            //     &::before {
-            //         font-size: 25px;
-            //         color: $fourtiary-brand-color;
-            //         content: "\e901";
-            //         font-family: icon!important;
-            //     }
-            // }
         }
     }
 }
@@ -231,6 +245,7 @@
         a.el-custom--banners-anchor{
             .el-custom--banners-content{
                 width: 60%;
+                top: 19%;
                 &:nth-child(1){
                     width: 37%;
                     h1{
@@ -248,9 +263,8 @@
                 }
                 &:not(:nth-child(1)){
                     width: 50%;
-                    padding-top: 9%;
                     h1{
-                        font-size: 5.2vw;
+                        font-size: 20px;
                         text-align: left;
                         margin-bottom: 0px;
                         span{
@@ -264,14 +278,11 @@
                         }
                     }
                 }
-                p{
-                    font-size: 3vw;
-                    display: none;
-                }
                 button{
                     padding: 10px;
-                    font-size: 2.4vw;
                     margin-top: 10px;
+                    height: 30px;
+                    font-size: 11px;
                 }
             }
         }
@@ -292,6 +303,26 @@
             &.slick-next {
                 &::before {
                     font-size: 25px;
+                }
+            }
+        }
+    }
+    .el-custom--banners-slides{
+        .slick-list.draggable{
+            .slick-track{
+                .banner {
+                    a.el-custom--banners-anchor{
+                        .el-custom--banners-content{
+                            h1{
+                                font-size: 4vw;
+                            }
+                            button{
+                                margin-top: 3px;
+                                font-size: 9px;
+                                height: 20px;
+                            }
+                        }
+                    }
                 }
             }
         }

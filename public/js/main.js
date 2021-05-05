@@ -89,15 +89,15 @@ $(document).ready(function() {
 $(document).ready(function() {
     const bannerProducts = $(".el-custom--products-slide");
     if (bannerProducts.length) {
-        console.error('ejecutamos este bloque');
         bannerProducts.slick({
-            // centerMode: true,
+            centerMode: true,
             slidesToShow: 5,
             dots: false,
             arrows: true,
             adaptiveHeight: true,
             appendArrows: $(".el-custom--products-arrows"),
             autoplay: false,
+            infinite: true,
             responsive: [
                 {
                     breakpoint: 900,
@@ -123,6 +123,12 @@ $(document).ready(function() {
                     },
                 },
             ]
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            console.log(nextSlide, 'pilas');
+        });
+        $("div.products--card").click(function(){
+            const index = $(this).attr('data-attr-index');
+            bannerProducts.slick('slickGoTo', index -1);
         });
     }
 });

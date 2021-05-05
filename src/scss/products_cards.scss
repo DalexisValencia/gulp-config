@@ -28,6 +28,7 @@
         .products--card__description{
             text-align: center;
             width: 100%;
+            border: 1px solid red;
             h3 {
                 margin-top: 30px;
                 margin-bottom: 20px;
@@ -38,6 +39,7 @@
                 font-weight: 400;
             }
             .el-custom--button{
+                display: inline-block;
                 border-radius: 5px;
                 text-transform: uppercase;
                 font-size: 14px;

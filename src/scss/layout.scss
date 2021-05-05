@@ -1,5 +1,6 @@
 @import './vars/colors.scss';
 .el-custom--main{
+    overflow: hidden;
     &:not(.el-custom-404-page),
     &:not(.el-custom-news-page){
         background-color: $fourtiary-brand-color;

@@ -18,6 +18,7 @@
     li{
         text-align: center;
         a{
+            text-decoration: none;
             color: $fourtiary-brand-color;
             font-size: 8px;
             display: block;
@@ -84,6 +85,7 @@
         }
        .el-custom--footer-social{
         a {
+            text-decoration: none !important;
             margin-left: 6px;
             i{
                 color: $fourtiary-brand-color;

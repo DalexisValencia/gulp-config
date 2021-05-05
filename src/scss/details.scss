@@ -2,7 +2,7 @@
 @import './common/queries.scss';
 .el-custom--details{
     width: 100%;
-    // eight: calc(1152px * 0.42);
+    border-top: 12px solid $nineth-brand-color;
     height: 35vw;
     max-height: 447px;
     background-image: url('../assets/details/bg-details.png');
@@ -13,12 +13,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    &::before{
+        content: "";
+        border-left: 24px solid transparent;
+        border-right: 24px solid transparent;
+        border-bottom: 24px solid $nineth-brand-color;
+        position: absolute;
+        top: -24px;
+    }
     .el-custom--details--body{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        max-width: 880px;
-        width: 100%;
+        max-width: 1151px;
+        width: 75%;
         border: 2px solid blue;
         .el-custom--details--body-wrapper-image{
             display: inline-block;

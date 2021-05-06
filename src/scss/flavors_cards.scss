@@ -4,6 +4,7 @@
     section.el-custom--flavors-card{
         display: flex;
         pointer-events: auto;
+        align-items: center;
         .slick-list.draggable{
             .slick-track{
                 height: 100%;

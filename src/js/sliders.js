@@ -34,7 +34,7 @@ $(document).ready(function() {
     $('#el-custom--flavors__big-slide').slick({
         slidesToShow: 3,
         dots: false,
-        // appendDots: $('.no-one'),
+        // appendArrows: $('.el-custom--skus-slide-arrows'),
         arrows: true,
         autoplay: false,
         adaptiveHeight: true,

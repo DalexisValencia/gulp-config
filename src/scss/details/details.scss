@@ -15,42 +15,83 @@ $zerozero-bg-color: #848484;
 
 @mixin slider-header () {
     header.el-custom--flavors-page__slider-navigation {
+        margin-top: -50px;
+        border: 1px solid red;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &.header-0 {
-            background-image: url('../assets/details/header-back-0.png');
+            // background-image: url('../assets/details/header-back-0.png');
+            &::before{
+                background-image: url('../assets/details/header-back-0.png');
+            }
         }
         &.header-1 {
-            background-image: url('../assets/details/header-back-1.png');
+            &::before{
+                background-image: url('../assets/details/header-back-1.png');
+            }
+            // background-image: url('../assets/details/header-back-1.png');
         }
         &.header-2 {
-            background-image: url('../assets/details/header-back-2.png');
+            &::before{
+                background-image: url('../assets/details/header-back-2.png');
+            }
+            // background-image: url('../assets/details/header-back-2.png');
         }
         &.header-3 {
-            background-image: url('../assets/details/header-back-3.png');
+            &::before{
+                background-image: url('../assets/details/header-back-3.png');
+            }
+            // background-image: url('../assets/details/header-back-3.png');
         }
-        transition: 0.5s all;
-        justify-content: space-between;
-        align-items: center;
-        background-repeat: repeat-y;
-        background-size: 100%;
-        background-position: center;
-        background-position-y: 23%;
-        height: 100%;
-        width: 100%;
-        z-index: 1;
-        position: absolute;
-        top: -221px;
+        &::before{
+            content: "";
+            transition: 1s all;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            // background-image: url('../assets/details/header-back-0.png');
+            // background-position-y: 88%;
+            background-position: center;
+            background-size: 100%;
+        }
+        // transition: 0.5s all;
+        // justify-content: space-between;
+        // align-items: center;
+        // background-repeat: repeat-y;
+        // background-size: 100%;
+        // background-position: center;
+        // background-position-y: 23%;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // width: 100%;
+        // z-index: 1;
+        // position: absolute;
+        // top: -221px;
+        @include slider-navigation();
     }
 }
 
 @mixin slider-page () {
     #el-custom--flavors-page__sliders {
-        background-position-y: -200px;
-        background-size: 100% 112%;
+        // pointer-events: none; quitar aqui!!!
+        background-position: top;
+        // background-position-y: 79%;
+        background-size: cover;
         background-repeat: no-repeat;
-        margin-top: -5%;
+        margin-top: -4%;
         z-index: 2;
         position: relative;
         transition: 0.3s all;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .slick-list.draggable{
+            pointer-events: auto;
+            max-width: 1150px;
+        }
         &.bg-0,
         &.bg-1 {
             background-image: url('../assets/details/bg-1.png');
@@ -64,7 +105,8 @@ $zerozero-bg-color: #848484;
         .el-custom--flavors-page__sliders-slide {
             position: relative;
             .el-custom--flavors-page__sliders-slide-body {
-                padding: 28% $padding-horizontal 35%;
+                padding: 11% $padding-horizontal 35%;
+                pointer-events: none;
                 article {
                     justify-content: space-between;
                     align-items: center;
@@ -80,13 +122,13 @@ $zerozero-bg-color: #848484;
                         }
                         h1 {
                             font-weight: bold;
-                            font-size: 4vw;
+                            font-size: 52px;
                             font-style: italic;
                             font-family: 'Poppins-Bold';
                         }
                         p {
                             margin-top: 20px;
-                            font-size: 2vw;
+                            font-size: 25px;
                             font-family: 'Poppins', sans-serif;
                         }
                         button,
@@ -94,7 +136,7 @@ $zerozero-bg-color: #848484;
                             margin-top: 20px;
                             padding: 12px 8px;
                             background-color: $secondary-brand-color;
-                            font-size: 2vw;
+                            font-size: 30px;
                             font-style: italic;
                             font-family: 'Poppins', sans-serif;
                             color: $fifth-brand-color;
@@ -148,8 +190,8 @@ $zerozero-bg-color: #848484;
     .el-custom--flavors-slider--navigation {
         position: absolute;
         z-index: 3;
-        width: 100%;
-        top: 5%;
+        width: 85%;
+        // top: 5%;
         ul {
             width: 100%;
             margin: 0px;
@@ -244,7 +286,6 @@ $zerozero-bg-color: #848484;
     height: 100%;
     position: relative;
     @include slider-header();
-    @include slider-navigation();
     @include slider-page();
 }
 
@@ -263,20 +304,22 @@ $zerozero-bg-color: #848484;
     }
 }
 
+
+@include for-tablet-landscape-only('.el-custom--flavors-page__main'){
+    #el-custom--flavors-page__sliders{
+        background-position-y: 65% !important;
+    }
+}
+
+@include for-big-desktop-middle('.el-custom--flavors-page__main'){
+    #el-custom--flavors-page__sliders{
+        margin-top: -2%;
+    }
+}
+
+
 @include for-desktop-up('.el-custom--flavors-page__main') {
-    header.el-custom--flavors-page__slider-navigation {
-        background-position-y: inherit;
-    }
-    .el-custom--flavors-slider--navigation {
-        top: 7%;
-    }
     #el-custom--flavors-page__sliders {
-        &:not(.bg-2) {
-            background-position-y: 130%;
-        }
-        &.bg-2 {
-            background-position-y: 105%;
-        }
         .el-custom--flavors-page__sliders-slide {
             .el-custom--flavors-page__sliders-slide-body {
                 padding-top: 15%;
@@ -295,7 +338,7 @@ $zerozero-bg-color: #848484;
             li {
                 button {
                     &::before {
-                        font-size: 2.2vw;
+                        font-size: 2.2vw !important;
                     }
                 }
                 &:nth-child(3),
@@ -318,6 +361,12 @@ $zerozero-bg-color: #848484;
 }
 
 @include for-tablet-landscape-down ('.el-custom--flavors-page__main') {
+    .el-custom--flavors-page__slider-navigation{
+        &::before{
+            height: 450px !important;
+            background-position: center !important;
+        }
+    }
     .el-custom--flavors-slider--navigation {
         ul.slick-dots {
             display: none;
@@ -327,9 +376,12 @@ $zerozero-bg-color: #848484;
         height: 30%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         button {
             border: 1px solid transparent;
             width: 80px;
+            height: 80px;
+            border-radius: 50%;
             color: transparent;
             font-size: 1px;
             &[aria-disabled="true"] {
@@ -367,9 +419,15 @@ $zerozero-bg-color: #848484;
         top: -18%;
     }
     #el-custom--flavors-page__sliders {
+        margin-top: -14%;
         &[class*="bg"] {
             background-image: url('../assets/details/fondo-sabores-mobile.png') !important;
-            background-position-y: 100px;
+
+        }
+        .slick-list.draggable{
+            .slick-track{
+                margin-top: -32%;
+            }
         }
         .el-custom--flavors-page__sliders-slide {
             .el-custom--flavors-page__sliders-slide-body {
@@ -414,7 +472,7 @@ $zerozero-bg-color: #848484;
                                 font-size: 25px;
                             }
                             p {
-                                font-size: 14px;
+                                font-size: 15px;
                                 line-height: 1.5;
                             }
                             button {
@@ -429,51 +487,29 @@ $zerozero-bg-color: #848484;
 }
 
 @include for-phone-only ('.el-custom--flavors-page__main') {
-    header.el-custom--flavors-page__slider-navigation {
-        top: -20%;
+    #el-custom--flavors-page__sliders {
+        margin-top: -100px;
     }
     .el-custom--flavors-slider--navigation{
-        height: 25%;
-    }
-    #el-custom--flavors-page__sliders {
-        background-image: url('../assets/details/fondo-sabores-mobile.png');
-        background-position-y: 40px !important;
-        background-size: cover;
-        .el-custom--flavors-page__sliders-slide {
-            .el-custom--flavors-page__sliders-slide-body {
-                .el-custom--flex.slider-body--detail-image {
-                    margin-top: -30px;
-                }
+        height: 22%;
+        button{
+            &::before{
+                font-size: 10vw !important;
             }
         }
     }
 }
 
 @include for-phone-small ('.el-custom--flavors-page__main') {
-    .el-custom--flavors-slider--navigation {
-        top: 10%;
-        height: 22%;
-        button {
-            &.slick-prev.slick-arrow,
-            &.slick-next.slick-arrow {
-                &::before {
-                    font-size: 40px;
-                }
+    #el-custom--flavors-page__sliders {
+        margin-top: -130px;
+    }
+    .el-custom--flavors-slider--navigation{
+        height: 15%;
+        button{
+            &::before{
+                font-size: 8vw !important;
             }
         }
-    }
-}
-
-@include for-big-desktop-middle ('.el-custom--flavors-page__main') {
-    #el-custom--flavors-page__sliders{
-        // background-size: 100% 100% !important;
-        // &::after{
-        //     content: "";
-        //     position: absolute;
-        //     width: 100%;
-        //     height: 500px;
-        //     background-color: red;
-        //     bottom: 0px;
-        // }
     }
 }

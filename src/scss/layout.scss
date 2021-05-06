@@ -1,9 +1,12 @@
 @import './vars/colors.scss';
 .el-custom--main{
-    &:not(.el-custom-404-page),
-    &:not(.el-custom-news-page){
-        background-color: $fourtiary-brand-color;
+    &.home{
+        background-color: $primary-brand-color;
     }
+    // &:not(.el-custom-404-page),
+    // &:not(.el-custom-news-page){
+    //     background-color: $fourtiary-brand-color;
+    // }
     width: 100%;
     height: 100%;
     padding: 0px;

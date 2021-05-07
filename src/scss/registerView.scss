@@ -294,7 +294,6 @@ input.el-custom--input[type=number] {
     -moz-appearance: textfield;
 }
 @include for-big-desktop-middle('.el-custom--register-page__main'){
-    // border: 1px solid red !important;
     padding-top: 73px !important;
     padding-bottom: 100px !important;
 }

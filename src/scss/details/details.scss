@@ -16,7 +16,6 @@ $zerozero-bg-color: #848484;
 @mixin slider-header () {
     header.el-custom--flavors-page__slider-navigation {
         margin-top: -50px;
-        border: 1px solid red;
         height: 200px;
         display: flex;
         justify-content: center;

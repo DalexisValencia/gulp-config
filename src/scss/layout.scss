@@ -1,4 +1,5 @@
 @import './vars/colors.scss';
+@import './common/queries.scss';
 .el-custom--main{
     overflow: hidden;
     background-image: url('../assets/index/lineas-fondo_home.png');
@@ -13,4 +14,8 @@
     height: 100%;
     padding: 0px;
     // background-color: $fourtiary-brand-color;
+}
+
+@include for-tablet-landscape-down ('.el-custom--main'){
+    background-image: unset;
 }

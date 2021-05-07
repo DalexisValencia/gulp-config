@@ -1,5 +1,4 @@
 @import 'products_cards.scss';
-@import 'flavors_headers.scss';
 @import './common/queries.scss';
 .el-custom--banner-sku{
     pointer-events: none;
@@ -17,7 +16,7 @@
         background-color: #ff5c00;
         bottom: 8%;
     }
-    @include header_flavor;
+    // @include header_flavor;
     @include products-card;
     .el-custom--flavors-wrapper{
         padding: 17% $padding-horizontal 35%;

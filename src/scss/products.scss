@@ -23,6 +23,9 @@
             .slick-list{
                 height: 88%;
                 .slick-track{
+                    .products--card{
+                        transition: 0.5s all;
+                    }
                     height: 100%;
                     @include products-card;
                 }
@@ -80,12 +83,22 @@
     }
 }
 
+@include for-tablet-portait-only ('.el-custom--products') {
+    .el-custom--products-wrapper{
+        .el-custom--products-slide.slick-initialized.slick-slider{
+            .slick-list.draggable{
+                .slick-track{
+                    .products--card{
+                        width: 200px !important;
+                    }
+                }
+            }
+        }
+    }
+}
 @include for-tablet-landscape-down ('.el-custom--products'){
     padding: 0px;
     .el-custom--products-wrapper{
-        .el-custom--products-slide.slick-slider{
-            padding: 0px;
-        }
         .el-custom--products-arrows{
             padding: 0px 20px;
         }
@@ -93,24 +106,28 @@
 }
 
 
-@include  for-phone-only ('.el-custom--products') {
-    border: 2px solid magenta;
+@include for-phone-only ('.el-custom--products') {
     .el-custom--products-wrapper{
         max-width: none;
         height: auto;
         .el-custom--products-slide{
             height: 105vw;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            &.slick-slider{
+                border: 3px dashed red;
+                padding: 0px !important;
+            }
             .slick-list{
                 height: 98% !important;
                 .slick-track{
                     .products--card{
                         &.slick-active.slick-center{
-                            transition: 0.5s all;
-                            border: 3px solid pink;
+                            // border: 3px solid pink;
                             width: 58vw !important;
                         }
                         .products--card__description{
-                            border: 1px solid black;
+                            // border: 1px solid black;
                             h3{
                                 font-size: 4vw !important;
                             }

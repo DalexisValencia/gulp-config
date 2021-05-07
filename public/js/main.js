@@ -99,6 +99,7 @@ $(document).ready(function() {
             appendArrows: $(".el-custom--products-arrows"),
             autoplay: false,
             infinite: true,
+            speed: 700,
             responsive: [
                 // {
                 //     breakpoint: 900,
@@ -112,24 +113,39 @@ $(document).ready(function() {
                 //     },
                 // },
                 {
-                    breakpoint: 600,
+                    breakpoint: 900,
                     settings: {
-                        speed: 700,
                         centerMode: true,
                         rows: 1,
-                        slidesToShow: 1.72,
-                        infinite: true
+                        slidesToShow: 4,
+                        infinite: true,
+                        variableWidth: true
                     }
-                    // settings: {
-                    //     centerMode: true,
-                    //     slidesToShow: 1,
-                    //     dots: false,
-                    //     arrows: true,
-                    //     adaptiveHeight: true,
-                    //     appendArrows: $(".el-custom--products-arrows"),
-                    //     autoplay: false,
-                    //     infinite: true,
-                    // },
+                },
+                {
+                    breakpoint: 700,
+                    settings: {
+                        slidesToShow: 3,
+                        variableWidth: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        // speed: 700,
+                        // centerMode: true,
+                        // rows: 1,
+                        variableWidth: false,
+                        slidesToShow: 1.78,
+                        // infinite: true
+                    }
+                },
+                {
+                    breakpoint: 400,
+                    settings: {
+                        variableWidth: false,
+                        slidesToShow: 1.9,
+                }
                 },
             ]
         })

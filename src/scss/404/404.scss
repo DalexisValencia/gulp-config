@@ -5,8 +5,9 @@
     height: 100%;
     overflow: hidden;
 }
+
 .el-custom--page404{
-    padding-bottom: 30%;
+    padding-bottom: 15%;
     background-image: url('../assets/404/rasgado-404.png');
     background-position: center;
     background-color: $primary-brand-color;
@@ -84,7 +85,7 @@
     margin-top: 10%;
 }
 @include for-phone-only ('.el-custom--page404') { 
-    margin-top: -28%;
+    // margin-top: -28%;
     header.el-custom--page404__header{
         h1{
             font-size: 4.5vw;
@@ -105,7 +106,7 @@
     // border: 2px dashed black;
 }
 @include for-phone-small ('.el-custom--page404') {
-    padding-bottom: 43%;
+    padding-bottom: 25%;
     header.el-custom--page404__header{
         // border: 2px dashed black;
         top: 15%;
@@ -123,6 +124,11 @@
         }
     }
 }
+@include for-phone-small ('.system-404') {
+    .el-custom--footer {
+        margin-top: -11vw !important;
+    }
+}
 
 @include for-phone-small('.el-custom--page404') {
     header.el-custom--page404__header{
@@ -134,7 +140,7 @@
         }
         button,
         a{
-            font-size: 2vw;
+            font-size: 3vw !important;
         }
     }
 }

@@ -1,5 +1,21 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
+.ab-guarana-pe-core-SaborOriginal{
+    .el-custom--footer {
+        &::before {
+            background-image: url(../assets/footers/red-footer.png) !important;
+        }
+    }
+}
+.system-404{
+    .el-custom--footer{
+        margin-top: -1vw !important;
+        &::before {
+            background-image: url(../assets/footers/orange-footer.png) !important;
+        }
+    }
+}
+
 .el-custom--footer {
     position: relative;
     z-index: 3;
@@ -8,6 +24,7 @@
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row-reverse;
+    background-color: $fourtiary-brand-color;
     &::after{
         // content: "";
         width: 100%;
@@ -142,8 +159,22 @@ img.for-big-desktop{
         }
     }
 }
+@include for-big-desktop-middle('.system-404'){
+    .el-custom--page404{
+        padding-bottom: 17% !important;
+    }
+    .el-custom--footer{
+        margin-top: -1vw !important;
+    }
+}
+@include for-big-desktop-middle('.ab-guarana-pe-core-SaborOriginal'){
+    .el-custom--footer{
+        margin-top: -1vw!important;
+    }
+}
 @include for-big-desktop-middle('.el-custom--footer'){
-    margin-top: 10vw !important;
+    // margin-top: -1vh !important;
+    margin-top: 10vw !important; //Home
     // &::before{
         // content: unset;
         // background-color: $primary-brand-color;
@@ -164,9 +195,9 @@ img.for-big-desktop{
 }
 
 @include for-tablet-landscape-down('.el-custom--footer') {
-    padding: 45px 27px 30px !important;
+    padding: 20px 27px 30px !important;
     &::before{
-        top: -9vw;
+        top: -15vw;
         height: 29vw;
     }
     .el-custom--footer-nav,
@@ -212,7 +243,6 @@ img.for-big-desktop{
 }
 
 @include for-phone-only ('.el-custom--footer') {
-    padding-top: 15px;
     justify-content: space-around;
     &::after {
         content: "";
@@ -249,8 +279,36 @@ img.for-big-desktop{
     }
 }
 
+@media (min-width: 400px) and (max-width: 599px) {
+    .system-404{
+        .el-custom--main{
+            .el-custom--page404{
+                .el-custom--page404--rasgado{
+                    img{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-small('.system-404'){
+    .el-custom--main{
+        overflow: hidden;
+        .el-custom--page404{
+            .el-custom--page404--rasgado{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
 @include for-phone-small('.el-custom--footer'){
-    padding-bottom: 60px !important;
+    padding-bottom: 24px !important;
+    padding-top: 20px !important;
     .el-custom--footer-right-section {
         width: 40%;
         .el-custom--footer-social {
@@ -273,15 +331,3 @@ img.for-big-desktop{
         height: 100%;
     }
 }
-
-// @include for-big-desktop-middle('.ab-guarana-pe-core-home'){
-//     .el-custom--footer{
-//         &::before{
-//             top: -45%;
-//         }
-//         #block-footer-menu{
-//             display: none;
-//         }
-//         margin-top: 0px !important;
-//     }
-// }

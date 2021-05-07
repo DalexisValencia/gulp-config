@@ -76,7 +76,7 @@ $zerozero-bg-color: #848484;
 
 @mixin slider-page () {
     #el-custom--flavors-page__sliders {
-        // pointer-events: none; quitar aqui!!!
+        pointer-events: none;
         background-position: top;
         // background-position-y: 79%;
         background-size: cover;
@@ -112,6 +112,7 @@ $zerozero-bg-color: #848484;
                     align-items: center;
                 }
                 article.slider-body--playlist {
+                    pointer-events: all;
                     margin-top: 11%;
                     justify-content: space-between;
                     div.slider-body--playlist__description {
@@ -359,6 +360,15 @@ $zerozero-bg-color: #848484;
         }
     }
 }
+@media (min-width: 400px) and (max-width: 550px) {
+    .el-custom--flavors-page__main{
+        header.el-custom--flavors-page__slider-navigation{
+            .el-custom--flavors-slider--navigation{
+                height: 14%;
+            }
+        }
+    }
+}
 
 @include for-tablet-landscape-down ('.el-custom--flavors-page__main') {
     .el-custom--flavors-page__slider-navigation{
@@ -372,7 +382,7 @@ $zerozero-bg-color: #848484;
             display: none;
         }
         width: 100%;
-        top: 12%;
+        top: 194px;
         height: 30%;
         display: flex;
         justify-content: space-between;
@@ -475,7 +485,7 @@ $zerozero-bg-color: #848484;
                                 font-size: 15px;
                                 line-height: 1.5;
                             }
-                            button {
+                            button, a {
                                 font-size: 15px;
                             }
                         }
@@ -505,6 +515,7 @@ $zerozero-bg-color: #848484;
         margin-top: -130px;
     }
     .el-custom--flavors-slider--navigation{
+        top: 7%;
         height: 15%;
         button{
             &::before{

@@ -293,6 +293,11 @@ input.el-custom--input[type=number] {
     margin: 0;
     -moz-appearance: textfield;
 }
+@include for-big-desktop-middle('.el-custom--register-page__main'){
+    // border: 1px solid red !important;
+    padding-top: 73px !important;
+    padding-bottom: 100px !important;
+}
 
 @include for-tablet-landscape-down('.guarana-page') {
     #block-mainpagecontent{
@@ -424,21 +429,3 @@ input.el-custom--input[type=number] {
         }
     }
 }
-// @media (max-width: 1000px) {
-//     .el-custom--register-page__main{
-//         header{
-//             font-size: 20px;
-//         }
-//         article.el-custom--register-page__form{
-//             .el-custom-brand-register-form{
-//                 .block-form-group{
-//                     .js-form-item{
-//                         label:not(.error){
-//                             font-size: 15px !important;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }    
-// }

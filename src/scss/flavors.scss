@@ -52,9 +52,7 @@
     height: calc(85rem);
     .el-custom--flavors-wrapper{
         .el-custom--flavors-card.slick-initialized.slick-slider{
-            // border: 5px dashed blue;
             .slick-list.draggable{
-                // border: 4px dashed pink;
                 .slick-track{
                     .flavors--card{
                         max-width: 310px;
@@ -65,10 +63,10 @@
     }
 }
 
-@include for-tablet-landscape-down ('.el-custom--flavors-wrapper'){
-    padding-left: $padding-horizontal / 2 !important;
-    padding-right: $padding-horizontal / 2 !important;
-}
+// @include for-tablet-landscape-down ('.el-custom--flavors-wrapper'){
+//     padding-left: $padding-horizontal / 2 !important;
+//     padding-right: $padding-horizontal / 2 !important;
+// }
 @include for-tablet-landscape-down ('.el-custom--banner-tagimage'){
     padding-bottom: 8%;
 }

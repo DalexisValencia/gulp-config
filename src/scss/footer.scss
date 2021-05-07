@@ -139,24 +139,41 @@ img.for-big-desktop{
     width: 100%;
     top: -17vw;
 }
+
+
+@include for-big-desktop-middle('body.guarana-registroexitoso'){
+    main.el-custom--main{
+        .el-custom--news-page__main{
+            padding-bottom: 15% !important;
+            .el-custom--news-stick-banner{
+                height: 633px;
+            }
+        }
+        #block-footer{
+            .el-custom--footer.yellow{
+                margin-top: 0vw !important;
+            }
+        }
+    }
+}
 @include for-big-desktop-middle('body.system-404, body.guarana-page'){
     main.el-custom--main{
         background-color: $secondary-brand-color;
         #block-footer{
-            .el-custom--footer.yellow{
-                background-color: $secondary-brand-color;
-            }
+            // .el-custom--footer.yellow{
+            //     background-color: $secondary-brand-color;
+            // }
         }
     }
 }
 @include for-big-desktop-middle('body.ab-guarana-pe-core-home'){
     main.el-custom--main{
         background-color: $primary-brand-color;
-        #block-footer{
-            .el-custom--footer.yellow{
-                background-color: $primary-brand-color;
-            }
-        }
+        // #block-footer{
+        //     .el-custom--footer.yellow{
+        //         background-color: $primary-brand-color;
+        //     }
+        // }
     }
 }
 @include for-big-desktop-middle('.system-404'){

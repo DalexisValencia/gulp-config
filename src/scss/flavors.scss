@@ -49,7 +49,7 @@
     }
 }
 @include for-desktop-up ('.el-custom--banner-sku'){
-    height: calc(85rem);
+    height: calc(70rem);
     .el-custom--flavors-wrapper{
         .el-custom--flavors-card.slick-initialized.slick-slider{
             .slick-list.draggable{

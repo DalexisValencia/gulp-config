@@ -52,18 +52,46 @@ $(document).ready(function() {
     $('#el-custom--flavors__big-slide').slick({
         slidesToShow: 3,
         dots: false,
+        initialSlide: 0,
+        speed: 700,
+        slidesToScroll: 1,
         // appendArrows: $('.el-custom--skus-slide-arrows'),
         arrows: true,
+        variableWidth: true,
         autoplay: false,
         adaptiveHeight: true,
-        responsive: [{
+        responsive: [
+            {
+                breakpoint: 1250,
+                settings: {
+                    slidesToShow: 4,
+                    slidesPerRow: 4,
+                    swipe: true,
+                    infinite: true,
+                    arrows: true,
+                    variableWidth: false,
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 3,
+                    slidesPerRow: 3,
+                    swipe: true,
+                    infinite: true,
+                    arrows: true,
+                    variableWidth: false,
+                }
+            },
+            {
             breakpoint: 600,
             settings: {
                 slidesToShow: 2.35,
                 slidesPerRow: 2.35,
                 swipe: true,
-                infinite: false,
+                infinite: true,
                 arrows: false,
+                variableWidth: false,
             }
         }]
     });
@@ -97,10 +125,10 @@ $(document).ready(function() {
 
     if(pathname.indexOf('sabores') != -1) {
         var findIndex = pathname.split("/")[2];
-        console.error(findIndex, 'indes');
-        if(findIndex != null){
-            console.info('ahora vamos')
-            // $('#el-custom--flavors-page__sliders').slick('slickGoTo', 3);
+        if (findIndex != null) {
+            // console.log('OK');
+            $('#el-custom--flavors-page__sliders').slick('slickGoTo', findIndex);
+            $('.el-custom--main-menu li.nav-item:nth-child(4)').addClass('active');
         }
     }
 });

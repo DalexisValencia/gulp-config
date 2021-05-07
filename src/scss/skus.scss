@@ -25,6 +25,18 @@
         pointer-events: none;
     }
 }
+
+@include for-desktop-up('.el-custom--banner-sku'){
+    display: flex;
+    justify-content: center;
+    .el-custom--flavors-wrapper{
+        padding: 17% 0 0px !important;
+    }
+    .el-custom--flavors-card.slick-initialized.slick-slider{
+        max-width: 1250px;
+    }
+}
+
 @include for-tablet-portrait-up ('.el-custom--banner-sku') {
     .el-custom--flavors-wrapper{
         section.el-custom--flavors-card.slick-initialized.slick-slider{

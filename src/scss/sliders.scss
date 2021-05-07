@@ -2,6 +2,17 @@
 @import './vars/colors.scss';
 .el-custom--banners {
     position: relative;
+    // &::after{
+    //     content: "";
+    //     position: absolute;
+    //     width: 50%;
+    //     height: 150vh;
+    //     background-color: red !important;
+    //     background-image: url('../assets/index/lineas-fondo_home.png');
+    //     background-position: left;
+    //     background-repeat: no-repeat;
+    //     z-index: 0;
+    // }
 }
 
 .banner {

@@ -1,6 +1,10 @@
 @import './vars/colors.scss';
 .el-custom--main{
     overflow: hidden;
+    background-image: url('../assets/index/lineas-fondo_home.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
     &:not(.el-custom-404-page),
     &:not(.el-custom-news-page){
         background-color: $fourtiary-brand-color;

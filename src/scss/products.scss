@@ -4,6 +4,9 @@
 @import './common/queries.scss';
 
 .el-custom--products{
+    background-image: url('../assets/products/lineas-fondo-products.png');
+    background-position: right;
+    background-repeat: no-repeat;
     position: relative;
     padding: 0 33px;
     display: flex;
@@ -107,6 +110,7 @@
 
 
 @include for-phone-only ('.el-custom--products') {
+    background-image: unset !important;
     .el-custom--products-wrapper{
         max-width: none;
         height: auto;
@@ -115,7 +119,6 @@
             margin-top: 30px;
             margin-bottom: 30px;
             &.slick-slider{
-                border: 3px dashed red;
                 padding: 0px !important;
             }
             .slick-list{
@@ -123,11 +126,9 @@
                 .slick-track{
                     .products--card{
                         &.slick-active.slick-center{
-                            // border: 3px solid pink;
                             width: 58vw !important;
                         }
                         .products--card__description{
-                            // border: 1px solid black;
                             h3{
                                 font-size: 4vw !important;
                             }
@@ -147,7 +148,4 @@
     }
     // height: auto !important;
 }
-
-// @include  for-phone-small ('.el-custom--banner-tagimage, .el-custom--banner-sku') {
-// }
 

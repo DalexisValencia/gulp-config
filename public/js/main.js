@@ -152,9 +152,9 @@ $(document).ready(function() {
         // .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
         //     console.log(nextSlide, 'pilas');
         // });
-        // $("div.products--card").click(function(){
-        //     const index = $(this).attr('data-attr-index');
-        //     bannerProducts.slick('slickGoTo', index -1);
-        // });
+        $("div.products--card").click(function(){
+            const index = $(this).attr('data-attr-index');
+            bannerProducts.slick('slickGoTo', index -1);
+        });
     }
 });

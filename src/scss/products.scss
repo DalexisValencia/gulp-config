@@ -94,8 +94,41 @@
 
 
 @include  for-phone-only ('.el-custom--products') {
-    border: 5px solid magenta;
-    height: auto !important;
+    border: 2px solid magenta;
+    .el-custom--products-wrapper{
+        max-width: none;
+        height: auto;
+        .el-custom--products-slide{
+            height: 105vw;
+            .slick-list{
+                height: 98% !important;
+                .slick-track{
+                    .products--card{
+                        &.slick-active.slick-center{
+                            transition: 0.5s all;
+                            border: 3px solid pink;
+                            width: 58vw !important;
+                        }
+                        .products--card__description{
+                            border: 1px solid black;
+                            h3{
+                                font-size: 4vw !important;
+                            }
+                            .el-custom--button{
+                                font-size: 4.5vw !important;
+                                max-width: none;
+                                height: unset !important;
+                                padding: 15px 0px;
+                                width: 80%;
+                                background-color: $tertiary-brand-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // height: auto !important;
 }
 
 // @include  for-phone-small ('.el-custom--banner-tagimage, .el-custom--banner-sku') {

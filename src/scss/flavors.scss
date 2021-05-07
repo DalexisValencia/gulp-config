@@ -49,20 +49,22 @@
     }
 }
 @include for-desktop-up ('.el-custom--banner-sku'){
-    height: calc(70rem);
+    height: calc(83rem);
     .el-custom--flavors-wrapper{
         .el-custom--flavors-card.slick-initialized.slick-slider{
             .slick-list.draggable{
                 .slick-track{
                     .flavors--card{
-                        max-width: 310px;
+                        max-width: 312px;
                     }
                 }
             }
         }
     }
 }
-
+@include for-big-desktop-middle ('.el-custom--banner-sku') {
+    height: calc(75rem);
+}
 // @include for-tablet-landscape-down ('.el-custom--flavors-wrapper'){
 //     padding-left: $padding-horizontal / 2 !important;
 //     padding-right: $padding-horizontal / 2 !important;

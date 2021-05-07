@@ -81,15 +81,15 @@
 }
 
 @include for-tablet-landscape-down ('.el-custom--products'){
-   padding: 0px;
-   .el-custom--products-wrapper{
-       .el-custom--products-slide.slick-slider{
-           padding: 0px;
-       }
-       .el-custom--products-arrows{
-           padding: 0px 20px;
-       }
-   }
+    padding: 0px;
+    .el-custom--products-wrapper{
+        .el-custom--products-slide.slick-slider{
+            padding: 0px;
+        }
+        .el-custom--products-arrows{
+            padding: 0px 20px;
+        }
+    }
 }
 
 

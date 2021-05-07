@@ -28,20 +28,16 @@
         justify-content: space-evenly;
         max-width: 1151px;
         width: 75%;
-        border: 2px solid blue;
         .el-custom--details--body-wrapper-image{
             display: inline-block;
-            border: 1px solid magenta;
             cursor: pointer;
             img{
-                border: 2px solid red;
-                width: 316;
+                width: 316px;
                 height: 316px;
             }
         }
         article{
             margin-top: 40px;
-            border: 1px dashed black;
             width: 50%;
             display: flex;
             flex-wrap: wrap;
@@ -90,6 +86,120 @@
                             &:first-child{
                                 font-weight: 500;
                                 font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include for-tablet-landscape-down ('.el-custom--details'){
+    background-size: 133%;
+    .el-custom--details--body{ 
+        max-width: 1151px;
+        width: 85%;
+        justify-content: space-between;
+        .el-custom--details--body-wrapper-image{
+            display: flex;
+            justify-content: center;
+            img{
+                margin: auto;
+                width: 30vw;
+                height: 30vw;
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 730px) {
+    .el-custom--details{
+        background-size: 150%;
+        .el-custom--details--body{ 
+            max-width: 1151px;
+            width: 97%;
+            justify-content: space-between;
+            .el-custom--details--body-wrapper-image{
+                display: flex;
+                justify-content: center;
+                img{
+                    margin: auto;
+                    width: 30vw;
+                    height: 30vw;
+                }
+            }
+            article{
+                width: 64%;
+            }
+        }
+    }
+}
+
+@include for-phone-only('.el-custom--details'){
+    // min-height: 536px;
+    align-items: stretch;
+    height: 152vw;
+    max-height: 152vw !important;
+    max-height: unset;
+    background-size: contain;
+    background-image: url('../assets/details/bg-mobile.png') !important;
+    .el-custom--details--body{
+        border: 3px solid red;
+        .el-custom--details--body-wrapper-image{
+            width: 100%;
+            img{
+                width: 50vw;
+                height: 50vw;
+            }
+        }
+        .el-custom--details--body-product-details{
+            border: 1px dashed red;
+            width: 100%;
+            display: unset;
+            margin-top: 0px;
+            .el--custom__title{
+                text-align: center;
+                font-size: 32px;
+            }
+            .el--custom__description{
+                padding-top: 15px;
+                border: 1px dashed black;
+                font-size: 16px;
+                text-align: center;
+            }
+            .el-custom--details--body-product-details-nutritional{
+                padding-top: 20px;
+            }
+        }
+    }
+}
+@include for-phone-small ('.el-custom--details') {
+    .el-custom--details--body{
+        border: 3px solid magenta;
+        .el-custom--details--body-product-details{
+            .el--custom__title{
+                font-size: 8.5vw;
+            }
+            .el--custom__description{
+                font-size: 4.5vw;
+            }
+            .el-custom--details--body-product-details-nutritional{
+                padding-top: 20px;
+                h5{
+                    font-size: 5vw;
+                }
+                ul{
+                    li{
+                        border: 1px solid red;
+                        width: 15vw;
+                        height: 15vw;
+                        margin-right: 8%;
+                        span{
+                            &:first-child{
+                                font-size: 5.5vw;
+                            }
+                            &:last-child{
+                                font-size: 5vw;
                             }
                         }
                     }

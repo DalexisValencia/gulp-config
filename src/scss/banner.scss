@@ -1,0 +1,49 @@
+@import './common/queries.scss';
+@import './vars/colors.scss';
+.el-custom--promotional-banner{
+    margin: 50px 0px;
+    width: 100%;
+    height: 25vw;
+    min-height: 304px;
+    background-image: url('../assets/index/banners/banner-desktop.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    .el-custom--promotional-banner-header{
+        margin-left: 85px;
+        max-width: 484px;
+        border: 1px solid white;
+        h2, p{
+            color: $fourtiary-brand-color;
+            font-family: 'Roboto', sans-serif;
+        }
+        h2{
+            font-size: 40px;
+            font-weight: 700;
+        }
+        p{
+            margin: 0px;
+            font-weight: 500;
+            font-size: 20px;
+        }
+    }
+}
+
+@include for-tablet-landscape-down ('.el-custom--promotional-banner'){
+    // border: 3px solid red;
+    height: 27vw;
+    min-height: unset;
+    background-size: contain;
+    header.el-custom--promotional-banner-header{
+        margin-left: 10%;
+        max-width: 50%;
+        h2{
+            font-size: 4vw;
+        }
+        p{
+            font-size: 2vw;
+        }
+    }
+}

@@ -30,6 +30,14 @@
     }
 }
 
+@mixin for-ipadPro-only ($property) {
+    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)  {
+        #{$property} {
+            @content;
+        }
+    }
+}
+
 @mixin for-tablet-landscape-down ($property) {
     @media (max-width: 900px) {
         #{$property} {

@@ -1,0 +1,134 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+
+.el-custom--home-page{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .el-custom--home-page-container{
+        position: relative;
+        // border: 1px solid black;
+        width: 50%;
+        height: 49vw;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .el-custom-home-page-cristal-img{
+            img{
+                max-width: 314px;
+                max-height: 308px;
+                width: 28vw;
+            }
+        }
+        .el-custom--button{
+            padding: 10px 5px;
+            position: absolute;
+            color: $fourtiary-brand-color;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: none;
+            span{
+                text-decoration: underline;
+            }
+            i {
+                font-size: 22px;
+            }
+        }
+        &.el-left{
+            color: orange;
+            background-image: url('../assets/home-page/desktop/container-left.png');
+            .el-custom--button{
+                right: 0px;
+                span{
+                    margin-right: 20px;
+                }
+            }
+        }
+        &.el-right{
+            color: purple;
+            background-image: url('../assets/home-page/desktop/container-right.png');
+            .el-custom--button{
+                left: 0px;
+                span{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+@mixin home-page-mobile () {
+    flex-wrap: wrap;
+    .el-custom--home-page-container{
+        width: 100%;
+        height: 83vw !important;
+        .el-custom-home-page-cristal-img{
+            img{
+                width: 45vw;
+            }
+        }
+        .el-custom--button{
+            display: flex;
+            font-size: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            span{
+                width: 100%;
+                display: block;
+                margin: 0px !important;
+            }
+            i {
+                transform: rotate(90deg);
+                font-size: 18px;
+            }
+        }
+        &.el-left{
+            color: orange;
+            background-image: url('../assets/home-page/mobile/container-left.png');
+            .el-custom--button{
+                bottom: 0px;
+                right: unset;
+                span{
+                    margin-right: 20px;
+                }
+            }
+        }
+        &.el-right{
+            color: purple;
+            background-image: url('../assets/home-page/mobile/container-right.png');
+            .el-custom--button{
+                top: 0px;
+                left: unset;
+                span{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+@include for-phone-only ('.el-custom--home-page') {
+    @include  home-page-mobile();
+}
+
+@include for-ipadPro-only ('.el-custom--home-page') {
+    @include  home-page-mobile();
+    .el-custom--home-page-container{
+        .el-custom--button{
+            font-size: 25px;
+        }
+        .el-custom-home-page-cristal-img{
+            img{
+                width: 43vw;
+                max-height: inherit;
+                max-width: inherit;
+            }
+        }
+    }
+}

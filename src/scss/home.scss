@@ -132,3 +132,19 @@
         }
     }
 }
+
+// @include for-ipad-only ('.el-custom--home-page') {
+//     @include  home-page-mobile();
+//     .el-custom--home-page-container{
+//         .el-custom--button{
+//             font-size: 25px;
+//         }
+//         .el-custom-home-page-cristal-img{
+//             img{
+//                 width: 43vw;
+//                 max-height: inherit;
+//                 max-width: inherit;
+//             }
+//         }
+//     }
+// }

@@ -130,6 +130,7 @@ $zerozero-bg-color: #848484;
                             margin-top: 20px;
                             font-size: 25px;
                             font-family: 'Poppins', sans-serif;
+                            font-style: italic;
                         }
                         button,
                         a {
@@ -140,8 +141,9 @@ $zerozero-bg-color: #848484;
                             font-style: italic;
                             font-family: 'Poppins', sans-serif;
                             color: $fifth-brand-color;
+                            letter-spacing: inherit;
                             i {
-                                margin-left: 5px;
+                                margin-left: 8px;
                             }
                         }
                     }
@@ -171,6 +173,7 @@ $zerozero-bg-color: #848484;
                         font-family: 'Poppins', sans-serif;
                         margin-top: 20px;
                         font-size: 25px;
+                        font-style: italic;
                     }
                 }
                 .wrapper-image {

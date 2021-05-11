@@ -33,7 +33,7 @@
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     width: 80%;
     max-width: 554px;
@@ -74,11 +74,13 @@
             margin: 23px 0px;
         }
         .el-custom--button{
+            text-decoration: none;
             width: 118px;
             height: 37px;
             color: $fourtiary-brand-color;
             background-color: $tenth-brand-color;
             border-radius: 5px;
+            font-size: 18px;
         }
     }
   }
@@ -351,6 +353,7 @@
     article.el-custom--register-page__form {
         margin: 0px $padding-horizontal * 2;
         width: 71%;
+        flex-wrap: wrap;
         header {
             margin-top: 33px;
             margin-bottom: 35px;
@@ -441,3 +444,28 @@
         display: none !important;
     }
 }
+
+@include for-tablet-landscape-down('.modal-content ') {
+    margin-top: 176px;
+}
+
+@include for-phone-only('.modal-content ') {
+    article{
+        h1{
+            font-size: 20px;
+        }
+        p{
+            font-size: 14px;
+        }
+        .el-custom--button{
+            text-decoration: none;
+            width: 123px;
+            height: 39px;
+            color: $fourtiary-brand-color;
+            background-color: $tenth-brand-color;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    }
+}
+

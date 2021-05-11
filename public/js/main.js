@@ -34,9 +34,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-// $(document).ready(function() {
-//     $('select').niceSelect();
-// });
+$(document).ready(function() {
+    // $('select').niceSelect();
+});
 
 $(document).ready(function() {
     $('.el-custom--banners-slides').slick({

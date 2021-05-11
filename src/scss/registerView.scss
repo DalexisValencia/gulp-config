@@ -140,8 +140,13 @@
 
 @mixin form-item {
     .js-form-item {
+        &:not(.form-full){
+            width: 50%;
+        }
+        &.form-full{
+            width: 100%;
+        }
         border: 1px solid transparent;
-        width: 50%;
         display: flex;
         flex-wrap: wrap;
         position: relative;
@@ -149,7 +154,6 @@
             width: 100%;
         }
         &.form-item-birthday{
-            // width: 100%;
             justify-content: space-between;
             display: flex;
             div.js-form-item{
@@ -158,11 +162,12 @@
         }
         label {
             &:not(.error) {
-                font-style: italic;
-                font-size: 22px;
-                font-family: 'Poppins-SemiBold';
+                color: $primary-brand-color;
+                font-size: 18px;
+                font-family:Roboto,sans-serif;
                 display: block;
-                height: 27px;
+                font-weight: 700;
+                height: max-content;
             }
             &.error {
                 color: $tertiary-brand-color;
@@ -174,26 +179,31 @@
             sans-serif;
             font-weight: bolder;
             width: 100%;
-            // margin-bottom: 10px
         }
         // border: 2px solid red;
         @include form-select();
         input:not(.form-checkbox) {
-            height: 42px;
+            height: 32px;
             width: 100%;
-            border: 2px solid #C5C5C5;
+            border: 0px solid transparent;
+            padding: 0px 0px;
+            border-bottom: 1px solid $primary-brand-color;
             background-color: $fourtiary-brand-color !important;
             @extend .apply-to-form-inputs;
             color: $fifth-brand-color;
+            transition: 0.3s all;
+            font-family: 'Roboto', sans-serif;
             &:focus,
             &:active{
                 color: $fifth-brand-color !important;
+                border-bottom: 1px solid #454D58;
+                color: #454D58 !important;
+                font-weight: 700;
             }
             &::placeholder {
-                color: #9A9A9A;
+                color: rgba(#454D58, 0.5);
                 font-size: 13px;
-                font-weight: bold;
-                font-family: Poppins, sans-serif;
+                font-weight: 500;
             }
             &.error{
                 border-color: $tertiary-brand-color !important;
@@ -272,6 +282,7 @@
         .el-custom-brand-register-form {
             max-width: 1000px;
             .block-form-group {
+                border: 1px solid red;
                 display: flex;
                 @include form-item();
             }

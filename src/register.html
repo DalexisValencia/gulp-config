@@ -19,39 +19,38 @@
     <main class="el-custom--main el-custom-register-page">
         <header class="el-custom--header">
             <nav class="el-custom--flex justify-between">
-                <a class="el-custom--main-logo" href="index.html"></a>
+                <div class="el-custom--flex el-custom--up-menu">
+                    <a class="el-custom--main-logo" href="index.html"></a>
+                    <div class="burger-menu show-tablet-down">
+                        <i class="i-icon-menu"></i>
+                    </div>
+                </div>
                 <ul class="el-custom--flex el-custom--main-menu">
                     <div class="close-mobile-menu">x</div>
                     <a class="el-custom--main-logo" href=""></a>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="details.html">Sabores</a></li>
-                    <li><a href="register.html">Registro</a></li>
-                    <li class="backusYabtn"><a class="img">Backusya</a></li>
+                    <li class="active show-tablet-down"><a href="index.html">HOME</a></li>
+                    <li><a href="details.html">CRISTAL</a></li>
+                    <li><a href="register.html">HISTORIA</a></li>
+                    <li><a href="register.html">BICOLOR</a></li>
+                    <div class="el-custom--buttons-transform">
+                        <a href="" class="el-custom--button backusYa">Basackys</a>
+                        <a href="" class="el-custom--button">Registro</a>
+                    </div>
                 </ul>
-                <div class="burger-menu show-tablet-down">
-                    <i class="i-menu"></i>
-                </div>
             </nav>
         </header>
         <section class="el-custom--register-page__main">
             <header>
                 <h3>
-                    <span class="small-title">
-                        REGÍSTRATE Y SIGUE DESCUBRIENDO <span class="d-none">NUESTRAS</span>
-                    </span>
-                    <span class="title">
-                        <span class="hide-tablet-down">NUESTRAS</span> PRÓXIMAS NOVEDADES
-                    </span>
+                    REGÍSTRATE
                 </h3>
-                <!-- <h1></h1> -->
-                <h2>Ingresa tus datos para seguir manteniendo esa sed de siempre con las próximas novedades que tendremos para ti.</h2>
             </header>
             <article class="el-custom--register-page__form">
                 <form class="el-custom-brand-register-form" action="/" method="post" accept-charset="UTF-8">
                     <div class="block-form-group">
                         <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name form-no-label form-group">
-                            <label for="name">Nombre</label>
-                            <input placeholder="" autocomplete="off" type="text" id="register-name" name="name" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                            <label for="name">Nombre*</label>
+                            <input placeholder="Ingresa tu nombre" autocomplete="off" type="text" id="register-name" name="name" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
                         </fieldset>
 
                         <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-lastname form-item-lastname form-no-label form-group">
@@ -61,12 +60,33 @@
                     </div>
 
                     <div class="block-form-group">
-                        <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-document form-item-document form-no-label form-group">
+                        <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-document form-item-document form-no-label form-group form-full">
                             <label for="document">DNI / CARNET DE EXTRANJERÍA</label>
-                            <input placeholder="" autocomplete="off" type="number" id="register-document" name="document" value="" step="1" class="form-number required form-control el-custom--input" required="required">
+                            <input placeholder="Ingresa tu número de DNI / Cédula de Extranjería" autocomplete="off" type="number" id="register-document" name="document" value="" step="1" class="form-number required form-control el-custom--input" required="required">
                         </fieldset>
+                    </div>
+
+                    <div class="block-form-group">
                         <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-gender form-item-gender form-no-label form-group">
                             <label for="gender">Género</label>
+                            <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" selected="selected">Género</option>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-birthday form-item-birthday form-group">
+                            <label for="birthday">Fecha de nacimiento</label>
+                            <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" selected="selected">Género</option>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                            </select>
+                            <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" selected="selected">Género</option>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                            </select>
                             <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
                                 <option value="" selected="selected">Género</option>
                                 <option value="F">Femenino</option>
@@ -76,10 +96,14 @@
                     </div>
 
                     <div class="block-form-group">
-                        <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-birthday form-item-birthday form-group">
-                            <label for="birthday">Fecha de nacimiento</label>
-                            <input placeholder="DÍA/MES/AÑO" autocomplete="off" type="text" id="register-birthday" name="birthday" value="" size="60" maxlength="10" class="required form-control el-custom--input" required="required">
+                        <fieldset class="js-form-item js-form-type-email form-type-email js-form-item-email form-item-email form-no-label form-group form-full">
+                            <label for="email">Correo electrónico</label>
+                            <label class="error">*correo electronico invalido</label>
+                            <input placeholder="" autocomplete="off" type="email" id="register-email" name="email" value=" " size="60" maxlength="50" class="form-email required form-control el-custom--input error" required="required">
                         </fieldset>
+                    </div>
+
+                    <div class="block-form-group">
                         <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-city form-item-city form-no-label form-group">
                             <label for="city">Ciudad</label>
                             <select autocomplete="off" name="city" id="register-city" class="form-select required form-control" required="required">
@@ -87,14 +111,6 @@
                                 <option value="1838">Amazonas</option>
                                 <option value="1839">Áncash</option>
                             </select>
-                        </fieldset>
-                    </div>
-
-                    <div class="block-form-group">
-                        <fieldset class="js-form-item js-form-type-email form-type-email js-form-item-email form-item-email form-no-label form-group">
-                            <label for="email">Correo electrónico</label>
-                            <label class="error">*correo electronico invalido</label>
-                            <input placeholder="" autocomplete="off" type="email" id="register-email" name="email" value=" " size="60" maxlength="50" class="form-email required form-control el-custom--input error" required="required">
                         </fieldset>
 
                         <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-phone form-item-phone form-no-label form-group">

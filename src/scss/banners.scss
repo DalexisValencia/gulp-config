@@ -242,6 +242,7 @@
             .el-custom--banners-content{
                 width: 60%;
                 top: 19%;
+                right: 2%;
                 &:nth-child(1){
                     width: 37%;
                     h1{
@@ -280,7 +281,7 @@
                     margin-top: 10px;
                     height: 30px;
                     font-size: 11px;
-                    line-height: 30px;
+                    line-height: 15px;
                 }
             }
         }
@@ -320,7 +321,7 @@
                                 margin-top: 3px;
                                 font-size: 9px;
                                 height: 20px;
-                                line-height: 20px;
+                                line-height: 5px;
                             }
                         }
                     }

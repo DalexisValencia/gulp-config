@@ -25,6 +25,10 @@
         display: block;
         width: 100%;
         position: relative;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // text-align: center;
         .el-custom--banners-content{
             // background-color: rgba(0,0,0,0.6);
             position: absolute;
@@ -276,6 +280,7 @@
                     margin-top: 10px;
                     height: 30px;
                     font-size: 11px;
+                    line-height: 30px;
                 }
             }
         }
@@ -315,6 +320,7 @@
                                 margin-top: 3px;
                                 font-size: 9px;
                                 height: 20px;
+                                line-height: 20px;
                             }
                         }
                     }

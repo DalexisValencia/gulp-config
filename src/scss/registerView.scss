@@ -1,6 +1,9 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 // Ajustes drupal
+#daylist{
+    border: 1px solid red;
+}
 .guarana-page{
     #block-mainpagecontent{
         margin-top: -4%;
@@ -17,7 +20,7 @@
 }
 .apply-to-form-inputs {
     font-size: 15px;
-    font-family: Poppins, sans-serif;
+    font-family:Roboto,sans-serif;
     color: $fifth-brand-color;
 }
 
@@ -26,14 +29,14 @@
         margin: 30px 0px;
         .block-term {
             margin-bottom: 10px;
-            padding: 0px 12px;
+            padding: 0px 18px;
             label.js-form-item {
                 display: flex;
                 label.form-check-label:not(.error) {
                     position: relative;
                     display: flex;
                     align-items: center;
-                    font-family: Poppins, sans-serif;
+                    font-family:Roboto,sans-serif;
                     font-size: 12px;
                     color: $fifth-brand-color;
                     a {
@@ -49,20 +52,25 @@
 
 @mixin form-actions {
     .form-actions {
+        text-align: center;
+        border: 1px solid red;
         button.el-custom--button,
         input.el-custom--button {
-            background-color: $tertiary-brand-color;
-            font-family: Poppins, sans-serif;
-            font-size: 15px;
-            font-style: italic;
+            border-radius: 5px;
+            background-color: $tenth-brand-color;
+            font-family:Roboto,sans-serif;
+            font-size: 18px;
             color: $fourtiary-brand-color;
-            padding: 20px 50px;
+            // padding: 20px 50px;
+            font-weight: 500;
+            width: 238px;
+            height: 48px;
         }
     }
 }
 @mixin nice-select-for-drupal {
     -webkit-tap-highlight-color: transparent;
-    background-color: #fff !important;
+    background-color: transparent !important;
     border-radius: 5px;
     border: solid 1px #e8e8e8;
     box-sizing: border-box;
@@ -113,8 +121,9 @@
     select{
         border: 1px solid transparent;
         border-bottom: 1px solid $primary-brand-color;
-        background-color: $fourtiary-brand-color;
-        background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E) !important;
+        background-color: transparent;
+        // background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E) !important;
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='9' viewBox='0 0 17 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.16742 6.28428L15.0084 1.93979e-08L16.335 1.21863L8.16742 8.72153L-0.000122058 1.21863L1.32645 2.19463e-07L8.16742 6.28428Z' fill='%23454D58'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat, repeat !important;
         background-position: right .7em top 50%, 0 0 !important;
         background-size: .65em auto, 100% !important;
@@ -124,7 +133,10 @@
         margin: 8px 0;
         margin-top: 0px;
         padding: 5px 0px;
-        font-family: Poppins, sans-serif;
+        font-family:Roboto,sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        transition: 0.2s all;
         -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
@@ -134,11 +146,22 @@
             &:active {
                 outline: 0;
                 outline-color: transparent !important;
+                border-bottom: 1px solid #008F4F !important;
             }
         &.error{
             border-color: $tertiary-brand-color !important;
         }
+        optgroup { font-size:40px; }
+        option{
+            font-size: 14px;
+            padding: 5px;
+            background: #c5c5c5;
+        }
     }
+    select option:checked {
+        color: $primary-brand-color;
+        font-weight: 700;
+      }
 }
 
 @mixin form-item {
@@ -161,12 +184,16 @@
             width: 100%;
         }
         &.form-item-birthday{
-            border: 2px dashed magenta !important;
             justify-content: space-between;
             display: flex;
             select.form-select.form-control.el-custom--input,
             div.js-form-item{
                 width: 30% !important;
+                background-image: unset;
+            }
+
+            select.form-select.form-control.el-custom--input{
+                text-align-last:center;
             }
         }
         label {
@@ -184,8 +211,7 @@
                 bottom: -16px;
                 font-size: 12px;
             }
-            font-family: Poppins,
-            sans-serif;
+            font-family:Roboto,sans-serif;
             font-weight: bolder;
             width: 100%;
         }
@@ -197,7 +223,7 @@
             border: 0px solid transparent;
             padding: 0px 0px;
             border-bottom: 1px solid $primary-brand-color;
-            background-color: $fourtiary-brand-color !important;
+            background-color: transparent !important;
             @extend .apply-to-form-inputs;
             color: $fifth-brand-color;
             transition: 0.3s all;
@@ -205,7 +231,7 @@
             &:focus,
             &:active{
                 color: $fifth-brand-color !important;
-                border-bottom: 1px solid #454D58;
+                border-bottom: 1px solid #008F4F !important;
                 color: #454D58 !important;
                 font-weight: 700;
             }
@@ -214,9 +240,9 @@
                 font-size: 13px;
                 font-weight: 500;
             }
-            &.error{
-                border-color: $tertiary-brand-color !important;
-            }
+            // &.error{
+            //     border-color: $tertiary-brand-color !important;
+            // }
             &[type="number"]{
                 -webkit-appearance: none;
                 margin: 0;
@@ -249,45 +275,26 @@
 }
 
 .el-custom--register-page__main {
-    padding: 10% 0px 20%;
-    header {
-        margin: 0px $padding-horizontal * 2;
-        h3{
-            span.title,
-            span.small-title{
-                display: block;
-            }
-            span.small-title{
-                font-size: 30px;
-            }
-            span.title{
-                font-family: 'Poppins-Bold';
-                color: $fifth-brand-color;
-                font-style: italic;
-                text-align: center;
-                font-size: 52px;
-            }
-        }
-
-        h3,
-        h2 {
-            text-align: center;
-            font-family: Poppins, sans-serif;
-            color: $fifth-brand-color;
-            font-style: italic;
-        }
-        h2 {
-            margin-top: 40px;
-            margin-bottom: 40px;
-            padding: 0px 10%;
-            font-size: 21px;
-            font-weight: 200;
-        }
-    }
+    // padding: 10% 0px 20%;
+    border: 2px dashed black;
+    max-width: 1153px;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
     article.el-custom--register-page__form {
+        header {
+            margin-top: 33px;
+            margin-bottom: 35px;
+            width: 100%;
+            h3{
+                font-family:Roboto,sans-serif;
+                color: $fifth-brand-color;
+                text-align: left;
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
         padding: 0px $padding-horizontal * 2;
-        display: flex;
-        justify-content: center;
         .el-custom-brand-register-form {
             max-width: 1000px;
             .block-form-group {
@@ -298,6 +305,18 @@
         }
         @include block-terms();
         @include form-actions();
+    }
+
+    article.el-custom--register-page__image{
+        background-image: url('../assets/form/img_formulario_1.png');
+        background-position: top;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: 1px solid red;
+        max-width: 509px;
+        max-height: 766px;
+        width: 80%;
+        height: 65vw;
     }
 }
 
@@ -318,33 +337,23 @@
     background-position-y: 30%;
 }
 
-@include for-tablet-landscape-down('.el-custom--register-page__main') {
-    padding: 5% 0 21%;
-    header{
-        margin: 0px $padding-horizontal / 2;
-        h3{
-            span.d-none{
-                display: inline-flex;
-            }
-            span.small-title{
-                font-size: 40px;
-            }
-            span.title{
-                font-size: 18px;
-            }
-        }
-        h2 {
-            display: none;
-        }
-        margin-bottom: 20px;
-    }
+// for-tablet-landscape-down
+@include for-phone-only('.el-custom--register-page__main') {
     article.el-custom--register-page__form {
-        padding: 0px $padding-horizontal;
-        .el-custom-brand-register-form {
+        header{
+            h3{
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+        .el-custom-brand-register-form{
             .block-form-group {
                 flex-wrap: wrap;
-                .js-form-item {
-                    width: 100%;
+                fieldset.js-form-item {
+                    &:first-child:not(.form-full){
+                        margin-right: 0px !important;
+                    }
+                    width: 100% !important;
                     &.js-form-type-select {
                         &::before{
                             content: inherit !important;
@@ -355,14 +364,17 @@
                     }
                 }
             }
-            .form-actions {
+        }
+        .form-actions {
+            width: 100%;
+            button.el-custom--button,
+            input.el-custom--button {
                 width: 100%;
-                button.el-custom--button,
-                input.el-custom--button {
-                    width: 100%;
-                }
             }
         }
+    }
+    .el-custom--register-page__image{
+        display: none !important;
     }
 }
 @include for-phone-only('.el-custom-register-page') {

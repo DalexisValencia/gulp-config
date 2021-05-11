@@ -40,12 +40,20 @@
             </nav>
         </header>
         <section class="el-custom--register-page__main">
+            <div id="modalRegister" class="modal">
+                <div class="modal-content">
+                    <span class="close"></span>
+                    <article>
+                        <h3>¡Gracias por registrarte!</h3>
+                        <p>Te has registrado exitosamente.</p>
+                        <button class="el-custom--button">
+                            VOLVER
+                        </button>
+                    </article>
+                </div>
+            </div>
             <article class="el-custom--register-page__form">
-                <header>
-                    <h3>
-                        REGÍSTRATE
-                    </h3>
-                </header>
+                
                 <form class="el-custom-brand-register-form" action="/" method="post" accept-charset="UTF-8">
                     <div class="block-form-group">
                         <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name form-no-label form-group">
@@ -61,7 +69,7 @@
 
                     <div class="block-form-group">
                         <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-document form-item-document form-no-label form-group form-full">
-                            <label for="document">DNI / CARNET DE EXTRANJERÍA</label>
+                            <label for="document">DNI*</label>
                             <input placeholder="Ingresa tu número de DNI / Cédula de Extranjería" autocomplete="off" type="number" id="register-document" name="document" value="" step="1" class="form-number required form-control el-custom--input" required="required">
                         </fieldset>
                     </div>
@@ -70,7 +78,7 @@
                         <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-gender form-item-gender form-no-label form-group">
                             <label for="gender">Género</label>
                             <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
-                                <option value="" selected="selected">Género</option>
+                                <option value="" hide>Selecciona una opción</option>
                                 <option value="F">Femenino</option>
                                 <option value="M">Masculino</option>
                             </select>
@@ -113,8 +121,8 @@
                         </fieldset>
 
                         <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-phone form-item-phone form-no-label form-group">
-                            <label for="phone">Teléfono</label>
-                            <input placeholder="CELULAR" min="1" step="1" autocomplete="off" type="number" id="register-phone" name="phone" value=" " class="form-number required form-control el-custom--input" required="required">
+                            <label for="phone">Número de teléfono*</label>
+                            <input placeholder="000-0000-00" min="1" step="1" autocomplete="off" type="number" id="register-phone" name="phone" value=" " class="form-number required form-control el-custom--input" required="required">
                         </fieldset>
                     </div>
                     <div class="el-custom--block-terms">
@@ -142,6 +150,8 @@
                             ENVIAR
                         </button>
                     </div>
+
+                    <button id="openModal">Ejemplo del modal</button>
                 </form>
             </article>
             <article class="el-custom--register-page__image">

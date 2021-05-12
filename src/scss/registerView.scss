@@ -178,6 +178,8 @@
         }
         span.current {
             font-weight: bolder;
+            color: rgba(#454D58, 0.5);
+            font-size: 14px;
         }
         ul {
             width: 100%;
@@ -256,6 +258,7 @@
         &.form-item-birthday{
             justify-content: space-between;
             display: flex;
+            .nice-select.el-custom--input,
             select.form-select.form-control.el-custom--input,
             div.js-form-item{
                 width: 30% !important;

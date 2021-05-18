@@ -114,6 +114,14 @@
                         color: $fifth-brand-color;
                     }
                 }
+                position: relative;
+                label.error{
+                    color: $tertiary-brand-color;
+                    position: absolute;
+                    bottom: -14px;
+                    font-size: 10px;
+                    left: 13px;
+                }
             }
         }
     }
@@ -149,7 +157,7 @@
     font-family: inherit;
     font-size: 14px;
     font-weight: normal;
-    height: 42px;
+    height: 32px !important;
     line-height: 40px;
     outline: none;
     padding-left: 18px;
@@ -173,6 +181,7 @@
         border: 1px solid transparent;
         border-bottom: 1px solid $primary-brand-color;
         height: 46.4px;
+        padding: 0px;
         * {
             @extend .apply-to-form-inputs;
         }
@@ -264,6 +273,14 @@
                 width: 30% !important;
                 background-image: unset;
             }
+            .js-form-item{
+                .nice-select.el-custom--input{
+                    width: 100% !important;
+                    &::after{
+                        content: unset;
+                    }
+                }
+            }
 
             select.form-select.form-control.el-custom--input{
                 text-align-last:center;
@@ -281,8 +298,9 @@
             &.error {
                 color: $tertiary-brand-color;
                 position: absolute;
-                bottom: -16px;
-                font-size: 12px;
+                bottom: -11px;
+                font-size: 10px;
+                height: 10px;
             }
             font-family:Roboto,sans-serif;
             font-weight: bolder;

@@ -13,20 +13,24 @@ $(document).ready(function() {
     })
 })
 
-var modal = $("#modalRegister");
+$(document).ready(function() {
+    var modal = $("#modalRegister");
+    console.error('función del modal agregada');
+    if(modal.length){
+        var btn = $("#openModal");
+        var span = $(".close");
 
-var btn = $("#openModal");
-var span = $(".close");
+        btn.click(function() {
+            modal.css("display", "block");
+            $("body").addClass("no-overflow");
+            window.scrollTo(0, 0);
+        });
 
-btn.click(function() {
-    modal.css("display", "block");
-    $("body").addClass("no-overflow");
-    window.scrollTo(0, 0);
-});
-
-span.click(function() {
-    modal.css("display", "none");
-    $("body").removeClass("no-overflow");
+        span.click(function() {
+            modal.css("display", "none");
+            $("body").removeClass("no-overflow");
+    });
+    }
 });
 
 // (function ($, Drupal) {

@@ -19,6 +19,12 @@ body.no-overflow{
     // background-color: $fourtiary-brand-color;
 }
 
+.el-custom--main{
+    #block-cristal-pet-menuuser-menu,
+    #block-cristal-pet-footer-menu{
+        display: none;
+    }
+}
 @include for-tablet-landscape-down ('.el-custom--main'){
     background-image: unset;
 }

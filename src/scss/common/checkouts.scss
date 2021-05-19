@@ -64,7 +64,8 @@
 
 @include for-phone-small('.el-custom--checkbox') {
     input[type=checkbox]{
-       &:checked ~ label.option{
+       &:checked ~ label.option,
+       & ~ label.option{
             display: inline-block;
             margin-left: 40px;
             position: relative;

@@ -166,8 +166,8 @@
             }
             &.error {
                 color: $tertiary-brand-color;
-                position: absolute;
-                bottom: -16px;
+                position: relative;
+                bottom: 0px;
                 font-size: 12px;
             }
             font-family: Poppins,
@@ -306,7 +306,8 @@ input.el-custom--input[type=number] {
         }
     }
     background-image: url(../assets/fondo-registro-mobile.png);
-    background-position-y: 30%;
+    background-size: 100%;
+    // background-position-y: 30%;
 }
 
 @include for-tablet-landscape-down('.el-custom--register-page__main') {
@@ -391,9 +392,13 @@ input.el-custom--input[type=number] {
         .el-custom--block-terms {
             .block-term label.js-form-item {
                 label.form-check-label:not(.error) {
+                    display: block;
                     *,
                     a {
                         font-size: 13px;
+                    }
+                    a {
+                        display: inline;
                     }
                 }
             }

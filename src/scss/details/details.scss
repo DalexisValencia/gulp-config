@@ -117,10 +117,11 @@ $zerozero-bg-color: #848484;
                     div.slider-body--playlist__description {
                         width: 33%;
                         h1,
+                        h2,
                         p {
                             color: $fifth-brand-color;
                         }
-                        h1 {
+                        h1, h2 {
                             font-weight: bold;
                             font-size: 52px;
                             font-style: italic;
@@ -161,10 +162,11 @@ $zerozero-bg-color: #848484;
                 .description {
                     width: 50%;
                     h1,
+                    h3,
                     p {
                         color: $fifth-brand-color;
                     }
-                    h1 {
+                    h1, h3 {
                         font-family: 'Poppins-Bold';
                         font-size: 52px;
                         font-style: italic;
@@ -462,7 +464,7 @@ $zerozero-bg-color: #848484;
                         }
                         .description {
                             text-align: center;
-                            h1 {
+                            h1, h3 {
                                 font-size: 25px;
                             }
                             p {
@@ -480,7 +482,7 @@ $zerozero-bg-color: #848484;
                         }
                         .slider-body--playlist__description {
                             margin-top: 40px;
-                            h1 {
+                            h1, h2 {
                                 font-size: 25px;
                             }
                             p {

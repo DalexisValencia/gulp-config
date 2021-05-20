@@ -199,8 +199,11 @@
                 border-color: $tertiary-brand-color !important;
             }
             &[type="number"]{
-                -webkit-appearance: none;
-                margin: 0;
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
                 -moz-appearance: textfield;
             }
         }
@@ -289,10 +292,22 @@
 
 input.el-custom--input[type=number] {
     color: black !important;
+    // -webkit-appearance: none;
+    margin: 0;
+    // -moz-appearance: textfield;
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-    -moz-appearance: textfield;
+    }
+
+    /* Firefox */
+    &[type=number] {
+        -moz-appearance: textfield;
+    }
 }
+
 @include for-big-desktop-middle('.el-custom--register-page__main'){
     padding-top: 73px !important;
     padding-bottom: 100px !important;

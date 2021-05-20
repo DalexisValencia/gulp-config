@@ -163,10 +163,11 @@ $zerozero-bg-color: #848484;
                     width: 50%;
                     h1,
                     h3,
+                    h2,
                     p {
                         color: $fifth-brand-color;
                     }
-                    h1, h3 {
+                    h1, h3, h2 {
                         font-family: 'Poppins-Bold';
                         font-size: 52px;
                         font-style: italic;
@@ -464,7 +465,7 @@ $zerozero-bg-color: #848484;
                         }
                         .description {
                             text-align: center;
-                            h1, h3 {
+                            h1, h3, h2 {
                                 font-size: 25px;
                             }
                             p {

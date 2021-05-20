@@ -2,18 +2,26 @@
 @import './common/queries.scss';
 @mixin products-card {
     .products--card{
+        transition: 0.5s all;
         text-decoration: none !important;
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
-        // &.slick-active.slick-center{
-        //     width: 222px !important;
-        //     .products--card__image{
-        //         img.img-producto{
-        //             width: 90%;
-        //         }
-        //     }
-        // }
+        margin: 0px 10px;
+        &.no-visible{
+            // .products--card__description{
+                opacity: 0;
+            // }
+        }
+       &.slick-center{
+           transform: scale(1.08);
+           .products--card__image{
+                margin-top: 70px;
+                img.img-producto{
+                    width: 80% !important;
+                }
+            }
+       }
         &:not(.slick-center){
             padding-top: 30px;
         }
@@ -26,12 +34,13 @@
             outline-color: transparent !important;
         }
         .products--card__description{
+            transition: 0.3s all;
             text-align: center;
             width: 100%;
             h3 {
-                margin-top: 30px;
+                margin-top: 20px;
                 margin-bottom: 20px;
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Matthan-sans-regular';
                 color: $fifth-brand-color;
                 text-transform: capitalize !important;
                 font-size: 16px;
@@ -41,8 +50,8 @@
                 display: inline-block;
                 border-radius: 5px;
                 text-transform: uppercase;
-                font-size: 14px;
-                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                font-family: 'Matthan-sans-regular';
                 font-weight: 100;
                 color: $fourtiary-brand-color;
                 background-color: $sixth-brand-color;
@@ -53,6 +62,7 @@
             }
         }
         .products--card__image{
+            transition: 0.5s all;
             margin: 0px 10px;
             width: 100%;
             background-image: url('../assets/sabores/circulo1.png');
@@ -63,12 +73,31 @@
             display: flex;
             justify-content: center;
             img.img-producto{
-                transition: 0.5s all;
-                width: 75%;
+                transition: 0.7s all;
+                width: 65%;
                 height: 100%;
-                margin-bottom: 20%;
+                margin-bottom: 15px;
                 object-fit: cover;
             }
         }
+    }
+}
+
+@include for-phone-only('.products--card'){
+    &.slick-center{
+        transform: scale(1) !important;
+        margin-left: 0px !important;
+        margin-right: 1px !important;
+        .products--card__image{
+             margin-top: 20px !important;
+         }
+    }
+    &.no-visible{
+        // .products--card__description{
+            opacity: 1 !important;
+            .products--card__description{
+                opacity: 0;
+            }
+        // }
     }
 }

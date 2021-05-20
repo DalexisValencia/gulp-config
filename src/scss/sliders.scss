@@ -196,18 +196,27 @@
     .el-custom--banners-arrows{
         padding: 0px;
     }
-    .el-custom--banners-dots {
-        ul.slick-dots {
-            padding-bottom: 16px;
-            width: 100%;
-            display: flex !important;
-            justify-content: center;
-            align-items: center;
-            li{
-                button{
-                    width: 16px;
-                    height: 16px;
-                    border-radius: 50%;
+    .el-custom--banners-slides{
+        .slick-list.draggable{
+            .slick-track{
+                .banner{
+                    .el-custom--banners-anchor{
+                        .el-custom--banners-anchor-header{
+                            width: 303px;
+                            h2{
+                                font-size: 35px;
+                            }
+                            p{
+                                font-size: 13px;
+                                margin: 12px;
+                            }
+                            .el-custom--button{
+                                width: 122px;
+                                height: 41px;
+                                font-size: 17px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -215,51 +224,39 @@
 }
 
 @include for-phone-only('.el-custom--banners') {
-    .banner {
-        .el-custom--banners-anchor{
-            .el-custom--banners-content{
-                width: 60%;
-                &:nth-child(1){
-                    width: 37%;
-                    h1{
-                        margin-bottom: 0px;
-                        text-align: left;
-                        span:nth-child(1){
-                            display: block;
-                            padding-left: 10%;
-                        }
-                        span:nth-child(2){
-                            display: block;
-                            padding-left: 20%;
-                        }
-                    }
-                }
-                &:not(:nth-child(1)){
-                    width: 50%;
-                    padding-top: 9%;
-                    h1{
-                        font-size: 5.2vw;
-                        text-align: left;
-                        margin-bottom: 0px;
-                        span{
-                            display: block;
-                            &:nth-child(1){
-                                padding-left: 10%;
+    .el-custom--banners-slides{
+        .slick-list.draggable{
+            .slick-track{
+                .banner{
+                    .el-custom--banners-anchor{
+                        position: relative;
+                        .el-custom--banners-anchor-header{
+                            padding-top: 0px !important;
+                            width: 100%;
+                            left: 0px;
+                            text-align: center;
+                            h2{
+                                font-size: 60px;
+                                width: 100%;
+                                text-shadow: 1px 1px 3px $primary-brand-color;
                             }
-                            &:nth-child(2){
-                                padding-left: 20%;
+                            p{
+                                display: inline-block;
+                                font-size: 16px;
+                                width: 60%;
+                                font-weight: 500;
+                            }
+                            .el-custom--button{
+                                display: block;
+                                width: 138px;
+                                height: 39px;
+                                font-size: 17px;
+                                line-height: 39px;
+                                margin: 0px auto;
+                                margin-top: 20px;
                             }
                         }
                     }
-                }
-                p{
-                    font-size: 3vw;
-                    display: none;
-                }
-                button{
-                    padding: 10px;
-                    font-size: 2.4vw;
-                    margin-top: 10px;
                 }
             }
         }
@@ -279,6 +276,40 @@
             &.slick-next {
                 &::before {
                     font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .el-custom--banners {
+        .el-custom--banners-slides{
+            .slick-list.draggable{
+                .slick-track{
+                    .banner{
+                        .el-custom--banners-anchor{
+                            .el-custom--banners-anchor-header{
+                                margin-top: -70px;
+                                h2{
+                                    font-size: 12vw;
+                                }
+                                p{
+                                    font-size: 3vw;
+                                    width: 85%;
+                                }
+                                .el-custom--button{
+                                    display: block;
+                                    width: 138px;
+                                    height: 39px;
+                                    font-size: 17px;
+                                    line-height: 39px;
+                                    margin: 0px auto;
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

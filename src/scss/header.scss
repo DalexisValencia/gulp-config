@@ -9,7 +9,7 @@
     cursor: pointer;
     display: none;
     i {
-        color: $secondary-brand-color;
+        color: #ED443E;
         font-size: 35px;
     }
 }
@@ -21,13 +21,17 @@
         font-size: 14px;
         width: 110.4px;
         height: 30.4px;
-        background-color: $secondary-brand-color;
+        background-color: $nineth-brand-color;
         border-radius: 5px;
         text-decoration: none;
         color: $fourtiary-brand-color;
         font-family:Roboto,sans-serif;
         &.backusYa{
             margin-right: 12px;
+            background-image: url('../assets/backusYa/backusya-bicolor.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 65%;
         }
     }
 }
@@ -39,9 +43,9 @@ header.el-custom--header {
         flex-wrap: wrap;
         height: 100%;
         div.el-custom--up-menu{
-            background-image: url('/public/assets/header/header-bicolor.png');
+            background-image: url('../assets/header/header-bicolor.png');
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
             padding: 0px $padding-horizontal 0px;
             height: 80px;
             width: 100%;
@@ -67,6 +71,7 @@ header.el-custom--header {
             list-style: none;
             padding: 0px;
             &.el-custom--main-menu{
+                border-top: 5px solid $nineth-brand-color;
                 width: 100%;
                 height: 44px;
                 align-items: center;
@@ -77,12 +82,12 @@ header.el-custom--header {
                     display: none !important;
                 }
                 li {
-                    border-right: 1px solid $primary-brand-color;
+                    border-right: 2px solid $nineth-brand-color;
                     *, a {
                         cursor: pointer;
-                        font-family: 'Roboto', sans-serif;
+                        font-family: 'Matthan-sans-regular';
                         text-decoration: none;
-                        color: $fifth-brand-color;
+                        color: $sixth-brand-color;
                         font-weight: 400;
                         font-size: 20px;
                         padding: 5px 20px;
@@ -102,7 +107,7 @@ header.el-custom--header {
 }
 
 @include for-tablet-landscape-down('header.el-custom--header') {
-    height: 86px;
+    // height: 86px;
     div.el-custom--up-menu{
         justify-content: space-between !important;
             .el-custom--main-logo{
@@ -147,9 +152,18 @@ header.el-custom--header {
         }
     }
     ul.el-custom--main-menu {
+        border-top:0px solid transparent !important;
         overflow-x: auto;
         height: 100% !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url('../assets/mobile-menu/background-bicolor.png');
         background-color: $primary-brand-color !important;
+        .el-custom--main-logo{
+            background-image: url('../assets/mobile-menu/mobile-logo-bicolor.png') !important;
+            margin-bottom: 50px !important;
+        }
         &.active{
             display: block !important;
         }
@@ -161,9 +175,7 @@ header.el-custom--header {
             width: 100% !important;
             text-align: center;
                 border-top: 1px solid $fourtiary-brand-color;
-                // &:last-child{
-                    
-                // }
+                border-right-color: transparent !important;
                 line-height: 53px;
                 height: 62px;
                 padding: 0px !important;
@@ -175,13 +187,24 @@ header.el-custom--header {
                 color: $fourtiary-brand-color !important;
             }
         }
-    }
-    nav {
-        a.el-custom--main-logo{
-            width: 38%;
-            max-width: 100px;
-            min-width: 80px;
-            height: 68px;
+        .el-custom--buttons-transform{
+            .el-custom--button{
+                &.backusYa{
+                    background-size: 145px;
+                }
+                font: {
+                    family: 'Matthan-sans-regular';
+                    size: 28px;
+                }
+            }
         }
     }
+    // nav {
+    //     a.el-custom--main-logo{
+    //         width: 38%;
+    //         max-width: 100px;
+    //         min-width: 80px;
+    //         height: 68px;
+    //     }
+    // }
 }

@@ -35,7 +35,7 @@
 .el-custom--footer {
     position: relative;
     z-index: 3;
-    background-color: $secondary-brand-color;
+    background-color: $nineth-brand-color;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -54,7 +54,7 @@
             li {
                 list-style: none;
                 a {
-                    color: black;
+                    color: $fourtiary-brand-color;
                     // font-size:0.8rem;
                     font-size: 10px;
                     text-transform: uppercase;
@@ -67,6 +67,9 @@
     }
     .el-custom--footer-warning{
         padding: 0px $padding-horizontal;
+        background-image: url('../assets/footer/footer-bicolor.png');
+        background-size: cover;
+        background-repeat: no-repeat;
         background-color: $primary-brand-color;
         width: 100%;
         height: 42px;
@@ -77,7 +80,7 @@
             justify-content: center;
             content: "Anheuser-Busch InBev © 2021";
             position: absolute;
-            color: #000;
+            color: $fourtiary-brand-color;
             font-size: 9.6px;
             font-family: Poppins,sans-serif;
             text-decoration: none!important;
@@ -99,33 +102,38 @@ div.el-custom--logo {
     text-align: center;
     padding-top: 12px;
     img {
-        width: 25px;
-        height: 25px;
+        width: 72px;
+        height: 32px;
     }
 }
 
-@include for-tablet-landscape-down('.el-custom--footer') {
+@include for-phone-only('.el-custom--footer') {
+    background-image: url('../assets/footer/footer-mobile-bicolor.png');
     .el-custom--logo{
+        height: 130px;
         display: flex;
         padding: 30px 45px;
         justify-content: space-between;
+        background-color: $nineth-brand-color;
+        align-items: center;
         .dont-share{
             position: unset;
-            width: 140px;
+            width: 50%;
+            height: 100%;
             left: unset;
             right: unset;
             margin-left: unset;
             margin-right: unset;
             li:first-child{
-                border: 2px solid blue;
                 a{
-                    font-size: 10px;
+                    font-size: 3vw;
+                    color: $fourtiary-brand-color;
                 }
             }
             li:last-child{
-                border: 2px solid blue;
                 a{
-                    font-size: 6px;
+                    font-size: 6.5px;
+                    color: $fourtiary-brand-color;
                 }
             }
             li{
@@ -142,15 +150,15 @@ div.el-custom--logo {
                 }
             }
         }
-        img{
-            width: 57px;
-            height: 57px; 
-        }
+        // img{
+        //     width: 57px;
+        //     height: 57px; 
+        // }
     }
     .el-custom--footer-above-section{
         height: unset;
         .el-custom--footer-nav{
-            background-color: $primary-brand-color;
+            background-color: transparent;
             padding-top: 15px;
             ul{
                 flex-wrap: wrap;
@@ -167,6 +175,8 @@ div.el-custom--logo {
         }
     }
     .el-custom--footer-warning{
+        background-image: unset;
+        background-color: transparent;
         height: auto;
         padding-bottom: 30px;
         flex-wrap: wrap;

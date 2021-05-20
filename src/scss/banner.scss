@@ -17,13 +17,15 @@
         max-width: 484px;
         h2, p{
             color: $fourtiary-brand-color;
-            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
         }
         h2{
-            font-size: 40px;
+            font-size: 66px;
             font-weight: 700;
+            font-family: 'Matthan-sans-regular';
         }
         p{
+            font-family: 'Roboto', sans-serif;
             margin: 0px;
             font-weight: 500;
             font-size: 20px;
@@ -40,7 +42,7 @@
         margin-left: 10%;
         max-width: 50%;
         h2{
-            font-size: 4vw;
+            font-size: 6.6vw;
         }
         p{
             font-size: 2vw;

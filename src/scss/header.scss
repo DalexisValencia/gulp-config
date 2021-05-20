@@ -39,6 +39,9 @@ header.el-custom--header {
         flex-wrap: wrap;
         height: 100%;
         div.el-custom--up-menu{
+            background-image: url('/public/assets/header/header-bicolor.png');
+            background-repeat: no-repeat;
+            background-size: contain;
             padding: 0px $padding-horizontal 0px;
             height: 80px;
             width: 100%;

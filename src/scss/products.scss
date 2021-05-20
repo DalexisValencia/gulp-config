@@ -3,6 +3,9 @@
 @import './common/queries.scss';
 
 .el-custom--products{
+    &#cristal-products{
+        scroll-behavior: smooth;
+    }
     background-image: url('../assets/products/lineas-fondo-products.png');
     background-position: right;
     background-repeat: no-repeat;

@@ -3,6 +3,9 @@
 body.no-overflow{
     overflow: hidden !important;
 }
+html, body{
+    scroll-behavior: smooth;
+}
 .el-custom--main{
     overflow: hidden;
     background-image: url('../assets/index/lineas-fondo_home.png');

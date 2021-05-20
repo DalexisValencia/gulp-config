@@ -6,20 +6,23 @@ $subheading-size: $heading-size - 4px;
 $pharagraph-size: ($heading-size / 2) - 2;
 
 @font-face {
-    font-family: 'Poppins-Bold';
-    src: url('../assets/fonts/Poppins-Bold.otf');
+    font-family: 'Matthan-sans-italic';
+    src: url('../assets/fonts/bicolor/Matthan-sans-italic.ttf');
+}
+@font-face {
+    font-family: 'Matthan-sans-regular';
+    src: url('../assets/fonts/bicolor/Matthan-sans-regular.ttf');
 }
 
 @font-face {
-    font-family: 'Poppins-SemiBold';
-    src: url('../assets/fonts/Poppins-SemiBold.otf');
-}
-
-@font-face {
-    font-family: 'Poppins-Light';
-    src: url('../assets/fonts/Poppins-Light.otf');
+    font-family: 'ResotE';
+    src: url('../assets/fonts/cristal/ResotE.ttf');
 }
 @font-face {
-    font-family: 'Poppins-SemiBoldItalic';
-    src: url('../assets/fonts/Poppins-SemiBoldItalic.otf');
+    font-family: 'ResotE-Lavender';
+    src: url('../assets/fonts/cristal/ResotE-Lavender.ttf');
+}
+@font-face {
+    font-family: 'ResotE-Pearl';
+    src: url('../assets/fonts/cristal/ResotE-Pearl.ttf');
 }

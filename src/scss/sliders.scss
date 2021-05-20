@@ -2,91 +2,61 @@
 @import './vars/colors.scss';
 .el-custom--banners {
     position: relative;
-    // &::after{
-    //     content: "";
-    //     position: absolute;
-    //     width: 50%;
-    //     height: 150vh;
-    //     background-color: red !important;
-    //     background-image: url('../assets/index/lineas-fondo_home.png');
-    //     background-position: left;
-    //     background-repeat: no-repeat;
-    //     z-index: 0;
-    // }
 }
 
 .banner {
     img {
         width: 100% !important;
     }
-    a.el-custom--banners-anchor{
-        display: block;
+    .el-custom--banners-anchor{
+        display: flex;
         width: 100%;
         position: relative;
-        .el-custom--banners-content{
-            // background-color: rgba(0,0,0,0.6);
+        align-items: center;
+        picture {
+            width: 100%;
+        }
+        .el-custom--banners-anchor-header{
             position: absolute;
-            z-index: 2;
-            top: 18%;
-            right: 10%;
-            width: 40%;
-            text-align: center;
-            &:nth-child(0){
-                right: 5%;
+            z-index: 11;
+            // left: 0px;
+            // top: 0px;
+            left: 10%; 
+            width: 462px;
+            // width: 36%;
+            padding-top: 5%;
+            .banners-anchor-header--title,
+            .banners-anchor-header--description{
+                color: white;
             }
-            h1, p, button{
-                text-transform: uppercase;
-            }
-            h1{
-                font-family: 'Poppins-Bold';
-                color: $fourtiary-brand-color;
-                font-style: italic;
-                font-size: 4.2vw;
-                line-height: 1.15;
-                margin-bottom: 10px;
-                span{
-                    display: block;
-                }
-                &.black{
-                    padding-top: 10%;
-                    color: $fifth-brand-color;
-                    line-height: 0.98;
-                    span{
-                        display: block;
-                        font-size: 4.6vw;
-                    }
-                    margin-bottom: 20px;
+            .banners-anchor-header--title{
+                font: {
+                    size: 55px;
+                    family: 'Matthan-sans-regular';
+                    weight: 100;
                 }
             }
-            p{
-                font-family: Poppins,sans-serif;
-                color: $fourtiary-brand-color;
-                font-style: italic;
-                font-size: 2.2vw;
-                &.black{
-                    color: $fifth-brand-color;
-                    line-height: 1.1;
-                    padding: 0px 2%;
-                    text-transform: inherit !important;
+            .banners-anchor-header--description{
+                margin: 25px 0;
+                line-height: 1.4;
+                font: {
+                    size: 20px;
+                    weight: 100;
+                    family: 'Roboto', sans-serif;
                 }
             }
-            button{
-                &:not(.orange){
-                    background-color: $secondary-brand-color;
-                    color: $fifth-brand-color;
+            .el-custom--button{
+                background-color: #AF1024;
+                color: white;
+                width: 157px;
+                height: 48px;
+                border-radius: 5px;
+                font: {
+                    size: 25px;
+                    family: 'Matthan-sans-regular';
                 }
-                &.orange{
-                    // display: none;
-                    background-color: $primary-brand-color;
-                    color: $fourtiary-brand-color;
-                }
-                font-family: Poppins,sans-serif;
-                font-style: italic;
-                padding: 10px 20px;
-                font-size: 2.4vw;
-                font-weight: normal;
-                margin-top: 10%;
             }
+            
         }
     }
 }
@@ -95,7 +65,7 @@
 .el-custom--banners-dots {
     position: absolute;
     width: 100%;
-    bottom: 16px;
+    bottom: 74px;
     z-index: 2;
     ul.slick-dots {
         margin: 0px;
@@ -134,10 +104,11 @@
 }
 
 .el-custom--banners-arrows{
+    pointer-events: none;
     transition: 0.5s all;
     position: absolute;
     width: 100%;
-    padding: 0px 70px;
+    padding: 0px 20px;
     z-index: 1;
     display: flex;
     justify-content: space-between;
@@ -149,6 +120,7 @@
     display: flex;
     align-items: center;
     button.slick-arrow {
+        pointer-events: auto;
         border: 1px solid transparent;
         color: transparent;
         font-size: 1px;
@@ -184,9 +156,33 @@
     }
 }
 
+.el-custom--banners-arrow-bottom{
+    position: absolute;
+    display: block;
+    color: white;
+    width: 54px;
+    height: 40px;
+    bottom: 13px;
+    z-index: 1;
+    font-size: 13px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    i{  
+        margin-top: 3px;
+        display: block;
+        transform: rotate( 90deg );
+        font-size: 22px;
+        color: $sixth-brand-color;
+    }
+}
+
 @include for-big-desktop-up('.el-custom--banners'){
     .banner {
-        a.el-custom--banners-anchor{
+        .el-custom--banners-anchor{
             .el-custom--banners-content{
                 button{
                     font-size: 30px;
@@ -220,7 +216,7 @@
 
 @include for-phone-only('.el-custom--banners') {
     .banner {
-        a.el-custom--banners-anchor{
+        .el-custom--banners-anchor{
             .el-custom--banners-content{
                 width: 60%;
                 &:nth-child(1){

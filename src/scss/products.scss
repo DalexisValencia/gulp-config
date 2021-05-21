@@ -132,12 +132,15 @@
 
 
 @include for-phone-only ('.el-custom--products') {
+    &::before{
+        background-image: unset !important;
+    }
     background-image: unset !important;
     .el-custom--products-wrapper{
         max-width: none;
         height: auto;
         .el-custom--products-slide{
-            height: 105vw;
+            height: 108vw;
             margin-top: 30px;
             margin-bottom: 30px;
             &.slick-slider{
@@ -153,7 +156,7 @@
                         }
                         .products--card__description{
                             h3{
-                                font-size: 4vw !important;
+                                font-size: 16px !important;
                             }
                             .el-custom--button{
                                 font-size: 4.5vw !important;

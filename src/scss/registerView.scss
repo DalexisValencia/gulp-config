@@ -245,7 +245,6 @@
 
 @mixin form-item {
     .js-form-item {
-        // border: 1px dashed !important;
         padding-left: 0px;
         padding-right: 0px;
         &:first-child:not(.form-full){

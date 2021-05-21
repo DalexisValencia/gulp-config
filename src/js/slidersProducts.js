@@ -23,32 +23,11 @@ $(document).ready(function() {
                         infinite: true,
                     },
                 },
-                // {
-                //     breakpoint: 740,
-                //     settings: {
-                //         centerMode: true,
-                //         rows: 1,
-                //         slidesToShow: 4,
-                //         infinite: true,
-                //         variableWidth: true
-                //     }
-                // },
-                // {
-                //     breakpoint: 700,
-                //     settings: {
-                //         slidesToShow: 3,
-                //         variableWidth: true
-                //     }
-                // },
                 {
                     breakpoint: 600,
                     settings: {
-                        // speed: 700,
-                        // centerMode: true,
-                        // rows: 1,
                         variableWidth: false,
                         slidesToShow: 1.78,
-                        // infinite: true
                     }
                 },
                 {
@@ -60,19 +39,22 @@ $(document).ready(function() {
                 },
             ]
         })
+        .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            addClassToDetails();
+            $(".el-custom--details").removeClass('reload');
+        })
         .on('afterChange', function(event, slick, currentSlide, nextSlide) {
             hidethirdInactive();
+            addClassToDetails();
         });
-        // .on('init', function(event, slick) {
-        //     hidethirdInactive();
-        // });
+        
+
         $("div.products--card").click(function(){
             const index = $(this).attr('data-attr-index');
             bannerProducts.slick('slickGoTo', index -1);
             hidethirdInactive();
+            addClassToDetails();
         });
-
-        hidethirdInactive();
 
         function hidethirdInactive() {
             const realWidth = jQuery( window ).width();
@@ -86,10 +68,18 @@ $(document).ready(function() {
                 $("div.products--card.slick-slide.slick-current.slick-active.slick-center").next().addClass('no-visible');
             }
         }
+
+        function addClassToDetails () {
+            setTimeout(() => {
+                $(".el-custom--details").addClass('reload');
+            }, 500);
+        }
+
+        hidethirdInactive();
+        addClassToDetails();
     }
 
     $(window).resize(function(){
-        console.info("cargado y listo!")
         hidethirdInactive();
     });
 });

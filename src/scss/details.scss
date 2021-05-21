@@ -9,7 +9,7 @@
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-color: red;
+    background-color: $fourtiary-brand-color;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +22,18 @@
         position: absolute;
         top: -24px;
     }
+    &.reload{
+        .el-custom--details--body{
+            opacity: 1;
+        }
+    }
+    &:not(.reload){
+        .el-custom--details--body{
+            opacity: 0;
+        }
+    }
     .el-custom--details--body{
+        transition: 1s all;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -32,8 +43,8 @@
             display: inline-block;
             cursor: pointer;
             img{
-                width: 316px;
-                height: 316px;
+                width: 290px;
+                height: 290px;
             }
         }
         article{
@@ -92,6 +103,17 @@
         }
     }
 }
+@include for-tablet-landscape-only ('.el-custom--details') {
+    .el-custom--details--body{
+        width: 78%;
+        .el-custom--details--body-wrapper-image{
+            img{
+                width: 270px;
+                height: 270px;
+            }
+        }
+    }
+}
 @include for-tablet-landscape-down ('.el-custom--details'){
     background-size: 133%;
     .el-custom--details--body{ 
@@ -103,13 +125,12 @@
             justify-content: center;
             img{
                 margin: auto;
-                width: 30vw;
-                height: 30vw;
+                width: 27.3vw;
+                height: 27.3vw;
             }
         }
     }
 }
-
 @media (min-width: 600px) and (max-width: 730px) {
     .el-custom--details{
         background-size: 150%;
@@ -132,7 +153,6 @@
         }
     }
 }
-
 @include for-phone-only('.el-custom--details'){
     // min-height: 536px;
     align-items: stretch;
@@ -145,8 +165,8 @@
         .el-custom--details--body-wrapper-image{
             width: 100%;
             img{
-                width: 50vw;
-                height: 50vw;
+                width: 65vw;
+                height: 65vw;
             }
         }
         .el-custom--details--body-product-details{
@@ -159,12 +179,12 @@
             }
             .el--custom__description{
                 padding-top: 15px;
-                border: 1px dashed black;
                 font-size: 16px;
                 text-align: center;
             }
             .el-custom--details--body-product-details-nutritional{
                 padding-top: 20px;
+                text-align: center;
             }
         }
     }

@@ -10,7 +10,7 @@
     display: none;
     i {
         color: #ED443E;
-        font-size: 35px;
+        font-size: 25px;
     }
 }
 .el-custom--buttons-transform{
@@ -109,6 +109,7 @@ header.el-custom--header {
 @include for-tablet-landscape-down('header.el-custom--header') {
     // height: 86px;
     div.el-custom--up-menu{
+        background-position: center;
         justify-content: space-between !important;
             .el-custom--main-logo{
                 position: initial !important;

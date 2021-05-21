@@ -14,17 +14,15 @@ $(document).ready(function() {
             infinite: true,
             speed: 400,
             responsive: [
-                // {
-                //     breakpoint: 900,
-                //     settings: {
-                //         slidesToShow: 3,
-                //         slidesPerRow: 3,
-                //         adaptiveHeight: false,
-                //         swipe: true,
-                //         infinite: true,
-                //         rows: 1,
-                //     },
-                // },
+                {
+                    breakpoint: 740,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesPerRow: 4,
+                        adaptiveHeight: true,
+                        infinite: true,
+                    },
+                },
                 // {
                 //     breakpoint: 740,
                 //     settings: {
@@ -63,18 +61,18 @@ $(document).ready(function() {
             ]
         })
         .on('afterChange', function(event, slick, currentSlide, nextSlide) {
-            // console.log(nextSlide, 'pilas');
-            hidethirdInactive();
-        })
-        .on('init', function(event, slick, currentSlide, nextSlide) {
-            // console.log(nextSlide, 'pilas');
             hidethirdInactive();
         });
+        // .on('init', function(event, slick) {
+        //     hidethirdInactive();
+        // });
         $("div.products--card").click(function(){
             const index = $(this).attr('data-attr-index');
             bannerProducts.slick('slickGoTo', index -1);
             hidethirdInactive();
         });
+
+        hidethirdInactive();
 
         function hidethirdInactive() {
             const realWidth = jQuery( window ).width();
@@ -91,6 +89,7 @@ $(document).ready(function() {
     }
 
     $(window).resize(function(){
+        console.info("cargado y listo!")
         hidethirdInactive();
     });
 });

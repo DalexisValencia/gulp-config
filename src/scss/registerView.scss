@@ -461,7 +461,8 @@
                 width: 100%;
                 button.el-custom--button,
                 input.el-custom--button {
-                    font-size: 16px;
+                    font-size: 25px;
+                    width: 238px;
                 }
             }
         }
@@ -489,7 +490,7 @@
             width: 123px;
             height: 39px;
             color: $fourtiary-brand-color;
-            background-color: $tenth-brand-color;
+            // background-color: $tenth-brand-color;
             border-radius: 5px;
             font-size: 16px;
         }

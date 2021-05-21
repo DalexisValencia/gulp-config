@@ -3,8 +3,19 @@
 @import './common/queries.scss';
 
 .el-custom--products{
+    background-color: white;
     &#cristal-products{
         scroll-behavior: smooth;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url('../assets/products/lineas-fondo-products-left.png');
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        width: 100%;
+        height: 100%;
+        left: 0px;
     }
     background-image: url('../assets/products/lineas-fondo-products.png');
     background-position: right;
@@ -19,7 +30,6 @@
         max-width: 1151px;
         width: 100%;
         position: relative;
-        border: 1px solid black;
         .el-custom--products-slide{
             display: flex;
             justify-content: center;

@@ -47,11 +47,10 @@
             .el--custom__title{
                 font-size: 32px;
                 color: $nineth-brand-color;
-                font-family: 'Roboto', sans-serif;
-                font-weight: bold;
+                font-family: 'Matthan-sans-regular';
+                font-weight: 100;
             }
             .el--custom__description{
-                // margin-top: 20px;
                 font-family: 'Roboto', sans-serif;
                 font-weight: 400;
                 color: $primary-brand-color;
@@ -59,6 +58,7 @@
             }
             .el-custom--details--body-product-details-nutritional{
                 h5{
+                    color: $nineth-brand-color;
                     font-size: 16px;
                     font-family: 'Roboto', sans-serif;
                     font-weight: 500;
@@ -202,83 +202,3 @@
         }
     }
 }
-// .el-custom--banner-register{
-//     position: relative;
-//     z-index: 3;
-//     margin-top: -20%;
-//     img{
-//         width: 100%;
-//     }
-//     header.el-custom--banner-register-yellow-banner{
-//         background-image: url('../assets/home/back_form.png');
-//         background-position: center;
-//         background-size: 100%;
-//         background-repeat: no-repeat;
-//         padding: 10% $padding-horizontal 17%;
-//         text-align: center;
-//         margin-top: -13%;
-//         z-index: -1;
-
-//         h5, h3, p{
-//             color: $fifth-brand-color;
-//             font-family: Poppins,sans-serif;
-//             font-style: italic;
-//         }
-//         p {
-//             font-size: 1.8vw;
-//         }
-//         h3 {
-//             font-size: 4vw;
-//             font-family: 'Poppins-Bold';
-//         }
-//         h5{
-//             font-size: 2vw;
-//             font-style: italic;
-//             font-weight: bold;
-//             font-family: Poppins,sans-serif;
-//         }
-
-//         button.el-custom--button,
-//         a.el-custom--button{
-//             z-index: 3;
-//             padding: 10px 40px;
-//             margin-top: 30px;
-//             font-size: 24px;
-//             font-style: italic;
-//             font-family: Poppins,sans-serif;
-//             color: $fourtiary-brand-color;
-//             background-color: $tertiary-brand-color;
-//         }
-//     }
-// }
-
-// @include for-phone-only('.el-custom--banner-register'){
-//     header.el-custom--banner-register-yellow-banner{
-//         padding: 12% $padding-horizontal / 2 20%;
-//         p {
-//             display: none;
-//         }
-//         h3 {
-//             font-size: 25px;
-//             font-weight: bold;
-//         }
-//         h5{
-//             font-size: 15px;
-//         }
-//         button.el-custom--button{
-//             margin-top: 10px;
-//             font-size: 13px;
-//         }
-//     }
-// }
-
-// @include for-phone-small('.el-custom--banner-register'){
-//     header.el-custom--banner-register-yellow-banner{
-//         h3{
-//             font-size: 6.2vw;
-//         }
-//         h5{
-//             font-size: 4.05vw;
-//         }
-//     }
-// }

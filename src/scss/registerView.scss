@@ -63,9 +63,10 @@
     article{
         text-align: center;
         h3{
-            font-size: 24px;
-            font-family:Roboto,sans-serif;
-            color: $primary-brand-color;
+            font-size: 30px;
+            font-family: 'Matthan-sans-regular';
+            color: $sixth-brand-color;
+            font-weight: 100;
         }
         p{
             font-size: 14px;
@@ -75,12 +76,13 @@
         }
         .el-custom--button{
             text-decoration: none;
-            width: 118px;
+            width: 93px;
             height: 37px;
             color: $fourtiary-brand-color;
-            background-color: $tenth-brand-color;
+            background-color: $sixth-brand-color;
             border-radius: 5px;
             font-size: 18px;
+            font-family: 'Matthan-sans-regular';
         }
     }
   }
@@ -134,12 +136,12 @@
         button.el-custom--button,
         input.el-custom--button {
             border-radius: 5px;
-            background-color: $tenth-brand-color;
-            font-family:Roboto,sans-serif;
-            font-size: 18px;
+            background-color: $sixth-brand-color;
+            font-family: 'Matthan-sans-regular';
+            font-size: 24px;
             color: $fourtiary-brand-color;
             font-weight: 500;
-            width: 238px;
+            width: 150px;
             height: 48px;
         }
     }
@@ -189,6 +191,10 @@
             font-weight: bolder;
             color: rgba(#454D58, 0.5);
             font-size: 14px;
+            height: 100%;
+            display: block;
+            display: flex;
+            align-items: center;
         }
         ul {
             width: 100%;
@@ -287,12 +293,13 @@
         }
         label {
             &:not(.error) {
-                color: $primary-brand-color;
-                font-size: 18px;
-                font-family:Roboto,sans-serif;
+                color: $sixth-brand-color;
+                font-size: 22px;
+                font-family: 'Matthan-sans-regular';
                 display: block;
-                font-weight: 700;
+                font-weight: 100;
                 height: max-content;
+                text-transform: uppercase;
             }
             &.error {
                 color: $tertiary-brand-color;
@@ -321,7 +328,7 @@
             &:focus,
             &:active{
                 color: $fifth-brand-color !important;
-                border-bottom: 1px solid #008F4F !important;
+                border-bottom: 1px solid $sixth-brand-color !important;
                 color: #454D58 !important;
                 font-weight: 700;
             }
@@ -379,11 +386,11 @@
             margin-bottom: 35px;
             width: 100%;
             h3{
-                font-family:Roboto,sans-serif;
-                color: $fifth-brand-color;
+                font-family: 'Matthan-sans-regular';
+                color: $sixth-brand-color;
                 text-align: left;
-                font-size: 30px;
-                font-weight: 700;
+                font-size: 41px;
+                font-weight: 100;
             }
         }
         .el-custom-brand-register-form {
@@ -434,7 +441,7 @@
                         margin-right: 0px !important;
                     }
                     label:not(.error) {
-                       font-size: 15px;
+                       font-size: 18px;
                     }
                     width: 100% !important;
                     &.js-form-type-select {

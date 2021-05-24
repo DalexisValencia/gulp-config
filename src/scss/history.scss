@@ -1,0 +1,146 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+$sliderFullHeight: 57vw;
+.el-custom--history__sliders-wrapper{
+    position: relative;
+}
+
+.el-custom--history-page{
+    .el-custom--history-page__header{
+        background-image: url('../assets/history/header/header-history.png');
+        background-size: cover;
+        height: 210px;
+        // text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        h2{
+            font-family: 'ResotE';
+            font-size: 40px;
+            color: #fff;
+            font-weight: 400;
+        }
+        p{
+            font-size: 20px;
+            font-family:Roboto,sans-serif;
+            color: #fff;
+            width: 627px;
+            text-align: center;
+        }
+    }
+    .el-custom--history-page__slider{
+        position: relative;
+        display: flex;
+        align-items: center;
+        .slick-dots{
+            position: absolute;
+            border-right: 4px solid $fourtiary-brand-color;
+            // top: 20px;
+            z-index: 2;
+            right: 0px;
+            list-style: none;
+            margin: 0px 35px 0px 0px;
+            // height: 70%;
+            // display: flex;
+            // flex-wrap: wrap;
+            // align-items: center;
+            li{
+                transition: 0.5s all;
+                padding-right: 20px;
+                height: 40px;
+                cursor: pointer;
+                font-family: 'ResotE';
+                color: $fourtiary-brand-color;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                text-align: right;
+                &::before{
+                    transition: 0.5s all;
+                    right: -9px;
+                    content: "";
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    background-color: $fourtiary-brand-color;
+                    border-radius: 50%;
+                }
+                &:hover{
+                    color: $secondary-brand-color;
+                    &::before{
+                        background-color: $secondary-brand-color;
+                    }
+                }
+                &.slick-active{
+                    font-size: 24px;
+                    color: $secondary-brand-color;
+                    &::before{
+                        background-color: $secondary-brand-color;
+                    }
+                }
+                span{
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+        .el-custom--history-page__slide{
+            position: relative;
+            // display: flex;
+            // align-items: center;
+            // max-height: 668px;
+            // flex-wrap: wrap;
+            .el-custom-home-page-cristal-img{
+                position: relative;
+                display: flex;
+                align-items: center;
+                &.full{
+                    height: $sliderFullHeight;
+                }
+                &:not(.full){
+                    height: $sliderFullHeight / 2;
+                    // height: 37.5vw;;
+                }
+                .el-custom--history-page__slide--header{
+                    position: absolute;
+                    left: 8%;
+                    width: 521px;
+                    .el-custom--history-page__slide--header-year{
+                        color: $fourtiary-brand-color;
+                        font-size: 18px;
+                        position: absolute;
+                        top: -60px;
+                        font-family: 'ResotE-Lavender';
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            width: 125%;
+                            height: 3px;
+                            left: 55px;
+                            bottom: -15px;
+                            background-color: #808080;
+                        }
+                    }
+                    h2{
+                        color: $fourtiary-brand-color;
+                        font-size: 40px;
+                        font-family: 'ResotE-Lavender';
+                        font-weight: 500;
+                    }
+                    p{
+                        color: $fourtiary-brand-color;
+                        font-size: 20px;
+                        font-family:Roboto,sans-serif;
+                    }
+                }
+                width: 100%;
+                // background-image: url('../assets/history/gallery/history-1.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+        }
+    }
+}

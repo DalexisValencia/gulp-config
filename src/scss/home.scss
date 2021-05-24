@@ -1,12 +1,44 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 
-.with-rotate-left{
-    // right: 70px;
-    // animation-name: chears-with-right-bottle;
-    // animation-fill-mode: forwards;
-    // animation-duration: 0.5s;
-    // animation-timing-function: cubic-bezier(0.9, -0.3, 0.2, 0.4);
+.cheers-left-animation,
+.cheers-right-animation
+{
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.9, -0.3, 0.2, 0.4);
+}
+
+.cheers-left-animation{
+    animation-name: cheers-left;
+}
+
+.cheers-right-animation{
+    animation-name: cheers-right;
+}
+
+@keyframes cheers-left {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes cheers-right {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
 }
 
 
@@ -138,6 +170,15 @@
     }
 }
 
+
+@include for-tablet-landscape-down ('.el-custom--home-page') {
+    .el-custom--home-page-container{
+        .el-custom-home-page-cristal-img{
+            border: 1px solid black;
+            max-width: 60px;
+        }   
+    }
+}
 
 @include for-phone-only ('.el-custom--home-page') {
     @include home-page-mobile();

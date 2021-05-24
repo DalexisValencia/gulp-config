@@ -3,22 +3,26 @@ $(document).ready(function(){
     const leftBottle = $(".el-custom--home-page-container.el-left").find('.el-custom-home-page-cristal-img');
     const rightBottle = $(".el-custom--home-page-container.el-right").find('.el-custom-home-page-cristal-img');
     const windowWidth = $(window).width();
-    const translateByBottle = (windowWidth / 2) - 235;
     
     if(home.length) {
         if (windowWidth > 600) {
             $(".el-custom--home-page-container").click(function(){
+            const translateByBottle = (windowWidth / 2) - 235;
              leftBottle.css({
-                 "transform": "rotate(45deg)",
+                 // "transform": "rotate(45deg)",
                  "margin-left": translateByBottle+"px",
              });
              rightBottle.css({
-                 "transform": "rotate(-45deg)",
+                 // "transform": "rotate(-45deg)",
                  "margin-left": "-"+translateByBottle+"px",
              })
              setTimeout(() => {
-                 home.addClass('open-doors');
-             }, 800);
+                leftBottle.addClass('cheers-left-animation');
+                rightBottle.addClass('cheers-right-animation');
+                setTimeout(() => {
+                    home.addClass('open-doors');
+                }, 1000);
+             }, 500);
             });
         }
     }

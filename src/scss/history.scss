@@ -1,8 +1,67 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
-$sliderFullHeight: 57vw;
-.el-custom--history__sliders-wrapper{
-    position: relative;
+// $sliderFullHeight: 57vw;
+// $sliderFullHeight: 74vw;
+$sliderFullHeight: 100vh;
+
+@mixin historyDots {
+    .slick-dots{
+        position: absolute;
+        border-right: 4px solid $fourtiary-brand-color;
+        // top: 20px;
+        z-index: 2;
+        right: 0px;
+        list-style: none;
+        margin: 0px 35px 0px 0px;
+        // height: 70%;
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-items: center;
+        li{
+            pointer-events: initial;
+            padding-right: 20px;
+            height: 40px;
+            cursor: pointer;
+            font-family: 'ResotE';
+            color: $fourtiary-brand-color;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            text-align: right;
+            &::before{
+                transition: 0.5s all;
+                right: -9px;
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background-color: $fourtiary-brand-color;
+                border-radius: 50%;
+            }
+            &:hover{
+                color: $secondary-brand-color;
+                &::before{
+                    background-color: $secondary-brand-color;
+                }
+            }
+            &.slick-active{
+                transition: 0.5s all;
+                a{
+                    font-size: 24px;
+                    color: $secondary-brand-color;
+                }
+                &::before{
+                    background-color: $secondary-brand-color;
+                }
+            }
+            a{
+                display: block;
+                width: 100%;
+                text-decoration: none;
+                color: $fourtiary-brand-color;
+            }
+        }
+    }
 }
 
 .el-custom--history-page{
@@ -31,71 +90,21 @@ $sliderFullHeight: 57vw;
         }
     }
     .el-custom--history-page__slider{
+        border: 1px solid black;
         position: relative;
-        display: flex;
-        align-items: center;
-        .slick-dots{
-            position: absolute;
-            border-right: 4px solid $fourtiary-brand-color;
-            // top: 20px;
-            z-index: 2;
-            right: 0px;
-            list-style: none;
-            margin: 0px 35px 0px 0px;
-            // height: 70%;
-            // display: flex;
-            // flex-wrap: wrap;
-            // align-items: center;
-            li{
-                transition: 0.5s all;
-                padding-right: 20px;
-                height: 40px;
-                cursor: pointer;
-                font-family: 'ResotE';
-                color: $fourtiary-brand-color;
-                display: flex;
-                align-items: center;
-                font-size: 18px;
-                text-align: right;
-                &::before{
-                    transition: 0.5s all;
-                    right: -9px;
-                    content: "";
-                    position: absolute;
-                    width: 15px;
-                    height: 15px;
-                    background-color: $fourtiary-brand-color;
-                    border-radius: 50%;
-                }
-                &:hover{
-                    color: $secondary-brand-color;
-                    &::before{
-                        background-color: $secondary-brand-color;
-                    }
-                }
-                &.slick-active{
-                    font-size: 24px;
-                    color: $secondary-brand-color;
-                    &::before{
-                        background-color: $secondary-brand-color;
-                    }
-                }
-                span{
-                    display: block;
-                    width: 100%;
-                }
-            }
-        }
+        // @include historyDots;
         .el-custom--history-page__slide{
+            width: 100%;
             position: relative;
-            // display: flex;
-            // align-items: center;
-            // max-height: 668px;
-            // flex-wrap: wrap;
             .el-custom-home-page-cristal-img{
+                // background-image: url('../assets/history/gallery/history-1.png');
+                background-position: top;
+                background-repeat: no-repeat;
+                background-size: cover;
+                // background-size: 100%;
+                align-items: center;
                 position: relative;
                 display: flex;
-                align-items: center;
                 &.full{
                     height: $sliderFullHeight;
                 }
@@ -120,7 +129,7 @@ $sliderFullHeight: 57vw;
                             height: 3px;
                             left: 55px;
                             bottom: -15px;
-                            background-color: #808080;
+                            background-color: $fourtiary-brand-color;
                         }
                     }
                     h2{
@@ -134,12 +143,50 @@ $sliderFullHeight: 57vw;
                         font-size: 20px;
                         font-family:Roboto,sans-serif;
                     }
-                }
-                width: 100%;
-                // background-image: url('../assets/history/gallery/history-1.png');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 100%;
+                } 
+            }
+        }
+    }
+    .el-custom--history-page__slider-navigation{
+        position: fixed;
+        right: 0px;
+        // border: 1px solid red;
+        height: 100%;
+        z-index: 2;
+        top: 0px;
+        width: 100%;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        @include historyDots;
+    }
+}
+
+@include for-tablet-landscape-down('.el-custom--history-page'){
+    .el-custom--history-page__slider{
+        .el-custom--history-page__slide {
+            .el-custom-home-page-cristal-img{
+                .el-custom--history-page__slide--header{
+                    border: 2px dashed black;
+                    left: 4%;
+                    width: 55%;
+                    .el-custom--history-page__slide--header-year{
+                        font-size: 1.8vw;
+                        &::before{
+                            width: 100%;
+                            left: 5.8vw;
+                            bottom: -0,5vw;
+                        }
+                    }
+                    h2{
+                        font-size: 3.8vw;
+                    }
+                    p{
+                        font-size: 2vw;
+                    }
+                } 
             }
         }
     }

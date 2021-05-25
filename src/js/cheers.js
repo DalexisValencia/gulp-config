@@ -21,6 +21,10 @@ $(document).ready(function(){
                 rightBottle.addClass('cheers-right-animation');
                 setTimeout(() => {
                     home.addClass('open-doors');
+                    setTimeout(() => {
+                        window.location.href = "/cristal-bicolor";
+                        console.warn('las pueras se abren');
+                    }, 2000);
                 }, 1000);
              }, 500);
             });

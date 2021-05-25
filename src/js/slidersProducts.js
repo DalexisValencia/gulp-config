@@ -70,10 +70,25 @@ $(document).ready(function() {
         }
 
         function addClassToDetails () {
+            addContentToDetail ()
             setTimeout(() => {
                 $(".el-custom--details").addClass('reload');
             }, 500);
         }
+
+        function addContentToDetail () {
+            const activeSlide = $("div.products--card.slick-slide.slick-current.slick-active.slick-center");
+            const details_container = $(".el-custom--details");
+            const attrIndex = activeSlide.attr("data-attr-index");
+            const attrDescription = activeSlide.attr("data-attr-description");
+            const attrImg = activeSlide.attr("data-attr-img");
+            const attTitle = activeSlide.attr("data-atrr-titulo");
+            const attArray = activeSlide.attr("data-atrr-array");
+            
+            if(details_container.attr('data-container-parent') != attrIndex){
+                console.warn("lo agregamos!")
+            }
+        } 
 
         hidethirdInactive();
         addClassToDetails();

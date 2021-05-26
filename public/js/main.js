@@ -21,26 +21,30 @@ $(document).ready(function(){
     if(home.length) {
         if (windowWidth > 600) {
             $(".el-custom--home-page-container").click(function(){
-            const translateByBottle = (windowWidth / 2) - 235;
-             leftBottle.css({
-                 // "transform": "rotate(45deg)",
-                 "margin-left": translateByBottle+"px",
-             });
-             rightBottle.css({
-                 // "transform": "rotate(-45deg)",
-                 "margin-left": "-"+translateByBottle+"px",
-             })
-             setTimeout(() => {
-                leftBottle.addClass('cheers-left-animation');
-                rightBottle.addClass('cheers-right-animation');
+                const translateByBottle = (windowWidth / 2) - 235;
+                leftBottle.css({
+                    // "transform": "rotate(45deg)",
+                    "margin-left": translateByBottle+"px",
+                });
+                rightBottle.css({
+                    // "transform": "rotate(-45deg)",
+                    "margin-left": "-"+translateByBottle+"px",
+                })
                 setTimeout(() => {
-                    home.addClass('open-doors');
+                    leftBottle.addClass('cheers-left-animation');
+                    rightBottle.addClass('cheers-right-animation');
                     setTimeout(() => {
-                        window.location.href = "/cristal-bicolor";
-                        console.warn('las pueras se abren');
-                    }, 2000);
-                }, 1000);
-             }, 500);
+                        home.addClass('open-doors');
+                        setTimeout(() => {
+                            window.location.href = "/cristal-bicolor";
+                            console.warn('las pueras se abren');
+                        }, 2000);
+                    }, 1000);
+                }, 500);
+            });
+        } else if ( windowWidth < 600 ) {
+            $(".el-custom--home-page-container").click(function(){
+                window.location.href = "/cristal-bicolor";
             });
         }
     }
@@ -333,9 +337,9 @@ $(document).ready(function() {
         }
 
         function addClassToDetails () {
-            addContentToDetail ()
             setTimeout(() => {
                 $(".el-custom--details").addClass('reload');
+                addContentToDetail ()
             }, 500);
         }
 
@@ -348,8 +352,25 @@ $(document).ready(function() {
             const attTitle = activeSlide.attr("data-atrr-titulo");
             const attArray = activeSlide.attr("data-atrr-array");
             
-            if(details_container.attr('data-container-parent') != attrIndex){
-                console.warn("lo agregamos!")
+            if (details_container.attr('data-container-parent') != attrIndex) {
+                var parentUl = details_container.find('.el-custom--details--body .el-custom--details--body-product-details .el-custom--details--body-product-details-nutritional ul');
+                details_container.attr('data-container-parent', attrIndex);
+                details_container.find('.el-custom--details--body .el-custom--details--body-product-details h2.el--custom__title').text(attTitle);
+                details_container.find('.el-custom--details--body .el-custom--details--body-product-details .el--custom__description').html(attrDescription);
+                details_container.find('.el-custom--details--body .el-custom--details--body-wrapper-image').find('img').attr('src', attrImg);
+                var splitData = attArray.split(",");
+                parentUl.empty();
+
+                for (let index = 0; index < splitData.length; index++) {
+                    if(index % 2 == 0) {
+                        var li = $("<li></li>");
+                        var spanVal = $("<span></span>").text(splitData[index]);
+                        var spanName = $("<span></span>").text(splitData[index+1]);
+
+                        li.append(spanVal, spanName);
+                        parentUl.append(li);
+                    }
+                }
             }
         } 
 

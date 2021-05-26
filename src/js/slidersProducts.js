@@ -70,9 +70,9 @@ $(document).ready(function() {
         }
 
         function addClassToDetails () {
-            addContentToDetail ()
             setTimeout(() => {
                 $(".el-custom--details").addClass('reload');
+                addContentToDetail ()
             }, 500);
         }
 
@@ -85,8 +85,25 @@ $(document).ready(function() {
             const attTitle = activeSlide.attr("data-atrr-titulo");
             const attArray = activeSlide.attr("data-atrr-array");
             
-            if(details_container.attr('data-container-parent') != attrIndex){
-                console.warn("lo agregamos!")
+            if (details_container.attr('data-container-parent') != attrIndex) {
+                var parentUl = details_container.find('.el-custom--details--body .el-custom--details--body-product-details .el-custom--details--body-product-details-nutritional ul');
+                details_container.attr('data-container-parent', attrIndex);
+                details_container.find('.el-custom--details--body .el-custom--details--body-product-details h2.el--custom__title').text(attTitle);
+                details_container.find('.el-custom--details--body .el-custom--details--body-product-details .el--custom__description').html(attrDescription);
+                details_container.find('.el-custom--details--body .el-custom--details--body-wrapper-image').find('img').attr('src', attrImg);
+                var splitData = attArray.split(",");
+                parentUl.empty();
+
+                for (let index = 0; index < splitData.length; index++) {
+                    if(index % 2 == 0) {
+                        var li = $("<li></li>");
+                        var spanVal = $("<span></span>").text(splitData[index]);
+                        var spanName = $("<span></span>").text(splitData[index+1]);
+
+                        li.append(spanVal, spanName);
+                        parentUl.append(li);
+                    }
+                }
             }
         } 
 

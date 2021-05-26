@@ -13,6 +13,7 @@
         font-size: 25px;
     }
 }
+
 .el-custom--buttons-transform{
     position: absolute;
     top: 28px;
@@ -38,7 +39,6 @@
 header.el-custom--header {
     position: relative;
     z-index: 10;
-    // background-color: $primary-brand-color;
     nav{
         flex-wrap: wrap;
         height: 100%;
@@ -103,11 +103,54 @@ header.el-custom--header {
             }
         }
     }
+    &.cristal{
+        nav{
+            div.el-custom--up-menu{
+                background-image: url('../assets/header/header-cristal.png');
+                .burger-menu{
+                    .i-icon-menu{
+                        color: $seventh-brand-color;
+                    }
+                }
+            }
+            ul{
+                border-top-color: $seventh-brand-color;
+                li {
+                    *, a {
+                        font-family: 'ResotE' !important;
+                        color: $seventh-brand-color;
+                    }
+                }
+                .el-custom--buttons-transform{
+                    .el-custom--button{
+                        background-color: $secondary-brand-color;
+                        color: $primary-brand-color;
+                        &.backusYa{
+                            background-image: url('../assets/backusYa/backusya-cristal.svg');
+                        }
+                    }
+                }
+            }
+        }
+    }
     @include header-logo();
 }
 
 @include for-tablet-landscape-down('header.el-custom--header') {
     // height: 86px;
+    &.cristal{
+        nav{
+            ul.el-custom--main-menu{
+                background-image: url('../assets/mobile-menu/background-cristal.png');
+                li{
+                    a{
+                        font-size: 18px !important;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
     div.el-custom--up-menu{
         background-position: center;
         justify-content: space-between !important;
@@ -175,7 +218,7 @@ header.el-custom--header {
         li {
             width: 100% !important;
             text-align: center;
-                border-top: 1px solid $fourtiary-brand-color;
+                border-bottom: 1px solid $seventh-brand-color;
                 border-right-color: transparent !important;
                 line-height: 53px;
                 height: 62px;
@@ -200,12 +243,4 @@ header.el-custom--header {
             }
         }
     }
-    // nav {
-    //     a.el-custom--main-logo{
-    //         width: 38%;
-    //         max-width: 100px;
-    //         min-width: 80px;
-    //         height: 68px;
-    //     }
-    // }
 }

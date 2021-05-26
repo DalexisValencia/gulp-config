@@ -7,26 +7,30 @@ $(document).ready(function(){
     if(home.length) {
         if (windowWidth > 600) {
             $(".el-custom--home-page-container").click(function(){
-            const translateByBottle = (windowWidth / 2) - 235;
-             leftBottle.css({
-                 // "transform": "rotate(45deg)",
-                 "margin-left": translateByBottle+"px",
-             });
-             rightBottle.css({
-                 // "transform": "rotate(-45deg)",
-                 "margin-left": "-"+translateByBottle+"px",
-             })
-             setTimeout(() => {
-                leftBottle.addClass('cheers-left-animation');
-                rightBottle.addClass('cheers-right-animation');
+                const translateByBottle = (windowWidth / 2) - 235;
+                leftBottle.css({
+                    // "transform": "rotate(45deg)",
+                    "margin-left": translateByBottle+"px",
+                });
+                rightBottle.css({
+                    // "transform": "rotate(-45deg)",
+                    "margin-left": "-"+translateByBottle+"px",
+                })
                 setTimeout(() => {
-                    home.addClass('open-doors');
+                    leftBottle.addClass('cheers-left-animation');
+                    rightBottle.addClass('cheers-right-animation');
                     setTimeout(() => {
-                        window.location.href = "/cristal-bicolor";
-                        console.warn('las pueras se abren');
-                    }, 2000);
-                }, 1000);
-             }, 500);
+                        home.addClass('open-doors');
+                        setTimeout(() => {
+                            window.location.href = "/cristal-bicolor";
+                            console.warn('las pueras se abren');
+                        }, 2000);
+                    }, 1000);
+                }, 500);
+            });
+        } else if ( windowWidth < 600 ) {
+            $(".el-custom--home-page-container").click(function(){
+                window.location.href = "/cristal-bicolor";
             });
         }
     }

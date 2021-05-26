@@ -40,6 +40,24 @@
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row-reverse;
+    &.cristal{
+        background-color: $secondary-brand-color;
+        .el-custom--footer-nav {
+            ul{
+                li{
+                    a{
+                        color: $primary-brand-color;
+                    }
+                }
+            }
+        }
+        .Anheuser-Busch-anchor{
+            color: $primary-brand-color;
+        }
+        .el-custom--footer-warning{
+            background-image: url('../assets/footer/footer-cristal.png'); 
+        }
+    }
     .el-custom--footer-above-section{
         width: 100%;
         height: 93px;
@@ -65,6 +83,14 @@
             }
         }
     }
+    .Anheuser-Busch-anchor{
+        position: absolute;
+        bottom: 50px;
+        color: #fff;
+        font-size: 9.6px;
+        font-family: Poppins,sans-serif;
+        text-decoration: none!important;
+    }
     .el-custom--footer-warning{
         padding: 0px $padding-horizontal;
         background-image: url('../assets/footer/footer-bicolor.png');
@@ -73,19 +99,6 @@
         background-color: $primary-brand-color;
         width: 100%;
         height: 42px;
-        &::before{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            content: "Anheuser-Busch InBev © 2021";
-            position: absolute;
-            color: $fourtiary-brand-color;
-            font-size: 9.6px;
-            font-family: Poppins,sans-serif;
-            text-decoration: none!important;
-            margin-top: -75px;
-        }
        .el-custom--footer-social{
         a {
             text-decoration: none !important;
@@ -109,6 +122,12 @@ div.el-custom--logo {
 
 @include for-phone-only('.el-custom--footer') {
     background-image: url('../assets/footer/footer-mobile-bicolor.png');
+    &.cristal{
+        background-image: url('../assets/footer/footer-mobile-cristal.png');
+    }
+    .Anheuser-Busch-anchor{
+        bottom: 13px;
+    }
     .el-custom--logo{
         height: 130px;
         display: flex;

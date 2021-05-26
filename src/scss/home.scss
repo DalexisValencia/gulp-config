@@ -56,9 +56,17 @@
             &.el-right{
                 transform: translateX(100%);
             }
-            // .el-custom-home-page-cristal-img
             .el-custom--button{
                 opacity: 0;
+            }
+        }
+    }
+    &.cristal{
+        .el-custom--home-page-container{
+            .el-custom--button{
+                color: $secondary-brand-color;
+                font-family: 'ResotE';
+                font-size: 12px;
             }
         }
     }
@@ -102,7 +110,6 @@
             }
         }
         &.el-left{
-            color: orange;
             background-image: url('../assets/home-page/desktop/container-left.png');
             .el-custom--button{
                 right: 0px;
@@ -112,7 +119,6 @@
             }
         }
         &.el-right{
-            color: purple;
             background-image: url('../assets/home-page/desktop/container-right.png');
             .el-custom--button{
                 left: 0px;
@@ -159,7 +165,6 @@
             }
         }
         &.el-right{
-            color: purple;
             background-image: url('../assets/home-page/mobile/container-right.png');
             .el-custom--button{
                 top: 0px;

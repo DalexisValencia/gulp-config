@@ -21,13 +21,12 @@ $(document).ready(function(){
     if(home.length) {
         if (windowWidth > 600) {
             $(".el-custom--home-page-container").click(function(){
-                const translateByBottle = (windowWidth / 2) - 235;
+                const valueToReduce = Math.abs(windowWidth > 900 ? 235 : 160);
+                const translateByBottle = (windowWidth / 2) - valueToReduce;
                 leftBottle.css({
-                    // "transform": "rotate(45deg)",
                     "margin-left": translateByBottle+"px",
                 });
                 rightBottle.css({
-                    // "transform": "rotate(-45deg)",
                     "margin-left": "-"+translateByBottle+"px",
                 })
                 setTimeout(() => {
@@ -37,7 +36,7 @@ $(document).ready(function(){
                         home.addClass('open-doors');
                         setTimeout(() => {
                             window.location.href = "/cristal-bicolor";
-                            console.warn('las pueras se abren');
+                            // console.warn('las pueras se abren');
                         }, 2000);
                     }, 1000);
                 }, 500);

@@ -107,6 +107,9 @@ header.el-custom--header {
         nav{
             div.el-custom--up-menu{
                 background-image: url('../assets/header/header-cristal.png');
+                .el-custom--main-logo{
+                    background-image: url('../assets/logo-cristal.png');
+                }
                 .burger-menu{
                     .i-icon-menu{
                         color: $seventh-brand-color;

@@ -1,9 +1,18 @@
 @import './vars/colors.scss';
 @import 'products_cards.scss';
+@import './cristal/products_cards.scss';
 @import './common/queries.scss';
 
 .el-custom--products{
     background-color: white;
+    background-image: url('../assets/products/lineas-fondo-products.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+    // padding: 0 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &#cristal-products{
         scroll-behavior: smooth;
     }
@@ -17,14 +26,18 @@
         height: 100%;
         left: 0px;
     }
-    background-image: url('../assets/products/lineas-fondo-products.png');
-    background-position: right;
-    background-repeat: no-repeat;
-    position: relative;
-    // padding: 0 33px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &.cristal{
+        .el-custom--products-wrapper{
+            .el-custom--products-slide{
+                border: 3px dashed black;
+                .slick-list{
+                    .slick-track{
+                        @include products-card-cristal;
+                    }
+                }
+            }
+        }
+    }
     .el-custom--products-wrapper{
         height: 495px;
         max-width: 1151px;
@@ -100,19 +113,20 @@
 }
 
 @include for-tablet-portait-only ('.el-custom--products') {
-    .el-custom--products-wrapper{
-        // height: 400px;
-        .el-custom--products-slide.slick-initialized.slick-slider{
-            .slick-list.draggable{
-                .slick-track{
-                    .products--card{
-                        .products--card__description{
-                            h3 {
-                                font-size: 18px;
-                            }
-                            .el-custom--button{
-                                font-size: 15px;
-                                height: 36px;
+    &:not(.cristal){
+        .el-custom--products-wrapper{
+            .el-custom--products-slide.slick-initialized.slick-slider{
+                .slick-list.draggable{
+                    .slick-track{
+                        .products--card{
+                            .products--card__description{
+                                h3 {
+                                    font-size: 18px;
+                                }
+                                .el-custom--button{
+                                    font-size: 15px;
+                                    height: 36px;
+                                }
                             }
                         }
                     }
@@ -121,6 +135,7 @@
         }
     }
 }
+
 @include for-tablet-landscape-down ('.el-custom--products'){
     padding: 0px;
     .el-custom--products-wrapper{
@@ -129,7 +144,6 @@
         }
     }
 }
-
 
 @include for-phone-only ('.el-custom--products') {
     &::before{
@@ -172,6 +186,21 @@
             }
         }
     }
-    // height: auto !important;
+    &.cristal{
+        .el-custom--products-wrapper{
+            .el-custom--products-slide{
+                .slick-list{
+                    .products--card{
+                        .products--card__description{
+                            .el-custom--button{
+                                max-width: 80% !important;
+                                font-size: 3.5vw !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 

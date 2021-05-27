@@ -1,0 +1,124 @@
+@import '../vars/colors.scss';
+@import '../common/queries.scss';
+@mixin products-card-cristal {
+    .products--card{
+        transition: 0.5s all;
+        text-decoration: none !important;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        margin: 0px 10px;
+        &.no-visible{
+            // .products--card__description{
+                opacity: 0;
+            // }
+        }
+       &.slick-center{
+           transform: scale(1.08);
+           .products--card__image{
+                margin-top: 70px;
+                img.img-producto{
+                    width: 80% !important;
+                }
+            }
+       }
+        &:not(.slick-center){
+            padding-top: 30px;
+        }
+        &:active,
+        &:focus,
+        &:hover,
+        &:visited
+        {
+            outline: 0;
+            outline-color: transparent !important;
+        }
+        .products--card__description{
+            transition: 0.3s all;
+            text-align: center;
+            width: 100%;
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-family: 'ResotE';
+                color: #4D4D4D;
+                text-transform: capitalize !important;
+                font-size: 16px;
+                font-weight: 400;
+            }
+            .el-custom--button{
+                display: inline-block;
+                border-radius: 5px;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-family: 'ResotE';
+                font-weight: 100;
+                color: $fourtiary-brand-color;
+                background-color: $seventh-brand-color;
+                width: 90%;
+                max-width: 110.4px;
+                min-width: 110.4px;
+                height: 48px;
+            }
+        }
+        .products--card__image{
+            transition: 0.5s all;
+            margin: 0px 10px;
+            width: 100%;
+            background-image: url('../assets/sabores/circulo1.png');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: contain;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            img.img-producto{
+                transition: 0.7s all;
+                width: 65%;
+                height: 100%;
+                margin-bottom: 15px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@include for-tablet-portait-only ('.el-custom--products') {
+    &.cristal{
+        .el-custom--products-wrapper{
+            .el-custom--products-slide.slick-initialized.slick-slider{
+                .slick-list.draggable{
+                    .slick-track{
+                        .products--card{
+                            .products--card__description{
+                                h3 {
+                                    font-size: 13px;
+                                }
+                                .el-custom--button{
+                                    font-size: 12px;
+                                    height: 36px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// @include for-phone-only('.products--card'){
+//     &.slick-center{
+//         transform: scale(1) !important;
+//         margin-left: 0px !important;
+//         margin-right: 1px !important;
+//         .products--card__image{
+//              margin-top: 20px !important;
+//          }
+//     }
+//     &.no-visible{
+//         opacity: 1 !important;
+//         .products--card__description{
+//             opacity: 0;
+//         }
+//     }
+// }

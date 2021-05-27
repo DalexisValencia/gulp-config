@@ -140,7 +140,6 @@ header.el-custom--header {
 }
 
 @include for-tablet-landscape-down('header.el-custom--header') {
-    // height: 86px;
     &.cristal{
         nav{
             ul.el-custom--main-menu{
@@ -213,6 +212,9 @@ header.el-custom--header {
         }
         &.active{
             display: block !important;
+            a{
+                font-weight: 400 !important;
+            }
         }
         @include mobile-menu;
         > li:last-child{

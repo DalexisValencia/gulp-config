@@ -17,28 +17,26 @@
 
 <body>
     <main class="el-custom--main el-custom-404-page">
-        <section class="el-custom--mobile-menu">
-            <div class="close-mobile-menu">x</div>
-            <a class="el-custom--main-logo" href="index.html"></a>
-            <ul class="">
-                <li class="active"> <a href="index.html">Home</a></li>
-                <li><a href="details.html">Sabores</a></li>
-                <li><a href="register.html">Registro</a></li>
-                <li><a href="">Backusya</a></li>
-            </ul>
-        </section>
         <header class="el-custom--header">
             <nav class="el-custom--flex justify-between">
-                <a class="el-custom--main-logo" href="index.html"></a>
-                <ul class="el-custom--flex hide-tablet-down">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="details.html">Sabores</a></li>
-                    <li><a href="register.html">Registro</a></li>
-                    <li><a class="img"></a></li>
-                </ul>
-                <div class="burger-menu show-tablet-down">
-                    <i class="i-menu"></i>
+                <div class="el-custom--flex el-custom--up-menu">
+                    <a class="el-custom--main-logo" href="index.html"></a>
+                    <div class="burger-menu show-tablet-down">
+                        <i class="i-icon-menu"></i>
+                    </div>
                 </div>
+                <ul class="el-custom--flex el-custom--main-menu">
+                    <div class="close-mobile-menu"></div>
+                    <a class="el-custom--main-logo" href=""></a>
+                    <li class="active show-tablet-down"><a href="index.html">HOME</a></li>
+                    <li><a href="details.html">CRISTAL</a></li>
+                    <li><a href="register.html">HISTORIA</a></li>
+                    <li><a href="register.html">BICOLOR</a></li>
+                    <div class="el-custom--buttons-transform">
+                        <a href="" class="el-custom--button backusYa"></a>
+                        <a href="" class="el-custom--button">Registro</a>
+                    </div>
+                </ul>
             </nav>
         </header>
         <section class="el-custom--page404">
@@ -49,43 +47,59 @@
                     <span>VOLVER AL INICIO</span>
                 </button>
             </header>
-            <figure class="el-custom--page404--rasgado">
-                <img src="assets/404/six-bottle.png" alt="">
-            </figure>
         </section>
-        <footer class="el-custom--footer orange">
-            <section class="el-custom--footer-right-section">
-                <figure class="el-custom--logo">
-                    <img src="assets/logo.png" alt="Logo Guarana">
-                </figure>
-                <div class="el-custom--footer-social">
-                    <a href=""> <i class="i-facebook"></i> </a>
-                    <a href=""> <i class="i-twitter"></i> </a>
-                    <a href=""> <i class="i-instagram"></i> </a>
-                    <a href=""> <i class="i-tiktok"></i> </a>
+        <footer class="el-custom--footer">
+            <section class="el-custom--footer-above-section">
+                <div class="el-custom--logo">
+                    <ul class="dont-share">
+                        <li>
+                            <a href="">NO COMPARTA ESTE CONTENIDO CON MENORES DE EDAD</a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="desktop">
+                                    ADVERTENCIA: TOMAR BEBIDAS ALCOHÓLICAS EN EXCESO ES DAÑINO
+                                </span>
+                                <span class="mobile">
+                                    ADVERTENCIA: EL CONSUMO EXCESIVO DE ALCOHOL LIMITA SU CAPACIDAD DE CONDUCIR Y
+                                    OPERAR MAQUINARIAS, PUEDE CAUSAR DAÑOS A SU SALUD Y PERJUDICAR A SU FAMILIA.
+                                    MINISTERIO DE SALUD PÚBLICA DEL PERÚ.
+                                </span> 
+                            </a>
+                        </li>
+                    </ul>
+                    <img src="assets/logo-bicolor.png" alt="cristal" class="logo cristal">
                 </div>
+                <nav class="el-custom--footer-nav">
+                    <ul>
+                        <li>
+                            <a href="">TERMINOS DE USO PERÚ</a>
+                        </li>
+                        <li>
+                            <a href="">HABLEMOS DE ALCOHOL</a>
+                        </li>
+                        <li>
+                            <a href="">POLÍTICA DE PROTECCIÓN DE DATOS PERÚ</a>
+                        </li>
+                        <li>
+                            <a href="">CONTÁCTENOS</a>
+                        </li>
+                        <li>
+                            <a href="">DERECHOS ARCO</a>
+                        </li>
+                    </ul>
+                </nav>
             </section>
-            <nav class="el-custom--footer-nav">
-                <ul>
-                    <li>
-                        <a href="">TÉRMINOS Y CONDICIONES GENERALES</a>
-                    </li>
-                    <li>
-                        <a href="">CONTACTO</a>
-                    </li>
-                    <li>
-                        <a href="">POLÍTICA DE PROTECCIÓN DE DATOS PERSONALES</a>
-                    </li>
-                    <li>
-                        <a href="">SOLICITUD DE EJERCICIO DERECHOS ARCO</a>
-                    </li>
-                    <li class="show-tablet-down">
-                        <a href=""> ANHEUSER-BUSCH INBEV © 2021</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="el-custom--footer-legal">
-                <span class="hide-tablet-down">ANHEUSER-BUSCH INBEV © 2021</span>
+
+            <a href="" class="Anheuser-Busch-anchor">Anheuser-Busch InBev © 2021</a>
+            
+            <div class="el-custom--footer-warning el-custom--flex justify-between">
+                <img src="assets/adult-legal.png" alt="Solo mayores de 18 años">
+                <div class="el-custom--footer-social">
+                    <a href=""> <i class="i-icon-instagram"></i> </a>
+                    <a href=""> <i class="i-icon-twitter"></i> </a>
+                    <a href=""> <i class="i-icon-facebook"></i> </a>
+                </div>
             </div>
         </footer>
     </main>

@@ -60,48 +60,174 @@
         }
     }
 }
-
-
-.el-custom--banners-dots {
-    position: absolute;
-    width: 100%;
-    bottom: 74px;
-    z-index: 2;
-    ul.slick-dots {
-        margin: 0px;
-        padding: 0px;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        li {
-            button[role="tab"] {
-                border: 1px solid transparent;
-                // border-radius: 50%;
-                width: 32px;
-                height: 8px;
-                font-size: 1px;
-                margin: 0px 5px;
-                &:active,
-                &:hover,
-                &:focus,
-                &:visited {
-                    outline: transparent !important;
+.el-custom--banners{
+    .el-custom--banners-dots {
+        position: absolute;
+        width: 100%;
+        bottom: 74px;
+        z-index: 2;
+        ul.slick-dots {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+                button[role="tab"] {
+                    border: 1px solid transparent;
+                    // border-radius: 50%;
+                    width: 32px;
+                    height: 8px;
+                    font-size: 1px;
+                    margin: 0px 5px;
+                    &:active,
+                    &:hover,
+                    &:focus,
+                    &:visited {
+                        outline: transparent !important;
+                    }
+                }
+                // &.slick-active {
+                //     button[role="tab"] {
+                //         background-color: $sixth-brand-color;
+                //     }
+                // }
+                // &:not(.slick-active) {
+                //     button[role="tab"] {
+                //         background-color: $eighth-brand-color;
+                //     }
+                // }
+            }
+        }
+    }
+    
+    &.cristal{
+        .banner {
+            .el-custom--banners-anchor-header{
+                .banners-anchor-header--title{
+                    font: {
+                        size: 55px;
+                        family: 'ResotE';
+                        weight: 100;
+                    }
+                }
+                .el-custom--button{
+                    background-color: $seventh-brand-color;
+                    width: auto;
+                    padding: 0px 15px;
+                    font: {
+                        size: 15px;
+                        family: 'ResotE';
+                        weight: 200;
+                    }
                 }
             }
-            &.slick-active {
-                button[role="tab"] {
-                    background-color: $sixth-brand-color;
+        }
+        .el-custom--banners-dots{
+            ul.slick-dots{
+                li{
+                    &.slick-active {
+                        button[role="tab"] {
+                            background-color: $seventh-brand-color;
+                        }
+                    }
+                    &:not(.slick-active) {
+                        button[role="tab"] {
+                            background-color: $fourtiary-brand-color;
+                        }
+                    }
                 }
             }
-            &:not(.slick-active) {
-                button[role="tab"] {
-                    background-color: $eighth-brand-color;
+        }
+        .el-custom--banners-arrow-bottom{
+            font-size: 11px;
+            font-family: 'ResotE-Lavender';
+            width: 70px;
+            i{  
+                margin-top: 3px;
+                display: block;
+                transform: rotate( 90deg );
+                font-size: 22px;
+                color: $fourtiary-brand-color;
+            }
+        }
+        .el-custom--banners-arrows{
+            button.slick-arrow {
+                &.slick-prev{
+                    &::before {
+                        color: $fourtiary-brand-color;
+                    }
+                }
+                &.slick-next {
+                    &::before {
+                        color: $fourtiary-brand-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &:not(.cristal),
+    &.bicolor {
+        .el-custom--banners-dots{
+            ul.slick-dots{
+                li{
+                    &.slick-active {
+                        button[role="tab"] {
+                            background-color: $sixth-brand-color;
+                        }
+                    }
+                    &:not(.slick-active) {
+                        button[role="tab"] {
+                            background-color: $eighth-brand-color;
+                        }
+                    }
                 }
             }
         }
     }
 }
+// .el-custom--banners-dots {
+//     position: absolute;
+//     width: 100%;
+//     bottom: 74px;
+//     z-index: 2;
+//     ul.slick-dots {
+//         margin: 0px;
+//         padding: 0px;
+//         list-style: none;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         li {
+//             button[role="tab"] {
+//                 border: 1px solid transparent;
+//                 // border-radius: 50%;
+//                 width: 32px;
+//                 height: 8px;
+//                 font-size: 1px;
+//                 margin: 0px 5px;
+//                 &:active,
+//                 &:hover,
+//                 &:focus,
+//                 &:visited {
+//                     outline: transparent !important;
+//                 }
+//             }
+//             &.slick-active {
+//                 button[role="tab"] {
+//                     background-color: $sixth-brand-color;
+//                 }
+//             }
+//             &:not(.slick-active) {
+//                 button[role="tab"] {
+//                     background-color: $eighth-brand-color;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 .el-custom--banners-arrows{
     pointer-events: none;
@@ -221,6 +347,17 @@
             }
         }
     }
+    &.cristal{
+        .banner {
+            .el-custom--banners-anchor{
+                .el-custom--banners-anchor-header{
+                    .el-custom--button{
+                        width: 200px !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @include for-phone-only('.el-custom--banners') {
@@ -261,6 +398,17 @@
             }
         }
     }
+    &.cristal{
+        .banner {
+            .el-custom--banners-anchor{
+                .el-custom--banners-anchor-header{
+                    .el-custom--button{
+                        font-size: 3vw !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @include for-phone-small('.el-custom--banners') {
@@ -276,6 +424,18 @@
             &.slick-next {
                 &::before {
                     font-size: 25px;
+                }
+            }
+        }
+    }
+    &.cristal{
+        .banner {
+            .el-custom--banners-anchor{
+                .el-custom--banners-anchor-header{
+                    .el-custom--button{
+                        font-size: 4.3vw !important;
+                        max-width: 180px !important;
+                    }
                 }
             }
         }

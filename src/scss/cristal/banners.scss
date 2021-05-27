@@ -1,0 +1,111 @@
+@import '../common/queries.scss';
+@import '../vars/colors.scss';
+
+@mixin slider-cristal {
+    .banner {
+        .el-custom--banners-anchor-header{
+            .banners-anchor-header--title{
+                font: {
+                    size: 55px;
+                    family: 'ResotE';
+                    weight: 100;
+                }
+            }
+            .el-custom--button{
+                background-color: $seventh-brand-color;
+                width: auto;
+                padding: 0px 15px;
+                font: {
+                    size: 15px;
+                    family: 'ResotE';
+                    weight: 200;
+                }
+            }
+        }
+    }
+    .el-custom--banners-dots{
+        ul.slick-dots{
+            li{
+                &.slick-active {
+                    button[role="tab"] {
+                        background-color: $seventh-brand-color;
+                    }
+                }
+                &:not(.slick-active) {
+                    button[role="tab"] {
+                        background-color: $fourtiary-brand-color;
+                    }
+                }
+            }
+        }
+    }
+    .el-custom--banners-arrow-bottom{
+        font-size: 11px;
+        font-family: 'ResotE-Lavender';
+        width: 70px;
+        i{  
+            margin-top: 3px;
+            display: block;
+            transform: rotate( 90deg );
+            font-size: 22px;
+            color: $fourtiary-brand-color;
+        }
+    }
+    .el-custom--banners-arrows{
+        button.slick-arrow {
+            &.slick-prev{
+                &::before {
+                    color: $fourtiary-brand-color;
+                }
+            }
+            &.slick-next {
+                &::before {
+                    color: $fourtiary-brand-color;
+                }
+            }
+        }
+    }
+}
+
+@include for-tablet-landscape-down('.el-custom--banners') {
+    &.cristal{
+        .banner {
+            .el-custom--banners-anchor{
+                .el-custom--banners-anchor-header{
+                    .el-custom--button{
+                        width: 200px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only('.el-custom--banners') {
+    &.cristal{
+        .banner {
+            .el-custom--banners-anchor{
+                .el-custom--banners-anchor-header{
+                    .el-custom--button{
+                        font-size: 3vw !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-small('.el-custom--banners') {
+    &.cristal{
+        .banner {
+            .el-custom--banners-anchor{
+                .el-custom--banners-anchor-header{
+                    .el-custom--button{
+                        font-size: 4.3vw !important;
+                        max-width: 180px !important;
+                    }
+                }
+            }
+        }
+    }
+}

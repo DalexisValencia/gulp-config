@@ -56,6 +56,7 @@
             flex-direction: column;
             max-height: 232px;
             .el--custom__title{
+                text-transform: uppercase;
                 font-size: 32px;
                 color: $nineth-brand-color;
                 font-family: 'Matthan-sans-regular';

@@ -122,7 +122,7 @@
                     position: absolute;
                     bottom: -14px;
                     font-size: 10px;
-                    left: 13px;
+                    left: 32px;
                 }
             }
         }
@@ -337,9 +337,14 @@
                 font-size: 13px;
                 font-weight: 500;
             }
-            // &.error{
-            //     border-color: $tertiary-brand-color !important;
-            // }
+            &[type="number"]{
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+                -moz-appearance: textfield;
+            }
             &[type="number"]{
                 -webkit-appearance: none;
                 margin: 0;
@@ -406,7 +411,8 @@
 
     article.el-custom--register-page__image{
         transition: 0.2s all;
-        background-image: url('../assets/form/img_formulario_1.png');
+        // background-image: url('../assets/form/img_formulario_1.png');
+        background-image: url('../assets/form/form-bicolor.png');
         background-position: top;
         background-size: contain;
         background-repeat: no-repeat;

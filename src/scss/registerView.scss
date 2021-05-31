@@ -1,6 +1,5 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
-
 // .guarana-page{
 //     #block-mainpagecontent{
 //         margin-top: -4%;
@@ -15,23 +14,35 @@
 //         }
 //     }
 // }
+
 /* The Modal (background) */
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black w/ opacity */
     backdrop-filter: blur(2px)
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
@@ -60,21 +71,21 @@
             cursor: pointer;
         }
     }
-    article{
+    article {
         text-align: center;
-        h3{
+        h3 {
             font-size: 30px;
             font-family: 'Matthan-sans-regular';
             color: $sixth-brand-color;
             font-weight: 100;
         }
-        p{
+        p {
             font-size: 14px;
-            font-family:Roboto,sans-serif;
+            font-family: Roboto, sans-serif;
             color: $primary-brand-color;
             margin: 23px 0px;
         }
-        .el-custom--button{
+        .el-custom--button {
             text-decoration: none;
             width: 93px;
             height: 37px;
@@ -85,12 +96,12 @@
             font-family: 'Matthan-sans-regular';
         }
     }
-  }
+}
 
 //Ajuste a todos los inputs
 .apply-to-form-inputs {
     font-size: 15px;
-    font-family:Roboto,sans-serif;
+    font-family: Roboto, sans-serif;
     color: $fifth-brand-color;
 }
 
@@ -107,7 +118,7 @@
                     position: relative;
                     display: flex;
                     align-items: center;
-                    font-family:Roboto,sans-serif;
+                    font-family: Roboto, sans-serif;
                     font-size: 14px;
                     color: $fifth-brand-color;
                     a {
@@ -117,8 +128,8 @@
                     }
                 }
                 position: relative;
-                label.error{
-                    color: $tertiary-brand-color;
+                label.error {
+                    color: $seventh-brand-color;
                     position: absolute;
                     bottom: -14px;
                     font-size: 10px;
@@ -146,6 +157,7 @@
         }
     }
 }
+
 @mixin nice-select-for-drupal {
     -webkit-tap-highlight-color: transparent;
     background-color: transparent !important;
@@ -169,12 +181,13 @@
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     white-space: nowrap;
     width: auto;
 }
+
 @mixin form-select {
     .nice-select {
         @include nice-select-for-drupal;
@@ -203,7 +216,7 @@
             overflow: scroll;
         }
     }
-    select{
+    select {
         border: 1px solid transparent;
         border-bottom: 1px solid $primary-brand-color;
         background-color: transparent;
@@ -218,26 +231,28 @@
         margin-top: 8px;
         margin-top: 0px;
         padding: 5px 0px;
-        font-family:Roboto,sans-serif;
+        font-family: Roboto, sans-serif;
         font-size: 15px;
         font-weight: 500;
         transition: 0.2s all;
         -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            &:hover,
-            &:focus,
-            &:focus-visible,
-            &:active {
-                outline: 0;
-                outline-color: transparent !important;
-                border-bottom: 1px solid #008F4F !important;
-            }
-        &.error{
-            border-color: $tertiary-brand-color !important;
+        -moz-appearance: none;
+        appearance: none;
+        &:hover,
+        &:focus,
+        &:focus-visible,
+        &:active {
+            outline: 0;
+            outline-color: transparent !important;
+            border-bottom: 1px solid #008F4F !important;
         }
-        optgroup { font-size:40px; }
-        option{
+        // &.error {
+        //     border-color: $tertiary-brand-color !important;
+        // }
+        optgroup {
+            font-size: 40px;
+        }
+        option {
             font-size: 14px;
             padding: 5px;
             background: #c5c5c5;
@@ -246,49 +261,49 @@
     select option:checked {
         color: $primary-brand-color;
         font-weight: 700;
-      }
+    }
 }
 
 @mixin form-item {
     .js-form-item {
         padding-left: 0px;
         padding-right: 0px;
-        &:first-child:not(.form-full){
+        &:first-child:not(.form-full) {
             margin-right: 5%;
         }
-        &:not(.form-full){
+        &:not(.form-full) {
             width: 50%;
         }
-        &.form-full{
+        &.form-full {
             width: 100%;
         }
         border: 1px solid transparent;
         display: flex;
         flex-wrap: wrap;
         position: relative;
-        div.js-form-item{
+        div.js-form-item {
             width: 100%;
         }
-        &.form-item-birthday{
+        &.form-item-birthday {
             justify-content: space-between;
             display: flex;
-            .nice-select.el-custom--input,
-            select.form-select.form-control.el-custom--input,
-            div.js-form-item{
+            .nice-select.el-custom--input, // select.form-select.form-control.el-custom--input,
+            div.js-form-item {
                 width: 30% !important;
                 background-image: unset;
             }
-            .js-form-item{
-                .nice-select.el-custom--input{
+            .js-form-item {
+                .nice-select.el-custom--input {
                     width: 100% !important;
-                    &::after{
+                    &::after {
                         content: unset;
                     }
                 }
             }
-
-            select.form-select.form-control.el-custom--input{
-                text-align-last:center;
+            select.form-select.form-control.el-custom--input {
+                background-image: unset;
+                text-align-last: center;
+                width: 100% !important;
             }
         }
         label {
@@ -302,13 +317,14 @@
                 text-transform: uppercase;
             }
             &.error {
-                color: $tertiary-brand-color;
+                color: $seventh-brand-color;
                 position: absolute;
                 bottom: -11px;
                 font-size: 10px;
                 height: 10px;
             }
-            font-family:Roboto,sans-serif;
+            font-family:Roboto,
+            sans-serif;
             font-weight: bolder;
             width: 100%;
         }
@@ -326,7 +342,7 @@
             transition: 0.3s all;
             font-family: 'Roboto', sans-serif;
             &:focus,
-            &:active{
+            &:active {
                 color: $fifth-brand-color !important;
                 border-bottom: 1px solid $sixth-brand-color !important;
                 color: #454D58 !important;
@@ -337,7 +353,7 @@
                 font-size: 13px;
                 font-weight: 500;
             }
-            &[type="number"]{
+            &[type="number"] {
                 &::-webkit-outer-spin-button,
                 &::-webkit-inner-spin-button {
                     -webkit-appearance: none;
@@ -345,7 +361,7 @@
                 }
                 -moz-appearance: textfield;
             }
-            &[type="number"]{
+            &[type="number"] {
                 -webkit-appearance: none;
                 margin: 0;
                 -moz-appearance: textfield;
@@ -354,16 +370,16 @@
     }
 }
 
-.js-form-item-tyc{
+.js-form-item-tyc {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
-    label.error{
-        &#tyc-error{
+    label.error {
+        &#tyc-error {
             font-size: 12px;
             display: block;
             padding-top: 10px;
-            color: $tertiary-brand-color;
+            color: $seventh-brand-color;
         }
     }
 }
@@ -390,7 +406,7 @@
             margin-top: 33px;
             margin-bottom: 35px;
             width: 100%;
-            h3{
+            h3 {
                 font-family: 'Matthan-sans-regular';
                 color: $sixth-brand-color;
                 text-align: left;
@@ -408,8 +424,7 @@
         @include block-terms();
         @include form-actions();
     }
-
-    article.el-custom--register-page__image{
+    article.el-custom--register-page__image {
         transition: 0.2s all;
         // background-image: url('../assets/form/img_formulario_1.png');
         background-image: url('../assets/form/form-bicolor.png');
@@ -424,8 +439,8 @@
     }
 }
 
-.js-form-item-phone{
-    label.error{
+.js-form-item-phone {
+    label.error {
         bottom: -17px !important;
     }
 }
@@ -433,28 +448,28 @@
 @include for-tablet-landscape-down('.el-custom--register-page__main') {
     max-width: 700px;
     article.el-custom--register-page__form {
-        header{
-            h3{
+        header {
+            h3 {
                 font-size: 25px;
                 text-align: center;
             }
         }
-        .el-custom-brand-register-form{
+        .el-custom-brand-register-form {
             .block-form-group {
                 flex-wrap: wrap;
                 fieldset.js-form-item {
-                    &:first-child:not(.form-full){
+                    &:first-child:not(.form-full) {
                         margin-right: 0px !important;
                     }
                     label:not(.error) {
-                       font-size: 18px;
+                        font-size: 18px;
                     }
                     width: 100% !important;
                     &.js-form-type-select {
-                        &::before{
+                        &::before {
                             content: inherit !important;
                         }
-                        select{
+                        select {
                             font-size: 15px !important;
                         }
                         label:not(.error) {
@@ -474,7 +489,7 @@
         }
         margin-bottom: 50px;
     }
-    .el-custom--register-page__image{
+    .el-custom--register-page__image {
         display: none !important;
     }
 }
@@ -484,14 +499,14 @@
 }
 
 @include for-phone-only('.modal-content ') {
-    article{
-        h1{
+    article {
+        h1 {
             font-size: 20px;
         }
-        p{
+        p {
             font-size: 14px;
         }
-        .el-custom--button{
+        .el-custom--button {
             text-decoration: none;
             width: 123px;
             height: 39px;
@@ -502,4 +517,3 @@
         }
     }
 }
-

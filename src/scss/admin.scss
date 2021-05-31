@@ -1,34 +1,39 @@
 @import './common/input.scss';
 @import './common/buttons.scss';
 @import './vars/colors.scss';
-@mixin login-admin{
-    #block-mainpagecontent{
-        display: flex;
-        justify-content: center;
-        padding: 30px 10px;
-        form{
+@mixin login-admin {
+    #block-mainpagecontent,
+    .el-custom--main {
+        &:not(.el-custom--main) {
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        form {
             padding: 0px 28.5px;
             max-width: 700px;
-            div.js-form-item{
+            margin: 0px auto;
+            margin-bottom: 40px;
+            div.js-form-item {
                 margin-bottom: 10px;
-                label{
+                label {
                     font-size: 15px;
-                    font-family: Arial,Helvetica,sans-serif;
+                    font-family: Arial, Helvetica, sans-serif;
                     margin-right: 10px;
                     text-transform: uppercase;
                     font-weight: bold;
                 }
-                input{
+                input {
                     @extend .el-custom--input;
                 }
-                .description{
+                .description {
                     font-size: 12px;
                     font-family: Arial, Helvetica, sans-serif;
                 }
             }
-            .form-actions{
+            .form-actions {
                 margin-top: 20px;
-                input[type="submit"]{
+                input[type="submit"] {
                     background-color: $tertiary-brand-color;
                     color: $fourtiary-brand-color;
                     background-color: red;
@@ -42,18 +47,20 @@
         }
     }
 }
-#drupal-live-announce{
+
+#drupal-live-announce {
     display: none;
 }
-body.user-login{
-    .el-custom--header{
+
+body.user-login {
+    .el-custom--header {
         padding-bottom: 25px;
     }
-    .el-custom--footer{
+    .el-custom--footer {
         margin-top: 0px !important;
         z-index: auto !important;
-    } 
-    #block-footer-menu{
+    }
+    #block-footer-menu {
         display: none;
     }
     @include login-admin();

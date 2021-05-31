@@ -3,9 +3,8 @@
 // $sliderFullHeight: 57vw;
 // $sliderFullHeight: 74vw;
 $sliderFullHeight: 100vh;
-
 @mixin historyDots {
-    .slick-dots{
+    .slick-dots {
         position: absolute;
         border-right: 4px solid $fourtiary-brand-color;
         // top: 20px;
@@ -17,7 +16,7 @@ $sliderFullHeight: 100vh;
         // display: flex;
         // flex-wrap: wrap;
         // align-items: center;
-        li{
+        li {
             pointer-events: initial;
             padding-right: 20px;
             height: 40px;
@@ -28,7 +27,7 @@ $sliderFullHeight: 100vh;
             align-items: center;
             font-size: 18px;
             text-align: right;
-            &::before{
+            &::before {
                 transition: 0.5s all;
                 right: -9px;
                 content: "";
@@ -38,23 +37,23 @@ $sliderFullHeight: 100vh;
                 background-color: $fourtiary-brand-color;
                 border-radius: 50%;
             }
-            &:hover{
+            &:hover {
                 color: $secondary-brand-color;
-                &::before{
+                &::before {
                     background-color: $secondary-brand-color;
                 }
             }
-            &.slick-active{
+            &.slick-active {
                 transition: 0.5s all;
-                a{
+                a {
                     font-size: 24px;
                     color: $secondary-brand-color;
                 }
-                &::before{
+                &::before {
                     background-color: $secondary-brand-color;
                 }
             }
-            a{
+            a {
                 display: block;
                 width: 100%;
                 text-decoration: none;
@@ -64,8 +63,8 @@ $sliderFullHeight: 100vh;
     }
 }
 
-.el-custom--history-page{
-    .el-custom--history-page__header{
+.el-custom--history-page {
+    .el-custom--history-page__header {
         background-image: url('../assets/history/header/header-history.png');
         background-size: cover;
         height: 210px;
@@ -75,28 +74,28 @@ $sliderFullHeight: 100vh;
         justify-content: center;
         align-items: center;
         flex-flow: column;
-        h2{
+        h2 {
             font-family: 'ResotE';
             font-size: 40px;
             color: #fff;
             font-weight: 400;
         }
-        p{
+        p {
             font-size: 20px;
-            font-family:Roboto,sans-serif;
+            font-family: Roboto, sans-serif;
             color: #fff;
             width: 627px;
             text-align: center;
         }
     }
-    .el-custom--history-page__slider{
+    .el-custom--history-page__slider {
         border: 1px solid black;
         position: relative;
         // @include historyDots;
-        .el-custom--history-page__slide{
+        .el-custom--history-page__slide {
             width: 100%;
             position: relative;
-            .el-custom-home-page-cristal-img{
+            .el-custom-home-page-cristal-img {
                 // background-image: url('../assets/history/gallery/history-1.png');
                 background-position: top;
                 background-repeat: no-repeat;
@@ -105,24 +104,24 @@ $sliderFullHeight: 100vh;
                 align-items: center;
                 position: relative;
                 display: flex;
-                &.full{
+                &.full {
                     height: $sliderFullHeight;
                 }
-                &:not(.full){
+                &:not(.full) {
                     height: $sliderFullHeight / 2;
                     // height: 37.5vw;;
                 }
-                .el-custom--history-page__slide--header{
+                .el-custom--history-page__slide--header {
                     position: absolute;
                     left: 8%;
                     width: 521px;
-                    .el-custom--history-page__slide--header-year{
+                    .el-custom--history-page__slide--header-year {
                         color: $fourtiary-brand-color;
                         font-size: 18px;
                         position: absolute;
                         top: -60px;
                         font-family: 'ResotE-Lavender';
-                        &::before{
+                        &::before {
                             content: "";
                             position: absolute;
                             width: 125%;
@@ -132,22 +131,22 @@ $sliderFullHeight: 100vh;
                             background-color: $fourtiary-brand-color;
                         }
                     }
-                    h2{
+                    h2 {
                         color: $fourtiary-brand-color;
                         font-size: 40px;
                         font-family: 'ResotE-Lavender';
                         font-weight: 500;
                     }
-                    p{
+                    p {
                         color: $fourtiary-brand-color;
                         font-size: 20px;
-                        font-family:Roboto,sans-serif;
+                        font-family: Roboto, sans-serif;
                     }
-                } 
+                }
             }
         }
     }
-    .el-custom--history-page__slider-navigation{
+    .el-custom--history-page__slider-navigation {
         position: fixed;
         right: 0px;
         // border: 1px solid red;
@@ -164,29 +163,31 @@ $sliderFullHeight: 100vh;
     }
 }
 
-@include for-tablet-landscape-down('.el-custom--history-page'){
-    .el-custom--history-page__slider{
+@include for-tablet-landscape-down('.el-custom--history-page') {
+    .el-custom--history-page__slider {
         .el-custom--history-page__slide {
-            .el-custom-home-page-cristal-img{
-                .el-custom--history-page__slide--header{
+            .el-custom-home-page-cristal-img {
+                border: 10px solid red;
+                // background-image: url(attr(data-attr-responsive));
+                .el-custom--history-page__slide--header {
                     border: 2px dashed black;
                     left: 4%;
                     width: 55%;
-                    .el-custom--history-page__slide--header-year{
+                    .el-custom--history-page__slide--header-year {
                         font-size: 1.8vw;
-                        &::before{
+                        &::before {
                             width: 100%;
                             left: 5.8vw;
-                            bottom: -0,5vw;
+                            bottom: -0, 5vw;
                         }
                     }
-                    h2{
+                    h2 {
                         font-size: 3.8vw;
                     }
-                    p{
+                    p {
                         font-size: 2vw;
                     }
-                } 
+                }
             }
         }
     }

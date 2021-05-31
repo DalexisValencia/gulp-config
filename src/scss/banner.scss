@@ -1,75 +1,83 @@
 @import './common/queries.scss';
 @import './vars/colors.scss';
-.el-custom--promotional-banner{
+.el-custom--promotional-banner {
     z-index: 1;
     margin: 50px 0px;
     width: 100%;
     height: 25vw;
-    min-height: 304px;
-    background-image: url('../assets/index/banners/banner-desktop.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
-    .el-custom--promotional-banner-header{
-        margin-left: 85px;
-        max-width: 484px;
-        h2, p{
-            color: $fourtiary-brand-color;
-            font-weight: 100;
-        }
-        h2{
-            font-size: 66px;
-            font-family: 'Matthan-sans-regular';
-            font-weight: 100;
-        }
-        p{
-            font-family: 'Roboto', sans-serif;
-            margin: 0px;
-            font-weight: 500;
-            font-size: 20px;
+    &:not(.cristal),
+    &.bicolor {
+        min-height: 304px;
+        background-image: url('../assets/index/banners/banner-desktop.png');
+        .el-custom--promotional-banner-header {
+            margin-left: 85px;
+            max-width: 484px;
+            h2,
+            p {
+                color: $fourtiary-brand-color;
+                font-weight: 100;
+            }
+            h2 {
+                font-size: 66px;
+                font-family: 'Matthan-sans-regular';
+                font-weight: 100;
+            }
+            p {
+                font-family: 'Roboto', sans-serif;
+                margin: 0px;
+                font-weight: 500;
+                font-size: 20px;
+            }
         }
     }
 }
 
-@include for-tablet-landscape-down ('.el-custom--promotional-banner'){
-    // border: 3px solid red;
+@include for-tablet-landscape-down ('.el-custom--promotional-banner') {
     height: 27vw;
     min-height: unset;
     background-size: contain;
-    header.el-custom--promotional-banner-header{
-        margin-left: 10%;
-        max-width: 50%;
-        h2{
-            font-size: 6.6vw;
-        }
-        p{
-            font-size: 2vw;
+    &:not(.cristal),
+    &.bicolor {
+        header.el-custom--promotional-banner-header {
+            margin-left: 10%;
+            max-width: 50%;
+            h2 {
+                font-size: 6.6vw;
+            }
+            p {
+                font-size: 2vw;
+            }
         }
     }
 }
 
-@include  for-phone-only ('.el-custom--promotional-banner') {
-    align-items: unset;
-    height: 104vw;
-    background-image: url('../assets/index/banners/banner-mobile.png');
-    // border: 4px solid red;
-    header.el-custom--promotional-banner-header{
-        margin-top: 10%;
-        max-width: 100%;
-        margin-left: 0px;
-        width: 100%;
-        text-align: center;
-        h2{
-            width: 77%;
-            padding: 0 10%;
-            font-size: 12vw;
-            line-height: 1.1;
-            margin: 0px auto;
-        }
-        p{
-           display: none;
+@include for-phone-only ('.el-custom--promotional-banner') {
+    &:not(.cristal),
+    &.bicolor {
+        align-items: unset;
+        height: 104vw;
+        background-image: url('../assets/index/banners/banner-mobile.png');
+        header.el-custom--promotional-banner-header {
+            margin-top: 10%;
+            max-width: 100%;
+            margin-left: 0px;
+            width: 100%;
+            text-align: center;
+            h2 {
+                width: 77%;
+                padding: 0 10%;
+                font-size: 12vw;
+                line-height: 1.1;
+                margin: 0px auto;
+            }
+            p {
+                display: none;
+            }
         }
     }
 }

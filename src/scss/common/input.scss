@@ -16,8 +16,7 @@ input.el-custom--input {
         box-shadow: 0 0 0 30px white inset !important;
         -webkit-box-shadow: 0 0 0 30px white inset !important;
     }
-    &[type="number"]{
-        color: red !important;
+    &[type="number"] {
         -webkit-appearance: none;
         margin: 0;
         -moz-appearance: textfield;

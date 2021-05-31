@@ -66,9 +66,25 @@ $(document).ready(function() {
                 );
             }
         }
-
         createHistoryDots();
+        $(window).resize(function() {
+            const total_width = $(window).width();
+            const imgSlider = $(".el-custom-home-page-cristal-img");
+            if (total_width <= 600) {
+                imgSlider.each(function() {
+                    console.warn($(this).attr("data-attr-responsive"), '$(this).attr("data-attr-responsive")')
+                    $(this).css("background-image", "url(" + $(this).attr("data-attr-responsive") + ")")
+                });
+            } else if (total_width > 600) {
+                imgSlider.each(function() {
+                    // console.warn($(this).attr("data-attr-responsive"), '$(this).attr("data-attr-responsive")')
+                    // $(this).css("background-image", "url(" + $(this).attr("data-attr-responsive") + ")")
+                    $(this).attr("style", "");
+                });
+            }
+        });
     }
+
 
     // $(window).on("scroll", function(){
     // const header = $(".el-custom--header");

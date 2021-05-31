@@ -2,9 +2,10 @@
 @import './common/queries.scss';
 @import './logo.scss';
 @import './mobile-menu.scss';
-.visually-hidden#block-menuuser-menu{
+.visually-hidden#block-menuuser-menu {
     display: none;
 }
+
 .burger-menu {
     cursor: pointer;
     display: none;
@@ -14,11 +15,11 @@
     }
 }
 
-.el-custom--buttons-transform{
+.el-custom--buttons-transform {
     position: absolute;
     top: 28px;
     right: 28px;
-    .el-custom--button{
+    .el-custom--button {
         font-size: 14px;
         width: 110.4px;
         height: 30.4px;
@@ -26,8 +27,8 @@
         border-radius: 5px;
         text-decoration: none;
         color: $fourtiary-brand-color;
-        font-family:Roboto,sans-serif;
-        &.backusYa{
+        font-family: Roboto, sans-serif;
+        &.backusYa {
             margin-right: 12px;
             background-image: url('../assets/backusYa/backusya-bicolor.svg');
             background-repeat: no-repeat;
@@ -36,13 +37,14 @@
         }
     }
 }
+
 header.el-custom--header {
     position: relative;
     z-index: 10;
-    nav{
+    nav {
         flex-wrap: wrap;
         height: 100%;
-        div.el-custom--up-menu{
+        div.el-custom--up-menu {
             background-image: url('../assets/header/header-bicolor.png');
             background-repeat: no-repeat;
             background-size: cover;
@@ -52,25 +54,24 @@ header.el-custom--header {
             align-items: center;
             position: relative;
             justify-content: flex-end;
-                .el-custom--main-logo{
-                    position: absolute;
-                    left: 0; 
-                    right: 0; 
-                    margin-left: auto; 
-                    margin-right: auto; 
-                    width: 80px;
-                    height: 80px;
-                }
+            .el-custom--main-logo {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80px;
+                height: 80px;
+            }
         }
-
-        ul{
-            > li:last-of-type{
+        ul {
+            >li:last-of-type {
                 border-right-color: transparent !important;
             }
             margin: 0px;
             list-style: none;
             padding: 0px;
-            &.el-custom--main-menu{
+            &.el-custom--main-menu {
                 border-top: 5px solid $nineth-brand-color;
                 width: 100%;
                 height: 44px;
@@ -78,12 +79,13 @@ header.el-custom--header {
                 justify-content: center;
                 background-color: $fourtiary-brand-color;
                 .close-mobile-menu,
-                .el-custom--main-logo{
+                .el-custom--main-logo {
                     display: none !important;
                 }
                 li {
                     border-right: 2px solid $nineth-brand-color;
-                    *, a {
+                    *,
+                    a {
                         cursor: pointer;
                         font-family: 'Matthan-sans-regular';
                         text-decoration: none;
@@ -103,32 +105,33 @@ header.el-custom--header {
             }
         }
     }
-    &.cristal{
-        nav{
-            div.el-custom--up-menu{
+    &.cristal {
+        nav {
+            div.el-custom--up-menu {
                 background-image: url('../assets/header/header-cristal.png');
-                .el-custom--main-logo{
-                    background-image: url('../assets/logo-cristal.png');
+                .el-custom--main-logo {
+                    background-image: url('../assets/logo-cristal.svg');
                 }
-                .burger-menu{
-                    .i-icon-menu{
+                .burger-menu {
+                    .i-icon-menu {
                         color: $seventh-brand-color;
                     }
                 }
             }
-            ul{
+            ul {
                 border-top-color: $seventh-brand-color;
                 li {
-                    *, a {
+                    *,
+                    a {
                         font-family: 'ResotE' !important;
                         color: $seventh-brand-color;
                     }
                 }
-                .el-custom--buttons-transform{
-                    .el-custom--button{
+                .el-custom--buttons-transform {
+                    .el-custom--button {
                         background-color: $secondary-brand-color;
                         color: $primary-brand-color;
-                        &.backusYa{
+                        &.backusYa {
                             background-image: url('../assets/backusYa/backusya-cristal.svg');
                         }
                     }
@@ -140,12 +143,15 @@ header.el-custom--header {
 }
 
 @include for-tablet-landscape-down('header.el-custom--header') {
-    &.cristal{
-        nav{
-            ul.el-custom--main-menu{
+    &.cristal {
+        nav {
+            ul.el-custom--main-menu {
                 background-image: url('../assets/mobile-menu/background-cristal.png');
-                li{
-                    a{
+                a.el-custom--main-logo {
+                    background-image: url('../assets/mobile-menu/mobile-logo-cristal.svg') !important;
+                }
+                li {
+                    a {
                         font-size: 18px !important;
                         font-weight: 400;
                     }
@@ -153,17 +159,17 @@ header.el-custom--header {
             }
         }
     }
-    div.el-custom--up-menu{
+    div.el-custom--up-menu {
         background-position: center;
         justify-content: space-between !important;
-            .el-custom--main-logo{
-                position: initial !important;
-                margin-left: inherit !important;
-                left: inherit !important;
-                right: inherit !important;
-            }
+        .el-custom--main-logo {
+            position: initial !important;
+            margin-left: inherit !important;
+            left: inherit !important;
+            right: inherit !important;
+        }
     }
-    .el-custom--buttons-transform{
+    .el-custom--buttons-transform {
         position: unset !important;
         top: unset !important;
         right: unset !important;
@@ -173,32 +179,32 @@ header.el-custom--header {
         align-items: center;
         flex-wrap: wrap;
         margin-top: 54px;
-        .el-custom--button{
+        .el-custom--button {
             width: 80%;
             margin-bottom: 16px;
             height: 56.45px;
             background-color: $seventh-brand-color !important;
             color: $fourtiary-brand-color;
-            &.backusYa{
+            &.backusYa {
                 margin-right: 0px;
             }
         }
     }
-    ul:not(.ul-mobile).el-custom--main-menu{
+    ul:not(.ul-mobile).el-custom--main-menu {
         padding: 30px;
         .el-custom--main-logo,
-        .close-mobile-menu{
+        .close-mobile-menu {
             display: inline-block !important;
             cursor: pointer;
         }
-        a.el-custom--main-logo{
+        a.el-custom--main-logo {
             width: 50%;
             min-width: 100px;
             max-width: 150px;
         }
     }
     ul.el-custom--main-menu {
-        border-top:0px solid transparent !important;
+        border-top: 0px solid transparent !important;
         overflow-x: auto;
         height: 100% !important;
         background-repeat: no-repeat;
@@ -206,29 +212,30 @@ header.el-custom--header {
         background-size: cover;
         background-image: url('../assets/mobile-menu/background-bicolor.png');
         background-color: $primary-brand-color !important;
-        .el-custom--main-logo{
+        .el-custom--main-logo {
             background-image: url('../assets/mobile-menu/mobile-logo-bicolor.png') !important;
             margin-bottom: 50px !important;
         }
-        &.active{
+        &.active {
             display: block !important;
-            a{
+            a {
                 font-weight: 400 !important;
             }
         }
         @include mobile-menu;
-        > li:last-child{
+        >li:last-child {
             border-bottom: 1px solid $fourtiary-brand-color;
         }
         li {
             width: 100% !important;
             text-align: center;
-                border-bottom: 1px solid $seventh-brand-color;
-                border-right-color: transparent !important;
-                line-height: 53px;
-                height: 62px;
-                padding: 0px !important;
-            * , a{
+            border-bottom: 1px solid $seventh-brand-color;
+            border-right-color: transparent !important;
+            line-height: 53px;
+            height: 62px;
+            padding: 0px !important;
+            *,
+            a {
                 background-color: transparent;
                 width: 100%;
                 font-size: 18px;
@@ -236,9 +243,9 @@ header.el-custom--header {
                 color: $fourtiary-brand-color !important;
             }
         }
-        .el-custom--buttons-transform{
-            .el-custom--button{
-                &.backusYa{
+        .el-custom--buttons-transform {
+            .el-custom--button {
+                &.backusYa {
                     background-size: 145px;
                 }
                 font: {

@@ -2,8 +2,8 @@
 @import 'flavors_cards.scss';
 @import 'flavors_headers.scss';
 @import './common/queries.scss';
-.el-custom--banner-tagimage{
-    &::before{
+.el-custom--banner-tagimage {
+    &::before {
         content: "";
         position: absolute;
         width: 100%;
@@ -12,11 +12,11 @@
         bottom: -20px;
     }
     position: relative;
-    > img{
+    >img {
         margin-top: -24%;
         pointer-events: none;
     }
-    article.el-custom--flavors-wrapper{
+    article.el-custom--flavors-wrapper {
         width: 100%;
         position: absolute;
         top: 20%;
@@ -26,21 +26,21 @@
     }
 }
 
-@include for-desktop-up ('.el-custom--banner-tagimage'){
+@include for-desktop-up ('.el-custom--banner-tagimage') {
     height: calc(78rem);
-    .el-custom--flavors-wrapper{
+    .el-custom--flavors-wrapper {
         top: 25% !important;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        header.el-custom--flavors-header{
+        header.el-custom--flavors-header {
             margin-bottom: 0px;
         }
-        section.el-custom--flavors-card.slick-initialized.slick-slider{
-            .slick-list{
-                .slick-track{
-                    a.flavors--card{
+        section.el-custom--flavors-card.slick-initialized.slick-slider {
+            .slick-list {
+                .slick-track {
+                    a.flavors--card {
                         max-width: 300px;
                     }
                 }
@@ -48,13 +48,14 @@
         }
     }
 }
-@include for-desktop-up ('.el-custom--banner-sku'){
+
+@include for-desktop-up ('.el-custom--banner-sku') {
     height: calc(83rem);
-    .el-custom--flavors-wrapper{
-        .el-custom--flavors-card.slick-initialized.slick-slider{
-            .slick-list.draggable{
-                .slick-track{
-                    .flavors--card{
+    .el-custom--flavors-wrapper {
+        .el-custom--flavors-card.slick-initialized.slick-slider {
+            .slick-list.draggable {
+                .slick-track {
+                    .flavors--card {
                         max-width: 312px;
                     }
                 }
@@ -62,42 +63,45 @@
         }
     }
 }
+
 @include for-big-desktop-middle ('.el-custom--banner-sku') {
     height: calc(75rem);
 }
+
 // @include for-tablet-landscape-down ('.el-custom--flavors-wrapper'){
 //     padding-left: $padding-horizontal / 2 !important;
 //     padding-right: $padding-horizontal / 2 !important;
 // }
-@include for-tablet-landscape-down ('.el-custom--banner-tagimage'){
+@include for-tablet-landscape-down ('.el-custom--banner-tagimage') {
     padding-bottom: 8%;
 }
-@include for-tablet-landscape-down ('.el-custom--banner-sku'){ 
-    .el-custom--flavors-wrapper{
+
+@include for-tablet-landscape-down ('.el-custom--banner-sku') {
+    .el-custom--flavors-wrapper {
         padding-bottom: 26% !important;
     }
 }
 
-@include  for-phone-only ('.el-custom--banner-tagimage, .el-custom--banner-sku') {
-    &:not(.el-custom--banner-sku){
-        padding-bottom: 30%;
-        &::before{
+@include for-phone-only ('.el-custom--banner-tagimage, .el-custom--banner-sku') {
+    &:not(.el-custom--banner-sku) {
+        padding-bottom: 50%;
+        &::before {
             height: 30%;
             background-color: $primary-brand-color;
             bottom: 0px;
         }
     }
-    article.el-custom--flavors-wrapper{
+    article.el-custom--flavors-wrapper {
         padding-right: 0px !important;
         padding-left: 0px !important;
-        section.el-custom--flavors-card{
-            .flavors--card{
-                .flavors--card__description{
+        section.el-custom--flavors-card {
+            .flavors--card {
+                .flavors--card__description {
                     h3 {
                         margin-bottom: 5px;
                         font-size: 13px;
                     }
-                    button.el-custom--button{
+                    button.el-custom--button {
                         font-size: 13px;
                         width: 90%;
                     }
@@ -107,23 +111,23 @@
     }
 }
 
-@include  for-phone-small ('.el-custom--banner-tagimage, .el-custom--banner-sku') {
-    article.el-custom--flavors-wrapper{
-        header.el-custom--flavors-header{
-            h5{
+@include for-phone-small ('.el-custom--banner-tagimage, .el-custom--banner-sku') {
+    article.el-custom--flavors-wrapper {
+        header.el-custom--flavors-header {
+            h5 {
                 font-size: 4.03vw!important;
             }
-            h3{
+            h3 {
                 font-size: 7.5vw!important;
             }
         }
-        section.el-custom--flavors-card{
-            .flavors--card{
-                .flavors--card__description{
-                    h3{
+        section.el-custom--flavors-card {
+            .flavors--card {
+                .flavors--card__description {
+                    h3 {
                         font-size: 3.2vw;
                     }
-                    button.el-custom--button{
+                    button.el-custom--button {
                         font-size: 3.3vw !important;
                         width: 83%;
                         height: auto;
@@ -133,4 +137,3 @@
         }
     }
 }
-

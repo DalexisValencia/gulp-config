@@ -1,7 +1,7 @@
 @import 'flavors_cards.scss';
 @import 'flavors_headers.scss';
 @import './common/queries.scss';
-.el-custom--banner-sku{
+.el-custom--banner-sku {
     pointer-events: none;
     position: relative;
     background-image: url('../assets/home/back_sku.png');
@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     margin-top: -20%;
     z-index: 3;
-    &::after{
+    &::after {
         content: "";
         position: absolute;
         width: 100%;
@@ -20,69 +20,69 @@
     }
     @include header_flavor;
     @include flavors-card;
-    .el-custom--flavors-wrapper{
+    .el-custom--flavors-wrapper {
         padding: 17% 0px 35%;
         pointer-events: none;
     }
 }
 
-@include for-desktop-up('.el-custom--banner-sku'){
+@include for-desktop-up('.el-custom--banner-sku') {
     display: flex;
     justify-content: center;
-    .el-custom--flavors-wrapper{
+    .el-custom--flavors-wrapper {
         padding: 17% 0 0px !important;
     }
-    .el-custom--flavors-card.slick-initialized.slick-slider{
+    .el-custom--flavors-card.slick-initialized.slick-slider {
         max-width: 1250px;
     }
 }
 
-@include for-tablet-portrait-up ('.el-custom--banner-sku') {
-    .el-custom--flavors-wrapper{
-        section.el-custom--flavors-card.slick-initialized.slick-slider{
-            button.slick-arrow{
-                border: 1px solid transparent !important;
+// @include for-tablet-portrait-up ('.el-custom--banner-sku') {
+.el-custom--flavors-wrapper {
+    section.el-custom--flavors-card.slick-initialized.slick-slider {
+        button.slick-arrow {
+            border: 1px solid transparent !important;
+            position: absolute;
+            z-index: 1;
+            font-size: 1px;
+            color: transparent;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:active,
+            &:hover,
+            &:focus,
+            &:visited {
+                outline: transparent !important;
+            }
+            &::before {
+                text-shadow: 1px 1px 7px $fifth-brand-color;
+                font-size: 50px;
                 position: absolute;
-                z-index: 1;
-                font-size: 1px;
-                color: transparent;
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                &:active,
-                &:hover,
-                &:focus,
-                &:visited{
-                    outline: transparent !important;
-                }
-                &::before{
-                    text-shadow: 1px 1px 7px $fifth-brand-color;
-                    font-size: 50px;
-                    position: absolute;
-                    color: $fourtiary-brand-color !important;
-                    font-family: icon!important;
-                }
+                color: $fourtiary-brand-color !important;
+                font-family: icon!important;
             }
-            button.slick-prev.slick-arrow{
-                &::before{
-                    content: "\e900";
-                }
+        }
+        button.slick-prev.slick-arrow {
+            &::before {
+                content: "\e900";
             }
-            button.slick-next.slick-arrow{
-                right: 0 !important; 
-                &::before{
-                    content: "\e901";
-                }
+        }
+        button.slick-next.slick-arrow {
+            right: 0 !important;
+            &::before {
+                content: "\e901";
             }
         }
     }
 }
 
-@include  for-phone-only ('.el-custom--banner-sku') {
-    &::after{
+// }
+@include for-phone-only ('.el-custom--banner-sku') {
+    &::after {
         content: "";
         position: absolute;
         width: 100%;
@@ -91,14 +91,15 @@
         z-index: -1;
         bottom: 8%;
     }
-    .el-custom--flavors-wrapper{
-        section.el-custom--flavors-card.slick-initialized.slick-slider{
-            button.slick-arrow{
-                display: none !important;
-            }
-        }
-    }
+    // .el-custom--flavors-wrapper{
+    //     section.el-custom--flavors-card.slick-initialized.slick-slider{
+    //         button.slick-arrow{
+    //             display: none !important;
+    //         }
+    //     }
+    // }
 }
+
 @include for-phone-small ('.el-custom--banner-sku') {
     padding-bottom: 15%;
 }

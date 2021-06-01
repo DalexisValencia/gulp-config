@@ -2,8 +2,7 @@
 @import 'products_cards.scss';
 @import './cristal/products_cards.scss';
 @import './common/queries.scss';
-
-.el-custom--products{
+.el-custom--products {
     background-color: white;
     background-image: url('../assets/products/lineas-fondo-products.png');
     background-position: right;
@@ -13,10 +12,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &#cristal-products{
+    &#cristal-products {
         scroll-behavior: smooth;
     }
-    &::before{
+    &::before {
         content: "";
         position: absolute;
         background-image: url('../assets/products/lineas-fondo-products-left.png');
@@ -26,33 +25,39 @@
         height: 100%;
         left: 0px;
     }
-    &.cristal{
-        .el-custom--products-wrapper{
-            .el-custom--products-slide{
-                border: 3px dashed black;
-                .slick-list{
-                    .slick-track{
+    &.cristal {
+        .el-custom--products-wrapper {
+            .el-custom--products-slide {
+                .slick-list {
+                    .slick-track {
                         @include products-card-cristal;
+                    }
+                }
+            }
+            .el-custom--products-arrows {
+                button.slick-arrow {
+                    &::before {
+                        color: $seventh-brand-color !important;
                     }
                 }
             }
         }
     }
-    .el-custom--products-wrapper{
+    .el-custom--products-wrapper {
         height: 495px;
         max-width: 1151px;
         width: 100%;
         position: relative;
-        .el-custom--products-slide{
+        .el-custom--products-slide {
             display: flex;
             justify-content: center;
             align-items: center;
             // padding: 0px 53px;
             height: 100%;
-            .slick-list{
+            .slick-list {
                 height: 88%;
-                .slick-track{
-                    .products--card{
+                .slick-track {
+                    .products--card {
                         transition: 0.5s all;
                     }
                     height: 100%;
@@ -60,7 +65,7 @@
                 }
             }
         }
-        .el-custom--products-arrows{
+        .el-custom--products-arrows {
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -82,10 +87,10 @@
                 border: 1px solid transparent;
                 color: transparent;
                 font-size: 1px;
-                &::before{
+                &::before {
                     content: "";
                 }
-                &.slick-prev{
+                &.slick-prev {
                     &::before {
                         color: $tertiary-brand-color;
                         font-size: 32px;
@@ -113,17 +118,17 @@
 }
 
 @include for-tablet-portait-only ('.el-custom--products') {
-    &:not(.cristal){
-        .el-custom--products-wrapper{
-            .el-custom--products-slide.slick-initialized.slick-slider{
-                .slick-list.draggable{
-                    .slick-track{
-                        .products--card{
-                            .products--card__description{
+    &:not(.cristal) {
+        .el-custom--products-wrapper {
+            .el-custom--products-slide.slick-initialized.slick-slider {
+                .slick-list.draggable {
+                    .slick-track {
+                        .products--card {
+                            .products--card__description {
                                 h3 {
                                     font-size: 18px;
                                 }
-                                .el-custom--button{
+                                .el-custom--button {
                                     font-size: 15px;
                                     height: 36px;
                                 }
@@ -136,43 +141,43 @@
     }
 }
 
-@include for-tablet-landscape-down ('.el-custom--products'){
+@include for-tablet-landscape-down ('.el-custom--products') {
     padding: 0px;
-    .el-custom--products-wrapper{
-        .el-custom--products-arrows{
+    .el-custom--products-wrapper {
+        .el-custom--products-arrows {
             padding: 0px 20px;
         }
     }
 }
 
 @include for-phone-only ('.el-custom--products') {
-    &::before{
+    &::before {
         background-image: unset !important;
     }
     background-image: unset !important;
-    .el-custom--products-wrapper{
+    .el-custom--products-wrapper {
         max-width: none;
         height: auto;
-        .el-custom--products-slide{
+        .el-custom--products-slide {
             height: 108vw;
             margin-top: 30px;
             margin-bottom: 30px;
-            &.slick-slider{
+            &.slick-slider {
                 padding: 0px !important;
             }
-            .slick-list{
+            .slick-list {
                 height: 100% !important;
-                .slick-track{
-                    .products--card{
+                .slick-track {
+                    .products--card {
                         margin: unset;
-                        &.slick-active.slick-center{
+                        &.slick-active.slick-center {
                             width: 58vw !important;
                         }
-                        .products--card__description{
-                            h3{
+                        .products--card__description {
+                            h3 {
                                 font-size: 16px !important;
                             }
-                            .el-custom--button{
+                            .el-custom--button {
                                 font-size: 4.5vw !important;
                                 max-width: none;
                                 height: unset !important;
@@ -186,13 +191,13 @@
             }
         }
     }
-    &.cristal{
-        .el-custom--products-wrapper{
-            .el-custom--products-slide{
-                .slick-list{
-                    .products--card{
-                        .products--card__description{
-                            .el-custom--button{
+    &.cristal {
+        .el-custom--products-wrapper {
+            .el-custom--products-slide {
+                .slick-list {
+                    .products--card {
+                        .products--card__description {
+                            .el-custom--button {
                                 max-width: 80% !important;
                                 font-size: 3.5vw !important;
                             }
@@ -203,4 +208,3 @@
         }
     }
 }
-

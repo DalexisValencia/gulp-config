@@ -1,11 +1,32 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
-.el-custom--details{
+@mixin cristal-details {
+    .el-custom--details--body {
+        article.el-custom--details--body-product-details {
+            .el--custom__title {
+                color: $secondary-brand-color;
+                font-family: 'ResotE-Lavender';
+            }
+            .el--custom__description {
+                color: $fourtiary-brand-color;
+            }
+            .el-custom--details--body-product-details-nutritional {
+                h5 {
+                    color: $secondary-brand-color;
+                    font-family: 'ResotE-Lavender';
+                }
+                ul {
+                    li {
+                        color: $fourtiary-brand-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.el-custom--details {
     width: 100%;
-    border-top: 12px solid $nineth-brand-color;
-    height: 35vw;
-    max-height: 447px;
-    background-image: url('../assets/details/bg-details.png');
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -14,7 +35,36 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    &::before{
+    &.reload {
+        .el-custom--details--body {
+            opacity: 1;
+        }
+    }
+    &:not(.reload) {
+        .el-custom--details--body {
+            opacity: 0;
+        }
+    }
+    &:not(.cristal) {
+        border-top: 12px solid $nineth-brand-color;
+        background-image: url('../assets/details/bg-details.png');
+        max-height: 447px;
+        height: 35vw;
+        &::before {
+            border-bottom: 24px solid $nineth-brand-color;
+        }
+    }
+    &.cristal {
+        border-top: 12px solid $seventh-brand-color;
+        background-image: url('../assets/details/bg-details-cristal.png');
+        max-height: 530px;
+        height: 38vw;
+        @include cristal-details;
+         ::before {
+            border-bottom-color: $seventh-brand-color !important;
+        }
+    }
+    &::before {
         content: "";
         border-left: 24px solid transparent;
         border-right: 24px solid transparent;
@@ -22,32 +72,22 @@
         position: absolute;
         top: -24px;
     }
-    &.reload{
-        .el-custom--details--body{
-            opacity: 1;
-        }
-    }
-    &:not(.reload){
-        .el-custom--details--body{
-            opacity: 0;
-        }
-    }
-    .el-custom--details--body{
+    .el-custom--details--body {
         transition: 1s all;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         max-width: 1151px;
         width: 75%;
-        .el-custom--details--body-wrapper-image{
+        .el-custom--details--body-wrapper-image {
             display: inline-block;
             cursor: pointer;
-            img{
+            img {
                 width: 290px;
                 height: 290px;
             }
         }
-        article{
+        article {
             margin-top: 40px;
             width: 50%;
             display: flex;
@@ -55,46 +95,46 @@
             justify-content: space-between;
             flex-direction: column;
             max-height: 232px;
-            .el--custom__title{
+            .el--custom__title {
                 text-transform: uppercase;
                 font-size: 32px;
                 color: $nineth-brand-color;
                 font-family: 'Matthan-sans-regular';
                 font-weight: 100;
             }
-            .el--custom__description{
+            .el--custom__description {
                 font-family: 'Roboto', sans-serif;
                 font-weight: 400;
                 color: $primary-brand-color;
                 font-size: 16px;
             }
-            .el-custom--details--body-product-details-nutritional{
-                h5{
+            .el-custom--details--body-product-details-nutritional {
+                h5 {
                     color: $nineth-brand-color;
                     font-size: 16px;
                     font-family: 'Roboto', sans-serif;
                     font-weight: 500;
                     margin-bottom: 22px;
                 }
-                ul{
+                ul {
                     margin: 0px;
                     padding: 0px;
                     list-style: none;
                     display: flex;
                     align-items: center;
-                    li{
+                    li {
                         width: 32px;
                         height: 58px;
                         margin-right: 32px;
                         text-align: center;
-                        span{
+                        span {
                             display: block;
                             font-family: 'Roboto', sans-serif;
-                            &:last-child{
+                            &:last-child {
                                 font-size: 16px;
                                 font-weight: 700;
                             }
-                            &:first-child{
+                            &:first-child {
                                 font-weight: 700;
                                 font-size: 20px;
                             }
@@ -105,27 +145,29 @@
         }
     }
 }
+
 @include for-tablet-landscape-only ('.el-custom--details') {
-    .el-custom--details--body{
+    .el-custom--details--body {
         width: 78%;
-        .el-custom--details--body-wrapper-image{
-            img{
+        .el-custom--details--body-wrapper-image {
+            img {
                 width: 270px;
                 height: 270px;
             }
         }
     }
 }
-@include for-tablet-landscape-down ('.el-custom--details'){
+
+@include for-tablet-landscape-down ('.el-custom--details') {
     background-size: 133%;
-    .el-custom--details--body{ 
+    .el-custom--details--body {
         max-width: 1151px;
         width: 85%;
         justify-content: space-between;
-        .el-custom--details--body-wrapper-image{
+        .el-custom--details--body-wrapper-image {
             display: flex;
             justify-content: center;
-            img{
+            img {
                 margin: auto;
                 width: 27.3vw;
                 height: 27.3vw;
@@ -133,88 +175,98 @@
         }
     }
 }
+
 @media (min-width: 600px) and (max-width: 730px) {
-    .el-custom--details{
+    .el-custom--details {
         background-size: 150%;
-        .el-custom--details--body{ 
+        .el-custom--details--body {
             max-width: 1151px;
             width: 97%;
             justify-content: space-between;
-            .el-custom--details--body-wrapper-image{
+            .el-custom--details--body-wrapper-image {
                 display: flex;
                 justify-content: center;
-                img{
+                img {
                     margin: auto;
                     width: 30vw;
                     height: 30vw;
                 }
             }
-            article{
+            article {
                 width: 64%;
             }
         }
     }
 }
-@include for-phone-only('.el-custom--details'){
-    // min-height: 536px;
+
+@include for-phone-only('.el-custom--details') {
     align-items: stretch;
-    height: 152vw;
-    max-height: 152vw !important;
-    max-height: unset;
+    &.cristal,
+    &:not(.cristal) {
+        height: 152vw !important;
+        max-height: 152vw !important;
+        max-height: unset !important;
+    }
     background-size: contain;
-    background-image: url('../assets/details/bg-mobile.png') !important;
-    .el-custom--details--body{
-        .el-custom--details--body-wrapper-image{
+    &:not(.cristal) {
+        background-image: url('../assets/details/bg-mobile.png') !important;
+    }
+    &.cristal {
+        background-image: url('../assets/details/bg-details-cristal-mobile.svg') !important;
+    }
+    .el-custom--details--body {
+        .el-custom--details--body-wrapper-image {
             width: 100%;
-            img{
+            img {
                 width: 65vw;
                 height: 65vw;
             }
         }
-        .el-custom--details--body-product-details{
+        .el-custom--details--body-product-details {
             width: 100%;
             display: unset;
             margin-top: 0px;
-            .el--custom__title{
+            .el--custom__title {
                 text-align: center;
                 font-size: 32px;
             }
-            .el--custom__description{
+            .el--custom__description {
                 padding-top: 15px;
                 font-size: 16px;
                 text-align: center;
             }
-            .el-custom--details--body-product-details-nutritional{
+            .el-custom--details--body-product-details-nutritional {
                 padding-top: 20px;
                 text-align: center;
             }
         }
     }
 }
+
 @include for-phone-small ('.el-custom--details') {
-    .el-custom--details--body{
-        .el-custom--details--body-product-details{
-            .el--custom__title{
+    .el-custom--details--body {
+        .el-custom--details--body-product-details {
+            .el--custom__title {
                 font-size: 8.5vw;
             }
-            .el--custom__description{
+            .el--custom__description {
                 font-size: 4.5vw;
             }
-            .el-custom--details--body-product-details-nutritional{
+            .el-custom--details--body-product-details-nutritional {
                 padding-top: 20px;
-                h5{
+                h5 {
                     font-size: 5vw;
                 }
-                ul{
-                    li{
+                ul {
+                    li {
                         width: 15vw;
                         height: 15vw;
                         margin-right: 8%;
-                        span{
-                            &:first-child{
+                        span {
+                            &:first-child {
                                 font-size: 5.5vw;
                             }
-                            &:last-child{
+                            &:last-child {
                                 font-size: 5vw;
                             }
                         }

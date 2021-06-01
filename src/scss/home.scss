@@ -1,19 +1,17 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
-
 .cheers-left-animation,
-.cheers-right-animation
-{
+.cheers-right-animation {
     animation-fill-mode: forwards;
     animation-duration: 1s;
     animation-timing-function: cubic-bezier(0.9, -0.3, 0.2, 0.4);
 }
 
-.cheers-left-animation{
+.cheers-left-animation {
     animation-name: cheers-left;
 }
 
-.cheers-right-animation{
+.cheers-right-animation {
     animation-name: cheers-right;
 }
 
@@ -41,36 +39,35 @@
     }
 }
 
-
-.el-custom--home-page{
+.el-custom--home-page {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    &.open-doors{
-        .el-custom--home-page-container{
+    &.open-doors {
+        .el-custom--home-page-container {
             transition: 2.5s all;
             &.el-left {
                 transform: translateX(-100%);
             }
-            &.el-right{
+            &.el-right {
                 transform: translateX(100%);
             }
-            .el-custom--button{
+            .el-custom--button {
                 opacity: 0;
             }
         }
     }
-    &.cristal{
-        .el-custom--home-page-container{
-            .el-custom--button{
+    &.cristal {
+        .el-custom--home-page-container {
+            .el-custom--button {
                 color: $secondary-brand-color;
                 font-family: 'ResotE';
                 font-size: 12px;
             }
         }
     }
-    .el-custom--home-page-container{
+    .el-custom--home-page-container {
         position: relative;
         width: 50%;
         height: 49vw;
@@ -80,7 +77,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        .el-custom-home-page-cristal-img{
+        .el-custom-home-page-cristal-img {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -88,12 +85,12 @@
             max-width: 92px;
             max-height: 308px;
             width: 28vw;
-            transition:0.5s all cubic-bezier(0.9, -0.3, 0.2, 0.4);
-            img{
+            transition: 0.5s all cubic-bezier(0.9, -0.3, 0.2, 0.4);
+            img {
                 width: 100%;
             }
         }
-        .el-custom--button{
+        .el-custom--button {
             padding: 10px 5px;
             position: absolute;
             color: $fourtiary-brand-color;
@@ -101,28 +98,24 @@
             font-size: 14px;
             font-weight: 400;
             text-transform: none;
-            // border: 1px solid red;
-            // span{
-            //     text-decoration: underline;
-            // }
             i {
                 font-size: 22px;
             }
         }
-        &.el-left{
+        &.el-left {
             background-image: url('../assets/home-page/desktop/container-left.png');
-            .el-custom--button{
+            .el-custom--button {
                 right: 0px;
-                span{
+                span {
                     margin-right: 20px;
                 }
             }
         }
-        &.el-right{
+        &.el-right {
             background-image: url('../assets/home-page/desktop/container-right.png');
-            .el-custom--button{
+            .el-custom--button {
                 left: 0px;
-                span{
+                span {
                     margin-left: 20px;
                 }
             }
@@ -132,18 +125,18 @@
 
 @mixin home-page-mobile () {
     flex-wrap: wrap;
-    .el-custom--home-page-container{
+    .el-custom--home-page-container {
         width: 100%;
         height: 83vw !important;
-        .el-custom-home-page-cristal-img{
+        .el-custom-home-page-cristal-img {
             width: 13vw;
         }
-        .el-custom--button{
+        .el-custom--button {
             display: flex;
             font-size: 12px;
             flex-wrap: wrap;
             justify-content: center;
-            span{
+            span {
                 width: 100%;
                 display: block;
                 margin: 0px !important;
@@ -153,23 +146,23 @@
                 font-size: 18px;
             }
         }
-        &.el-left{
+        &.el-left {
             color: orange;
             background-image: url('../assets/home-page/mobile/container-left.png');
-            .el-custom--button{
+            .el-custom--button {
                 bottom: 0px;
                 right: unset;
-                span{
+                span {
                     margin-right: 20px;
                 }
             }
         }
-        &.el-right{
+        &.el-right {
             background-image: url('../assets/home-page/mobile/container-right.png');
-            .el-custom--button{
+            .el-custom--button {
                 top: 0px;
                 left: unset;
-                span{
+                span {
                     margin-left: 20px;
                 }
             }
@@ -177,48 +170,15 @@
     }
 }
 
-
 @include for-tablet-landscape-down ('.el-custom--home-page') {
-    .el-custom--home-page-container{
-        .el-custom-home-page-cristal-img{
+    .el-custom--home-page-container {
+        .el-custom-home-page-cristal-img {
             // border: 1px solid black;
             max-width: 60px;
-        }   
+        }
     }
 }
 
 @include for-phone-only ('.el-custom--home-page') {
     @include home-page-mobile();
 }
-
-// @include for-ipadPro-only ('.el-custom--home-page') {
-//     @include  home-page-mobile();
-//     .el-custom--home-page-container{
-//         .el-custom--button{
-//             font-size: 18px;
-//         }
-//         .el-custom-home-page-cristal-img{
-//             img{
-//                 width: 13vw;
-//                 max-height: inherit;
-//                 max-width: inherit;
-//             }
-//         }
-//     }
-// }
-
-// @include for-ipad-only ('.el-custom--home-page') {
-//     @include  home-page-mobile();
-//     .el-custom--home-page-container{
-//         .el-custom--button{
-//             font-size: 25px;
-//         }
-//         .el-custom-home-page-cristal-img{
-//             img{
-//                 width: 43vw;
-//                 max-height: inherit;
-//                 max-width: inherit;
-//             }
-//         }
-//     }
-// }

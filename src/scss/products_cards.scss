@@ -2,6 +2,7 @@
 @import './common/queries.scss';
 @mixin products-card {
     .products--card{
+        max-width: 200px !important;
         transition: 0.5s all;
         text-decoration: none !important;
         flex-wrap: wrap;
@@ -13,7 +14,7 @@
                 opacity: 0;
             // }
         }
-       &.slick-center{
+       &.slick-center.slick-current{
            transform: scale(1.08);
            .products--card__image{
                 margin-top: 70px;

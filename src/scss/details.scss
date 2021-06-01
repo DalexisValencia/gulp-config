@@ -64,8 +64,9 @@
             border-bottom-color: $seventh-brand-color !important;
         }
     }
-    &::before {
-        content: "";
+   .details--marker {
+        position: absolute;
+        transition: 0.5s all;
         border-left: 24px solid transparent;
         border-right: 24px solid transparent;
         border-bottom: 24px solid $nineth-brand-color;

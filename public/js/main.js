@@ -283,6 +283,7 @@ $(document).ready(function() {
             const attrIndex = activeSlide.attr("data-attr-index");
             const attrDescription = activeSlide.attr("data-attr-description");
             const attrImg = activeSlide.attr("data-attr-img");
+            const attrImgAlt = activeSlide.attr("data-atrr-alt");
             const attTitle = activeSlide.attr("data-atrr-titulo");
             const attArray = activeSlide.attr("data-atrr-array");
             
@@ -292,6 +293,8 @@ $(document).ready(function() {
                 details_container.find('.el-custom--details--body .el-custom--details--body-product-details h2.el--custom__title').text(attTitle);
                 details_container.find('.el-custom--details--body .el-custom--details--body-product-details .el--custom__description').html(attrDescription);
                 details_container.find('.el-custom--details--body .el-custom--details--body-wrapper-image').find('img').attr('src', attrImg);
+                details_container.find('.el-custom--details--body .el-custom--details--body-wrapper-image').find('img').attr('alt', attrImgAlt);
+
                 var splitData = attArray.split(",");
                 parentUl.empty();
 

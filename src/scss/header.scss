@@ -110,7 +110,7 @@ header.el-custom--header {
             div.el-custom--up-menu {
                 background-image: url('../assets/header/header-cristal.png');
                 .el-custom--main-logo {
-                    background-image: url('../assets/logo-cristal.svg');
+                   // background-image: url('../assets/logo-cristal.svg');
                 }
                 .burger-menu {
                     .i-icon-menu {
@@ -213,7 +213,7 @@ header.el-custom--header {
         background-image: url('../assets/mobile-menu/background-bicolor.png');
         background-color: $primary-brand-color !important;
         .el-custom--main-logo {
-            background-image: url('../assets/mobile-menu/mobile-logo-bicolor.png') !important;
+            // background-image: url('../assets/mobile-menu/mobile-logo-bicolor.png') !important;
             margin-bottom: 50px !important;
         }
         &.active {

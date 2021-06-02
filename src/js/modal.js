@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
     var modal = $("#modalRegister");
-    console.error('función del modal agregada');
+    // console.error('función del modal agregada');
     if(modal.length){
         var btn = $("#openModal");
         var span = $(".close");

@@ -73,7 +73,7 @@ function clearJS() {
 }
 
 function compileJS() {
-    return src(['src/js/*.js' , '!src/js/history.js'])
+    return src(['src/js/*.js']) //  , '!src/js/history.js'
         .pipe(concat('main.js'))
         // .pipe(minify())
         .pipe(dest('public/js/'))

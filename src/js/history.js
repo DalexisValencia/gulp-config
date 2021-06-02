@@ -1,10 +1,8 @@
 $(document).ready(function() {
     const history_slider = $(".el-custom--history-page");
     const slider = $('.el-custom--history-page__slider');
-    console.error(history_slider.length, 'history_slider.length')
-    if (history_slider.length) {
+    if (history_slider.length) { // solo se ejecuta en la pagina de la historia
         function createHistoryDots() {
-            console.info("askjdklasjdl")
             var sliders = $('.el-custom--history-page__slider .el-custom--history-page__slide');
             for (let index = 0; index < sliders.length; index++) {
                 const currentSlide = $(sliders[index]);
@@ -17,22 +15,26 @@ $(document).ready(function() {
             }
         }
         createHistoryDots();
-        $(window).resize(function() {
-            const total_width = $(window).width();
-            const imgSlider = $(".el-custom-home-page-cristal-img");
-            if (total_width <= 600) {
-                imgSlider.each(function() {
-                    console.warn($(this).attr("data-attr-responsive"), '$(this).attr("data-attr-responsive")')
-                    $(this).css("background-image", "url(" + $(this).attr("data-attr-responsive") + ")")
-                });
-            } else if (total_width > 600) {
-                imgSlider.each(function() {
-                    // console.warn($(this).attr("data-attr-responsive"), '$(this).attr("data-attr-responsive")')
-                    // $(this).css("background-image", "url(" + $(this).attr("data-attr-responsive") + ")")
-                    $(this).attr("style", "");
-                });
-            }
+        $('.el-custom--history-page__slider-navigation ul.slick-dots li a').on('click', function(){
+            $('.el-custom--history-page__slider-navigation ul.slick-dots li').removeClass('slick-active');
+            $(this).parent().addClass('slick-active');
         });
+        // $(window).resize(function() {
+        //     const total_width = $(window).width();
+        //     const imgSlider = $(".el-custom-home-page-cristal-img");
+        //     if (total_width <= 600) {
+        //         imgSlider.each(function() {
+        //             console.warn($(this).attr("data-attr-responsive"), '$(this).attr("data-attr-responsive")')
+        //             $(this).css("background-image", "url(" + $(this).attr("data-attr-responsive") + ")")
+        //         });
+        //     } else if (total_width > 600) {
+        //         imgSlider.each(function() {
+        //             // console.warn($(this).attr("data-attr-responsive"), '$(this).attr("data-attr-responsive")')
+        //             // $(this).css("background-image", "url(" + $(this).attr("data-attr-responsive") + ")")
+        //             $(this).attr("style", "");
+        //         });
+        //     }
+        // });
     }
 
 

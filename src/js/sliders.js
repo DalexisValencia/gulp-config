@@ -95,7 +95,7 @@ $(document).ready(function() {
             }
         }]
     }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-        console.log(nextSlide, 'pilas');
+        // console.log(nextSlide, 'pilas');
         $("header.el-custom--flavors-page__slider-navigation").attr('class', 'el-custom--flavors-page__slider-navigation');
         $("header.el-custom--flavors-page__slider-navigation").addClass('header-' + nextSlide)
 
@@ -106,9 +106,12 @@ $(document).ready(function() {
     var pathname = window.location.pathname;
 
     if(pathname.indexOf('sabores') != -1) {
-        var findIndex = pathname.split("/")[2];
+        const menu = ['original', 'zero', 'camucamu', 'copoazu']
+        const findByName = pathname.split("/")[2].toLocaleLowerCase();
+        const findIndex = menu.indexOf(findByName);
+
+        console.info(findIndex);
         if (findIndex != null) {
-            // console.log('OK');
             $('#el-custom--flavors-page__sliders').slick('slickGoTo', findIndex);
             $('.el-custom--main-menu li.nav-item:nth-child(4)').addClass('active');
         }

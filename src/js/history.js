@@ -1,6 +1,6 @@
 $(document).ready(function() {
     const history_slider = $(".el-custom--history-page");
-    const slider = $('.el-custom--history-page__slider');
+    // const slider = $('.el-custom--history-page__slider');
     if (history_slider.length) { // solo se ejecuta en la pagina de la historia
         function createHistoryDots() {
             var sliders = $('.el-custom--history-page__slider .el-custom--history-page__slide');
@@ -8,7 +8,7 @@ $(document).ready(function() {
                 const currentSlide = $(sliders[index]);
                 const slideName = currentSlide.attr('data-attr-history-name');
                 const slideUrl = currentSlide.attr('id');
-                const active = index == 0 ? 'slick-active' : '';
+                const active =  ''; //  index == 0 ? 'slick-active' : '';
                 $(".el-custom--history-page__slider-navigation ul.slick-dots").append(
                     "<li class='" + active + "'><a class='dot' href='#" + slideUrl + "'>" + slideName + "</a></li>"
                 );

@@ -199,6 +199,9 @@ $sliderFullHeight: 100vh;
     }
 }
 @include for-phone-only('.el-custom--history-page') {
+    .el-custom--history-page__slider-navigation{
+        display: none;
+    }
     .el-custom--history-page__slider {
         .el-custom--history-page__slide {
             .el-custom-home-page-cristal-img {

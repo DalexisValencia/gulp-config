@@ -22,8 +22,9 @@ $(document).ready(function() {
         responsive: [{
             breakpoint: 600,
             settings: {
-                slidesToShow: 2.35,
-                slidesPerRow: 2.35,
+                arrows: true,
+                slidesToShow: 2,
+                slidesPerRow: 2,
                 adaptiveHeight: false,
                 swipe: true,
                 infinite: false,
@@ -42,8 +43,7 @@ $(document).ready(function() {
         variableWidth: true,
         autoplay: false,
         adaptiveHeight: true,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1250,
                 settings: {
                     slidesToShow: 4,
@@ -66,19 +66,22 @@ $(document).ready(function() {
                 }
             },
             {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2.35,
-                slidesPerRow: 2.35,
-                swipe: true,
-                infinite: true,
-                arrows: false,
-                variableWidth: false,
+                breakpoint: 600,
+                settings: {
+                    // slidesToShow: 2.35,
+                    // slidesPerRow: 2.35,
+                    slidesToShow: 2,
+                    slidesPerRow: 2,
+                    swipe: true,
+                    infinite: true,
+                    arrows: true,
+                    variableWidth: false,
+                }
             }
-        }]
+        ]
     });
     //prueba:
-    
+
     $('#el-custom--flavors-page__sliders').slick({
         dots: true,
         appendDots: $('.el-custom--flavors-slider--navigation'),
@@ -109,8 +112,6 @@ $(document).ready(function() {
         const menu = ['original', 'zero', 'camucamu', 'copoazu']
         const findByName = pathname.split("/")[2].toLocaleLowerCase();
         const findIndex = menu.indexOf(findByName);
-
-        console.info(findIndex);
         if (findIndex != null) {
             $('#el-custom--flavors-page__sliders').slick('slickGoTo', findIndex);
             $('.el-custom--main-menu li.nav-item:nth-child(4)').addClass('active');

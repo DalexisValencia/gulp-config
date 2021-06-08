@@ -49,6 +49,7 @@ $sliderFullHeight: 100vh;
                 }
             }
             a {
+                transition: 1s all;
                 display: block;
                 width: 100%;
                 text-decoration: none;
@@ -105,11 +106,22 @@ $sliderFullHeight: 100vh;
                 align-items: center;
                 position: relative;
                 display: flex;
+                &.full{
+                    height: 100vh;
+                }
+                &:not(.full){
+                    height: 50vh;
+                }
                 picture{
+                    height: 100%;
+                    background-color: black;
                     width: 100%;
-                    height: 37vw;
+                    // height: 37vw;
                     img{
                         width: 100%;
+                        flex-shrink: 0;
+                        min-width: 100%;
+                        min-height: 100%
                     }
                 }
                 .el-custom--history-page__slide--header {

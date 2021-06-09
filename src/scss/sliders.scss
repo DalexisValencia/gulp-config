@@ -226,7 +226,7 @@
 .el-custom--banners-arrow-bottom{
     position: absolute;
     display: block;
-    color: white;
+    color: $sixth-brand-color;
     width: 54px;
     height: 40px;
     bottom: 13px;
@@ -291,6 +291,30 @@
 }
 
 @include for-phone-only('.el-custom--banners') {
+    &:not(.cristal),
+    &.bicolor{
+        .el-custom--banners-slides{
+            .slick-list.draggable{
+                .slick-track{
+                    .banner{
+                        .el-custom--banners-anchor{
+                            .el-custom--banners-anchor-header{
+                                padding: 0px 45px;
+                                text-align: left;
+                                h2{
+                                    font-size: 30px;
+                                }
+                                p{
+                                    margin: 0px;
+                                    font-weight: 100;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .el-custom--banners-slides{
         .slick-list.draggable{
             .slick-track{
@@ -301,7 +325,10 @@
                             padding-top: 0px !important;
                             width: 100%;
                             left: 0px;
-                            text-align: center;
+                            
+                            &.cristal{
+                                text-align: center;
+                            }
                             h2{
                                 font-size: 60px;
                                 width: 100%;

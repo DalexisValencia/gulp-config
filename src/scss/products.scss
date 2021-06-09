@@ -43,6 +43,35 @@
             }
         }
     }
+    &.bicolor,
+    &:not(.cristal){
+        .el-custom--products-title{
+            display: block;
+            margin-top: 20px;
+            position: absolute;
+            top: 0px;
+            text-align: center;
+            width: 100%;
+            z-index: 1;
+            h2{
+                font-size: 30px;
+                color: $nineth-brand-color;
+                font-family:'Matthan-sans-regular';
+                position: relative;
+                display: initial;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    border-radius: 20px;
+                    background-color: #af1625;
+                    bottom: -5px;
+                    left: 0px;
+                }
+            }
+        }
+    }
     .el-custom--products-wrapper {
         height: 515px;
         max-width: 1151px;
@@ -156,6 +185,9 @@
 @include for-phone-only ('.el-custom--products') {
     &::before {
         background-image: unset !important;
+    }
+    .el-custom--products-title{
+        display: none !important;
     }
     background-image: unset !important;
     .el-custom--products-wrapper {

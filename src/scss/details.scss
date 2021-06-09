@@ -45,13 +45,25 @@
             opacity: 0;
         }
     }
-    &:not(.cristal) {
+    &:not(.cristal),
+    &.bicolor {
         border-top: 12px solid $nineth-brand-color;
-        background-image: url('../assets/details/bg-details.png');
+        background-image: url('../assets/details/bicolor/bg-details-desktop.png');
         max-height: 447px;
         height: 35vw;
         &::before {
             border-bottom: 24px solid $nineth-brand-color;
+        }
+        .el-custom--details--body{
+            // border: 3px solid black;
+            article{
+                .el--custom__title {
+                    color: $sixth-brand-color;
+                    font-size: 32px;
+                    font-family: 'Matthan-sans-regular';
+                    font-weight: 100;
+                }
+            }
         }
     }
     &.cristal {
@@ -93,23 +105,25 @@
             width: 50%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            // justify-content: space-between;
             flex-direction: column;
             max-height: 232px;
             .el--custom__title {
                 text-transform: uppercase;
-                font-size: 32px;
-                color: $nineth-brand-color;
-                font-family: 'Matthan-sans-regular';
-                font-weight: 100;
+                // font-size: 32px;
+                // color: $nineth-brand-color;
+                // font-family: 'Matthan-sans-regular';
+                // font-weight: 100;
+                margin-bottom: 15px;
             }
             .el--custom__description {
                 font-family: 'Roboto', sans-serif;
-                font-weight: 400;
-                color: $primary-brand-color;
+                font-weight: 300;
+                color: $fourtiary-brand-color;
                 font-size: 16px;
             }
             .el-custom--details--body-product-details-nutritional {
+                display: none;
                 h5 {
                     color: $nineth-brand-color;
                     font-size: 16px;
@@ -209,8 +223,10 @@
         max-height: unset !important;
     }
     background-size: contain;
-    &:not(.cristal) {
-        background-image: url('../assets/details/bg-mobile.png') !important;
+    &:not(.cristal),
+    &.bicolor {
+        background-image: url('../assets/details/bicolor/bg-details-mobile.png') !important;
+        background-size: cover;
     }
     &.cristal {
         background-image: url('../assets/details/bg-details-cristal-mobile.svg') !important;

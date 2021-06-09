@@ -110,6 +110,7 @@ $(document).ready(function() {
         var span = $(".close");
 
         btn.click(function() {
+            console.error('dado click')
             modal.css("display", "block");
             $("body").addClass("no-overflow");
             window.scrollTo(0, 0);

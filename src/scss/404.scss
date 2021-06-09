@@ -1,0 +1,81 @@
+@import './vars/colors.scss';
+.el-custom--page404 {
+    height: 60vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center bottom;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    &.bicolor,
+    &:not(.cristal){ 
+        background-image: url('../assets/404/bicolor-404.png');
+        .el-custom--page404__header{
+            width: 100%;
+            text-align: center;
+                h3 {
+                    font-size: 48px;
+                    color: $sixth-brand-color;
+                    font-family: 'Matthan-sans-regular';
+                }
+                p{
+                    margin-top: 15px;
+                    margin-bottom: 20px;
+                    font: {
+                        size: 14px;
+                        family: 'Roboto', sans-serif;
+                        color: $fifth-brand-color;
+                    }
+                }
+                button.el-custom--button,
+                a.el-custom--button {
+                    width: 215px;
+                    height: 50px;
+                    background-color: $sixth-brand-color;
+                    border-radius: 10px;
+                    color: #fff;
+                    font: {
+                        family: 'Matthan-sans-regular';
+                        size: 20px;
+                    }
+                }
+            }
+    }
+    &.cristal,
+    &:not(.bicolor){
+        background-image: url('../assets/404/cristal-404.png');
+        .el-custom--page404__header{
+            width: 100%;
+            text-align: center;
+                h3 {
+                    font: {
+                        size: 48px;
+                        family: 'ResotE';
+                    }
+                    color: $seventh-brand-color;
+                }
+                p{
+                    margin-top: 15px;
+                    margin-bottom: 20px;
+                    font: {
+                        size: 14px;
+                        family: 'Roboto', sans-serif;
+                        color: $fifth-brand-color;
+                    }
+                }
+                button.el-custom--button,
+                a.el-custom--button {
+                    width: 215px;
+                    height: 50px;
+                    background-color: $primary-brand-color;
+                    border-radius: 10px;
+                    color: #fff;
+                    font: {
+                        family: 'ResotE';
+                        size: 15px;
+                    }
+                }
+        }
+    }
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::GUARANA DEV::</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300,1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/nice-select.css">
+</head>
+
+<body>
+    <main class="el-custom--main el-custom-register-page">
+        <header class="el-custom--header cristal">
+            <nav class="el-custom--flex justify-between">
+                <div class="el-custom--flex el-custom--up-menu">
+                    <a class="el-custom--main-logo" href="index.html">
+                        <img src="assets/logo-cristal.svg">
+                    </a>
+                    <div class="burger-menu show-tablet-down">
+                        <i class="i-icon-menu"></i>
+                    </div>
+                </div>
+                <ul class="el-custom--flex el-custom--main-menu">
+                    <div class="close-mobile-menu"></div>
+                    <a class="el-custom--main-logo" href="">
+                        <img src="assets/logo-cristal.svg">
+                    </a>
+                    <li class="active show-tablet-down"><a href="index.html">HOME</a></li>
+                    <li><a href="details.html">CRISTAL</a></li>
+                    <li><a href="register.html">HISTORIA</a></li>
+                    <li><a href="register.html">BICOLOR</a></li>
+                    <div class="el-custom--buttons-transform">
+                        <a href="" class="el-custom--button backusYa"></a>
+                        <a href="" class="el-custom--button">Registro</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <section class="el-custom--register-page__main cristal">
+            <div id="modalRegister" class="modal">
+                <div class="modal-content">
+                    <span class="close"></span>
+                    <article>
+                        <h3>¡Gracias por registrarte!</h3>
+                        <p>Te has registrado exitosamente.</p>
+                        <button class="el-custom--button">
+                            VOLVER
+                        </button>
+                    </article>
+                </div>
+            </div>
+            <article class="el-custom--register-page__form">
+                <header>
+                    <h3>
+                        REGÍSTRATE
+                    </h3>
+                </header>
+                <form class="el-custom-brand-register-form" action="/" method="post" accept-charset="UTF-8">
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name form-no-label form-group">
+                            <label for="name">Nombre*</label>
+                            <input placeholder="Ingresa tu nombre" autocomplete="off" type="text" id="register-name" name="name" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                        </fieldset>
+
+                        <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-lastname form-item-lastname form-no-label form-group">
+                            <label for="lastname">Apellido *</label>
+                            <input placeholder="" autocomplete="off" type="text" id="register-lastname" name="lastname" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                        </fieldset>
+                    </div>
+
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-document form-item-document form-no-label form-group form-full">
+                            <label for="document">DNI*</label>
+                            <input placeholder="Ingresa tu número de DNI / Cédula de Extranjería" autocomplete="off" type="number" id="register-document" name="document" value="" step="1" class="form-number required form-control el-custom--input" required="required">
+                        </fieldset>
+                    </div>
+
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-gender form-item-gender form-no-label form-group">
+                            <label for="gender">Género</label>
+                            <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" hide>Selecciona una opción</option>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-birthday form-item-birthday form-group">
+                            <label for="birthday">Fecha de nacimiento</label>
+                            <select autocomplete="off" name="day" class="form-select required form-control el-custom--input" required="required" id="day">
+                                <option value="" hidden  selected>DD</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                            </select>
+                            <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" hidden  selected>MM</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                            </select>
+                            <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" hidden  selected>AAAA</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                            </select>
+                        </fieldset>
+                    </div>
+
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-email form-type-email js-form-item-email form-item-email form-no-label form-group form-full">
+                            <label for="email">Correo electrónico</label>
+                            <input placeholder="" autocomplete="off" type="email" id="register-email" name="email" value=" " size="60" maxlength="50" class="form-email required form-control el-custom--input error" required="required">
+                        </fieldset>
+                    </div>
+
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-city form-item-city form-no-label form-group">
+                            <label for="city">Ciudad</label>
+                            <select autocomplete="off" name="city" id="register-city" class="form-select required form-control" required="required">
+                                <option value="" selected="selected">Ciudad</option>
+                                <option value="1838">Amazonas</option>
+                                <option value="1839">Áncash</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-phone form-item-phone form-no-label form-group">
+                            <label for="phone">Número de teléfono*</label>
+                            <input placeholder="000-0000-00" min="1" step="1" autocomplete="off" type="number" id="register-phone" name="phone" value=" " class="form-number required form-control el-custom--input" required="required">
+                        </fieldset>
+                    </div>
+                    <div class="el-custom--block-terms">
+                        <div class="block-term">
+                            <label class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-terms form-item-terms el-custom--checkbox" for="acept-terms">
+                                <input type="checkbox" id="edit-terms" name="acept-terms" value="1" class="form-checkbox required form-check-input" required="required">
+                                <label class="form-check-label" for="edit-terms">
+                                    <span class="checkmark"></span>
+                                    <span>Acepto <a href="" target="_blank">términos y condiciones</a> y <a href="" target="_blank">políticas de privacidad</a> *</span>
+                                </label>
+                            </label>
+                        </div>
+                        <div class="block-term">
+                            <label class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-terms form-item-terms el-custom--checkbox" for="get-information">
+                                <input type="checkbox" id="get-information" name="get-information" value="1" class="form-checkbox required form-check-input" required="required">
+                                <label class="form-check-label" for="get-information">
+                                    <span class="checkmark"></span>
+                                    <span>Deseo recibir información comercial y eventos de Backus y sus marcas asociadas</span>
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-actions js-form-wrapper form-group" id="edit-actions">
+                        <button type="submit " value="ENVIAR " class="el-custom--button button button--primary js-form-submit form-submit btn btn-primary ">
+                            ENVIAR
+                        </button>
+                    </div>
+
+                    <input type="button" id="openModal" class="el-custom--button" value="click para ver modal" style="border: 1px dashed black;"/>
+                </form>
+            </article>
+            <article class="el-custom--register-page__image"></article>
+        </section>
+        <footer class="el-custom--footer cristal">
+            <section class="el-custom--footer-above-section">
+                <div class="el-custom--logo">
+                    <ul class="dont-share">
+                        <li>
+                            <a href="">NO COMPARTA ESTE CONTENIDO CON MENORES DE EDAD</a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="desktop">
+                                    ADVERTENCIA: TOMAR BEBIDAS ALCOHÓLICAS EN EXCESO ES DAÑINO
+                                </span>
+                                <span class="mobile">
+                                    ADVERTENCIA: EL CONSUMO EXCESIVO DE ALCOHOL LIMITA SU CAPACIDAD DE CONDUCIR Y
+                                    OPERAR MAQUINARIAS, PUEDE CAUSAR DAÑOS A SU SALUD Y PERJUDICAR A SU FAMILIA.
+                                    MINISTERIO DE SALUD PÚBLICA DEL PERÚ.
+                                </span> 
+                            </a>
+                        </li>
+                    </ul>
+                    <img src="assets/logo-cristal.svg" alt="Logo cristal">
+                </div>
+                <nav class="el-custom--footer-nav">
+                    <ul>
+                        <li>
+                            <a href="">TERMINOS DE USO PERÚ</a>
+                        </li>
+                        <li>
+                            <a href="">HABLEMOS DE ALCOHOL</a>
+                        </li>
+                        <li>
+                            <a href="">POLÍTICA DE PROTECCIÓN DE DATOS PERÚ</a>
+                        </li>
+                        <li>
+                            <a href="">CONTÁCTENOS</a>
+                        </li>
+                        <li>
+                            <a href="">DERECHOS ARCO</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <div class="el-custom--footer-warning el-custom--flex justify-between">
+                <img src="assets/adult-legal.png" alt="Solo mayores de 18 años">
+                <div class="el-custom--footer-social">
+                    <a href=""> <i class="i-icon-instagram"></i> </a>
+                    <a href=""> <i class="i-icon-twitter"></i> </a>
+                    <a href=""> <i class="i-icon-facebook"></i> </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+<script src="assets/vendor/jquery-3.6.0.slim.js"></script>
+<script src="assets/vendor/jquery.nice-select.min.js"></script>
+<script type="text/javascript" src="assets/vendor/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+</html>

@@ -8,8 +8,13 @@ html, body{
 }
 .el-custom--main{
     overflow: hidden;
-    &:not(.el-custom-404-page){
+    &:not(.el-custom-404-page),
+    &:not(.el-custom-register-page) {
         background-image: url('../assets/index/lineas-fondo_home.png');
+    }
+    &.el-custom-404-page,
+    &.el-custom-register-page{
+        background-image: unset !important;
     }
     background-position: left;
     background-repeat: no-repeat;

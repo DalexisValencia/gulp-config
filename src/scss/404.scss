@@ -1,12 +1,13 @@
 @import './vars/colors.scss';
+@import './common/queries.scss';
 .el-custom--page404 {
-    height: 60vh;
+    height: 80vh;
     min-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-position: center bottom;
-    background-size: 80%;
+    background-size: contain;
     background-repeat: no-repeat;
     &.bicolor,
     &:not(.cristal){ 
@@ -78,4 +79,11 @@
                 }
         }
     }
+}
+
+@include for-phone-only ('.el-custom--page404') {
+    align-items: start;
+    padding-top: 80px;
+    height: 65vh;
+    min-height: unset;
 }

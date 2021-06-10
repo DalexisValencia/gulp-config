@@ -20,14 +20,18 @@
         <header class="el-custom--header cristal">
             <nav class="el-custom--flex justify-between">
                 <div class="el-custom--flex el-custom--up-menu">
-                    <a class="el-custom--main-logo" href="index.html"></a>
+                    <a class="el-custom--main-logo" href="index.html">
+                        <img src="assets/logo-bicolor.png">
+                    </a>
                     <div class="burger-menu show-tablet-down">
                         <i class="i-icon-menu"></i>
                     </div>
                 </div>
                 <ul class="el-custom--flex el-custom--main-menu">
                     <div class="close-mobile-menu"></div>
-                    <a class="el-custom--main-logo" href=""></a>
+                    <a class="el-custom--main-logo" href="">
+                        <img src="assets/logo-bicolor.png">
+                    </a>
                     <li class="active show-tablet-down"><a href="index.html">HOME</a></li>
                     <li><a href="details.html">CRISTAL</a></li>
                     <li><a href="register.html">HISTORIA</a></li>
@@ -52,9 +56,9 @@
                             <p class="banners-anchor-header--description">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
-                            <a class="el-custom--button">
+                            <!-- <a class="el-custom--button">
                                 IR A LA PROMO
-                            </a>
+                            </a> -->
                         </header>
                     </div>
                 </div>
@@ -69,9 +73,9 @@
                             <p class="banners-anchor-header--description">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
-                            <a class="el-custom--button">
+                            <!-- <a class="el-custom--button">
                                 IR A LA PROMO
-                            </a>
+                            </a> -->
                         </header>
                     </div>
                 </div>
@@ -86,9 +90,9 @@
                             <p class="banners-anchor-header--description">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
-                            <a class="el-custom--button">
+                            <!-- <a class="el-custom--button">
                                 IR A LA PROMO
-                            </a>
+                            </a> -->
                         </header>
                     </div>
                 </div>
@@ -101,6 +105,11 @@
             </a>
         </section>
         <section class="el-custom--products cristal" id="cristal-products">
+            <header class="el-custom--products-title">
+                <h2>
+                    ELIGE TU PRESENTACIÓN FAVORITA
+                </h2>
+            </header>
             <article class="el-custom--products-wrapper">
                 <section class="el-custom--products-slide">
                     <div class="products--card" data-attr-index="1" data-attr-description="<p>Consigue tu bicolor en botella de vidrio personal y disfruta de ser bicolor cualquier día</p><p><strong>Info Nutricional</strong></p>" data-attr-img="assets/products/Product-1.png"
@@ -218,6 +227,10 @@
         </section>
 
         <section class="el-custom--promotional-banner cristal">
+            <picture>
+                <source media="(min-width:599px)" srcset="assets/index/banners/banner-desktop-cristal.png">
+                <img src="assets/index/banners/banner-mobile-cristal.png" alt="">
+            </picture>
             <header class="el-custom--promotional-banner-header">
                 <h2><span>!UNAS LATAS CON</span> HARTO BARRIO¡</h2>
                 <p>Consigue las tuyas</p>
@@ -283,6 +296,6 @@
 <script src="assets/vendor/jquery-3.6.0.slim.js"></script>
 <script src="assets/vendor/jquery.nice-select.min.js"></script>
 <script type="text/javascript" src="assets/vendor/slick/slick.min.js"></script>
-<script src="js/main-min.js"></script>
+<script src="js/main.js"></script>
 
 </html>

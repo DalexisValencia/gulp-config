@@ -6,6 +6,7 @@
             .el--custom__title {
                 color: $secondary-brand-color;
                 font-family: 'ResotE-Lavender';
+                font-weight: 100;
             }
             .el--custom__description {
                 color: $fourtiary-brand-color;
@@ -230,6 +231,7 @@
     }
     &.cristal {
         background-image: url('../assets/details/bg-details-cristal-mobile.svg') !important;
+        background-size: cover;
     }
     .el-custom--details--body {
         .el-custom--details--body-wrapper-image {

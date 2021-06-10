@@ -131,6 +131,7 @@ header.el-custom--header {
                     .el-custom--button {
                         background-color: $secondary-brand-color;
                         color: $primary-brand-color;
+                        font-weight: 500;
                         &.backusYa {
                             background-image: url('../assets/backusYa/backusya-cristal.svg');
                         }
@@ -148,7 +149,7 @@ header.el-custom--header {
             ul.el-custom--main-menu {
                 background-image: url('../assets/mobile-menu/background-cristal.png');
                 a.el-custom--main-logo {
-                    background-image: url('../assets/mobile-menu/mobile-logo-cristal.svg') !important;
+                    // background-image: url('../assets/mobile-menu/mobile-logo-cristal.svg') !important;
                 }
                 li {
                     a {

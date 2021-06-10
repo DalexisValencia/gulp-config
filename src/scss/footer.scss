@@ -126,6 +126,18 @@ div.el-custom--logo {
     background-image: url('../assets/footer/footer-mobile-bicolor.png');
     &.cristal{
         background-image: url('../assets/footer/footer-mobile-cristal.png');
+        .el-custom--footer-above-section{
+            .el-custom--logo{
+                background-color: $secondary-brand-color;
+                ul.dont-share {
+                    li {
+                        a {
+                            color: $primary-brand-color !important;
+                        }
+                    }
+                }
+            }   
+        }
     }
     .Anheuser-Busch-anchor{
         bottom: 13px;

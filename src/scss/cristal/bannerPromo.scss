@@ -1,8 +1,13 @@
 @import '../common/queries.scss';
 @import '../vars/colors.scss';
 .el-custom--promotional-banner {
+    picture{
+        width: 100%;
+    }
     &.cristal {
-        background-image: url('../assets/index/banners/banner-desktop-cristal.svg');
+        // height: 40vw;
+        // background-color: darkred;
+        // background-image: url('../assets/index/banners/banner-desktop-cristal.svg');
         .el-custom--promotional-banner-header {
             position: absolute;
             right: 24%;

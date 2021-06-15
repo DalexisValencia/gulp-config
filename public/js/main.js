@@ -16,7 +16,7 @@ $(document).ready(function(){
     const home = $(".el-custom--home-page");
     const leftBottle = $(".el-custom--home-page-container.el-left").find('.el-custom-home-page-cristal-img');
     const rightBottle = $(".el-custom--home-page-container.el-right").find('.el-custom-home-page-cristal-img');
-    const windowWidth = $(window).width();
+    var windowWidth = $(window).width();
     
     if(home.length) {
         if (windowWidth > 600) {
@@ -46,6 +46,11 @@ $(document).ready(function(){
                 window.location.href = "/cristal-bicolor";
             });
         }
+
+    $(window).resize(function(){
+        windowWidth = $(window).width();
+        console.warn(windowWidth, 'windowWidth')
+    });
     }
 });
 $(document).ready(function() {

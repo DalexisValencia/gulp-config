@@ -23,6 +23,8 @@ $(document).ready(function(){
             $(".el-custom--home-page-container").click(function(){
                 const valueToReduce = Math.abs(windowWidth > 900 ? 235 : 160);
                 const translateByBottle = (windowWidth / 2) - valueToReduce;
+                const selectedScreen = $(this).hasClass('el-left')
+                changeTemplate(selectedScreen);
                 leftBottle.css({
                     "margin-left": translateByBottle+"px",
                 });
@@ -35,8 +37,8 @@ $(document).ready(function(){
                     setTimeout(() => {
                         home.addClass('open-doors');
                         setTimeout(() => {
-                            window.location.href = "/cristal-bicolor";
-                            // console.warn('las pueras se abren');
+                            console.log(selectedScreen ? 'ir a cristal' : 'ir a bicolor')
+                            // window.location.href = "/cristal-bicolor";
                         }, 2000);
                     }, 1000);
                 }, 500);
@@ -51,6 +53,19 @@ $(document).ready(function(){
         windowWidth = $(window).width();
         console.warn(windowWidth, 'windowWidth')
     });
+
+    function changeTemplate(selectedScreen) {
+        const selectedPage = selectedScreen ? 'cristal' : 'bicolor';
+        const removePage = !selectedScreen ? 'cristal' : 'bicolor';
+
+        $('.el-custom--header').removeClass(removePage).addClass(selectedPage);
+        $('.el-custom--home-page').removeClass(removePage).addClass(selectedPage);
+        $('.el-custom--footer').removeClass(removePage).addClass(selectedPage);
+
+        $('img.relative-logo').each(function(){
+            $(this).attr('src', 'assets/logo-'+selectedPage+'.png').attr('alt', 'ejemplo');
+        });
+    }
     }
 });
 $(document).ready(function() {

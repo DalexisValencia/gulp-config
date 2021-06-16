@@ -293,7 +293,7 @@
             select.form-select.form-control.el-custom--input {
                 background-image: unset;
                 text-align-last: center;
-                width: 30% !important;
+                width: 100% !important;
             }
         }
         label {
@@ -428,12 +428,19 @@
             }
             .block-form-group{
                 fieldset.js-form-item{
-                    label{
+                    label:not(.error){
                         font: {
                             family: 'ResotE' !important;
                             size: 14px !important;
                         }
                         color: $primary-brand-color !important;
+                    }
+                    label.error{
+                        color: $tenth-brand-color;
+                        font: {
+                            family: 'Roboto', sans-serif;
+                            size: 11px;
+                        }
                     }
                     input:not(.form-checkbox) {
                         &:focus,

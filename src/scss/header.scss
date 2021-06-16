@@ -28,6 +28,7 @@
         text-decoration: none;
         color: $fourtiary-brand-color;
         font-family: Roboto, sans-serif;
+        transition: 0.5s all;
         &.backusYa {
             margin-right: 12px;
             background-image: url('../assets/backusYa/backusya-bicolor.svg');

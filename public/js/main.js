@@ -12,24 +12,24 @@ $(document).ready(function() {
         }
     })
 })
-$(document).ready(function(){
+$(document).ready(function() {
     const home = $(".el-custom--home-page");
     const leftBottle = $(".el-custom--home-page-container.el-left").find('.el-custom-home-page-cristal-img');
     const rightBottle = $(".el-custom--home-page-container.el-right").find('.el-custom-home-page-cristal-img');
     var windowWidth = $(window).width();
-    
-    if(home.length) {
+
+    if (home.length) {
         if (windowWidth > 600) {
-            $(".el-custom--home-page-container").click(function(){
+            $(".el-custom--home-page-container").click(function() {
                 const valueToReduce = Math.abs(windowWidth > 900 ? 235 : 160);
                 const translateByBottle = (windowWidth / 2) - valueToReduce;
                 const selectedScreen = $(this).hasClass('el-left')
                 changeTemplate(selectedScreen);
                 leftBottle.css({
-                    "margin-left": translateByBottle+"px",
+                    "margin-left": translateByBottle + "px",
                 });
                 rightBottle.css({
-                    "margin-left": "-"+translateByBottle+"px",
+                    "margin-left": "-" + translateByBottle + "px",
                 })
                 setTimeout(() => {
                     leftBottle.addClass('cheers-left-animation');
@@ -37,42 +37,62 @@ $(document).ready(function(){
                     setTimeout(() => {
                         home.addClass('open-doors');
                         setTimeout(() => {
-                            console.log(selectedScreen ? 'ir a cristal' : 'ir a bicolor')
-                            // window.location.href = "/cristal-bicolor";
+                            // console.log(selectedScreen ? 'ir a cristal' : 'ir a bicolor')
+                            window.location.href = selectedScreen ? "/Cristal" : "/cristal-bicolor";
                         }, 2000);
                     }, 1000);
                 }, 500);
             });
-        } else if ( windowWidth < 600 ) {
-            $(".el-custom--home-page-container").click(function(){
+        } else if (windowWidth < 600) {
+            $(".el-custom--home-page-container").click(function() {
                 window.location.href = "/cristal-bicolor";
             });
         }
 
-    $(window).resize(function(){
-        windowWidth = $(window).width();
-        console.warn(windowWidth, 'windowWidth')
-    });
+        $(window).resize(function() {
+            windowWidth = $(window).width();
+        });
+    }
 
     function changeTemplate(selectedScreen) {
         const selectedPage = selectedScreen ? 'cristal' : 'bicolor';
         const removePage = !selectedScreen ? 'cristal' : 'bicolor';
-
+        const siteUrl = location.origin;
+        const assetsUrl = '/sites/g/files/yrakuj5000266test/themes/site/cristal_pet/';
+        const completeurl = siteUrl + assetsUrl;
+        // add page clases cristal or bicolor
         $('.el-custom--header').removeClass(removePage).addClass(selectedPage);
         $('.el-custom--home-page').removeClass(removePage).addClass(selectedPage);
         $('.el-custom--footer').removeClass(removePage).addClass(selectedPage);
 
-        $('img.relative-logo').each(function(){
-            $(this).attr('src', 'assets/logo-'+selectedPage+'.png').attr('alt', 'ejemplo');
+        //change logo images 
+        $('img.relative-logo').each(function() {
+            $(this).attr('src', completeurl + 'assets/logo-' + selectedPage + '.png').attr('alt', 'ejemplo');
         });
+
+        //change register btn
+        $('.el-custom--buttons-transform a.el-custom--button:not(.backusYa)').attr('href', selectedScreen ? '/registro' : '/registro-bicolor');
     }
+
+    function findCristal() {
+        const bodyCristal = $("body").attr("class"); // clase1 clase2 clase clase
+        const availableClass = ['ab-cristal-core-homecristal', 'ab-cristal-core-cristal', 'ab-cristal-core-historia', 'cervezacristal-pageAzul']
+        const isCristal = bodyCristal ? availableClass.indexOf(bodyCristal) != -1 : false
+            // console.warn('is cristal', isCristal);
+            // console.error(availableClass.indexOf(bodyCristal), 'availableClass.indexOf(bodyCristal) ')
+        changeTemplate(isCristal)
     }
+    findCristal();
 });
 $(document).ready(function() {
     const history_slider = $(".el-custom--history-page");
     // const slider = $('.el-custom--history-page__slider');
     if (history_slider.length) { // solo se ejecuta en la pagina de la historia
-        $('.el-custom--history-page__slide').each(function(index){
+        AOS.init({
+            once: false,
+            mirror: true
+        });
+        $('.el-custom--history-page__slide').each(function(index) {
             const _me = $(this);
             var waypoint = new Waypoint({
                 element: document.getElementById($(this).attr('id')),
@@ -80,9 +100,9 @@ $(document).ready(function() {
                     const parentActiveSlide = _me;
                     const activeID = parentActiveSlide.attr("id");
                     $(".el-custom--history-page__slider-navigation ul li").removeClass('slick-active');
-                    
-                    $(".el-custom--history-page__slider-navigation ul li a").each(function(){
-                        if ($(this).attr('href') == '#'+activeID) {
+
+                    $(".el-custom--history-page__slider-navigation ul li a").each(function() {
+                        if ($(this).attr('href') == '#' + activeID) {
                             $(this).parent().addClass('slick-active');
                         }
                     });
@@ -90,26 +110,27 @@ $(document).ready(function() {
                 offset: index == 0 ? -100 : 0,
             })
         });
+
         function createHistoryDots() {
             var sliders = $('.el-custom--history-page__slider .el-custom--history-page__slide');
             var dostMenu = $(".el-custom--history-page__slider-navigation ul.slick-dots");
-                dostMenu.append('<button class="hide"></button>')
+            dostMenu.append('<button class="hide"></button>')
             for (let index = 0; index < sliders.length; index++) {
                 const currentSlide = $(sliders[index]);
                 const slideName = currentSlide.attr('data-attr-history-name');
                 const slideUrl = currentSlide.attr('id');
-                const active =  ''; //  index == 0 ? 'slick-active' : '';
-               
+                const active = ''; //  index == 0 ? 'slick-active' : '';
+
                 dostMenu.append("<li class='" + active + "'><a class='dot' href='#" + slideUrl + "'>" + slideName + "</a></li>");
             }
         }
         createHistoryDots();
-        $('.el-custom--history-page__slider-navigation ul.slick-dots li a').on('click', function(){
-            setTimeout(() => {     
+        $('.el-custom--history-page__slider-navigation ul.slick-dots li a').on('click', function() {
+            setTimeout(() => {
                 console.info($(document).scrollTop($(document).scrollTop() - 5))
             }, 750);
         });
-        $('.el-custom--history-page__slider-navigation ul.slick-dots button').bind('click', function(){
+        $('.el-custom--history-page__slider-navigation ul.slick-dots button').bind('click', function() {
             const showClass = $(this).hasClass('show');
             if (showClass) {
                 $(this).removeClass('show').addClass('hide');

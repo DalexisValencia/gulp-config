@@ -2,7 +2,11 @@ $(document).ready(function() {
     const history_slider = $(".el-custom--history-page");
     // const slider = $('.el-custom--history-page__slider');
     if (history_slider.length) { // solo se ejecuta en la pagina de la historia
-        $('.el-custom--history-page__slide').each(function(index){
+        AOS.init({
+            once: false,
+            mirror: true
+        });
+        $('.el-custom--history-page__slide').each(function(index) {
             const _me = $(this);
             var waypoint = new Waypoint({
                 element: document.getElementById($(this).attr('id')),
@@ -10,9 +14,9 @@ $(document).ready(function() {
                     const parentActiveSlide = _me;
                     const activeID = parentActiveSlide.attr("id");
                     $(".el-custom--history-page__slider-navigation ul li").removeClass('slick-active');
-                    
-                    $(".el-custom--history-page__slider-navigation ul li a").each(function(){
-                        if ($(this).attr('href') == '#'+activeID) {
+
+                    $(".el-custom--history-page__slider-navigation ul li a").each(function() {
+                        if ($(this).attr('href') == '#' + activeID) {
                             $(this).parent().addClass('slick-active');
                         }
                     });
@@ -20,26 +24,27 @@ $(document).ready(function() {
                 offset: index == 0 ? -100 : 0,
             })
         });
+
         function createHistoryDots() {
             var sliders = $('.el-custom--history-page__slider .el-custom--history-page__slide');
             var dostMenu = $(".el-custom--history-page__slider-navigation ul.slick-dots");
-                dostMenu.append('<button class="hide"></button>')
+            dostMenu.append('<button class="hide"></button>')
             for (let index = 0; index < sliders.length; index++) {
                 const currentSlide = $(sliders[index]);
                 const slideName = currentSlide.attr('data-attr-history-name');
                 const slideUrl = currentSlide.attr('id');
-                const active =  ''; //  index == 0 ? 'slick-active' : '';
-               
+                const active = ''; //  index == 0 ? 'slick-active' : '';
+
                 dostMenu.append("<li class='" + active + "'><a class='dot' href='#" + slideUrl + "'>" + slideName + "</a></li>");
             }
         }
         createHistoryDots();
-        $('.el-custom--history-page__slider-navigation ul.slick-dots li a').on('click', function(){
-            setTimeout(() => {     
+        $('.el-custom--history-page__slider-navigation ul.slick-dots li a').on('click', function() {
+            setTimeout(() => {
                 console.info($(document).scrollTop($(document).scrollTop() - 5))
             }, 750);
         });
-        $('.el-custom--history-page__slider-navigation ul.slick-dots button').bind('click', function(){
+        $('.el-custom--history-page__slider-navigation ul.slick-dots button').bind('click', function() {
             const showClass = $(this).hasClass('show');
             if (showClass) {
                 $(this).removeClass('show').addClass('hide');

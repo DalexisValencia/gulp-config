@@ -90,9 +90,14 @@ $(document).ready(function() {
             once: false,
             mirror: true
         });
-        const totals = $('.el-custom--history-page__slide').length + 1;
+        const totals = $('.el-custom--history-page__slide').length - 1;
         $('.el-custom--history-page__slide').each(function(index) {
             const _me = $(this);
+            console.info(totals, 'totals')
+            console.warn(index, 'index')
+            if (index == (totals-1)) {
+                $(this).css("border", "3px solid black")
+            }
             var waypoint = new Waypoint({
                 element: document.getElementById($(this).attr('id')),
                 handler: function() {
@@ -106,7 +111,7 @@ $(document).ready(function() {
                         }
                     });
                 },
-                offset: totals == index ? -400 : 0,
+                offset: index == (totals-1) ? 200 : index == totals ? 300 : 0,
                 // offset: index == 0 || totals == index ? 0 : -400,
             })
         });

@@ -65,3 +65,6 @@ body.user-login {
     }
     @include login-admin();
 }
+div#onetrust-banner-sdk * {
+    font-family:Roboto,sans-serif !important;
+}

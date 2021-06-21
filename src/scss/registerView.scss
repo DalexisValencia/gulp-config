@@ -62,7 +62,7 @@
     }
     article {
         text-align: center;
-        h3 {
+        h3, h2 {
             font-size: 30px;
             font-family: 'Matthan-sans-regular';
             color: $sixth-brand-color;
@@ -366,10 +366,11 @@
     flex-direction: column-reverse;
     label.error {
         &#tyc-error {
-            font-size: 12px;
+            font-size: 10px;
             display: block;
             padding-top: 10px;
             color: $seventh-brand-color;
+            width: 100%;
         }
     }
 }
@@ -392,7 +393,7 @@
         #modalRegister.modal {
             .modal-content {
                 article {
-                    h3 {
+                    h3, h2 {
                         &::first-letter {
                             text-transform: capitalize;
                         }
@@ -418,7 +419,8 @@
         }
         article.el-custom--register-page__form {
             header {
-                h3 {
+                h3,
+                h2 {
                     color: $primary-brand-color;
                     font: {
                         family: 'ResotE';
@@ -492,7 +494,8 @@
             margin-top: 33px;
             margin-bottom: 35px;
             width: 100%;
-            h3 {
+            h3,
+            h2 {
                 font-family: 'Matthan-sans-regular';
                 color: $sixth-brand-color;
                 text-align: left;
@@ -535,7 +538,8 @@
     max-width: 700px;
     article.el-custom--register-page__form {
         header {
-            h3 {
+            h3,
+            h2 {
                 font-size: 25px;
                 text-align: center;
             }

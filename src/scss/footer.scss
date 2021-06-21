@@ -55,6 +55,9 @@
         }
         .Anheuser-Busch-anchor{
             color: $primary-brand-color;
+            @media (max-width: 599px) {
+                color: $fourtiary-brand-color;
+            }
         }
         .el-custom--footer-warning{
             background-image: url('../assets/footer/footer-cristal.png'); 
@@ -102,7 +105,7 @@
         background-color: $primary-brand-color;
         width: 100%;
         height: 42px;
-        transition: 10s all;
+        transition: 0.4s all;
        .el-custom--footer-social{
         a {
             text-decoration: none !important;
@@ -145,7 +148,8 @@ div.el-custom--logo {
         bottom: 13px;
     }
     .el-custom--logo{
-        height: 130px;
+        // height: 130px;
+        height: min-content !important;
         display: flex;
         padding: 30px 45px;
         justify-content: space-between;

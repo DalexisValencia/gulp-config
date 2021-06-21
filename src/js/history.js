@@ -6,6 +6,7 @@ $(document).ready(function() {
             once: false,
             mirror: true
         });
+        const totals = $('.el-custom--history-page__slide').length + 1;
         $('.el-custom--history-page__slide').each(function(index) {
             const _me = $(this);
             var waypoint = new Waypoint({
@@ -21,7 +22,8 @@ $(document).ready(function() {
                         }
                     });
                 },
-                offset: index == 0 ? -100 : 0,
+                offset: totals == index ? -400 : 0,
+                // offset: index == 0 || totals == index ? 0 : -400,
             })
         });
 

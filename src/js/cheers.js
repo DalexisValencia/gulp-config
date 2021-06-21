@@ -53,7 +53,7 @@ $(document).ready(function() {
 
         //change logo images 
         $('img.relative-logo').each(function() {
-            $(this).attr('src', completeurl + 'assets/logo-' + selectedPage + '.png').attr('alt', 'ejemplo');
+            $(this).attr('src', completeurl + 'assets/logo-' + selectedPage + '.png');
         });
 
         //change register btn
@@ -62,11 +62,9 @@ $(document).ready(function() {
 
     function findCristal() {
         const bodyCristal = $("body").attr("class"); // clase1 clase2 clase clase
-        const availableClass = ['ab-cristal-core-homecristal', 'ab-cristal-core-cristal', 'ab-cristal-core-historia', 'cervezacristal-pageAzul']
+        const availableClass = ['ab-cristal-core-homecristal', 'ab-cristal-core-cristal', 'ab-cristal-core-historia', 'cervezacristal-pageAzul', 'ab-cristal-core-homecristal agegate-visible']
         const isCristal = bodyCristal ? availableClass.indexOf(bodyCristal) != -1 : false
-            // console.warn('is cristal', isCristal);
-            // console.error(availableClass.indexOf(bodyCristal), 'availableClass.indexOf(bodyCristal) ')
-        changeTemplate(isCristal)
+        changeTemplate(isCristal);
     }
     findCristal();
 });

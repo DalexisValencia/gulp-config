@@ -71,10 +71,20 @@
         border-top: 12px solid $seventh-brand-color;
         background-image: url('../assets/details/bg-details-cristal.png');
         max-height: 530px;
-        height: 38vw;
+        height: 37vw;
         @include cristal-details;
          ::before {
             border-bottom-color: $seventh-brand-color !important;
+        }
+        .el-custom--details--body{
+            article{
+                .el--custom__title {
+                    font-size: 37px;
+                    width: 50%;
+                    min-width: 200px;
+                    font-weight: 100;
+                }
+            }
         }
     }
    .details--marker {
@@ -97,18 +107,19 @@
             display: inline-block;
             cursor: pointer;
             img {
-                width: 290px;
-                height: 290px;
+                width: 390px;
+                height: 390px;
             }
         }
         article {
-            margin-top: 40px;
+            // margin-top: 40px;
             width: 50%;
             display: flex;
             flex-wrap: wrap;
             // justify-content: space-between;
             flex-direction: column;
             max-height: 232px;
+            justify-content: center;
             .el--custom__title {
                 text-transform: uppercase;
                 // font-size: 32px;

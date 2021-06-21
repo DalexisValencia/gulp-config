@@ -12,9 +12,12 @@ html, body{
     &:not(.el-custom-register-page) {
         background-image: url('../assets/index/lineas-fondo_home.png');
     }
-    &.el-custom-404-page,
-    &.el-custom-register-page{
+    &.el-custom-404-page{
         background-image: unset !important;
+    }
+    &.el-custom-register-page{
+        background-size: 30%;
+        background-position: left;
     }
     background-position: left;
     background-repeat: no-repeat;

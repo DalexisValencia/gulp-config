@@ -37,7 +37,7 @@
             transition: 0.3s all;
             text-align: center;
             width: 100%;
-            h3 {
+            h3, h2 {
                 margin-top: 20px;
                 margin-bottom: 20px;
                 font-family: 'ResotE';
@@ -91,7 +91,7 @@
                     .slick-track{
                         .products--card{
                             .products--card__description{
-                                h3 {
+                                h3, h2 {
                                     font-size: 13px;
                                 }
                                 .el-custom--button{

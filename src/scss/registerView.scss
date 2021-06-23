@@ -120,10 +120,13 @@
                 position: relative;
                 label.error {
                     color: $seventh-brand-color;
-                    position: absolute;
-                    bottom: -14px;
+                    position: relative;
+                    top: 5px;
                     font-size: 10px;
                     left: 32px;
+                    @media (max-width: 599px) {
+
+                    }
                 }
             }
         }
@@ -419,8 +422,9 @@
         }
         article.el-custom--register-page__form {
             header {
-                h3,
-                h2 {
+                > h3,
+                > h2,
+                > h1 {
                     color: $primary-brand-color;
                     font: {
                         family: 'ResotE';
@@ -494,8 +498,9 @@
             margin-top: 33px;
             margin-bottom: 35px;
             width: 100%;
-            h3,
-            h2 {
+            > h3,
+            > h2,
+            > h1 {
                 font-family: 'Matthan-sans-regular';
                 color: $sixth-brand-color;
                 text-align: left;
@@ -538,8 +543,9 @@
     max-width: 700px;
     article.el-custom--register-page__form {
         header {
-            h3,
-            h2 {
+            > h3,
+            > h2,
+            > h1 {
                 font-size: 25px;
                 text-align: center;
             }

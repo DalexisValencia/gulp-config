@@ -61,6 +61,7 @@
     &.cristal {
         .el-custom--home-page-container {
             .el-custom--button {
+                @include labender-fixed ($secondary-brand-color);
                 color: $secondary-brand-color;
                 font-family: 'ResotE-Lavender';
                 font-size: 12px;

@@ -7,6 +7,7 @@
                 color: $secondary-brand-color;
                 font-family: 'ResotE-Lavender';
                 font-weight: 100;
+                @include labender-fixed ($secondary-brand-color);
             }
             .el--custom__description {
                 color: $fourtiary-brand-color;
@@ -15,6 +16,7 @@
                 h5 {
                     color: $secondary-brand-color;
                     font-family: 'ResotE-Lavender';
+                    @include labender-fixed ($secondary-brand-color);
                 }
                 ul {
                     li {
@@ -35,6 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
     position: relative;
     &.reload {
         .el-custom--details--body {
@@ -76,11 +79,14 @@
          ::before {
             border-bottom-color: $seventh-brand-color !important;
         }
+        .details--marker {
+            border-bottom-color: #bb9b00 !important;
+        }
         .el-custom--details--body{
             article{
                 .el--custom__title {
                     font-size: 37px;
-                    width: 50%;
+                    width: 100%;
                     min-width: 200px;
                     font-weight: 100;
                 }
@@ -103,6 +109,7 @@
         justify-content: space-evenly;
         max-width: 1151px;
         width: 75%;
+        align-items: center;
         .el-custom--details--body-wrapper-image {
             display: inline-block;
             cursor: pointer;

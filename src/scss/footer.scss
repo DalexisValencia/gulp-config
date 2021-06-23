@@ -165,13 +165,13 @@ div.el-custom--logo {
             margin-right: unset;
             li:first-child{
                 a{
-                    font-size: 3vw;
+                    font-size: 3.5vw;
                     color: $fourtiary-brand-color;
                 }
             }
             li:last-child{
                 a{
-                    font-size: 6.5px;
+                    font-size: 9px;
                     color: $fourtiary-brand-color;
                 }
             }
@@ -199,6 +199,7 @@ div.el-custom--logo {
         .el-custom--footer-nav{
             background-color: transparent;
             padding-top: 15px;
+            z-index: 2;
             ul{
                 flex-wrap: wrap;
                 li{

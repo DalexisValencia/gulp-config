@@ -5,14 +5,80 @@
 $sliderFullHeight: 100vh;
 @mixin historyDots {
     .slick-dots {
+        // border: 2px solid orange;
+        overflow-x: hidden;
+        overflow-y: auto;
+        scrollbar-color: $tertiary-brand-color transparent;
+        scrollbar-width: thin;
+        max-height: 200px;
+        width: 270px;
+        // padding-right: 10px;
         position: absolute;
-        border-right: 4px solid $fourtiary-brand-color;
+        pointer-events: auto;
+        // border-right: 4px solid $fourtiary-brand-color;
         z-index: 2;
         right: 0px;
         list-style: none;
-        margin: 0px 35px 0px 0px;
-        button {
-            display: none;
+        margin: 0px 25px 0px 0px;
+        padding-right: 20px;
+        transition: 0.6s all;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: $tertiary-brand-color;
+            outline: 1px solid $tertiary-brand-color;
+        }
+        &.hide-transform{
+            background-color: rgba($primary-brand-color, 0);
+            transform: translateX(100%);
+            li {
+                opacity: 0;
+            }
+        }
+        &.show-transform{
+            background-color: rgba($primary-brand-color, 0.7);
+            transform: translateX(0%);
+            li {
+                opacity: 1;
+            }
+        }
+        button{
+            display: block !important;
+            border-color: transparent;
+            pointer-events: auto;
+            &.hide{
+                &::before{
+                    content: "\e901";
+                }
+            }
+            &.show{
+                &::before{
+                    content: "\e902";
+                }
+            }
+            color: #fff;
+            text-shadow: 2px 0px 1px $fifth-brand-color;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            font-family: icon!important;
+            // background-color: red;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0px;
+            &:hover,
+            &:focus,
+            &:active {
+                outline: 0;
+                outline-color: transparent !important;
+            }
         }
         li {
             pointer-events: initial;
@@ -28,13 +94,22 @@ $sliderFullHeight: 100vh;
             transition: 0.5s all;
             &::before {
                 transition: 0.5s all;
-                right: -9px;
+                right: 13px;
                 content: "";
                 position: absolute;
                 width: 15px;
                 height: 15px;
                 background-color: $fourtiary-brand-color;
                 border-radius: 50%;
+                z-index: 2;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                right: 18px;
+                height: 43px;
+                width: 4px;
+                background-color: $fourtiary-brand-color;
             }
             &:hover {
                 color: $secondary-brand-color;
@@ -84,7 +159,8 @@ $sliderFullHeight: 100vh;
             justify-content: center;
             align-items: center;
             flex-flow: column;
-            h2 {
+            > h2,
+            > h1 {
                 font-family: 'ResotE';
                 font-size: 40px;
                 color: #fff;
@@ -141,6 +217,7 @@ $sliderFullHeight: 100vh;
                         position: absolute;
                         top: -60px;
                         font-family: 'ResotE-Lavender';
+                        @include labender-fixed ($fourtiary-brand-color);
                         &::before {
                             content: "";
                             position: absolute;
@@ -152,12 +229,13 @@ $sliderFullHeight: 100vh;
                         }
                     }
                     h2, p {
-                        text-shadow: 1px 0px 5px $fifth-brand-color;
+                        text-shadow: 1px 0px 10px $fifth-brand-color;
                     }
                     h2 {
                         color: $fourtiary-brand-color;
                         font-size: 40px;
                         font-family: 'ResotE-Lavender';
+                        @include labender-fixed ($fourtiary-brand-color);
                         font-weight: 500;
                     }
                     p {
@@ -207,6 +285,7 @@ $sliderFullHeight: 100vh;
         pointer-events: none;
         display: flex;
         align-items: center;
+        z-index: 10;
         @include historyDots;
     }
 }
@@ -214,7 +293,8 @@ $sliderFullHeight: 100vh;
 @include for-tablet-landscape-down('.el-custom--history-page') {
     .el-custom--history-page__header {
         header{
-            h2{
+            > h2,
+            > h1{
                 font-size: 4vw;
             }
             p{
@@ -253,53 +333,53 @@ $sliderFullHeight: 100vh;
        //  display: none;
         ul {
             position: relative;
-            transition: 0.6s all;
-            &.hide-transform{
-                background-color: rgba($primary-brand-color, 0);
-                transform: translateX(100%);
-                li {
-                    opacity: 0;
-                }
-            }
-            &.show-transform{
-                background-color: rgba($primary-brand-color, 0.7);
-                transform: translateX(0%);
-                li {
-                    opacity: 1;
-                }
-            }
-            button{
-                display: block !important;
-                border-color: transparent;
-                pointer-events: auto;
-                &.hide{
-                    &::before{
-                        content: "\e901";
-                    }
-                }
-                &.show{
-                    &::before{
-                        content: "\e902";
-                    }
-                }
-                color: #fff;
-                text-shadow: 2px 0px 1px $fifth-brand-color;
-                font-size: 18px;
-                display: flex;
-                align-items: center;
-                font-family: icon!important;
-                // background-color: red;
-                position: absolute;
-                height: 100%;
-                top: 0;
-                left: 0px;
-                &:hover,
-                &:focus,
-                &:active {
-                    outline: 0;
-                    outline-color: transparent !important;
-                }
-            }
+            // transition: 0.6s all;
+            // &.hide-transform{
+            //     background-color: rgba($primary-brand-color, 0);
+            //     transform: translateX(100%);
+            //     li {
+            //         opacity: 0;
+            //     }
+            // }
+            // &.show-transform{
+            //     background-color: rgba($primary-brand-color, 0.7);
+            //     transform: translateX(0%);
+            //     li {
+            //         opacity: 1;
+            //     }
+            // }
+            // button{
+            //     display: block !important;
+            //     border-color: transparent;
+            //     pointer-events: auto;
+            //     &.hide{
+            //         &::before{
+            //             content: "\e901";
+            //         }
+            //     }
+            //     &.show{
+            //         &::before{
+            //             content: "\e902";
+            //         }
+            //     }
+            //     color: #fff;
+            //     text-shadow: 2px 0px 1px $fifth-brand-color;
+            //     font-size: 18px;
+            //     display: flex;
+            //     align-items: center;
+            //     font-family: icon!important;
+            //     // background-color: red;
+            //     position: absolute;
+            //     height: 100%;
+            //     top: 0;
+            //     left: 0px;
+            //     &:hover,
+            //     &:focus,
+            //     &:active {
+            //         outline: 0;
+            //         outline-color: transparent !important;
+            //     }
+            // }
         }
     }
     .el-custom--history-page__slider {
@@ -349,7 +429,8 @@ $sliderFullHeight: 100vh;
             height: unset;
             left: 0px;
             text-align: center;
-            h2 {
+            > h2,
+            > h1 {
                 width: 100%;
                 font-size: 32px;
             }

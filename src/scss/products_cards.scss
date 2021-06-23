@@ -2,17 +2,16 @@
 @import './common/queries.scss';
 @mixin products-card {
     .products--card{
-        max-width: 200px !important;
+        cursor: pointer;
+        // border: 1px dashed black;
+        // max-width: 200px !important;
         transition: 0.5s all;
         text-decoration: none !important;
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
-        margin: 0px 10px;
         &.no-visible{
-            // .products--card__description{
-                opacity: 0;
-            // }
+            opacity: 0;
         }
        &.slick-center.slick-current{
            transform: scale(1.08);
@@ -60,6 +59,7 @@
                 max-width: 110.4px;
                 min-width: 110.4px;
                 height: 48px;
+                display: inline-grid;
             }
         }
         .products--card__image{
@@ -76,7 +76,7 @@
             img.img-producto{
                 transition: 0.7s all;
                 width: 65%;
-                height: 100%;
+                // height: 100%;
                 margin-bottom: 15px;
                 object-fit: cover;
             }
@@ -85,6 +85,11 @@
 }
 
 @include for-phone-only('.products--card'){
+    .products--card__image{
+        img.img-producto{
+            width: 110% !important;
+        }
+    }
     &.slick-center{
         transform: scale(1) !important;
         margin-left: 0px !important;
@@ -94,11 +99,9 @@
          }
     }
     &.no-visible{
-        // .products--card__description{
-            opacity: 1 !important;
-            .products--card__description{
-                opacity: 0;
-            }
-        // }
+        opacity: 1 !important;
+        .products--card__description{
+            opacity: 0;
+        }
     }
 }

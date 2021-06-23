@@ -9,3 +9,15 @@ $eighth-brand-color: #C4C4C4;
 $nineth-brand-color: #C09E4F;
 $tenth-brand-color: #FD8204;
 $padding-horizontal: 20px;
+
+@mixin labender-fixed ($colorText) {
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: 0px 0px 0px $colorText !important;
+    // text-shadow: -1px 0 $colorText, -1px 0px $colorText, -1px 0 $colorText, -1px 0px $colorText;
+}
+
+@mixin labender-fixed-big-fonts ($colorText) {
+    -webkit-text-fill-color: transparent;
+    // text-shadow: 0px 0px 0px $colorText;
+    text-shadow: -1px 0 $colorText, -1px 0px $colorText, -1px 0 $colorText, -1px 0px $colorText;
+}

@@ -31,7 +31,8 @@ $(document).ready(function() {
             });
         } else if (windowWidth < 600) {
             $(".el-custom--home-page-container").click(function() {
-                window.location.href = "/cristal-bicolor";
+                const selectedScreen = $(this).hasClass('el-left')
+                window.location.href = selectedScreen ? "/Cristal" : "/cristal-bicolor";
             });
         }
 

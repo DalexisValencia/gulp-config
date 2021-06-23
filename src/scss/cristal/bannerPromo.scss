@@ -5,6 +5,7 @@
         width: 100%;
     }
     &.cristal {
+        height: 25vw;
         // height: 40vw;
         // background-color: darkred;
         // background-image: url('../assets/index/banners/banner-desktop-cristal.svg');
@@ -17,10 +18,12 @@
                 text-transform: uppercase;
                 font-family: 'ResotE-Lavender';
                 color: $fourtiary-brand-color;
+                @include labender-fixed ($fourtiary-brand-color);
                 font-size: 4.2vw;
                 line-height: 0.9;
                 font-weight: 100;
                 span {
+                    @include labender-fixed ($secondary-brand-color);
                     color: $secondary-brand-color;
                     display: block;
                 }
@@ -29,6 +32,7 @@
                 text-transform: uppercase;
                 color: $fourtiary-brand-color;
                 font-family: 'ResotE-Lavender';
+                @include labender-fixed ($fourtiary-brand-color);
                 font-size: 2.6vw;
             }
         }
@@ -38,7 +42,7 @@
 @include for-phone-only ('.el-custom--promotional-banner') {
     &.cristal {
         align-items: unset;
-        height: 104vw;
+        height: 98vw;
         background-image: url('../assets/index/banners/banner-mobile-cristal.svg');
         .el-custom--promotional-banner-header {
             width: 100%;

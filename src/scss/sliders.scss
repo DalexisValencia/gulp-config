@@ -44,9 +44,10 @@
                 line-height: 1.4;
                 font: {
                     size: 20px;
-                    weight: 100;
+                    weight: normal;
                     family: 'Roboto', sans-serif;
                 }
+                text-shadow: 0px 0px 1px $fifth-brand-color;
             }
             .el-custom--button{
                 background-color: #AF1024;

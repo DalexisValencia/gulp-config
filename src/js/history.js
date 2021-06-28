@@ -35,7 +35,7 @@ $(document).ready(function() {
         function createHistoryDots() {
             var sliders = $('.el-custom--history-page__slider .el-custom--history-page__slide');
             var dostMenu = $(".el-custom--history-page__slider-navigation ul.slick-dots");
-            dostMenu.append('<button class="hide"></button>')
+            $(".el-custom--history-page__slider-navigation").append('<button class="slider-nav-right hide"></button>')
             for (let index = 0; index < sliders.length; index++) {
                 const currentSlide = $(sliders[index]);
                 const slideName = currentSlide.attr('data-attr-history-name');
@@ -51,7 +51,7 @@ $(document).ready(function() {
                 console.info($(document).scrollTop($(document).scrollTop() - 5))
             }, 750);
         });
-        $('.el-custom--history-page__slider-navigation ul.slick-dots button').bind('click', function() {
+        $('.el-custom--history-page__slider-navigation button').bind('click', function() {
             const showClass = $(this).hasClass('show');
             if (showClass) {
                 $(this).removeClass('show').addClass('hide');

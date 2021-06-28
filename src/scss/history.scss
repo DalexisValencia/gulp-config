@@ -3,15 +3,55 @@
 // $sliderFullHeight: 57vw;
 // $sliderFullHeight: 74vw;
 $sliderFullHeight: 100vh;
+.slider-nav-right{
+    pointer-events: all;
+    position: absolute;
+    // background-color: red;
+    height: 200px;
+    display: block !important;
+    border-color: transparent;
+    pointer-events: auto;
+    z-index: 10;
+    transition: 0.4s all; 
+    &.hide{
+        right: 0px;
+        &::before{
+            content: "\e901";
+        }
+    }
+    &.show{
+        right: 260px;
+        &::before{
+            content: "\e902";
+        }
+    }
+    color: #fff;
+    text-shadow: 2px 0px 1px $fifth-brand-color;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    font-family: icon!important;
+    // background-color: red;
+    // position: absolute;
+    // height: 100%;
+    // top: 0;
+    right: 0px;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: 0;
+        outline-color: transparent !important;
+    }
+}
 @mixin historyDots {
     .slick-dots {
         // border: 2px solid orange;
         overflow-x: hidden;
         overflow-y: auto;
-        scrollbar-color: $tertiary-brand-color transparent;
+        scrollbar-color: $secondary-brand-color transparent;
         scrollbar-width: thin;
         max-height: 200px;
-        width: 270px;
+        width: 262px;
         // padding-right: 10px;
         position: absolute;
         pointer-events: auto;
@@ -31,8 +71,8 @@ $sliderFullHeight: 100vh;
         }
         
         &::-webkit-scrollbar-thumb {
-            background-color: $tertiary-brand-color;
-            outline: 1px solid $tertiary-brand-color;
+            background-color: $secondary-brand-color;
+            outline: 1px solid $secondary-brand-color;
         }
         &.hide-transform{
             background-color: rgba($primary-brand-color, 0);
@@ -48,38 +88,38 @@ $sliderFullHeight: 100vh;
                 opacity: 1;
             }
         }
-        button{
-            display: block !important;
-            border-color: transparent;
-            pointer-events: auto;
-            &.hide{
-                &::before{
-                    content: "\e901";
-                }
-            }
-            &.show{
-                &::before{
-                    content: "\e902";
-                }
-            }
-            color: #fff;
-            text-shadow: 2px 0px 1px $fifth-brand-color;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            font-family: icon!important;
-            // background-color: red;
-            position: absolute;
-            height: 100%;
-            top: 0;
-            left: 0px;
-            &:hover,
-            &:focus,
-            &:active {
-                outline: 0;
-                outline-color: transparent !important;
-            }
-        }
+        // button{
+        //     display: block !important;
+        //     border-color: transparent;
+        //     pointer-events: auto;
+        //     &.hide{
+        //         &::before{
+        //             content: "\e901";
+        //         }
+        //     }
+        //     &.show{
+        //         &::before{
+        //             content: "\e902";
+        //         }
+        //     }
+        //     color: #fff;
+        //     text-shadow: 2px 0px 1px $fifth-brand-color;
+        //     font-size: 18px;
+        //     display: flex;
+        //     align-items: center;
+        //     font-family: icon!important;
+        //     // background-color: red;
+        //     position: absolute;
+        //     height: 100%;
+        //     top: 0;
+        //     left: 0px;
+        //     &:hover,
+        //     &:focus,
+        //     &:active {
+        //         outline: 0;
+        //         outline-color: transparent !important;
+        //     }
+        // }
         li {
             pointer-events: initial;
             padding-right: 20px;

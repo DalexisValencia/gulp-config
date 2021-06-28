@@ -58,9 +58,9 @@
         &::before {
             border-bottom: 24px solid $nineth-brand-color;
         }
-        .el-custom--details--body{
+        .el-custom--details--body {
             // border: 3px solid black;
-            article{
+            article {
                 .el--custom__title {
                     color: $sixth-brand-color;
                     font-size: 32px;
@@ -82,8 +82,8 @@
         .details--marker {
             border-bottom-color: #bb9b00 !important;
         }
-        .el-custom--details--body{
-            article{
+        .el-custom--details--body {
+            article {
                 .el--custom__title {
                     font-size: 37px;
                     width: 100%;
@@ -93,7 +93,7 @@
             }
         }
     }
-   .details--marker {
+    .details--marker {
         position: absolute;
         transition: 0.5s all;
         border-left: 24px solid transparent;
@@ -107,7 +107,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        max-width: 1151px;
+        // max-width: 1151px;
         width: 75%;
         align-items: center;
         .el-custom--details--body-wrapper-image {

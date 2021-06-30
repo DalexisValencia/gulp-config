@@ -5,20 +5,22 @@
     .banner {
         .el-custom--banners-anchor-header{
             .banners-anchor-header--title{
-                @include labender-fixed-big-fonts ($fourtiary-brand-color);
+                // @include labender-fixed-big-fonts ($fourtiary-brand-color);
                 font: {
                     size: 55px;
-                    family: 'ResotE-Lavender';
+                    family: 'Soulmaze';
                     weight: 100;
                 }
+                text-shadow: 1px 0 10px $fifth-brand-color;
             }
             .el-custom--button{
+                text-shadow: 1px 0 10px $fifth-brand-color;
                 background-color: $seventh-brand-color;
                 width: auto;
                 padding: 0px 15px;
                 font: {
                     size: 15px;
-                    family: 'ResotE';
+                    family: 'Soulmaze';
                     weight: 200;
                 }
             }
@@ -42,7 +44,7 @@
     }
     .el-custom--banners-arrow-bottom{
         font-size: 11px;
-        font-family: 'ResotE-Lavender';
+        font-family: 'Soulmaze';
         width: 70px;
         color: $fourtiary-brand-color;
         @include labender-fixed ($fourtiary-brand-color);

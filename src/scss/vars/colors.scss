@@ -14,10 +14,10 @@ $padding-horizontal: 20px;
     // -webkit-text-fill-color: transparent !important;
     // text-shadow: 0px 0px 0px $colorText !important;
     // text-shadow: -1px 0 $colorText, -1px 0px $colorText, -1px 0 $colorText, -1px 0px $colorText;
-    background-color: $colorText;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background-color: $colorText;
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
 }
 
 @mixin labender-fixed-big-fonts ($colorText) {

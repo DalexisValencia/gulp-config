@@ -42,8 +42,10 @@
     justify-content: center;
     flex-direction: row-reverse;
     &.cristal{
-        // background-color: $secondary-brand-color;
-        background-color: transparent !important;
+        background-color: $secondary-brand-color;
+        @media (max-width: 599px) {
+            background-color: transparent !important;
+        }
         .el-custom--footer-nav {
             ul{
                 li{

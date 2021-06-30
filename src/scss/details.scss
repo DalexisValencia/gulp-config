@@ -5,7 +5,7 @@
         article.el-custom--details--body-product-details {
             .el--custom__title {
                 color: $secondary-brand-color;
-                font-family: 'ResotE-Lavender';
+                font-family: 'Soulmaze';
                 font-weight: 100;
                 @include labender-fixed ($secondary-brand-color);
             }
@@ -15,7 +15,7 @@
             .el-custom--details--body-product-details-nutritional {
                 h5 {
                     color: $secondary-brand-color;
-                    font-family: 'ResotE-Lavender';
+                    font-family: 'Soulmaze';
                     @include labender-fixed ($secondary-brand-color);
                 }
                 ul {

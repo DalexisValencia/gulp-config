@@ -125,7 +125,7 @@ $sliderFullHeight: 100vh;
             padding-right: 20px;
             height: 40px;
             cursor: pointer;
-            font-family: 'ResotE';
+            font-family: 'Soulmaze';
             color: $fourtiary-brand-color;
             display: flex;
             align-items: center;
@@ -201,7 +201,7 @@ $sliderFullHeight: 100vh;
             flex-flow: column;
             > h2,
             > h1 {
-                font-family: 'ResotE';
+                font-family: 'Soulmaze';
                 font-size: 40px;
                 color: #fff;
                 font-weight: 400;
@@ -256,7 +256,7 @@ $sliderFullHeight: 100vh;
                         font-size: 18px;
                         position: absolute;
                         top: -60px;
-                        font-family: 'ResotE-Lavender';
+                        font-family: 'Soulmaze';
                         @include labender-fixed ($fourtiary-brand-color);
                         &::before {
                             content: "";
@@ -274,7 +274,7 @@ $sliderFullHeight: 100vh;
                     h2 {
                         color: $fourtiary-brand-color;
                         font-size: 40px;
-                        font-family: 'ResotE-Lavender';
+                        font-family: 'Soulmaze';
                         @include labender-fixed ($fourtiary-brand-color);
                         font-weight: 500;
                     }
@@ -297,7 +297,7 @@ $sliderFullHeight: 100vh;
             position: absolute;
             bottom: 30px;
             right: 30px;
-            font-family: 'ResotE';
+            font-family: 'Soulmaze';
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -487,7 +487,7 @@ $sliderFullHeight: 100vh;
             bottom: 10px;
             text-decoration: none;
             color: $fourtiary-brand-color;
-            font-family: 'ResotE-Lavender';
+            font-family: 'Soulmaze';
             text-align: center;
             span{
                 display: block;

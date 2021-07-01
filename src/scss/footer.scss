@@ -1,0 +1,65 @@
+@import './vars/colors.scss';
+.abi--main-footer {
+    height: 231px;
+    border: 1px solid red;
+    background-image: url('../assets/footer/footer-desktop.png');
+    background-position: top center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    img.abi--main-footer__logo {
+        width: 102.14px;
+        height: 56px;
+        margin-top: 25px;
+    }
+    .abi--main-footer__social,
+    .abi--main-footer__nav,
+    .abi--main-footer__legal {
+        width: 100%;
+        border: 1px dashed black;
+    }
+    .abi--main-footer__social {
+        margin-top: 4px;
+        ul {
+            padding: 0px !important;
+            list-style: none;
+            margin: 0px auto;
+            display: flex;
+            width: 120.72px;
+            border: 1px dashed orange;
+            justify-content: space-between;
+            li {
+                a {
+                    text-decoration: none !important;
+                }
+            }
+        }
+    }
+    .abi--main-footer__nav {
+        ul {
+            list-style: none;
+            padding: 0px;
+            display: flex;
+            border: 1px dashed $secondary-brand-color;
+            width: 50%;
+            margin: 0px auto;
+            justify-content: space-between;
+            li {
+                a {
+                    color: $secondary-brand-color;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font: {
+                        size: 13px;
+                        weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    .abi--main-footer__legal {
+        color: $secondary-brand-color;
+        text-align: center;
+    }
+}

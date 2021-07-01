@@ -6,12 +6,265 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>::Testing Gulp::</title>
-    <link rel="stylesheet" href="css/main.css"/>
-    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
 </head>
 
 <body>
-    <h1 class="text-center phone-only">PAGINA INICIAL</h1>
+    <main class="abi--home-content">
+        <header class="abi--main-header">
+            <img src="assets/logo.svg" alt="Corona Logo" class="logo">
+            <nav>
+                <ul>
+                    <li class="active">
+                        <a href="">
+                            Ingresar código
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                           ¿Cómo ganar para ver la final de LA Copa oro 2021? 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Nuestro productos
+                        </a>
+                    </li>
+                    <li class="hide-desktop">
+                        <a href="">
+                            Términos y condiciones
+                        </a>
+                    </li>
+                </ul>
+                <button class="el-custom--button close-menu hide-desktop"></button>
+            </nav>
+            <button class="el-custom--button open-mobile-menu hide-desktop"></button>
+        </header>
+        <section class="abi--form-insert-codes">
+            <h2 class="abi--form-insert-code__title">
+                CERVEZA CORONA TE LLEVA A LAS VEGAS, ESTADOS UNIDOS
+                <br />
+                <span>
+                A LA FINAL DEl torneo  del área 2021
+            </span>
+            </h2>
+            <h3 class="abi--form-insert-code__copy-title">
+                Ingresa los códigos que recibiste en BeerHouse y participa
+            </h3>
+            <form class="abi--form-insert-code__form">
+                <div class="block-form-group">
+                    <fieldset class="js-form-item">
+                        <label for="email">Correo electrónico*</label>
+                        <input placeholder="Ingresa tu email" autocomplete="off" type="text" id="email" name="email" value="autofilled@mail.com" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                    </fieldset>
+                </div>
+
+                <div class="block-form-group">
+                    <fieldset class="js-form-item">
+                        <label for="code">Código BeerHouse**</label>
+                        <input placeholder="Ingresa tu código" autocomplete="off" type="text" id="code" name="code" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                    </fieldset>
+                </div>
+
+                <div class="form-actions form-group" id="edit-actions">
+                    <button type="submit" class="el-custom--button">
+                        Participar <i class="icon-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+        </section>
+        <section class="abi--how-to-participe">
+            <div class="abi--how-to-participe__left-content">
+                <h5 class="abi--how-to-participe__left-content-title">
+                    ¿Cómo participar para vivir el final de la copa del área 2021?
+                </h5>
+                <div class="abi--how-to-participe__left-content-wrapper-description">
+                    <div class="abi--how-to-participe__left-content-box-description">
+                        <div class="icon six-pack"></div>
+                        <div class="container-text">
+                            Por compras en
+                            <a href=""> BEER HOUSE</a> de Cerveza Corona, recibirás un código que te dará acceso a nuestro sorteo.
+                        </div>
+                    </div>
+                    <div class="abi--how-to-participe__left-content-box-description">
+                        <div class="icon ticket"></div>
+                        <div class="container-text">
+                            El participante que responda correctamente todas las preguntas con el mejor tiempo en nuestra <span>TRIVIA</span> ganará un pase doble para asisitir a la final de la
+                            <span>
+                                Copa del área 2021
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="abi--how-to-participe__right-banner">
+                <div id="how-to-participe-banners">
+                    <picture>
+                        <source media="(min-width:600px)" srcset="assets/sliders/img.png">
+                        <img src="assets/sliders/bicolor/banner-1-mobile.png" alt="">
+                    </picture>
+                </div>
+                <div class="how-to-participe-actions">
+                    <button class="el-custom--button abi--corona-cristal">
+                        ver ranking <i></i>
+                    </button>
+                </div>
+            </div>
+            <a id="#abi--shopping-zone"></a>
+        </section>
+
+        <section class="abi--shopping-section" id="abi--shopping-zone">
+            <h2 class="abi--shopping-section__title">
+                Gana comprando cerveza Corona
+            </h2>
+            <div class="abi--shopping-section__wrapper-cards">
+                <div class="card">
+                    <h3 class="card--title">
+                        Six pack <br> CORONA
+                    </h3>
+                    <figure class="card--figure">
+                        <img src="assets/products/product.png" alt="">
+                    </figure>
+                    <div class="card--description">
+                        <h2 class="card--price-before">
+                            Antes $9.95
+                        </h2>
+                        <h2 class="card--price-now">
+                            Ahora $7.00
+                        </h2>
+                    </div>
+                    <div class="card--actions">
+                        <button class="el-custom--button">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card--title">
+                        Six pack <br> CORONA
+                    </h3>
+                    <figure class="card--figure">
+                        <img src="assets/products/product.png" alt="">
+                    </figure>
+                    <div class="card--description">
+                        <h2 class="card--price-before">
+                            Antes $9.95
+                        </h2>
+                        <h2 class="card--price-now">
+                            Ahora $7.00
+                        </h2>
+                    </div>
+                    <div class="card--actions">
+                        <button class="el-custom--button">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card--title">
+                        Six pack <br> CORONA
+                    </h3>
+                    <figure class="card--figure">
+                        <img src="assets/products/product.png" alt="">
+                    </figure>
+                    <div class="card--description">
+                        <h2 class="card--price-before">
+                            Antes $9.95
+                        </h2>
+                        <h2 class="card--price-now">
+                            Ahora $7.00
+                        </h2>
+                    </div>
+                    <div class="card--actions">
+                        <button class="el-custom--button">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card--title">
+                        Six pack <br> CORONA
+                    </h3>
+                    <figure class="card--figure">
+                        <img src="assets/products/product.png" alt="">
+                    </figure>
+                    <div class="card--description">
+                        <h2 class="card--price-before">
+                            Antes $9.95
+                        </h2>
+                        <h2 class="card--price-now">
+                            Ahora $7.00
+                        </h2>
+                    </div>
+                    <div class="card--actions">
+                        <button class="el-custom--button">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="abi--main-footer">
+            <img src="assets/footer/logo-footer.svg" alt="corona futbol logo" class="abi--main-footer__logo">
+            <div class="abi--main-footer__social">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="abi--main-footer__nav">
+                <ul>
+                    <li>
+                        <a href="">
+                                tap into your beer
+                            </a>
+                    </li>
+                    <li>
+                        <a href="">
+                                Términos y condiciones
+                            </a>
+                    </li>
+                    <li>
+                        <a href="">
+                                Privacidad y cookies
+                            </a>
+                    </li>
+                    <li>
+                        <a href="">
+                                Hablemos de alcohol
+                            </a>
+                    </li>
+                    <li>
+                        <a href="">
+                                PREGUNTAS FRECUENTES
+                            </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="abi--main-footer__legal">
+                Todo con medida. Todos los derechos reservados 2020©. No compartas este contenido con menores de edad.
+            </div>
+        </footer>
+    </main>
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/main-min.js"></script>
+
 </html>

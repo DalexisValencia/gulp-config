@@ -14,6 +14,14 @@
     }
 }
 
+@mixin for-phone-only-custom ($property) {
+    @media (max-width: 730px) {
+        #{$property} {
+            @content;
+        }
+    }
+}
+
 @mixin for-tablet-portrait-up ($property) {
     @media (min-width: 600px) {
         #{$property} {

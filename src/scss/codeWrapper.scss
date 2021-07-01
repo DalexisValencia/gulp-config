@@ -1,0 +1,104 @@
+@import './vars/colors.scss';
+.abi--form-insert-codes {
+    margin-top: 80px;
+    position: relative;
+    // background-color: darkblue;
+    text-align: center;
+    .abi--form-insert-code__title {
+        color: $secondary-brand-color;
+        font: {
+            size: 36px;
+            weight: 600;
+            family: "CoronaHeadline-SemiBold";
+        }
+        line-height: 1.4;
+        text-transform: uppercase;
+        span {
+            color: $primary-brand-color;
+        }
+        margin-bottom: 40px;
+    }
+    .abi--form-insert-code__copy-title {
+        color: $secondary-brand-color;
+        font: {
+            size: 22px;
+            weight: 600;
+            family: "CoronaHeadline-SemiBold";
+        }
+        margin-bottom: 60px;
+    }
+    .abi--form-insert-code__form {
+        border: 1px solid red;
+        margin: 0px auto;
+        margin-top: 20px;
+        width: 265px;
+        .block-form-group {
+            border: 1px solid pink;
+            .js-form-item {
+                label:not(.error) {
+                    display: block;
+                    text-align: left;
+                    color: $secondary-brand-color;
+                }
+                label.error {
+                    color: red;
+                    font: {
+                        size: 11px;
+                    }
+                }
+                input:not(input[type="checkbox"]) {
+                    border-radius: 12px;
+                    border: 1px solid #FFFFFF;
+                    box-sizing: border-box;
+                    background-color: transparent;
+                    color: $primary-brand-color;
+                    font: {
+                        size: 16px;
+                        weight: normal;
+                    }
+                    &::placeholder {
+                        color: $secondary-brand-color;
+                    }
+                }
+            }
+        }
+        .form-actions {
+            margin: 20px 0px;
+            button.el-custom--button,
+            a.el-custom--button {
+                position: relative;
+                &::before {
+                    position: absolute;
+                    border-radius: 68px;
+                    content: "";
+                    width: 110%;
+                    height: 130%;
+                    background-color: rgba(255, 198, 39, 0.2);
+                    // background-color: rgba($color: $primary-brand-color, $alpha: 0.5);
+                    z-index: -1;
+                }
+                text-transform: capitalize;
+                z-index: 1;
+                width: 235.25px;
+                height: 63.51px;
+                // outline: 10px solid #00ff00;
+                // border: inset 100px solid rgba($color: $primary-brand-color, $alpha: 0.5);
+                padding: 10px 20px;
+                border-radius: 68px;
+                background-color: $primary-brand-color;
+                color: $tertiary-brand-color;
+                font: {
+                    size: 18px;
+                    weight: 600;
+                }
+                i {
+                    position: absolute;
+                    right: 30px;
+                    &::before {
+                        color: $tertiary-brand-color;
+                    }
+                }
+            }
+        }
+    }
+}

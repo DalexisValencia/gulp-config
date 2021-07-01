@@ -1,3 +1,4 @@
+@import '../vars/colors.scss';
 a[class*="el-custom"],
 a.el-custom--button,
 button[class*="el-custom"],
@@ -25,6 +26,7 @@ button.el-custom--button {
     vertical-align: middle;
     white-space: nowrap;
     border: 0px solid transparent;
+    text-decoration: none;
     &:hover,
     &:focus,
     &:active {
@@ -33,6 +35,37 @@ button.el-custom--button {
     }
 }
 
-// input[class*="el-custom"],
-// input.el-custom--button {
-// }
+.abi--corona-cristal {
+    position: relative;
+    &::before {
+        position: absolute;
+        border-radius: 68px;
+        content: "";
+        width: 110%;
+        height: 130%;
+        background-color: rgba(255, 198, 39, 0.2);
+        // background-color: rgba($color: $primary-brand-color, $alpha: 0.5);
+        z-index: -1;
+    }
+    text-transform: capitalize;
+    z-index: 1;
+    width: 235.25px;
+    height: 63.51px;
+    // outline: 10px solid #00ff00;
+    // border: inset 100px solid rgba($color: $primary-brand-color, $alpha: 0.5);
+    padding: 10px 20px;
+    border-radius: 68px !important;
+    background-color: $primary-brand-color;
+    color: $tertiary-brand-color;
+    font: {
+        size: 18px;
+        weight: 600;
+    }
+    i {
+        position: absolute;
+        right: 30px;
+        &::before {
+            color: $tertiary-brand-color;
+        }
+    }
+}

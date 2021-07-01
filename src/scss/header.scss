@@ -1,1 +1,162 @@
-ul li{text-decoration: none;}
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--main-header {
+    display: flex;
+    align-items: center;
+    padding: 0px 100px;
+    //  justify-content: space-between;
+    img.logo {
+        width: 128px;
+        height: 81px;
+    }
+    nav {
+        margin-left: 50px;
+        width: 50%;
+        min-width: 777px;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px;
+            list-style: none;
+            li {
+                a {
+                    font-family: 'CoronaHeadline-SemiBold';
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: $secondary-brand-color;
+                }
+                &.active {
+                    a {
+                        color: $primary-brand-color;
+                    }
+                }
+            }
+        }
+        .hide-desktop {
+            display: none;
+        }
+    }
+}
+
+@mixin transform-to-mobile {
+    nav {
+        opacity: 0;
+        transform: translateX(-100%);
+        &.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        transition: 0.5s all;
+        position: fixed;
+        width: 90%;
+        min-width: unset;
+        height: 80vh;
+        top: 0px;
+        left: 0px;
+        margin-left: 0px;
+        background-color: $tertiary-brand-color;
+        z-index: 3;
+        padding: 0px 20px 0px 0px;
+        &::before {
+            content: "";
+            width: 98px;
+            height: 71px;
+            right: 50px;
+            bottom: 50px;
+            position: absolute;
+            background-image: url('../assets/logo-mobile.svg');
+            background-repeat: no-repeat;
+            background-position: bottom right;
+        }
+        .close-menu {
+            display: block;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 34px;
+            height: 34px;
+            background-image: url('../assets/icons/close.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        ul {
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 100px;
+            li {
+                // border: 1px dashed white;
+                position: relative;
+                width: 100%;
+                min-height: 40px;
+                padding-left: 44px;
+                display: flex !important;
+                align-items: center;
+                margin-bottom: 10px;
+                &::before {
+                    content: "";
+                    left: 0px;
+                    position: absolute;
+                    width: 27px;
+                    height: 4px;
+                    background-color: $fourty-brand-color;
+                }
+            }
+        }
+        .hide-desktop {
+            display: block;
+        }
+    }
+    .open-mobile-menu {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 31px;
+        height: 23px;
+        background-image: url('../assets/icons/menu.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+@include for-tablet-landscape-only ('.abi--main-header') {
+    padding: 0px 50px;
+    nav {
+        width: 100%;
+        min-width: unset;
+        margin-left: 20px;
+    }
+}
+
+@include for-tablet-portait-only ('.abi--main-header') {
+    padding: 0px 20px;
+    img.logo {
+        width: 108px;
+        height: 61px;
+    }
+    nav {
+        width: 100%;
+        min-width: unset;
+        margin-left: 20px;
+        ul {
+            li {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only-custom ('.abi--main-header') {
+    padding: 0px 18px !important;
+    .logo {
+        margin: 0px auto;
+        margin-top: 20px;
+        width: 108px;
+        height: 68px;
+    }
+    @include transform-to-mobile;
+}

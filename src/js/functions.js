@@ -8,4 +8,11 @@
             $(".abi--main-header nav").addClass("active");
         })
     })
+    if ($('#how-to-participe-sliders').length) {
+        $('.owl-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            navContainer: '.how-to-participe-navigation'
+        });
+    }
 })(jQuery);

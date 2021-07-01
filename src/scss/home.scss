@@ -1,6 +1,11 @@
+@import './common/queries.scss';
 .abi--home-content {
     background-image: url("../assets/background/home.png");
     background-position: top;
     background-size: 100%;
     background-repeat: no-repeat;
+}
+
+@include for-phone-only-custom('.abi--home-content') {
+    background-image: url("../assets/background/home-mobile.svg");
 }

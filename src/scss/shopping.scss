@@ -1,4 +1,5 @@
 @import './vars/colors.scss';
+@import './common/queries.scss';
 .abi--shopping-section {
     position: relative;
     &::before {
@@ -7,14 +8,15 @@
         position: absolute;
         background-image: url("../assets/waves/bottom.svg");
         background-repeat: no-repeat;
-        background-position: left 0px;
+        background-position: left 60px;
         right: 0;
         background-size: 100%;
         width: 100%;
-        height: 40vw;
+        height: 48vw;
     }
-    border: 3px dashed red;
-    padding: 40px 0px 70px 0px;
+    // border: 3px dashed red;
+    height: 50vw;
+    padding: 100px 0px 70px 0px;
     text-align: center;
     z-index: 1;
     .abi--shopping-section__title {
@@ -23,11 +25,12 @@
         font: {
             weight: 600;
             size: 36px;
+            family: 'CoronaHeadline-SemiBold';
         }
     }
     .abi--shopping-section__wrapper-cards {
-        border: 2px dashed blue;
-        padding: 25px 0px;
+        // border: 2px dashed blue;
+        padding: 45px 0px;
         display: flex;
         justify-content: center;
         .card {
@@ -37,13 +40,15 @@
             padding: 15px 10px 25px 10px;
             // justify-content: center;
             background-color: rgba($tertiary-brand-color, 0.8);
-            width: 200px;
-            height: 392.31px;
+            min-width: 200px;
+            min-height: 392.31px;
+            width: 14vw;
+            height: 24vw;
             // mix-blend-mode: multiply;
             box-shadow: 0px 1px 20px rgba(0, 37, 69, 0.08);
             border-radius: 12px;
             &:not(:last-child) {
-                border: 1px solid red;
+                // border: 1px solid red;
                 margin-right: 20px;
             }
             .card--title {
@@ -52,6 +57,7 @@
                 font: {
                     size: 20px;
                     weight: 600;
+                    family: 'CoronaHeadline-SemiBold';
                 }
             }
             figure {
@@ -66,13 +72,16 @@
                     font: {
                         size: 20px;
                         weight: bold;
+                        family: 'CoronaHeadline-SemiBold';
                     }
+                    text-decoration: line-through;
                 }
                 .card--price-now {
                     color: $secondary-brand-color;
                     font: {
                         size: 25px;
                         weight: bold;
+                        family: 'CoronaHeadline-SemiBold';
                     }
                 }
             }
@@ -87,7 +96,142 @@
                     font: {
                         size: 15px;
                         weight: 600;
+                        family: 'CoronaHeadline-SemiBold';
                     }
+                }
+            }
+        }
+    }
+}
+
+@mixin card-mobile {
+    .abi--shopping-section__wrapper-cards {
+        .card {
+            min-width: 180px;
+            min-height: 305.31px;
+            .card--title {
+                font-size: 16px;
+            }
+            figure img {
+                width: 109.77px;
+                height: 114.25px;
+            }
+            .card--description {
+                .card--price-before {
+                    font-size: 15px;
+                }
+                .card--price-now {
+                    font-size: 20px;
+                }
+            }
+            .card--actions {
+                .el-custom--button {
+                    width: 149.23px;
+                    height: 40px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@include for-desktop-only('.abi--shopping-section') {
+    height: 780px;
+}
+
+@include for-tablet-landscape-only('.abi--shopping-section') {
+    height: 61vw;
+    @include card-mobile;
+}
+
+@include for-tablet-landscape-down('.abi--shopping-section') {
+    padding-top: 50px !important;
+    border: 1px solid brown;
+    height: 54vw;
+    .abi--shopping-section__title {
+        font-size: 4vw;
+    }
+    // @include card-mobile;
+    .abi--shopping-section__wrapper-cards {
+        padding-top: 10px !important;
+        .card {
+            min-width: 20vw;
+            min-height: 31vw;
+            height: 31px;
+            padding-bottom: 15px;
+            .card--title {
+                font-size: 1.7vw;
+            }
+            figure img {
+                width: 10vw;
+                height: 10.1vw;
+            }
+            .card--description {
+                .card--price-before {
+                    font-size: 1.7vw;
+                }
+                .card--price-now {
+                    font-size: 2vw;
+                }
+            }
+            .card--actions {
+                .el-custom--button {
+                    width: 100%;
+                    height: 5vw;
+                    font-size: 12px;
+                    border: 1px solid red;
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only-custom('.abi--shopping-section') {
+    &::before {
+        background-image: unset;
+    }
+    height: auto;
+    .abi--shopping-section__wrapper-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 156px);
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
+        padding-top: 10px !important;
+        border: 1px solid greenyellow;
+        max-width: 377px;
+        // flex-wrap: wrap;
+        margin: 0px auto;
+        .card:nth-child(3) {
+            margin-left: 0px !important;
+        }
+        .card {
+            border: 1px solid red;
+            min-width: 156px;
+            min-height: 306px;
+            height: 306px;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            .card--title {
+                font-size: 15px;
+            }
+            figure img {
+                width: 115px;
+                height: 119.73px;
+            }
+            .card--description {
+                .card--price-before {
+                    font-size: 16px;
+                }
+                .card--price-now {
+                    font-size: 18px;
+                }
+            }
+            .card--actions {
+                .el-custom--button {
+                    width: 100%;
+                    height: 32px;
+                    font-size: 12px;
+                    border: 1px solid red;
                 }
             }
         }

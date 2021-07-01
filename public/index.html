@@ -8,6 +8,7 @@
     <title>::Testing Gulp::</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="assets/vendor/owlcarousel/owl.carousel.min.css">
 </head>
 
 <body>
@@ -62,7 +63,7 @@
 
                 <div class="block-form-group">
                     <fieldset class="js-form-item">
-                        <label for="code">Código BeerHouse**</label>
+                        <label for="code">Código BeerHouse*</label>
                         <input placeholder="Ingresa tu código" autocomplete="off" type="text" id="code" name="code" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
                     </fieldset>
                 </div>
@@ -99,19 +100,34 @@
                 </div>
             </div>
             <div class="abi--how-to-participe__right-banner">
-                <div id="how-to-participe-banners">
-                    <picture>
-                        <source media="(min-width:600px)" srcset="assets/sliders/img.png">
-                        <img src="assets/sliders/bicolor/banner-1-mobile.png" alt="">
-                    </picture>
+                <div id="how-to-participe-sliders" class="owl-carousel">
+                    <div class="how-to-participe-slider">
+                        <picture>
+                            <source media="(min-width:730px)" srcset="assets/sliders/img.png">
+                            <img src="assets/sliders/mobile/img-1.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="how-to-participe-slider">
+                        <picture>
+                            <source media="(min-width:730px)" srcset="assets/sliders/img-1.png">
+                            <img src="assets/sliders/mobile/img-1.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="how-to-participe-slider">
+                        <picture>
+                            <source media="(min-width:730px)" srcset="assets/sliders/img-1.png">
+                            <img src="assets/sliders/mobile/img-2.png" alt="">
+                        </picture>
+                    </div>
                 </div>
+                <div class="how-to-participe-navigation"></div>
                 <div class="how-to-participe-actions">
                     <button class="el-custom--button abi--corona-cristal">
-                        ver ranking <i></i>
+                        ver ranking <i class="icon-arrow-right"></i>
                     </button>
                 </div>
             </div>
-            <a id="#abi--shopping-zone"></a>
+            <a id="#abi--shopping-zone" class="abi--shopping-zone"></a>
         </section>
 
         <section class="abi--shopping-section" id="abi--shopping-zone">
@@ -265,6 +281,7 @@
     </main>
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="assets/vendor/owlcarousel/owl.carousel.min.js"></script>
 <script src="js/main-min.js"></script>
 
 </html>

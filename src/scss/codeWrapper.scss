@@ -1,8 +1,10 @@
 @import './vars/colors.scss';
+@import './common/queries.scss';
 .abi--form-insert-codes {
-    margin-top: 80px;
+    padding: 100px 0px;
     position: relative;
-    // background-color: darkblue;
+    border: 1px dashed orange;
+    // height: 45vw;
     text-align: center;
     .abi--form-insert-code__title {
         color: $secondary-brand-color;
@@ -28,17 +30,23 @@
         margin-bottom: 60px;
     }
     .abi--form-insert-code__form {
-        border: 1px solid red;
+        // border: 1px solid red;
         margin: 0px auto;
         margin-top: 20px;
         width: 265px;
         .block-form-group {
-            border: 1px solid pink;
+            // border: 1px solid pink;
             .js-form-item {
+                border-color: transparent !important;
                 label:not(.error) {
                     display: block;
                     text-align: left;
                     color: $secondary-brand-color;
+                    font: {
+                        weight: 400;
+                        size: 18px;
+                        family: 'HelveticaNeueLTStd-LtCn';
+                    }
                 }
                 label.error {
                     color: red;
@@ -48,13 +56,14 @@
                 }
                 input:not(input[type="checkbox"]) {
                     border-radius: 12px;
-                    border: 1px solid #FFFFFF;
+                    border: 0.6px solid #FFFFFF;
                     box-sizing: border-box;
                     background-color: transparent;
                     color: $primary-brand-color;
                     font: {
                         size: 16px;
                         weight: normal;
+                        family: 'HelveticaNeueLTStd-LtCn';
                     }
                     &::placeholder {
                         color: $secondary-brand-color;
@@ -66,6 +75,7 @@
             margin: 20px 0px;
             button.el-custom--button,
             a.el-custom--button {
+                margin-top: 60px;
                 position: relative;
                 &::before {
                     position: absolute;
@@ -90,6 +100,7 @@
                 font: {
                     size: 18px;
                     weight: 600;
+                    family: 'CoronaHeadline-SemiBold';
                 }
                 i {
                     position: absolute;
@@ -98,6 +109,32 @@
                         color: $tertiary-brand-color;
                     }
                 }
+            }
+        }
+    }
+}
+
+@include for-phone-only-custom('.abi--form-insert-codes') {
+    background-image: url('../assets/waves/code-wave.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 40px !important;
+    .abi--form-insert-code__title {
+        border: 1px solid red;
+        font-size: 16px;
+        width: 275px;
+        margin: 0px auto;
+        height: 114px;
+    }
+    .abi--form-insert-code__copy-title {
+        font-size: 15px;
+        width: 300px;
+        margin: 0px auto;
+    }
+    .abi--form-insert-code__form {
+        .form-actions.form-group {
+            .el-custom--button {
+                margin-top: 0px !important;
             }
         }
     }

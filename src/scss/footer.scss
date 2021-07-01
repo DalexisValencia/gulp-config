@@ -1,7 +1,7 @@
 @import './vars/colors.scss';
+@import './common/queries.scss';
 .abi--main-footer {
     height: 231px;
-    border: 1px solid red;
     background-image: url('../assets/footer/footer-desktop.png');
     background-position: top center;
     background-size: cover;
@@ -17,7 +17,7 @@
     .abi--main-footer__nav,
     .abi--main-footer__legal {
         width: 100%;
-        border: 1px dashed black;
+        // font-family: 'HelveticaNeueLTStd-ThCn';
     }
     .abi--main-footer__social {
         margin-top: 4px;
@@ -27,7 +27,7 @@
             margin: 0px auto;
             display: flex;
             width: 120.72px;
-            border: 1px dashed orange;
+            // border: 1px dashed orange;
             justify-content: space-between;
             li {
                 a {
@@ -41,7 +41,7 @@
             list-style: none;
             padding: 0px;
             display: flex;
-            border: 1px dashed $secondary-brand-color;
+            // border: 1px dashed $secondary-brand-color;
             width: 50%;
             margin: 0px auto;
             justify-content: space-between;
@@ -53,6 +53,7 @@
                     font: {
                         size: 13px;
                         weight: 700;
+                        family: 'HelveticaNeueLTStd-LtCn';
                     }
                 }
             }
@@ -61,5 +62,30 @@
     .abi--main-footer__legal {
         color: $secondary-brand-color;
         text-align: center;
+        font-family: 'HelveticaNeueLTStd-LtCn';
+    }
+}
+
+@include for-phone-only-custom('.abi--main-footer') {
+    border: 5px solid red !important;
+    background-image: url('../assets/footer/footer-mobile.svg');
+    background-size: cover;
+    height: max-content;
+    padding: 30px 10px;
+    nav.abi--main-footer__nav {
+        width: 100%;
+        border: 1px solid red;
+        padding: 30px 0px;
+        ul {
+            flex-wrap: wrap;
+            li {
+                border: 1px solid red;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+    .abi--main-footer__legal {
+        font-size: 11px;
     }
 }

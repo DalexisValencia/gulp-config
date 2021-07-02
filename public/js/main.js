@@ -15,4 +15,14 @@
             navContainer: '.how-to-participe-navigation'
         });
     }
+    if ($('#questionnaire--questions').length) {
+        $('.questionnaire--questions.owl-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            dotsContainer: '.questionnaire--navigation',
+            nav: false,
+            mouseDrag: false,
+            touchDrag: false,
+        });
+    }
 })(jQuery);

@@ -1,0 +1,260 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.el-custom-questionnaire-page {
+    background-image: url("../assets/background/question-desktop.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: repeat-y;
+    @include media-xs {
+        background-image: url("../assets/background/question-mobile.png");
+    }
+}
+
+.el-custom--questionnaire-page__main {
+    padding: 7vw 15px 10vw;
+    @include media-xs {
+        overflow: hidden;
+        padding: 50px 15px;
+    }
+}
+
+.questionnaire-timer {
+    margin: 0px auto;
+    width: 155px;
+    height: 51px;
+    border-radius: 21px;
+    background-color: $primary-brand-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'CoronaHeadline-SemiBold';
+    font-size: 18px;
+}
+
+@mixin questionnaire {
+    .questionnaire {
+        overflow-x: visible;
+        margin: 0px 20px;
+        margin-top: 40px;
+        @include media-xs {
+            margin: 40px 0px;
+        }
+        .questionnaire--questions {
+            .questionnaire--questions__question {
+                position: relative;
+                .option--mark {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    left: -24px;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background-color: $primary-brand-color;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font: {
+                        size: 35px;
+                    }
+                    @include media-xs {
+                        font-size: 25px;
+                    }
+                }
+                .option {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // max-width: 457px;
+                    height: 68px;
+                    transition: 0.3s all;
+                    &:hover,
+                    &.active {
+                        background-color: $sixth-brand-color;
+                    }
+                    background-color: $secondary-brand-color;
+                    box-shadow: 0px 1px 20px rgba(0,
+                    37,
+                    69,
+                    0.08);
+                    border-radius: 12px;
+                    margin-bottom: 15px;
+                    font: {
+                        size: 22px;
+                        family: 'CoronaHeadline-SemiBold';
+                    }
+                    @include media-xs {
+                        font: {
+                            size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.el-custom--questionnaire-page__wrapper {
+    header {
+        .el-custom--questionnaire-page-title,
+        .el-custom--questionnaire-page-question-current {
+            max-width: max-content;
+            margin: 0px auto;
+            font: {
+                size: 28px;
+                family: 'CoronaHeadline-SemiBold';
+            }
+        }
+        .el-custom--questionnaire-page-title {
+            margin-top: 40px;
+            color: $secondary-brand-color;
+            @include media-xs {
+                margin-top: 25px;
+            }
+        }
+        .el-custom--questionnaire-page-question-current {
+            color: $primary-brand-color;
+        }
+        .el-custom--questionnaire-page-subtitle {
+            color: $secondary-brand-color;
+            max-width: max-content;
+            margin: 0px auto;
+            margin-top: 25px;
+            text-align: center;
+            font: {
+                size: 18px;
+                family: 'CoronaHeadline-SemiBold';
+            }
+        }
+    }
+}
+
+.el-custom--questions-page-content {
+    margin: 0px auto;
+    max-width: 457px;
+    text-align: center;
+    @include questionnaire;
+    .el-custom--button {
+        margin-top: 50px;
+    }
+    .questionnaire--questions.owl-carousel {
+        .owl-stage-outer {
+            .owl-stage {
+                .owl-item {
+                    opacity: 0;
+                    transition: 0.3s all !important;
+                    padding: 0px 30px;
+                    padding-right: 4px !important;
+                    // @include media-xs {
+                    //     padding: 0px 30px;
+                    // }
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.questionnaire--navigation {
+    height: 48px;
+    margin-bottom: 30px;
+    .owl-dot {
+        pointer-events: none;
+        position: relative;
+        border-color: transparent;
+        transition: 0.5s all;
+        z-index: 1;
+        &:not(.active) {
+            width: 34px;
+            height: 35px;
+            background-image: url("../assets/icons/balon_inactive.svg");
+        }
+        &.active {
+            width: 46px;
+            height: 48px;
+            background-image: url("../assets/icons/balon_active.svg");
+        }
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 15px;
+        &:hover,
+        &:focus,
+        &:active {
+            outline: 0;
+            outline-color: transparent !important;
+        }
+        &:not(:last-child) {
+            &::before {
+                content: "";
+                position: absolute;
+                border: 1px dashed #B2BCCA;
+                width: 12px;
+                right: -16px;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+// .el-custom-thankyou-page {
+//     background-image: url("../assets/background/thank-you-desktop.png");
+//     background-size: cover;
+//     background-position: top center;
+//     background-repeat: repeat-y;
+//     @include media-xs {
+//         background-image: url("../assets/background/thank-you-desktop-mobile.png");
+//     }
+// }
+// .el-custom--thankyou-page__wrapper {
+//     padding: 7vw 15px;
+//     @include media-xs {
+//         overflow: hidden;
+//         padding: 50px 15px;
+//         height: 100vh;
+//     }
+//     header {
+//         .el-custom--thankyou-page-title,
+//         .el-custom--thankyou-page-subtitle {
+//             max-width: max-content;
+//             margin: 0px auto;
+//             text-align: center;
+//             font: {
+//                 size: 25px;
+//                 family: 'CoronaHeadline-SemiBold';
+//             }
+//             color: $primary-brand-color;
+//             margin-bottom: 30px;
+//             @include media-xs {
+//                 font-size: 22px;
+//             }
+//         }
+//         .el-custom--thankyou-page-subtitle {
+//             color: $secondary-brand-color;
+//         }
+//     }
+// }
+// .el-custom--thakyou-page-content.resend--code_wrapper {
+//     margin-top: 100px;
+// }
+// .el-custom--thakyou-page-bottom {
+//     max-width: max-content;
+//     margin: 0px auto;
+//     text-align: center;
+//     padding: 40px 0px;
+//     .el-custom--thakyou-page-bottom-copy {
+//         font: {
+//             size: 25px;
+//             family: 'CoronaHeadline-SemiBold';
+//         }
+//         color: $secondary-brand-color;
+//         @include media-xs {
+//             font-size: 24px;
+//         }
+//     }
+//     .el-custom--button {
+//         margin-top: 40px;
+//     }
+// }

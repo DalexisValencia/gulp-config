@@ -95,6 +95,12 @@
     }
 }
 
+@mixin media-sm-custom {
+    @media (max-width: 730px) {
+        @content;
+    }
+}
+
 @mixin media-sm {
     @media (max-width: 899px) {
         @content;

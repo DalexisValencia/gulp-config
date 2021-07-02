@@ -3,7 +3,6 @@
 .abi--form-insert-codes {
     padding: 100px 0px;
     position: relative;
-    border: 1px dashed orange;
     // height: 45vw;
     text-align: center;
     .abi--form-insert-code__title {
@@ -30,12 +29,10 @@
         margin-bottom: 60px;
     }
     .abi--form-insert-code__form {
-        // border: 1px solid red;
         margin: 0px auto;
         margin-top: 20px;
         width: 265px;
         .block-form-group {
-            // border: 1px solid pink;
             .js-form-item {
                 border-color: transparent !important;
                 label:not(.error) {
@@ -120,7 +117,6 @@
     background-repeat: no-repeat;
     padding-top: 40px !important;
     .abi--form-insert-code__title {
-        border: 1px solid red;
         font-size: 16px;
         width: 275px;
         margin: 0px auto;

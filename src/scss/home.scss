@@ -2,10 +2,11 @@
 .abi--home-content {
     background-image: url("../assets/background/home.png");
     background-position: top;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 @include for-phone-only-custom('.abi--home-content') {
     background-image: url("../assets/background/home-mobile.svg");
+    background-size: cover;
 }

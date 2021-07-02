@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::GUARANA DEV::</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="assets/vendor/owlcarousel/owl.carousel.min.css">
+</head>
+
+<body>
+    <main class="el-custom--main el-custom-register-page">
+        <header class="abi--main-header">
+            <img src="assets/logo.svg" alt="Corona Logo" class="logo">
+            <nav>
+                <ul>
+                    <li class="active">
+                        <a href="">
+                            Ingresar código
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                           ¿Cómo ganar para ver la final de LA Copa oro 2021? 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Nuestro productos
+                        </a>
+                    </li>
+                    <li class="hide-desktop">
+                        <a href="">
+                            Términos y condiciones
+                        </a>
+                    </li>
+                </ul>
+                <button class="el-custom--button close-menu hide-desktop"></button>
+            </nav>
+            <button class="el-custom--button open-mobile-menu hide-desktop"></button>
+        </header>
+        <section class="el-custom--register-page__main">
+            <article class="el-custom--register-page__form">
+                <header>
+                    <h3 class="el-custom--register-page__form-title">
+                        ¡FELICITACIONES!
+                        <br>
+                        <span>
+                            TÚ CÓDIGO ES VALIDO
+                        </span>
+                    </h3>
+                    <p class="el-custom--register-page__form-subtitle">
+                        Para continuar participando recuerda dejar tus datos, así nos contactaremos contigo.
+                    </p>
+                </header>
+                <form class="el-custom-brand-register-form" action="/" method="post" accept-charset="UTF-8">
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name form-no-label form-group">
+                            <label for="name">Nombre*</label>
+                            <input placeholder="Ingresa tu nombre" autocomplete="off" type="text" id="register-name" name="name" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                        </fieldset>
+
+                        <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-lastname form-item-lastname form-no-label form-group">
+                            <label for="lastname">Apellido *</label>
+                            <input placeholder="" autocomplete="off" type="text" id="register-lastname" name="lastname" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                        </fieldset>
+                    </div>
+
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name form-no-label form-group">
+                            <label for="name">Teléfono*</label>
+                            <input placeholder="000-000-00" autocomplete="off" type="text" id="register-name" name="name" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                        </fieldset>
+
+                        <fieldset class="js-form-item js-form-type-email form-type-email js-form-item-email form-item-email form-no-label form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input placeholder="" autocomplete="off" type="email" id="register-email" name="email" value=" " size="60" maxlength="50" class="form-email required form-control el-custom--input error" required="required">
+                        </fieldset>
+                    </div>
+
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-city form-item-city form-no-label form-group">
+                            <label for="city">Estado*</label>
+                            <select autocomplete="off" name="city" id="register-city" class="form-select required form-control" required="required">
+                                <option value="" selected="selected">Estado*</option>
+                                <option value="1838">Amazonas</option>
+                                <option value="1839">Áncash</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset class="js-form-item js-form-type-number form-type-number js-form-item-phone form-item-phone form-no-label form-group">
+                            <label for="phone">Código postal*</label>
+                            <input placeholder="Ingresa tu código" min="1" step="1" autocomplete="off" type="number" id="register-phone" name="phone" value=" " class="form-number required form-control el-custom--input" required="required">
+                        </fieldset>
+                    </div>
+
+                    <div class="block-form-group">
+                        <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-birthday form-item-birthday form-group">
+                            <label for="birthday">Fecha de nacimiento</label>
+                            <!-- <select autocomplete="off" name="day" class="form-select required form-control el-custom--input" required="required" id="day">
+                                <option value="" hidden  selected>DD</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                            </select> -->
+                            <input placeholder="DD" min="1" step="1" autocomplete="off" type="number" id="day" name="day" value=" " class="form-number required form-control el-custom--input" required="required">
+                            <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" hidden  selected>MM</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                            </select>
+                            <input placeholder="AAAA" min="1" step="1" autocomplete="off" type="number" id="year" name="year" value=" " class="form-number required form-control el-custom--input" required="required">
+                            <!-- <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" hidden  selected>AAAA</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                            </select> -->
+                        </fieldset>
+
+                        <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-gender form-item-gender form-no-label form-group">
+                            <label for="gender">Género</label>
+                            <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" hide>Selecciona una opción</option>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                            </select>
+                        </fieldset>
+                    </div>
+
+                    <div class="el-custom--block-terms">
+                        <div class="block-term">
+                            <label class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-terms form-item-terms el-custom--checkbox" for="acept-terms">
+                                <input type="checkbox" id="edit-terms" name="acept-terms" value="1" class="form-checkbox required form-check-input" required="required">
+                                <label class="form-check-label" for="edit-terms">
+                                    <span class="checkmark"></span>
+                                    <span>Acepto <a href="" target="_blank">términos y condiciones</a> y <a href="" target="_blank">políticas de privacidad</a> *</span>
+                                </label>
+                            </label>
+                        </div>
+                        <div class="block-term">
+                            <label class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-terms form-item-terms el-custom--checkbox" for="get-information">
+                                <input type="checkbox" id="get-information" name="get-information" value="1" class="form-checkbox required form-check-input" required="required">
+                                <label class="form-check-label" for="get-information">
+                                    <span class="checkmark"></span>
+                                    <span>Deseo recibir promociones y novedades de Grupo Modelo</span>
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-actions js-form-wrapper form-group" id="edit-actions">
+                        <button type="submit " value="registrarme" class="el-custom--button button button--primary js-form-submit form-submit btn btn-primary abi--corona-cristal">
+                            registrarme <i class="icon-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+            </article>
+        </section>
+        <footer class="abi--main-footer">
+            <img src="assets/footer/logo-footer.svg" alt="corona futbol logo" class="abi--main-footer__logo">
+            <div class="abi--main-footer__social">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="abi--main-footer__nav">
+                <ul>
+                    <li>
+                        <a href="">
+                                tap into your beer
+                            </a>
+                    </li>
+                    <li>
+                        <a href="">
+                                Términos y condiciones
+                            </a>
+                    </li>
+                    <li>
+                        <a href="">
+                                Privacidad y cookies
+                            </a>
+                    </li>
+                    <li>
+                        <a href="">
+                                Hablemos de alcohol
+                            </a>
+                    </li>
+                    <li>
+                        <a href="">
+                                PREGUNTAS FRECUENTES
+                            </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="abi--main-footer__legal">
+                Todo con medida. Todos los derechos reservados 2020©. No compartas este contenido con menores de edad.
+            </div>
+        </footer>
+    </main>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="assets/vendor/owlcarousel/owl.carousel.min.js"></script>
+<script src="js/main-min.js"></script>
+
+</html>

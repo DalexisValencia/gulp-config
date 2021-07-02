@@ -1,0 +1,44 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.el-custom-terms-page {
+    background-image: url("../assets/background/tyc.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: repeat-y;
+}
+
+.el-custom--terms-page__wrapper {
+    header {
+        .el-custom--terms-page__form-title {
+            text-align: center;
+            font-size: 40px;
+            color: $primary-brand-color;
+            font-family: 'CoronaHeadline-SemiBold';
+            margin-bottom: 65px;
+            font-weight: 600;
+        }
+    }
+    .el-custom--terms-page__form-content {
+        max-width: 790px;
+        padding: 0px 26px;
+        margin: 0px auto;
+        color: $secondary-brand-color;
+        font-family: 'HelveticaNeueLTStd-LtCn';
+    }
+}
+
+@include for-phone-only-custom ('.el-custom-terms-page') {
+    background-image: url("../assets/background/tyc-mobile.png");
+    background-size: 100%;
+}
+
+@include for-tablet-landscape-down ('.el-custom--terms-page__wrapper') {
+    header {
+        .el-custom--terms-page__form-title {
+            font-size: 24px;
+        }
+    }
+    .el-custom--terms-page__form-content {
+        font-size: 14px;
+    }
+}

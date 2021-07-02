@@ -1,7 +1,6 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi--how-to-participe {
-    border: 4px solid red;
     height: 45vw;
     padding: 40px 105px;
     display: flex;
@@ -23,7 +22,6 @@
     .abi--how-to-participe__left-content,
     .abi--how-to-participe__right-banner {
         width: 44%;
-        border: 2px solid purple;
         .abi--how-to-participe__left-content-title {
             width: 80%;
             color: $primary-brand-color;
@@ -34,7 +32,6 @@
                 family: 'CoronaHeadline-SemiBold';
             }
             margin-bottom: 30px;
-            border: 2px dashed purple;
         }
     }
     .abi--how-to-participe__left-content {
@@ -43,7 +40,6 @@
         margin-top: 20px;
         .abi--how-to-participe__left-content-box-description {
             width: 100%;
-            // border: 1px solid black;
             display: flex;
             margin-bottom: 25px;
             justify-content: space-between;
@@ -66,7 +62,6 @@
             }
             .container-text {
                 width: 68%;
-                // border: 1px solid red;
                 padding-bottom: 10px;
                 // min-width: 400px;
                 color: $secondary-brand-color;
@@ -125,7 +120,7 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            margin-top: 10px !important;
+            margin-top: 20px !important;
             .el-custom--button {
                 margin-top: 0px auto;
             }
@@ -150,7 +145,35 @@
     }
 }
 
+@include for-tablet-landscape-only('.abi--how-to-participe') {
+    height: 55vw;
+    // border: 1px solid red;
+    .abi--how-to-participe__right-banner {
+        .how-to-participe-actions {
+            .el-custom--button {
+                height: 5vw;
+                font-size: 1.8vw;
+            }
+        }
+    }
+}
+
+@include for-tablet-portait-only('.abi--how-to-participe') {
+    // border: 4px solid red;
+    height: 65vw;
+    padding: 40px 50px;
+    .abi--how-to-participe__right-banner {
+        .how-to-participe-actions {
+            .el-custom--button {
+                height: 6vw;
+                font-size: 1.8vw;
+            }
+        }
+    }
+}
+
 @include for-phone-only-custom('.abi--how-to-participe') {
+    height: max-content;
     &::before {
         background-image: unset;
         // background-image: url('../assets/waves/products-waves.svg');
@@ -213,5 +236,4 @@
         bottom: 0;
     }
     padding-bottom: 100px;
-    // border: 1px solid red;
 }

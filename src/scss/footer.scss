@@ -42,7 +42,7 @@
             padding: 0px;
             display: flex;
             // border: 1px dashed $secondary-brand-color;
-            width: 50%;
+            width: 60%;
             margin: 0px auto;
             justify-content: space-between;
             li {
@@ -66,22 +66,38 @@
     }
 }
 
+@include for-tablet-landscape-only ('.abi--main-footer') {
+    .abi--main-footer__nav {
+        ul {
+            width: 80%;
+            padding: 0px 40px;
+        }
+    }
+}
+
+@include for-tablet-landscape-down('.abi--main-footer') {
+    .abi--main-footer__nav {
+        ul {
+            width: 100%;
+            padding: 0px 40px;
+        }
+    }
+}
+
 @include for-phone-only-custom('.abi--main-footer') {
-    border: 5px solid red !important;
     background-image: url('../assets/footer/footer-mobile.svg');
     background-size: cover;
     height: max-content;
     padding: 30px 10px;
     nav.abi--main-footer__nav {
         width: 100%;
-        border: 1px solid red;
         padding: 30px 0px;
         ul {
             flex-wrap: wrap;
             li {
-                border: 1px solid red;
                 width: 100%;
                 text-align: center;
+                margin-bottom: 10px;
             }
         }
     }

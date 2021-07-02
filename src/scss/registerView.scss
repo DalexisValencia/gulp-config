@@ -1,0 +1,414 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+$padding-horizontal: 20px;
+//Ajuste a todos los inputs
+.apply-to-form-inputs {
+    font-size: 16px;
+    font-family: 'HelveticaNeueLTStd-LtCn';
+    color: $primary-brand-color;
+}
+
+@mixin block-terms() {
+    .el-custom--block-terms {
+        margin: 30px 0px;
+        .block-term {
+            margin-bottom: 10px;
+            padding: 0px 18px;
+            label.js-form-item {
+                margin-bottom: 22px;
+                display: flex;
+                label.form-check-label:not(.error) {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    font-family: 'HelveticaNeueLTStd-LtCn';
+                    font-size: 14px;
+                    color: $secondary-brand-color;
+                    a {
+                        margin: 0px 4px;
+                        text-decoration: underline !important;
+                        color: $secondary-brand-color;
+                    }
+                }
+                position: relative;
+                label.error {
+                    // color: $seventh-brand-color;
+                    position: relative;
+                    top: 5px;
+                    font-size: 10px;
+                    left: 32px;
+                    @media (max-width: 599px) {}
+                }
+            }
+        }
+    }
+}
+
+@mixin form-actions {
+    .form-actions {
+        text-align: center;
+        margin-top: 52px;
+        .el-custom--button {
+            font-size: 24px;
+            font-weight: 500;
+            // width: 264px;
+            padding: 0px 70px;
+            height: 63.51px;
+            width: auto;
+            font-family: 'CoronaHeadline-SemiBold';
+            text-decoration: none;
+            color: $tertiary-brand-color;
+        }
+    }
+}
+
+@mixin nice-select-for-drupal {
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent !important;
+    border-radius: 5px;
+    border: solid 1px #e8e8e8;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    height: 32px !important;
+    line-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+}
+
+@mixin form-select {
+    .nice-select {
+        @include nice-select-for-drupal;
+        width: 100%;
+        border-radius: 0px;
+        border: 1px solid transparent;
+        border-bottom: 1px solid $primary-brand-color;
+        height: 46.4px;
+        padding: 0px;
+        * {
+            @extend .apply-to-form-inputs;
+        }
+        span.current {
+            font-weight: bolder;
+            color: rgba(#454D58, 0.5);
+            font-size: 14px;
+            height: 100%;
+            display: block;
+            display: flex;
+            align-items: center;
+        }
+        ul {
+            width: 100%;
+            border-radius: 0px;
+            max-height: 200px;
+            overflow: scroll;
+        }
+    }
+    select {
+        border: 1px solid transparent;
+        border: 1px solid $secondary-brand-color;
+        border-radius: 12px;
+        background-color: transparent;
+        // background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E) !important;
+        background-image: url("../assets/icons/arrow-select.svg");
+        background-repeat: no-repeat, repeat !important;
+        background-position: right .7em top 50%, 0 0 !important;
+        background-size: .65em auto, 100% !important;
+        height: 60px;
+        width: 100%;
+        margin-top: 8px;
+        margin-top: 0px;
+        padding: 5px 20px;
+        font-family: Roboto, sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        transition: 0.2s all;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        &:hover,
+        &:focus,
+        &:focus-visible,
+        &:active {
+            outline: 0;
+            outline-color: transparent !important;
+            // border-bottom: 1px solid #008F4F !important;
+        }
+        &:invalid {
+            color: rgba($secondary-brand-color, 0.3);
+        }
+        option {
+            font-size: 14px;
+            padding: 5px;
+            color: $tertiary-brand-color;
+        }
+        color: $secondary-brand-color;
+    }
+}
+
+@mixin form-item {
+    .js-form-item {
+        padding-left: 0px;
+        padding-right: 0px;
+        &:first-child:not(.form-full) {
+            margin-right: 5%;
+        }
+        &:not(.form-full) {
+            width: 50%;
+        }
+        &.form-full {
+            width: 100%;
+        }
+        border: 1px solid transparent;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        div.js-form-item {
+            width: 100%;
+        }
+        &.form-item-birthday {
+            justify-content: space-between;
+            display: flex;
+            .nice-select.el-custom--input, // select.form-select.form-control.el-custom--input,
+            div.js-form-item {
+                width: 30% !important;
+                background-image: unset;
+            }
+            .js-form-item {
+                .nice-select.el-custom--input {
+                    width: 100% !important;
+                    &::after {
+                        content: unset;
+                    }
+                }
+            }
+            input.el-custom--input,
+            select.form-select.form-control.el-custom--input {
+                background-image: unset;
+                text-align-last: center;
+                width: 28% !important;
+            }
+        }
+        label {
+            &:not(.error) {
+                color: $secondary-brand-color;
+                font-size: 18px;
+                font-family: 'HelveticaNeueLTStd-LtCn';
+                display: block;
+                font-weight: 100;
+                height: max-content;
+                text-transform: uppercase;
+                margin-bottom: 7px;
+            }
+            &.error {
+                font-family: 'HelveticaNeueLTStd-LtCn';
+                color: red;
+                // color: $seventh-brand-color;
+                position: absolute;
+                bottom: -11px;
+                font-size: 10px;
+                height: 10px;
+            }
+            font-weight: bolder;
+            width: 100%;
+        }
+        // border: 2px solid red;
+        @include form-select();
+        input:not(.form-checkbox) {
+            height: 60px;
+            width: 100%;
+            border: 0px solid transparent;
+            padding: 0px 20px;
+            border-radius: 12px;
+            border: 1px solid $secondary-brand-color;
+            background-color: transparent !important;
+            @extend .apply-to-form-inputs;
+            // color: $fifth-brand-color;
+            transition: 0.3s all;
+            // font-family: 'HelveticaNeueLTStd-LtCn';
+            font &:focus,
+            &:active {
+                // color: $fifth-brand-color !important;
+                // border-bottom: 1px solid $sixth-brand-color !important;
+                color: #454D58 !important;
+                font-weight: 700;
+            }
+            &::placeholder {
+                color: rgba(#fff, 0.5);
+                font-size: 16px;
+                font-weight: 500;
+            }
+            &[type="number"] {
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+                -moz-appearance: textfield;
+            }
+            &[type="number"] {
+                -webkit-appearance: none;
+                margin: 0;
+                -moz-appearance: textfield;
+            }
+        }
+    }
+}
+
+.js-form-item-tyc {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    label.error {
+        &#tyc-error {
+            font-size: 10px;
+            display: block;
+            padding-top: 10px;
+            // color: $seventh-brand-color;
+            width: 100%;
+        }
+    }
+}
+
+.el-custom-register-page {
+    transition: 1s all;
+    background-repeat: no-repeat;
+    background-image: url('../assets/background/register-desktop.png');
+    background-position: top center;
+    background-size: cover;
+}
+
+.el-custom--register-page__main {
+    max-width: 1153px;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+    padding: 5vw 0 10vw 0px;
+    article.el-custom--register-page__form {
+        margin: 0px $padding-horizontal * 2;
+        width: 71%;
+        flex-wrap: wrap;
+        header {
+            margin-top: 33px;
+            margin-bottom: 35px;
+            width: 100%;
+            .el-custom--register-page__form-title {
+                text-align: center;
+                font-family: 'CoronaHeadline-SemiBold';
+                color: $primary-brand-color;
+                font-size: 36px;
+                font-weight: 100;
+                span {
+                    color: $secondary-brand-color;
+                }
+            }
+            .el-custom--register-page__form-subtitle {
+                margin-top: 20px;
+                font-size: 22px;
+                font-family: 'HelveticaNeueLTStd-LtCn';
+                text-align: center;
+                color: $secondary-brand-color;
+            }
+        }
+        .el-custom-brand-register-form {
+            max-width: 1000px;
+            .block-form-group {
+                display: flex;
+                @include form-item();
+            }
+        }
+        @include block-terms();
+        @include form-actions();
+    }
+    article.el-custom--register-page__image {
+        transition: 0.2s all;
+        // background-image: url('../assets/form/img_formulario_1.png');
+        background-image: url('../assets/form/form-bicolor.png');
+        background-position: top;
+        background-size: contain;
+        background-repeat: no-repeat;
+        max-width: 509px;
+        max-height: 766px;
+        width: 80%;
+        // height: 65vw;
+        height: 73vw;
+    }
+}
+
+.js-form-item-phone {
+    label.error {
+        bottom: -17px !important;
+    }
+}
+
+@include for-tablet-landscape-down('.el-custom--register-page__main') {
+    max-width: 700px;
+    article.el-custom--register-page__form {
+        header {
+            .el-custom--register-page__form-title {
+                font-size: 24px;
+                text-align: center;
+            }
+            .el-custom--register-page__form-subtitle {
+                font-size: 18px;
+            }
+        }
+        .el-custom-brand-register-form {
+            .block-form-group {
+                flex-wrap: wrap;
+                fieldset.js-form-item {
+                    &:first-child:not(.form-full) {
+                        margin-right: 0px !important;
+                    }
+                    label:not(.error) {
+                        font-size: 18px;
+                    }
+                    width: 100% !important;
+                    &.js-form-type-select {
+                        &::before {
+                            content: inherit !important;
+                        }
+                        select {
+                            font-size: 15px !important;
+                        }
+                        label:not(.error) {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+            .form-actions {
+                width: 100%;
+                button.el-custom--button {
+                    font-family: 'CoronaHeadline-SemiBold';
+                    font-size: 18px;
+                    width: 264px;
+                    height: max-content;
+                    padding: 20px 0px;
+                    text-decoration: none;
+                    color: $tertiary-brand-color;
+                }
+            }
+        }
+        margin-bottom: 50px;
+    }
+    .el-custom--register-page__image {
+        display: none !important;
+    }
+}

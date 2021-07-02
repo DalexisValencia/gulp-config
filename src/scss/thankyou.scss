@@ -1,0 +1,64 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.el-custom-thankyou-page {
+    background-image: url("../assets/background/thank-you-desktop.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: repeat-y;
+    @include media-xs {
+        background-image: url("../assets/background/thank-you-desktop-mobile.png");
+    }
+}
+
+.el-custom--thankyou-page__wrapper {
+    padding: 7vw 15px;
+    @include media-xs {
+        overflow: hidden;
+        padding: 50px 15px;
+        height: 100vh;
+    }
+    header {
+        .el-custom--thankyou-page-title,
+        .el-custom--thankyou-page-subtitle {
+            max-width: max-content;
+            margin: 0px auto;
+            text-align: center;
+            font: {
+                size: 25px;
+                family: 'CoronaHeadline-SemiBold';
+            }
+            color: $primary-brand-color;
+            margin-bottom: 30px;
+            @include media-xs {
+                font-size: 22px;
+            }
+        }
+        .el-custom--thankyou-page-subtitle {
+            color: $secondary-brand-color;
+        }
+    }
+}
+
+.el-custom--thakyou-page-content.resend--code_wrapper {
+    margin-top: 100px;
+}
+
+.el-custom--thakyou-page-bottom {
+    max-width: max-content;
+    margin: 0px auto;
+    text-align: center;
+    padding: 40px 0px;
+    .el-custom--thakyou-page-bottom-copy {
+        font: {
+            size: 25px;
+            family: 'CoronaHeadline-SemiBold';
+        }
+        color: $secondary-brand-color;
+        @include media-xs {
+            font-size: 24px;
+        }
+    }
+    .el-custom--button {
+        margin-top: 40px;
+    }
+}

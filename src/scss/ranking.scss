@@ -1,0 +1,213 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+@mixin ranking-card {
+    .el-custom--ranking-card {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        padding: 0 10px;
+        &:not(:last-child) {
+            border-bottom: 5px solid $fifth-brand-color;
+            ;
+        }
+        &:first-child {
+            background-image: url("../assets/icons/ranking-crown.svg");
+            background-repeat: no-repeat;
+            background-size: 91.67px 83.22px;
+            background-position-y: -10px;
+            background-position-x: right;
+            @include media-xs {
+                background-image: unset;
+            }
+        }
+        &.active {
+            background-color: $tertiary-brand-color;
+            .ranking-card--icon {
+                background-image: url("../assets/icons/ranking-marker-active.svg");
+            }
+            .ranking-card--body {
+                .ranking-card--body-name,
+                .ranking-card--body-score {
+                    color: $secondary-brand-color;
+                }
+            }
+        }
+        .ranking-card--icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 55px;
+            height: 55px;
+            background-size: 115%;
+            background-position: center 3px;
+            color: $secondary-brand-color;
+            font-family: 'CoronaHeadline-SemiBold';
+            font-size: 14px;
+            background-image: url("../assets/icons/ranking-marker.svg");
+            @include media-xs {
+                background-position: center 5px;
+                min-width: 45px;
+                min-height: 45px;
+                font-size: 12px;
+            }
+        }
+        .ranking-card--body {
+            padding: 17px 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .ranking-card--body-name,
+            .ranking-card--body-score {
+                font-family: 'CoronaHeadline-SemiBold';
+                font-size: 14px;
+                @include media-xs {
+                    font-size: 12px;
+                    width: 50% !important;
+                }
+            }
+            .ranking-card--body-name {
+                margin-left: 15px;
+                width: 146px;
+                height: 100%;
+                border-right: 2.5px solid $primary-brand-color;
+                display: flex;
+                align-items: center;
+            }
+            .ranking-card--body-score {
+                padding: 0px 20px;
+            }
+        }
+    }
+}
+
+.el-custom-ranking-page,
+.el-custom-invalid-page {
+    background-image: url("../assets/background/ranking-desktop.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: repeat-y;
+    @include media-xs {
+        background-image: url("../assets/background/ranking-mobile.png");
+    }
+}
+
+.el-custom--ranking-page__main {
+    min-height: 55vw;
+    width: 100%;
+}
+
+.el-custom--ranking-page__wrapper {
+    padding: 7vw 15px;
+    header {
+        text-align: center;
+        .el-custom--ranking-page-title {
+            font: {
+                size: 36px;
+                family: 'CoronaHeadline-SemiBold';
+            }
+            color: $primary-brand-color;
+            margin-bottom: 10px;
+        }
+        .el-custom--ranking-page-description {
+            font: {
+                size: 28px;
+                family: 'HelveticaNeueLTStd-LtCn';
+                weight: bold;
+            }
+            color: $secondary-brand-color;
+        }
+    }
+    .el-custom--ranking-page-content {
+        // border: 1px solid red;
+        max-width: 505px;
+        height: 410px;
+        margin: 0px auto;
+        margin-top: 40px;
+        background: $secondary-brand-color;
+        box-shadow: 0px 10px 21px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        @include ranking-card();
+    }
+    .el-custom--ranking-page-bottom {
+        max-width: 632px;
+        padding: 0px 10px;
+        margin: 0px auto;
+        margin-top: 60px;
+        text-align: center;
+        .el-custom--ranking-page-bottom-copy {
+            font: {
+                size: 22px;
+                family: 'HelveticaNeueLTStd-LtCn'
+            }
+            color: $secondary-brand-color;
+            span {
+                color: $primary-brand-color;
+            }
+        }
+        .el-custom--ranking-page-content-insert-code {
+            margin-top: 40px;
+            .el-custom--button {
+                width: auto;
+                padding: 10px 35px;
+                i {
+                    right: 15px;
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only-custom('.el-custom--ranking-page__wrapper') {
+    overflow: hidden;
+    padding: 50px 15px;
+    header {
+        .el-custom--ranking-page-title {
+            font-size: 22px;
+            position: relative;
+            width: fit-content;
+            margin: 0px auto;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                top: -20px;
+                right: -30px;
+                background-image: url("../assets/icons/small-crown.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+        .el-custom--ranking-page-description {
+            font-size: 18px;
+        }
+    }
+    .el-custom--ranking-page-bottom {
+        .el-custom--ranking-page-bottom-copy {
+            font: {
+                size: 18px;
+            }
+        }
+        .el-custom--ranking-page-content-insert-code {
+            .el-custom--button {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@include for-phone-small('.el-custom--ranking-page__wrapper') {
+    .el-custom--ranking-page-bottom {
+        .el-custom--ranking-page-content-insert-code {
+            .el-custom--button {
+                width: 90%;
+                font-size: 15px;
+            }
+        }
+    }
+}

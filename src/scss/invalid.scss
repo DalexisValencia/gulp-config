@@ -1,0 +1,89 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.el-custom--invalid-page__wrapper {
+    padding: 7vw 15px;
+    min-height: 55vw;
+    width: 100%;
+    @include media-xs {
+        padding: 50px 15px;
+        height: 100vh;
+    }
+    header {
+        .el-custom--invalid-page-title {
+            max-width: max-content;
+            margin: 0px auto;
+            text-align: center;
+            font: {
+                size: 36px;
+                family: 'CoronaHeadline-SemiBold';
+            }
+            color: $primary-brand-color;
+            margin-bottom: 10px;
+            span {
+                color: $secondary-brand-color;
+            }
+            @include media-xs {
+                font-size: 22px;
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+    .el-custom--invalid-page-wrapper--image {
+        margin: 0px auto;
+        width: 253px;
+        margin-top: 20px;
+        img {
+            width: 100%;
+        }
+        @include media-xs {
+            width: 193px;
+        }
+    }
+}
+
+.el-custom--invalid-page-content,
+.resend--code_wrapper {
+    .abi--form-insert-code__form {
+        .form-actions {
+            margin: 0px auto;
+            text-align: center;
+            width: 88%;
+            margin-top: 30px;
+            .el-custom--button {
+                width: 90%;
+                margin-top: 0px;
+            }
+        }
+        @include media-xs {
+            z-index: 1;
+            margin-top: -30px;
+        }
+    }
+}
+
+.el-custom--invalid-page-bottom {
+    max-width: 500px;
+    margin: 0px auto;
+    text-align: center;
+    // border: 1px solid red;
+    margin-top: 53px;
+    .el-custom--invalid-page-bottom-copy {
+        padding: 0px 20px;
+        font-family: 'CoronaHeadline-SemiBold';
+        font-size: 24px;
+        color: $secondary-brand-color;
+        a {
+            color: $primary-brand-color;
+        }
+        span {
+            margin-top: 25px;
+            display: block;
+        }
+        @include media-xs {
+            z-index: 1;
+            font-size: 15px;
+        }
+    }
+}

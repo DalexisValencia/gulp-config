@@ -28,83 +28,84 @@
         }
         margin-bottom: 60px;
     }
-    .abi--form-insert-code__form {
-        margin: 0px auto;
-        margin-top: 20px;
-        width: 265px;
-        .block-form-group {
-            .js-form-item {
-                border-color: transparent !important;
-                label:not(.error) {
-                    display: block;
-                    text-align: left;
+}
+
+.abi--form-insert-code__form {
+    margin: 0px auto;
+    margin-top: 20px;
+    width: 265px;
+    .block-form-group {
+        .js-form-item {
+            border-color: transparent !important;
+            label:not(.error) {
+                display: block;
+                text-align: left;
+                color: $secondary-brand-color;
+                font: {
+                    weight: 400;
+                    size: 18px;
+                    family: 'HelveticaNeueLTStd-LtCn';
+                }
+            }
+            label.error {
+                color: red;
+                font: {
+                    size: 11px;
+                }
+            }
+            input:not(input[type="checkbox"]) {
+                border-radius: 12px;
+                border: 0.6px solid #FFFFFF;
+                box-sizing: border-box;
+                background-color: transparent;
+                color: $primary-brand-color;
+                font: {
+                    size: 16px;
+                    weight: normal;
+                    family: 'HelveticaNeueLTStd-LtCn';
+                }
+                &::placeholder {
                     color: $secondary-brand-color;
-                    font: {
-                        weight: 400;
-                        size: 18px;
-                        family: 'HelveticaNeueLTStd-LtCn';
-                    }
-                }
-                label.error {
-                    color: red;
-                    font: {
-                        size: 11px;
-                    }
-                }
-                input:not(input[type="checkbox"]) {
-                    border-radius: 12px;
-                    border: 0.6px solid #FFFFFF;
-                    box-sizing: border-box;
-                    background-color: transparent;
-                    color: $primary-brand-color;
-                    font: {
-                        size: 16px;
-                        weight: normal;
-                        family: 'HelveticaNeueLTStd-LtCn';
-                    }
-                    &::placeholder {
-                        color: $secondary-brand-color;
-                    }
                 }
             }
         }
-        .form-actions {
-            margin: 20px 0px;
-            button.el-custom--button,
-            a.el-custom--button {
-                margin-top: 60px;
-                position: relative;
-                &::before {
-                    position: absolute;
-                    border-radius: 68px;
-                    content: "";
-                    width: 110%;
-                    height: 130%;
-                    background-color: rgba(255, 198, 39, 0.2);
-                    // background-color: rgba($color: $primary-brand-color, $alpha: 0.5);
-                    z-index: -1;
-                }
-                text-transform: capitalize;
-                z-index: 1;
-                width: 235.25px;
-                height: 63.51px;
-                // outline: 10px solid #00ff00;
-                // border: inset 100px solid rgba($color: $primary-brand-color, $alpha: 0.5);
-                padding: 10px 20px;
+    }
+    .form-actions {
+        margin: 20px 0px;
+        button.el-custom--button,
+        a.el-custom--button {
+            margin-top: 60px;
+            position: relative;
+            &::before {
+                position: absolute;
                 border-radius: 68px;
-                background-color: $primary-brand-color;
-                color: $tertiary-brand-color;
-                font: {
-                    size: 18px;
-                    weight: 600;
-                    family: 'CoronaHeadline-SemiBold';
-                }
-                i {
-                    position: absolute;
-                    right: 30px;
-                    &::before {
-                        color: $tertiary-brand-color;
-                    }
+                content: "";
+                width: 110%;
+                height: 130%;
+                background-color: rgba(255, 198, 39, 0.2);
+                // background-color: rgba($color: $primary-brand-color, $alpha: 0.5);
+                z-index: -1;
+            }
+            text-transform: capitalize;
+            z-index: 1;
+            width: 235.25px;
+            height: 63.51px;
+            // outline: 10px solid #00ff00;
+            // border: inset 100px solid rgba($color: $primary-brand-color, $alpha: 0.5);
+            padding: 10px 20px;
+            border-radius: 68px;
+            background-color: $primary-brand-color;
+            color: $tertiary-brand-color;
+            font: {
+                size: 18px;
+                weight: 600;
+                family: 'CoronaHeadline-SemiBold';
+            }
+            i {
+                position: absolute;
+                right: 30px;
+                &::before {
+                    color: $tertiary-brand-color;
                 }
             }
         }

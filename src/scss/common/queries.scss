@@ -14,6 +14,14 @@
     }
 }
 
+@mixin for-phone-only-custom ($property) {
+    @media (max-width: 730px) {
+        #{$property} {
+            @content;
+        }
+    }
+}
+
 @mixin for-tablet-portrait-up ($property) {
     @media (min-width: 600px) {
         #{$property} {
@@ -75,5 +83,50 @@
         #{$property} {
             @content;
         }
+    }
+}
+
+
+/*media normal*/
+
+@mixin media-xs-stra {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin media-xs {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin media-sm-custom {
+    @media (max-width: 730px) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media (max-width: 899px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media (min-width: 1200px) and (max-width: 1799px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media (min-width: 1800px) {
+        @content;
     }
 }

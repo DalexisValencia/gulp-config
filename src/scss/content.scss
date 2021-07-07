@@ -1,0 +1,50 @@
+@import './vars/colors.scss';
+.abi--doblemalta-wrapper-banners {
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-image: url("../assets/bhase.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .abi--doblemalta-banner__header {
+        position: absolute;
+        width: 100%;
+        top: 40px;
+        border: 1px solid red;
+        text-align: center;
+        font-size: 4.06vw;
+        line-height: 0.8;
+    }
+    .abi--doblemalta-banner {
+        height: 60vw;
+        // max-height: 902px;
+        .abi--doblemalta-banner__ingredients {
+            border: 1px solid red;
+            position: absolute;
+            bottom: 11vw;
+            .abi--doblemalta-banner__ingredients-product {
+                background-color: green;
+                position: absolute;
+                .abi--doblemalta-banner__ingredients-productname{
+                    
+                }
+            }
+        }
+        .abi--doblemalta-banner__ingredients-img {
+            width: 17.5vw;
+        }
+        &.left-side {
+            // background-color: $primary-brand-color;
+        }
+        &.right-side {}
+    }
+    .abi--doblemalta-banner {
+        width: 50%;
+    }
+    .abi--doblemalta-banner__footer {
+        position: absolute;
+        bottom: 0px;
+    }
+}

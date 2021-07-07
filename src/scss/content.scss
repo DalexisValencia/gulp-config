@@ -11,24 +11,60 @@
     .abi--doblemalta-banner__header {
         position: absolute;
         width: 100%;
-        top: 40px;
+        top: 33px;
         border: 1px solid red;
         text-align: center;
-        font-size: 4.06vw;
-        line-height: 0.8;
+        .abi--doblemalta-banner__header-title {
+            font: {
+                size: 6.1vw;
+                // size: 7.06vw;
+                family: 'Bodoni-bold';
+                style: normal;
+                weight: bold;
+            }
+            text-transform: capitalize;
+            color: blue;
+            line-height: 0.8;
+        }
     }
     .abi--doblemalta-banner {
         height: 60vw;
+        position: relative;
         // max-height: 902px;
         .abi--doblemalta-banner__ingredients {
-            border: 1px solid red;
+            border: 3px solid red;
             position: absolute;
             bottom: 11vw;
+            .abi--doblemalta-banner__ingredients-title {
+                color: magenta;
+                text-align: center;
+                font: {
+                    size: 2vw;
+                    family: 'Bodoni-regular';
+                }
+                color: $fourty-brand-color;
+                margin-bottom: 16px;
+            }
             .abi--doblemalta-banner__ingredients-product {
-                background-color: green;
+                // background-color: green;
                 position: absolute;
-                .abi--doblemalta-banner__ingredients-productname{
-                    
+                left: 1.8vw;
+                .abi--doblemalta-banner__ingredients-productname {
+                    margin-top: 1vw;
+                    color: $fourty-brand-color;
+                    font: {
+                        size: 1.62vw;
+                        family: 'Futura-bold';
+                    }
+                }
+                .abi--doblemalta-banner__ingredients-productdescription {
+                    border: 1px dashed blue;
+                    width: 125%;
+                    font: {
+                        size: 1.7vw;
+                        family: 'Futura-book';
+                    }
+                    color: $fourty-brand-color;
                 }
             }
         }
@@ -37,8 +73,32 @@
         }
         &.left-side {
             // background-color: $primary-brand-color;
+            .banner-button {
+                background-color: $secondary-brand-color;
+                right: 3.5vw;
+                color: $primary-brand-color;
+                padding: 5px 10px;
+            }
         }
-        &.right-side {}
+        &.right-side {
+            .banner-button {
+                padding: 5px 20px;
+                background-color: $primary-brand-color;
+                left: 3.5vw;
+                color: $fourty-brand-color;
+            }
+        }
+        .banner-button {
+            position: absolute;
+            bottom: 1.6vw;
+            border: 1px dashed black;
+            border-radius: 50px;
+            text-transform: capitalize;
+            font: {
+                family: 'Futura-book';
+                size: 1vw;
+            }
+        }
     }
     .abi--doblemalta-banner {
         width: 50%;

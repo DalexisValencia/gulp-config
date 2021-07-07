@@ -22,15 +22,21 @@ button.el-custom--button {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    vertical-align: middle;
     white-space: nowrap;
     border: 0px solid transparent;
+    text-decoration: none !important;
+    vertical-align: middle;
     &:hover,
     &:focus,
     &:active {
         outline: 0;
         outline-color: transparent !important;
     }
+}
+
+a[class*="el-custom"],
+a.el-custom--button {
+    display: block;
 }
 
 // input[class*="el-custom"],

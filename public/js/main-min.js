@@ -1,1 +1,1 @@
-var a="example",r="robot";
+$(document).ready(function(){console.info("h1111");var a=$(".abi--doblemalta-wrapper-generation__wrapper-video button.video-play");console.info("hey"),a.length&&a.on("click",function(){var a=$(this).siblings("iframe");if($(this).siblings(".abi--doblemalta-wrapper-generation__video-thumbnail").addClass("active"),a.length>=1){var i=a.attr("src")+"?autoplay=1";a.attr("src",i)}})});

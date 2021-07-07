@@ -36,14 +36,13 @@
             position: absolute;
             bottom: 11vw;
             .abi--doblemalta-banner__ingredients-title {
-                color: magenta;
                 text-align: center;
                 font: {
                     size: 2vw;
                     family: 'Bodoni-regular';
                 }
                 color: $fourty-brand-color;
-                margin-bottom: 16px;
+                margin-bottom: 1vw;
             }
             .abi--doblemalta-banner__ingredients-product {
                 // background-color: green;
@@ -81,6 +80,25 @@
             }
         }
         &.right-side {
+            .abi--doblemalta-banner__ingredients {
+                right: 0px;
+                .abi--doblemalta-banner__ingredients-title {
+                    color: $fifth-brand-color;
+                }
+                .abi--doblemalta-banner__ingredients-product {
+                    border: 2px solid red;
+                    text-align: right;
+                    right: 1.8vw;
+                    .abi--doblemalta-banner__ingredients-productname,
+                    .abi--doblemalta-banner__ingredients-productdescription {
+                        color: $sixth-brand-color;
+                    }
+                    .abi--doblemalta-banner__ingredients-productdescription {
+                        margin-left: -3vw;
+                        line-height: 1;
+                    }
+                }
+            }
             .banner-button {
                 padding: 5px 20px;
                 background-color: $primary-brand-color;

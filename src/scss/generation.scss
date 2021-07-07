@@ -47,9 +47,8 @@
     .abi--doblemalta-wrapper-generation__wrapper-video {
         top: 3.5vw;
         width: 74vw;
-        height: 34vw;
+        height: 33vw;
         margin: 0 auto;
-        border: 1px solid #ff00ff;
         position: relative;
         display: flex;
         justify-content: center;
@@ -109,8 +108,7 @@
         .abi--doblemalta-wrapper-generation__social-links--title {
             text-align: center;
             color: $fifth-brand-color;
-            margin-top: 2vw;
-            margin-top: 16vw;
+            margin-top: 17vw;
             font-size: 4vw;
             font: {
                 family: 'HelveticaNeue-Condensed';
@@ -119,6 +117,39 @@
         }
         ul {
             list-style: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0px auto;
+            width: 38vw;
+            padding: 0px;
+            margin-top: 3vw;
+            li {
+                &,
+                *,
+                .social-icon {
+                    text-decoration: none !important;
+                }
+                .social-icon {
+                    display: block;
+                    width: 5vw;
+                    height: 5vw;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    &.download {
+                        background-image: url("../assets/icons/social/download.svg");
+                    }
+                    &.facebook {
+                        background-image: url("../assets/icons/social/facebook.svg");
+                    }
+                    &.instagram {
+                        background-image: url("../assets/icons/social/instagram.svg");
+                    }
+                    &.twitter {
+                        background-image: url("../assets/icons/social/twitter.svg");
+                    }
+                }
+            }
         }
         @include media-xs-range-1 {
             display: block;

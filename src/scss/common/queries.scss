@@ -105,6 +105,12 @@
     }
 }
 
+@mixin media-md-custom {
+    @media (min-width: 691px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
 @mixin media-lg {
     @media (min-width: 1200px) and (max-width: 1799px) {
         @content;

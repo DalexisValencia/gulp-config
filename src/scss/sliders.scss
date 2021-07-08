@@ -40,6 +40,9 @@
                     @include media-xs-range-1 {
                         transform: unset;
                     }
+                    @include media-md-custom {
+                        transform: translateY(-20vw);
+                    }
                 }
             }
             .generationThatBroke--case-description {
@@ -51,10 +54,14 @@
                 z-index: 2;
                 padding: 0px 30px;
                 padding-bottom: 40px;
+                width: 100%;
                 @include media-xs-range-1 {
                     transform: unset;
                     bottom: 0px;
                     opacity: 1;
+                }
+                @include media-md-custom {
+                    padding: 0px 5px;
                 }
                 .generationThatBroke--case-description__title {
                     font: {
@@ -62,6 +69,9 @@
                         family: 'Bodoni-regular';
                     }
                     line-height: 0.9;
+                    @include media-md-custom {
+                        font-size: 3.4vw;
+                    }
                 }
                 .generationThatBroke--case-description__ocupation {
                     margin-top: 10px;
@@ -76,6 +86,9 @@
                         size: 14px;
                         family: 'Futura-book';
                     }
+                    @include media-md-custom {
+                        font-size: 1.5vw;
+                    }
                 }
                 * {
                     text-align: center;
@@ -87,6 +100,9 @@
                 .generationThatBroke--case-description {
                     .generationThatBroke--case-description__title {
                         font-size: 34px;
+                        @include media-md-custom {
+                            font-size: 2.5vw;
+                        }
                         @include media-xs-range-1 {
                             font-size: 33px;
                         }

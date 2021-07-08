@@ -1,0 +1,152 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--doblemalta-wrapper-newproduct {
+    overflow: hidden;
+    background-color: $fifth-brand-color;
+    // background-image: url("../assets/bases/newproduct.png");
+    @include media-xs-range-1 {
+        // background-image: url("../assets/bases/newproduct-mobile.png");
+        height: 154.7vw;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 62vw;
+    // display: flex;
+    position: relative;
+    .abi--doblemalta-wrapper-newproduct__gallery {
+        // position: relative;
+        width: 50.9vw;
+        // width: 57.9vw;
+        height: 38vw;
+        margin-left: 11.3vw;
+        margin-top: 12.2vw;
+        overflow: hidden;
+        picture {
+            // display: none;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        float: left;
+        @include media-xs-range-1 {
+            float: unset;
+            width: 100%;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-bottom: 17vw;
+            height: 66vw;
+        }
+    }
+    .abi--doblemalta-wrapper-newproduct__lateral-description {
+        position: absolute;
+        margin-top: 12.1vw;
+        right: 0;
+        width: 37.5vw;
+        .abi--doblemalta-wrapper-newproduct__lateral-menu,
+        .abi--doblemalta-wrapper-newproduct__lateral-description-copybest,
+        .abi--doblemalta-wrapper-newproduct__lateral-description-title,
+        .abi--doblemalta-wrapper-newproduct__lateral-description-paragraph {
+            padding-left: 6.6vw;
+            @include media-xs-range-1 {
+                padding-left: 0px;
+            }
+        }
+        .abi--doblemalta-wrapper-newproduct__lateral-description-title {
+            color: white;
+            font: {
+                size: 1.5vw;
+                family: 'Bodoni-regular';
+            }
+            color: $primary-brand-color;
+            @include media-xs-range-1 {
+                text-align: center;
+                font-size: 6.3vw;
+                line-height: 0.95;
+            }
+        }
+        .abi--doblemalta-wrapper-newproduct__lateral-description-copybest {
+            color: $secondary-brand-color;
+            margin-top: 0.6vw;
+            font: {
+                size: 2.9vw;
+                family: 'Bodoni-regular';
+            }
+            span {
+                display: block;
+            }
+            @include media-xs-range-1 {
+                text-align: center;
+                margin-top: 6.8vw;
+                font-size: 4.1vw;
+                span {
+                    display: inline-block;
+                }
+            }
+        }
+        .abi--doblemalta-wrapper-newproduct__lateral-description-paragraph {
+            margin-top: 1.15vw;
+            width: 25vw;
+            font: {
+                size: 1.3vw;
+                family: 'Futura-book';
+            }
+            color: $nineth-brand-color;
+            @include media-xs-range-1 {
+                width: 100%;
+                text-align: center;
+                font-size: 3.4vw;
+                margin-top: 9.2vw;
+                padding: 0px 16vw;
+            }
+        }
+        .abi--doblemalta-wrapper-newproduct__lateral-menu {
+            list-style: none;
+            margin-top: 8.5vw;
+            li {
+                cursor: pointer;
+                max-width: max-content;
+                position: relative;
+                height: 5vw;
+                // border: 1px solid red;
+                font: {
+                    size: 2vw;
+                    family: 'Bodoni-regular';
+                }
+                color: white;
+                &.active {
+                    color: $primary-brand-color;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        bottom: 2.2vw;
+                        left: 0px;
+                        width: 100%;
+                        border-bottom: 1.5px solid $primary-brand-color;
+                        @include media-xs-range-1 {
+                            bottom: 0px;
+                        }
+                    }
+                }
+                @include media-xs-range-1 {
+                    font-size: 3.5vw;
+                }
+            }
+            @include media-xs-range-1 {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 3vw;
+            }
+        }
+        @include media-xs-range-1 {
+            // position: relative;
+            top: 6.5vw;
+            width: 100%;
+            margin-top: 0px;
+        }
+    }
+}

@@ -8,6 +8,7 @@
     <title>::Testing Gulp::</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="assets/vendor/owlcarousel/owl.carousel.min.css">
 </head>
 
 <body>
@@ -143,34 +144,101 @@
             </aside>
         </section>
 
-        <!--<section class="abi--doblemalta-wrapper-generationThatBroke">
-            <div class="abi--doblemalta-wrapper-generationThatBroke--full-modal">
+
+        <section class="abi--doblemalta-wrapper-generationThatBroke--full-container">
+            <div class="abi--doblemalta-wrapper-generationThatBroke--full-container--title">
                 Una generación que rompió sus propios límites.
             </div>
-            <div class="abi--doblemalta-wrapper-generationThatBroke--wrapper-cases">
-                <div class="generationThatBroke--case">
-                    <picture class="generationThatBroke--case-image">
-                        <source media="(min-width:690px)" srcset="assets/banners/bottle.png">
-                        <img src="assets/banners/bottle.png" alt="">
-                    </picture>
+            <section class="abi--doblemalta-wrapper-generationThatBroke">
+                <div class="abi--doblemalta-wrapper-generationThatBroke--wrapper-cases owl-carousel" id="generationThatBrokeSliders">
+                    <div class="generationThatBroke--case">
+                        <button class="el-custom--button play-gallery-video" attr-video="https://www.youtube.com/embed/NrVXIeIw0dQ?autoplay=true"></button>
+                        <picture class="generationThatBroke--case-image">
+                            <source media="(min-width:690px)" srcset="assets/sliders/slider-1.png">
+                            <img src="assets/sliders/slider-1.png" alt="">
+                        </picture>
 
-                    <div class="generationThatBroke--case-description">
-                        <h2 class="generationThatBroke--case-description__title">
-                            Óscar González
-                        </h2>
-                        <h3 class="generationThatBroke--case-description__ocupation">
-                            Chef restaurante Innato.
-                        </h3>
-                        <p class="generationThatBroke--case-description__shortdescription">
-                            Para evolucionar primero hay que mirar la tradición.
-                        </p>
+                        <div class="generationThatBroke--case-description">
+                            <h2 class="generationThatBroke--case-description__title">
+                                Paula Mendoza
+                            </h2>
+                            <h3 class="generationThatBroke--case-description__ocupation">
+                                Joyería.
+                            </h3>
+                            <p class="generationThatBroke--case-description__shortdescription">
+                                Cuando las culturas se mezclan, se engrandecen.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="generationThatBroke--case">
+                        <button class="el-custom--button play-gallery-video" attr-video="https://www.youtube.com/embed/NrVXIeIw0dQ?autoplay=true"></button>
+                        <picture class="generationThatBroke--case-image">
+                            <source media="(min-width:690px)" srcset="assets/sliders/slider-2.png">
+                            <img src="assets/sliders/slider-2.png" alt="">
+                        </picture>
+
+                        <div class="generationThatBroke--case-description">
+                            <h2 class="generationThatBroke--case-description__title">
+                                Óscar González
+                            </h2>
+                            <h3 class="generationThatBroke--case-description__ocupation">
+                                Chef restaurante Innato.
+                            </h3>
+                            <p class="generationThatBroke--case-description__shortdescription">
+                                Para evolucionar primero hay que mirar la tradición.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="generationThatBroke--case small-letter">
+                        <button class="el-custom--button play-gallery-video" attr-video="https://www.youtube.com/embed/NrVXIeIw0dQ?autoplay=true"></button>
+                        <picture class="generationThatBroke--case-image">
+                            <source media="(min-width:690px)" srcset="assets/sliders/slider-3.png">
+                            <img src="assets/sliders/slider-3.png" alt="">
+                        </picture>
+
+                        <div class="generationThatBroke--case-description">
+                            <h2 class="generationThatBroke--case-description__title">
+                                Maria José Fernandez y Elisa Ortega
+                            </h2>
+                            <h3 class="generationThatBroke--case-description__ocupation">
+                                Cinco sólidos.
+                            </h3>
+                            <p class="generationThatBroke--case-description__shortdescription">
+                                Cuando uno le aporta ese toque personal haciendo una mezcla, es lo que vuelve las cosas únicas y especiales.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="generationThatBroke--case">
+                        <button class="el-custom--button play-gallery-video" attr-video="https://www.youtube.com/embed/NrVXIeIw0dQ?autoplay=true"></button>
+                        <picture class="generationThatBroke--case-image">
+                            <source media="(min-width:690px)" srcset="assets/sliders/slider-4.png">
+                            <img src="assets/sliders/slider-4.png" alt="">
+                        </picture>
+
+                        <div class="generationThatBroke--case-description">
+                            <h2 class="generationThatBroke--case-description__title">
+                                Andrés Layos
+                            </h2>
+                            <h3 class="generationThatBroke--case-description__ocupation">
+                                Artista
+                            </h3>
+                            <p class="generationThatBroke--case-description__shortdescription">
+                                Mezclarse abre la puerta del progreso, porque es importante entender que el mundo ha cambiado.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section> -->
+                <section class="abi--doblemalta-wrapper-generationThatBroke--video">
+                    <!-- <iframe src="https://www.youtube.com/embed/NrVXIeIw0dQ"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                </section>
+
+            </section>
+        </section>
+
     </main>
 </body>
 <script src="assets/vendor/jquery.min.js"></script>
+<script src="assets/vendor/owlcarousel/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
 
 </html>

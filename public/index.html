@@ -86,7 +86,7 @@
                     <img src="assets/thumbnail/video-mobile.png" alt="">
                 </picture>
                 <button class="el-custom--button video-play"></button>
-                <iframe src="https://www.youtube.com/embed/dW2MmuA1nI4" title="" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/dW2MmuA1nI4" allow="autoplay" frameborder="0" allowfullscreen></iframe>
             </div>
 
             <footer class="abi--doblemalta-wrapper-generation__social-links">
@@ -110,7 +110,15 @@
         </section>
 
         <section class="abi--doblemalta-wrapper-newproduct">
-            <section class="abi--doblemalta-wrapper-newproduct__gallery">
+            <section class="abi--doblemalta-wrapper-newproduct__gallery owl-carousel">
+                <picture class="abi--doblemalta-wrapper-newproduct__gallery-image">
+                    <source media="(min-width:690px)" srcset="assets/product/banner-1.png">
+                    <img src="assets/product/banner-1.png" alt="">
+                </picture>
+                <picture class="abi--doblemalta-wrapper-newproduct__gallery-image">
+                    <source media="(min-width:690px)" srcset="assets/product/banner-1.png">
+                    <img src="assets/product/banner-1.png" alt="">
+                </picture>
                 <picture class="abi--doblemalta-wrapper-newproduct__gallery-image">
                     <source media="(min-width:690px)" srcset="assets/product/banner-1.png">
                     <img src="assets/product/banner-1.png" alt="">
@@ -148,6 +156,9 @@
         <section class="abi--doblemalta-wrapper-generationThatBroke--full-container">
             <div class="abi--doblemalta-wrapper-generationThatBroke--full-container--title">
                 Una generación que rompió sus propios límites.
+                <button class="el-custom--button close-video">
+                    cerrar
+                </button>
             </div>
             <section class="abi--doblemalta-wrapper-generationThatBroke">
                 <div class="abi--doblemalta-wrapper-generationThatBroke--wrapper-cases owl-carousel" id="generationThatBrokeSliders">

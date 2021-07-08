@@ -25,6 +25,22 @@ $(document).ready(function() {
             }
         })
     }
+    var sliderProduct = $(".abi--doblemalta-wrapper-newproduct__gallery.owl-carousel");
+
+    if (sliderProduct.length >= 1) {
+        sliderProduct.owlCarousel({
+            items: 1,
+            loop: true,
+        });
+
+        $('.abi--doblemalta-wrapper-newproduct__lateral-menu li').on("click", function() {
+            const index = $(this).index();
+            sliderProduct.trigger('to.owl.carousel', index);
+            $('.abi--doblemalta-wrapper-newproduct__lateral-menu li').removeClass('active');
+            $(this).addClass('active');
+        })
+    }
+
     var slidersGenreation = $("#generationThatBrokeSliders.owl-carousel");
     if (slidersGenreation.length >= 1) {
         // createSlider(4)
@@ -53,20 +69,28 @@ $(document).ready(function() {
             const posX = event.pageX;
             const videoWrapper = $(".abi--doblemalta-wrapper-generationThatBroke--video");
             const url = $(this).attr("attr-video");
-            console.error(url)
             if (url) {
                 videoWrapper.css({ "left": posX + "px", "opacity": "1" });
                 videoWrapper.addClass("start-animation");
                 setTimeout(() => {
-                    videoWrapper.addClass("show-video-animation").css({ "left": "0px" }).removeClass("start-animation");
+                    videoWrapper.removeClass("start-animation").addClass("show-video-animation");
                     setTimeout(() => {
                         $('<iframe>') // Creates the element
                             .attr('src', url) // Sets the attribute spry:region="myDs"
                             .attr('allow', 'autoplay')
+                            .attr('class', 'generated-iframe')
                             .appendTo('.abi--doblemalta-wrapper-generationThatBroke--video');
                     }, 150);
                 }, 400);
             }
         })
+
+        $(".close-video").on("click", function() {
+            const videoWrapper = $(".abi--doblemalta-wrapper-generationThatBroke--video");
+            $('.generated-iframe').remove();
+            videoWrapper.css('opacity', '0');
+            videoWrapper.attr('style', '');
+            videoWrapper.removeClass('start-animation').removeClass('show-video-animation');
+        });
     }
 })

@@ -44,7 +44,6 @@ $(document).ready(function() {
     var slidersGenreation = $("#generationThatBrokeSliders.owl-carousel");
     if (slidersGenreation.length >= 1) {
         var isiPad = navigator.userAgent.toLowerCase().indexOf("ipad");
-        console.warn(isiPad, 'isiPad')
 
         if (isiPad > -1) {
             slidersGenreation.owlCarousel({
@@ -58,9 +57,11 @@ $(document).ready(function() {
                 responsive: {
                     0: {
                         items: 1,
+                        navContainer: $(".generationThatBrokeSliders-navigation")
                     },
                     691: {
-                        items: 4,
+                        items: 4
+
                     }
                 }
             });

@@ -142,7 +142,11 @@
                         background-repeat: no-repeat;
                         background-size: contain;
                         // background-color: red;
-                        left: -6.8vw;
+                        left: -7.5vw;
+                        @include media-xs-range-1 {
+                            bottom: 0px;
+                            background-image: unset;
+                        }
                     }
                 }
                 @include media-xs-range-1 {

@@ -40,6 +40,9 @@
                     @include media-xs-range-1 {
                         transform: unset;
                     }
+                    @include media-for-ipadpro {
+                        transform: unset;
+                    }
                     @include media-md-custom {
                         transform: translateY(-20vw);
                     }
@@ -60,8 +63,16 @@
                     bottom: 0px;
                     opacity: 1;
                 }
+                @include media-for-ipadpro {
+                    transform: unset;
+                    bottom: 45px;
+                    opacity: 1;
+                }
                 @include media-md-custom {
                     padding: 0px 5px;
+                }
+                @include media-for-ipadpro {
+                    padding: 0px 30px;
                 }
                 .generationThatBroke--case-description__title {
                     font: {
@@ -72,12 +83,18 @@
                     @include media-md-custom {
                         font-size: 3.4vw;
                     }
+                    @include media-for-ipadpro {
+                        font-size: 45px;
+                    }
                 }
                 .generationThatBroke--case-description__ocupation {
                     margin-top: 10px;
                     font: {
                         size: 14px;
                         family: 'Futura-book';
+                    }
+                    @include media-for-ipadpro {
+                        font-size: 14px;
                     }
                 }
                 .generationThatBroke--case-description__shortdescription {
@@ -88,6 +105,9 @@
                     }
                     @include media-md-custom {
                         font-size: 1.5vw;
+                    }
+                    @include media-for-ipadpro {
+                        font-size: 14px;
                     }
                 }
                 * {
@@ -104,6 +124,9 @@
                             font-size: 2.5vw;
                         }
                         @include media-xs-range-1 {
+                            font-size: 33px;
+                        }
+                        @include media-for-ipadpro {
                             font-size: 33px;
                         }
                     }

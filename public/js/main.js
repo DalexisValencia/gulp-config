@@ -43,27 +43,28 @@ $(document).ready(function() {
 
     var slidersGenreation = $("#generationThatBrokeSliders.owl-carousel");
     if (slidersGenreation.length >= 1) {
-        // createSlider(4)
+        var isiPad = navigator.userAgent.toLowerCase().indexOf("ipad");
+        console.warn(isiPad, 'isiPad')
 
-        // function createSlider(sliders) {
-        slidersGenreation.owlCarousel({
-            items: 4,
-            loop: true,
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                691: {
-                    items: 4,
+        if (isiPad > -1) {
+            slidersGenreation.owlCarousel({
+                items: 2,
+                loop: true,
+            });
+        } else {
+            slidersGenreation.owlCarousel({
+                items: 4,
+                loop: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    691: {
+                        items: 4,
+                    }
                 }
-            }
-            // dotsContainer: '.questionnaire--navigation',
-            // nav: false,
-            // mouseDrag: false,
-            // touchDrag: false,
-            // autoheight: true,
-        });
-        //}
+            });
+        }
 
         $(".play-gallery-video").on("click", function(event) {
             const posX = event.pageX;

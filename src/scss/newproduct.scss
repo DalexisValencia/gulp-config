@@ -115,14 +115,12 @@
                 max-width: max-content;
                 position: relative;
                 height: 5vw;
-                // border: 1px solid red;
                 font: {
                     size: 2vw;
                     family: 'Bodoni-regular';
                 }
                 color: white;
                 &.active {
-                    // border: 1px solid red;
                     color: $primary-brand-color;
                     &:before {
                         content: "";

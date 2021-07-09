@@ -87,6 +87,12 @@
     }
 }
 
+@mixin media-for-ipadpro {
+    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+        @content;
+    }
+}
+
 @mixin media-xs-range-1 {
     @media (max-width: 690px) {
         @content;

@@ -27,6 +27,7 @@
         display: none;
         padding: 0px 20px;
         @include media-xs-range-1 {
+            margin-top: -35vw;
             display: flex;
             justify-content: space-between;
         }

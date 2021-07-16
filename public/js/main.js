@@ -10,62 +10,33 @@
 // })(jQuery);
 
 $(document).ready(function() {
-    var playVideo = $(".abi--doblemalta-wrapper-generation__wrapper-video button.video-play");
-    if (playVideo.length) {
-        playVideo.on("click", function() {
-            var iframe = $(this).siblings('iframe');
-            var thumbnail = $(this).siblings('.abi--doblemalta-wrapper-generation__video-thumbnail');
-
-            // $("#video")[0].src += "&autoplay=1";
-            thumbnail.addClass('active');
-            if (iframe.length >= 1) {
-                var url = iframe.attr("src") + "?autoplay=1";
-                iframe.attr("src", url);
-                // iframe.attr('data-play', 0);
-            }
-        })
-    }
-    var sliderProduct = $(".abi--doblemalta-wrapper-newproduct__gallery.owl-carousel");
-
-    if (sliderProduct.length >= 1) {
-        sliderProduct.owlCarousel({
-            items: 1,
-            loop: true,
-        });
-
-        $('.abi--doblemalta-wrapper-newproduct__lateral-menu li').on("click", function() {
-            const index = $(this).index();
-            sliderProduct.trigger('to.owl.carousel', index);
-            $('.abi--doblemalta-wrapper-newproduct__lateral-menu li').removeClass('active');
-            $(this).addClass('active');
-        })
-    }
-
-    var slidersGenreation = $("#generationThatBrokeSliders.owl-carousel");
+    var slidersGenreation = $(".abi--clubcolombia-flavor-travel__products.owl-carousel");
     if (slidersGenreation.length >= 1) {
         var isiPad = navigator.userAgent.toLowerCase().indexOf("ipad");
 
-        if (isiPad > -1) {
-            slidersGenreation.owlCarousel({
-                items: 2,
-                loop: true,
-            });
-        } else {
-            slidersGenreation.owlCarousel({
-                items: 4,
-                loop: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        navContainer: $(".generationThatBrokeSliders-navigation")
-                    },
-                    691: {
-                        items: 4
-
-                    }
+        slidersGenreation.owlCarousel({
+            items: 4,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    marging: 10,
+                    center: true,
+                    navContainer: $(".abi--clubcolombia-flavor-travel__carousel-nav")
+                },
+                590: {
+                    items: 2,
+                    navContainer: $(".abi--clubcolombia-flavor-travel__carousel-nav")
+                },
+                760: {
+                    items: 3,
+                    navContainer: $(".abi--clubcolombia-flavor-travel__carousel-nav")
+                },
+                960: {
+                    items: 4
                 }
-            });
-        }
+            }
+        });
 
         $(".play-gallery-video").on("click", function(event) {
             const posX = event.pageX;
@@ -93,6 +64,21 @@ $(document).ready(function() {
             videoWrapper.css('opacity', '0');
             videoWrapper.attr('style', '');
             videoWrapper.removeClass('start-animation').removeClass('show-video-animation');
+        });
+    }
+
+    var mainBanners = $(".abi--doblemalta__container-slide.owl-carousel");
+
+    if (mainBanners.length == 1) {
+        mainBanners.owlCarousel({
+            loop: true,
+            autoplay: true,
+            items: 1,
+            nav: false,
+            autoplayHoverPause: true,
+            animateOut: 'slideOutUp',
+            animateIn: 'slideInUp',
+            dotsContainer: $('.abi--doblemalta__container-slide-dots')
         });
     }
 })

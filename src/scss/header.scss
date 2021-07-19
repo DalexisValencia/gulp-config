@@ -1,0 +1,106 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--main-main-header {
+    z-index: 2;
+    padding: 0px 40px;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: $primary-brand-color;
+    overflow: visible;
+    display: flex;
+}
+
+.abi--main-main-header-logo {
+    position: relative;
+    top: 18px;
+    z-index: 1;
+    width: 137px;
+    height: 84px;
+    // left: 38px;
+}
+
+.abi-ul {
+    margin: 0px;
+    padding: 0px;
+    li {
+        list-style: none;
+    }
+}
+
+.abi--main-navigation,
+.abi--social {
+    display: flex;
+    align-items: center;
+    ul.abi--social-menu,
+    ul.abi--main-menu {
+        display: flex;
+        li {
+            a {
+                color: $secondary-brand-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.abi--main-navigation {
+    margin-left: 5vw !important;
+    width: 385px;
+    ul.abi--main-menu {
+        width: 100%;
+        // border: 1px solid red;
+        justify-content: space-between;
+        li.abi--main-menu-item {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            a {
+                font: {
+                    size: 16px;
+                    weight: bold;
+                }
+            }
+            &.active {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 120%;
+                    height: 2px;
+                    background-color: $tertiary-brand-color;
+                    bottom: -5px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+.abi--social {
+    position: absolute;
+    right: 40px;
+    height: 100%;
+    .abi--social-menu {
+        justify-content: space-between;
+        width: 140px;
+        li {
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+    .el-custom--button.register {
+        margin-left: 3vw;
+        border: 1px solid $secondary-brand-color;
+        width: 138px;
+        height: 28px;
+        line-height: 28px;
+        text-decoration: transparent;
+        font: {
+            size: 16px;
+            weight: bold;
+        }
+        color: $secondary-brand-color;
+    }
+}

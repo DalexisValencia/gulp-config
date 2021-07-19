@@ -1,0 +1,105 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--main-wrapper--sliders {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .abi--main-sliders {
+        width: 100%;
+        border: 1px solid red;
+        position: relative;
+    }
+}
+
+.abi--main-slide {
+    position: relative;
+    picture.abi--main-slide--background {
+        img {
+            width: 100%;
+        }
+    }
+    .abi--main-slide--body {
+        border: 1px solid red;
+        position: absolute;
+        z-index: 1;
+        left: 10vw;
+        top: 8vw;
+        height: 22vw;
+        .el-custom--button.slider-btn {
+            border: 1px solid red;
+            width: 17.1vw;
+            height: 4.2vw;
+            color: red;
+            font-size: 1.4vw;
+            background-color: $primary-brand-color;
+        }
+    }
+}
+
+.abi--main-sliders-navigation {
+    position: absolute;
+    width: 100%;
+    padding: 0px 4vw;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    pointer-events: none;
+    // background-color: red;
+    button {
+        font-size: 0px;
+        pointer-events: auto;
+        border: 1px solid transparent;
+        width: 3.7vw;
+        height: 3.6vw;
+        border-radius: 10px;
+        background-color: $primary-brand-color;
+        // opacity: 0.5;
+        color: transparent;
+        &:hover,
+        &:focus,
+        &:active {
+            outline: 0;
+            outline-color: transparent !important;
+        }
+        &.owl-prev {
+            background-image: url("../assets/icons/slider-prev.svg");
+        }
+        &.owl-next {
+            background-image: url("../assets/icons/slider-next.svg");
+        }
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30%;
+    }
+}
+
+.abi--main-sliders-dots {
+    position: absolute;
+    padding: 0px 3vw;
+    border: 1px solid red;
+    width: 100%;
+    z-index: 2;
+    right: 0px;
+    bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    button {
+        margin: 0px 10px;
+        &:hover,
+        &:focus,
+        &:active {
+            outline: 0;
+            outline-color: transparent !important;
+        }
+        width: 90px;
+        height: 5px;
+        border: 1px solid transparent;
+        &.active {
+            background-color: $primary-brand-color;
+        }
+        &:not(.active) {
+            background-color: rgba($seventh-brand-color, 0.5);
+        }
+    }
+}

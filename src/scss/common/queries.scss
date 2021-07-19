@@ -81,6 +81,12 @@
 
 /*media normal*/
 
+@mixin media-xs-small {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
 @mixin media-xs {
     @media (max-width: 599px) {
         @content;

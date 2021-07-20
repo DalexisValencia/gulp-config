@@ -375,6 +375,7 @@
                 }
             }
             .add-to-car {
+                display: flex;
                 width: 100%;
                 height: 43.15px;
                 background-color: $eight-brand-color;
@@ -393,7 +394,7 @@
 .el-custom-button.show-more {
     margin-top: 70px;
     margin: 0px auto;
-    display: block;
+    display: flex;
     background-color: $eight-brand-color;
     border-radius: 4px;
     width: 156.34px;

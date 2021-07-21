@@ -1,0 +1,52 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--banner-pilsen-extra__wrapper {
+    background-color: $fifth-brand-color;
+}
+
+.abi--banner-pilsen-extra {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 454px;
+    max-width: 1149px;
+    margin: 0px auto;
+    padding: 0px 70px;
+}
+
+.abi--banner-pilsen-extra__description {
+    width: 531px;
+    position: relative;
+    .abi--banner-pilsen-extra__description-title {
+        margin-top: 80px;
+        line-height: 1;
+        font: {
+            size: 59px;
+            weight: 400;
+        }
+    }
+    .abi--banner-pilsen-extra__description-detail {
+        width: 195px;
+        margin-top: 10px;
+        font: {
+            size: 16px;
+            weight: 400;
+        }
+    }
+    .abi--banner-pilsen-extra__description-image {
+        position: absolute;
+        width: 333px;
+        height: 289px;
+        right: 0px;
+        bottom: 20px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.abi--banner-pilsen-extra__form {
+    width: 390px;
+    height: 100%;
+    background-color: $eight-brand-color;
+}

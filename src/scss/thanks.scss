@@ -1,0 +1,57 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--internal-section {
+    background-color: $secondary-brand-color;
+    width: 100%;
+    min-height: 700px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-xs-range-1 {
+        height: 150vw;
+        min-height: unset;
+        // background-color: red;
+        padding: 10px;
+    }
+}
+
+.abi--thanks-section__box {
+    max-width: 369px;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    .abi--thanks-section__box-header {
+        position: relative;
+        background-color: $eleventh-brand-color;
+        height: 108px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            color: $fourty-brand-color;
+        }
+        .abi--thanks-section__box-header--title {
+            color: red;
+            font: {
+                size: 42px;
+                // size: 20px;
+                weight: 400;
+            }
+            line-height: 1;
+        }
+    }
+    .abi--thanks-section__box-content {
+        padding: 30px 20px;
+        background-color: $eight-brand-color;
+        color: $secondary-brand-color;
+        font: {
+            size: 16px;
+            weight: 400;
+        }
+    }
+}

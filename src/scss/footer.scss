@@ -1,0 +1,142 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--main-main-footer {
+    position: relative;
+    width: 100%;
+    background-color: $primary-brand-color;
+    padding-top: 40px;
+    @include media-xs-range-1 {
+        padding-top: 20px;
+        border-top: 10px solid $tenth-brand-color;
+    }
+}
+
+.abi--main-main-footer-navigation {
+    ul {
+        margin: 0px auto;
+        width: 70vw;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1.5px solid $seventh-brand-color;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        li {
+            a {
+                color: $seventh-brand-color;
+                text-decoration: none;
+                font: {
+                    size: 12px;
+                    weight: 400;
+                }
+            }
+            @include media-xs-range-1 {
+                width: 100%;
+                text-align: center;
+                border: 1px solid red;
+                margin-bottom: 5px;
+                &:first-child {
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                    a {
+                        font-size: 14px;
+                    }
+                }
+                a {
+                    font-size: 15px;
+                }
+            }
+        }
+        @include media-xs-range-1 {
+            width: 100%;
+            flex-wrap: wrap;
+            border-top-color: transparent;
+        }
+    }
+}
+
+.abi--main-main-footer-copy {
+    background-color: $seventh-brand-color;
+    display: flex;
+    justify-content: center;
+    padding: 8px 0px;
+    div {
+        padding: 0px 10px;
+        color: $secondary-brand-color;
+        font: {
+            size: 10px;
+            weight: 700;
+        }
+        &:first-child {
+            border-right: 2px solid $secondary-brand-color;
+        }
+        &:first-letter {
+            text-transform: uppercase;
+        }
+        @include media-xs-range-1 {
+            width: 100%;
+            text-align: center;
+            padding: 6px;
+            &:first-child {
+                border-right: 2px solid transparent;
+            }
+            text-transform: lowercase;
+            font-size: 14px;
+        }
+    }
+    @include media-xs-range-1 {
+        padding: 0px 20px;
+        flex-direction: column-reverse;
+        background-color: transparent;
+        flex-wrap: wrap;
+        max-width: 312px;
+        margin: 0px auto;
+    }
+}
+
+.abi--main-main-footer-social {
+    position: absolute;
+    top: 31px;
+    left: 5vw;
+    max-width: max-content;
+    ul {
+        display: flex;
+        // border: 1px dashed white;
+        li {
+            margin-right: 7px;
+            // &:not(:first-child) {}
+            a {
+                text-decoration: none;
+                i {
+                    color: $secondary-brand-color;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .abi--main-main-footer-social--follow-us {
+        text-align: center;
+        color: $secondary-brand-color;
+        margin-bottom: 35px;
+        font: {
+            size: 14px;
+            weight: 800;
+        }
+        display: none;
+        @include media-xs-range-1 {
+            display: block;
+        }
+    }
+    @include media-xs-range-1 {
+        max-width: unset;
+        position: unset;
+        padding: 20px 0px;
+        ul {
+            justify-content: center;
+            li {
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,376 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+$height_input: 39px; // using in selects as well
+$error_family: '';
+//Ajuste a todos los inputs
+.apply-to-form-inputs {
+    font-size: 15px;
+    font-family: Roboto, sans-serif;
+    color: $fifth-brand-color;
+}
+
+.simple-questionary {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+    .field-label {
+        width: 100%;
+        font: {
+            size: 11px;
+            weight: 400;
+        }
+        color: $secondary-brand-color;
+        margin-bottom: 3px;
+    }
+    div.answer {
+        width: 60px;
+        display: flex;
+        align-items: center;
+        input[type="radio"] {
+            border: 1px solid $secondary-brand-color !important;
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            min-height: 20px;
+            min-width: 20px;
+            -webkit-appearance: none;
+            border-radius: 0px;
+            margin-top: 3px;
+            &:checked {
+                background-color: transparent;
+                background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.12075 0.215994C9.55376 0.558799 9.62689 1.18773 9.28409 1.62074L4.53409 7.62074C4.34402 7.86083 4.05442 8.0006 3.74821 8.00004C3.44199 7.99948 3.15291 7.85865 2.96372 7.61786L0.213724 4.11786C-0.127489 3.68359 -0.0520506 3.05494 0.382221 2.71372C0.816493 2.37251 1.44515 2.44795 1.78636 2.88222L3.75301 5.38522L7.716 0.379337C8.0588 -0.0536794 8.68773 -0.12681 9.12075 0.215994Z' fill='white'/%3E%3C/svg%3E%0A");
+                background-position: center;
+                background-size: 60% !important;
+                background-repeat: no-repeat;
+            }
+        }
+        label:not(.error) {
+            display: block;
+            color: $secondary-brand-color;
+            font-size: 11px;
+            margin-left: 5px;
+        }
+    }
+}
+
+@mixin block-terms() {
+    .el-custom--block-terms {
+        margin: 10px 0px;
+        .block-term {
+            .js-form-item {
+                position: relative;
+                margin-bottom: 6px;
+                display: flex;
+                align-items: center;
+                .form-check-label {
+                    align-items: center;
+                    font-family: Roboto, sans-serif;
+                    font-size: 10px;
+                    color: $fifth-brand-color;
+                    margin-left: 10px;
+                }
+                // }
+                a {
+                    margin: 0px 4px;
+                    text-decoration: underline !important;
+                    color: $fifth-brand-color;
+                }
+                label.error {
+                    color: $seventh-brand-color;
+                    position: relative;
+                    font-size: 10px;
+                    @media (max-width: 599px) {}
+                }
+            }
+        }
+    }
+}
+
+@mixin form-actions {
+    .form-actions {
+        text-align: center;
+        // margin-top: 52px;
+        button.el-custom--button,
+        input.el-custom--button {
+            border-radius: 0px;
+            color: $secondary-brand-color;
+            background-color: $nineth-brand-color;
+            // font-family: 'Matthan-sans-regular';
+            font-size: 13px;
+            font-weight: 500;
+            width: 100%;
+            height: 37px;
+        }
+    }
+}
+
+@mixin nice-select-for-drupal {
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent !important;
+    border-radius: 5px;
+    border: solid 1px #e8e8e8;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    height: 32px !important;
+    line-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+}
+
+@mixin form-select {
+    // .nice-select {
+    //     @include nice-select-for-drupal;
+    //     // width: 100%;
+    //     border-radius: 0px;
+    //     border: 1px solid transparent;
+    //     border-bottom: 1px solid $primary-brand-color;
+    //     height: 46.4px;
+    //     padding: 0px;
+    //     * {
+    //         @extend .apply-to-form-inputs;
+    //     }
+    //     span.current {
+    //         font-weight: bolder;
+    //         color: rgba(#454D58, 0.5);
+    //         font-size: 14px;
+    //         height: 100%;
+    //         display: block;
+    //         display: flex;
+    //         align-items: center;
+    //     }
+    //     ul {
+    //         width: 100%;
+    //         border-radius: 0px;
+    //         max-height: 200px;
+    //         overflow: scroll;
+    //     }
+    // }
+    select {
+        border: 1px solid transparent;
+        background-color: transparent;
+        background-image: url("../assets/icons/arrow-select.svg");
+        background-repeat: no-repeat, repeat !important;
+        background-position: right .7em top 50%, 0 0 !important;
+        background-size: .65em auto, 100% !important;
+        height: 40px;
+        width: 100%;
+        border-radius: 0px;
+        margin-top: 8px;
+        margin-top: 0px;
+        padding: 5px 0px;
+        padding-left: 13px;
+        // font-family: Roboto, sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        transition: 0.2s all;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        color: $secondary-brand-color;
+        &:hover,
+        &:focus,
+        &:focus-visible,
+        &:active {
+            outline: 0;
+            outline-color: transparent !important;
+            // border-bottom: 1px solid #008F4F !important;
+        }
+        font: {
+            size: 11px;
+        }
+        optgroup {
+            font-size: 40px;
+        }
+        option {
+            font-size: 14px;
+            padding: 5px;
+            background: #c5c5c5;
+        }
+    }
+    select option:checked {
+        color: $secondary-brand-color;
+        font-weight: 700;
+    }
+}
+
+@mixin form-item {
+    .js-form-item {
+        @include form-select();
+        &:not(.form-full) {
+            width: 50%;
+        }
+        &.form-full {
+            width: 100%;
+        }
+        &:not(.js-form-item-birthday) {
+            border: 1px solid $secondary-brand-color !important;
+        }
+        &.js-form-item-birthday {
+            border: 0px solid transparent !important;
+        }
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        margin: 0px;
+        padding: 0px !important;
+        legend {
+            font-size: 11px;
+            color: $secondary-brand-color;
+            margin-left: 15px;
+            padding: 0px 10px;
+        }
+        &.form-item-birthday {
+            justify-content: space-between;
+            display: flex;
+            select,
+            input {
+                width: 30%;
+                border: 1px solid $secondary-brand-color;
+            }
+        }
+        label {
+            &.error {
+                color: red;
+                // position: absolute;
+                // bottom: -11px;
+                font-size: 10px;
+                // height: 10px;
+                // font-family: 'Roboto, sans-serif';
+                // font-weight: bolder;
+                width: 100%;
+            }
+            &:not(.error) {
+                width: 100%;
+                color: $secondary-brand-color;
+                font: {
+                    size: 11px;
+                    weight: 400;
+                }
+            }
+        }
+        input:not(.form-checkbox) {
+            // height: 100%;
+            height: 30px;
+            width: 100%;
+            border: 0px solid transparent;
+            padding-left: 15px;
+            margin-bottom: 0px !important;
+            margin-top: 0px !important;
+            background-color: transparent !important;
+            @extend .apply-to-form-inputs;
+            color: $fifth-brand-color;
+            transition: 0.3s all;
+            font-family: 'Roboto', sans-serif;
+            font-size: 11px;
+            &:focus,
+            &:active {
+                color: $fifth-brand-color !important;
+                // border-bottom: 1px solid $sixth-brand-color !important;
+                color: $secondary-brand-color !important;
+                font-weight: 700;
+            }
+            &::placeholder {
+                color: #fff;
+                font-size: 13px;
+                font-weight: bold;
+            }
+            &[type="number"] {
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+                -moz-appearance: textfield;
+            }
+            &[type="number"] {
+                -webkit-appearance: none;
+                margin: 0;
+                -moz-appearance: textfield;
+            }
+        }
+    }
+}
+
+.js-form-item-tyc {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    label.error {
+        &#tyc-error {
+            font-size: 10px;
+            display: block;
+            padding-top: 10px;
+            color: $seventh-brand-color;
+            width: 100%;
+        }
+    }
+}
+
+.el-custom-register-page {
+    transition: 1s all;
+    background-repeat: no-repeat;
+    background-image: url('../assets/fondo-registro.png');
+    background-position: center;
+    background-size: cover;
+}
+
+article.el-custom--register-page__form {
+    width: 100%;
+    padding: 20px 30px;
+    .el-custom--register-page__form--title {
+        color: $secondary-brand-color;
+        font: {
+            size: 14px;
+            weight: 500;
+        }
+    }
+    .el-custom-abi-register-form {
+        .block-form-group {
+            &:not(.birthday) {
+                min-height: 45px;
+            }
+            display: flex;
+            margin-top: 8px;
+            @include form-item();
+            &.birthday {
+                margin-bottom: 8px;
+                height: fit-content;
+                .js-form-item-birthday-fieldset {
+                    width: 30%;
+                    input {
+                        &:focus,
+                        &:active,
+                        &:visited {
+                            border-color: transparent !important;
+                            outline-width: 0 !important;
+                            outline: none;
+                        }
+                    }
+                }
+                select {
+                    height: 45px !important;
+                }
+            }
+        }
+    }
+    @include block-terms();
+    @include form-actions();
+}

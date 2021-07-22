@@ -1,6 +1,7 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi--main-main-footer {
+    z-index: 2;
     position: relative;
     width: 100%;
     background-color: $primary-brand-color;

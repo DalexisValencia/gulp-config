@@ -1,0 +1,322 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--banner-pilsen-extra__details {
+    // padding: 5vw 5vw;
+    padding-top: 5vw;
+    border: 1px solid red;
+    background-color: $secondary-brand-color;
+    // background-image: url("../assets/product/base.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100%;
+    height: 83vw;
+}
+
+.abi--banner-pilsen-extra__details-up {
+    display: none;
+    border: 1px dashed black;
+    display: flex;
+    padding: 0px 5vw;
+    .abi--banner-pilsen-extra__details-up-title {
+        text-transform: uppercase;
+        color: red;
+        line-height: 1;
+        font: {
+            size: 4vw;
+        }
+    }
+    .abi--banner-pilsen-extra__details-up-description {
+        margin-top: 1vw;
+        width: 15vw;
+        color: red;
+        line-height: 1.4;
+        font: {
+            size: 1.3vw;
+        }
+    }
+    .el-custom--button.buy-here {
+        margin-top: 1.1vw;
+        // background-color: $primary-brand-color;
+        background-color: red;
+        // opacity: 0.5;
+        color: $secondary-brand-color;
+        height: 4.4vw;
+        line-height: 4.4vw;
+        text-align: center;
+        font: {
+            size: 1.3vw;
+        }
+    }
+}
+
+.abi--banner-pilsen-extra__details-product {
+    position: relative;
+    border: 4px dashed blue;
+    display: flex;
+    width: 39vw;
+    .abi--banner-pilsen-extra__details-product--image {
+        position: absolute;
+        // background-color: red;
+        // opacity: 0.5;
+        top: -3vw;
+        width: 14.5vw;
+        img {
+            width: 100%;
+        }
+    }
+    .abi--banner-pilsen-extra__details-product--properties {
+        position: absolute;
+        right: 0px;
+        // top: 3vw;
+        // border: 2px solid red;
+        // opacity: 0.5;
+        width: 15vw;
+        * {
+            color: red;
+        }
+        ul {
+            li.product-property {
+                position: relative;
+                margin-top: 2.5vw;
+                .product-property--title {
+                    line-height: 1;
+                    font-size: 2vw;
+                }
+                .product-property--description {
+                    font-size: 1.2vw;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 1.3vw;
+                    left: -13.4vw;
+                    width: 13vw;
+                    background-image: url("../assets/icons/dashed-arrow-marker.svg");
+                    background-position: top;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    height: 7vw;
+                }
+                &:last-child {
+                    &::before {
+                        left: -10.4vw;
+                        width: 10vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.abi--banner-pilsen-extra__details-wave {
+    // border: 5px solid magenta;
+    padding-top: 17.5vw;
+    padding-left: 5vw;
+    display: flex;
+    position: relative;
+    // background-color: magenta;
+    &::before {
+        position: absolute;
+        top: -16vw;
+        right: 0px;
+        content: "";
+        width: 100%;
+        height: 72vw;
+        background-image: url("../assets/product/background-wave.png");
+        background-position: top center;
+        background-size: 100%;
+        z-index: 1;
+    }
+}
+
+.abi--banner-pilsen-extra__details-wave--gallery {
+    z-index: 1;
+    // border: 2px solid red;
+    .abi--banner-pilsen-extra__details-wave--gallery-header {
+        // border: 5px solid white;
+        width: 33vw;
+        position: relative;
+        // display: flex;
+        .abi--banner-pilsen-extra__details-wave--gallery-title {
+            color: red;
+            font: {
+                size: 2vw;
+            }
+        }
+        .abi--banner-pilsen-extra__details-wave--gallery-description {
+            width: 14vw;
+            color: red;
+            font-size: 1.1vw;
+        }
+        .abi--banner-pilsen-extra__details-wave--gallery-description-image {
+            position: absolute;
+            top: -5vw;
+            right: 1vw;
+            width: 10vw;
+            img {
+                width: 100%;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                background-image: url("../assets/icons/dashed-arrow-marker-left.svg");
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 10.3vw;
+                height: 4vw;
+                left: -10vw;
+                top: 5.7vw;
+                // background-color: red;
+            }
+        }
+    }
+    .abi--banner-pilsen-extra__details-wave--gallery-container {
+        position: relative;
+        z-index: 2;
+        margin-top: 2.8vw;
+        width: 32.6vw;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .abi--banner-pilsen-extra__details-wave--gallery-container--card {
+            // opacity: 0.5;
+            width: 15.9vw;
+            margin-bottom: 0.5vw;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.abi--banner-pilsen-extra__details-wave--can {
+    right: 4.8vw;
+    top: 0px;
+    position: absolute;
+    width: 55.5vw;
+    z-index: 2;
+}
+
+.abi--banner-pilsen-extra__details-wave--can-header {
+    width: 15vw;
+    margin-top: 10vw;
+    margin-left: 5vw;
+    position: relative;
+    .abi--banner-pilsen-extra__details-wave--can-header-title {
+        color: red;
+        font-size: 2.3vw;
+    }
+    .abi--banner-pilsen-extra__details-wave--can-header-description {
+        margin-top: 0.2vw;
+        color: red;
+        font-size: 1.3vw;
+    }
+    &::before {
+        content: "";
+        top: -4.1vw;
+        right: -1.7vw;
+        width: 10vw;
+        height: 4vw;
+        // border: 1px solid red;
+        position: absolute;
+        background-image: url("../assets/icons/dashed-arrow-marker-revert-top.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+    }
+}
+
+.abi--banner-pilsen-extra__details-wave--can-details {
+    position: absolute;
+    top: -2.5vw;
+    display: flex;
+    left: 14.6vw;
+    .abi--banner-pilsen-extra__details-wave--can-details--image {
+        // background-color: red;
+        width: 12.9vw;
+        margin-top: 3vw;
+        margin-left: 7vw;
+        img {
+            width: 100%;
+        }
+    }
+    .abi--banner-pilsen-extra__details-wave--can-details--properties {
+        // background-color: white;
+        margin-left: 1vw;
+        // opacity: 0.5;
+        // position: absolute;
+        // right: -8vw;
+        .abi--banner-pilsen-extra__details-wave--can-details--properties-items {
+            margin-top: 1.2vw;
+            li {
+                margin-top: 0.5vw;
+                // border: 1px solid red;
+                // border: 1px solid black;
+                .abi--banner-pilsen-extra__details-wave--can-details--properties-items--title {
+                    color: red;
+                    font-size: 1.5vw;
+                }
+                .abi--banner-pilsen-extra__details-wave--can-details--properties-items--description {
+                    color: $secondary-brand-color;
+                    font-size: 1.1vw;
+                }
+                .abi--banner-pilsen-extra__details-wave--can-details--properties-items--values {
+                    margin-top: 0.3vw;
+                    display: flex;
+                    align-items: center;
+                    i {
+                        // border: 1px solid red;
+                        // color: $secondary-brand-color;
+                        color: red;
+                        &:not(:first-child) {
+                            margin: 0px 0.7vw;
+                        }
+                        font-size: 2.2vw;
+                        &.icon-amargor-filled {
+                            font-size: 3.1vw;
+                        }
+                    }
+                }
+                &:not(.wave--can-details--properties-item) {
+                    margin-top: 1.6vw;
+                    border: 1px solid white;
+                }
+            }
+        }
+    }
+}
+
+.abi--banner-pilsen-extra__details-wave--sticky {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: absolute;
+    width: 9.6vw;
+    min-width: 122px;
+    min-height: 195px;
+    z-index: 2;
+    right: 3.6vw;
+    bottom: 1vw;
+    background-color: $fourteen-brand-color;
+    overflow: hidden;
+    .abi--banner-pilsen-extra__details-wave--stick-image {
+        width: 100%;
+        padding: 10px 3px;
+        img {
+            width: 100%;
+        }
+    }
+    .abi--banner-pilsen-extra__details-wave--stick-title {
+        height: 2.3vw;
+        line-height: 2.3vw;
+        ;
+        text-align: center;
+        background-color: $primary-brand-color;
+        color: $secondary-brand-color;
+        font: {
+            size: 16px;
+            weight: 700;
+        }
+    }
+}

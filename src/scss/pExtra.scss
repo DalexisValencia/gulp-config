@@ -8,7 +8,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 454px;
+    min-height: 454px;
     max-width: 1149px;
     margin: 0px auto;
     padding: 0px 70px;
@@ -47,6 +47,6 @@
 
 .abi--banner-pilsen-extra__form {
     width: 390px;
-    height: 100%;
+    // height: 100%;
     background-color: $eight-brand-color;
 }

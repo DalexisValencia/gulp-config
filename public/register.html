@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::GUARANA DEV::</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300,1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/nice-select.css">
+</head>
+
+<body>
+    <main class="el-custom--main el-custom-register-page">
+
+        <article class="el-custom--register-page__form">
+            <h3>
+                REGÍSTRATE
+            </h3>
+            <form class="el-custom-abi-register-form" action="/" method="post" accept-charset="UTF-8">
+                <div class="block-form-group">
+                    <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name form-no-label form-group">
+                        <legend>Ingresa tu nombre</legend>
+                        <input placeholder="Ingresa tu nombre" autocomplete="off" type="text" id="register-name" name="name" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                    </fieldset>
+
+                    <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-lastname form-item-lastname form-no-label form-group">
+                        <legend>Ingresa tu apellido</legend>
+                        <input placeholder="" autocomplete="off" type="text" id="register-lastname" name="lastname" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                    </fieldset>
+                </div>
+
+                <div class="block-form-group">
+                    <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-gender form-item-gender form-no-label form-group form-full">
+                        <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" hide>Selecciona tu Genero </option>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                            </select>
+                    </fieldset>
+                </div>
+
+                <div class="block-form-group">
+                    <fieldset class="js-form-item js-form-type-email form-type-email js-form-item-email form-item-email form-no-label form-group form-full">
+                        <legend>Ingresa tu correo electrónico</legend>
+                        <input placeholder="" autocomplete="off" type="email" id="register-email" name="email" value=" " size="60" maxlength="50" class="form-email required form-control el-custom--input error" required="required">
+                    </fieldset>
+                </div>
+
+                <div class="block-form-group">
+                    <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-birthday form-item-birthday form-group form-full">
+                        <label for="birthday">Fecha de nacimiento</label>
+                        <select autocomplete="off" name="day" class="form-select required form-control el-custom--input" required="required" id="day">
+                                <option value="" hidden  selected>DD</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                            </select>
+                        <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" hidden  selected>MM</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                            </select>
+                        <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                <option value="" hidden  selected>AAAA</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                            </select>
+                    </fieldset>
+                </div>
+
+                <div class="simple-questionary">
+                    <label class="field-label">
+                            ¿Ya probaste la nueva <b>Pilsen Extra</b>?
+                        </label>
+                    <div class="yes answer">
+                        <input type="radio" name="questionary-answer" value="yes">
+                        <label for="">Yes</label>
+                    </div>
+                    <div class="no answer">
+                        <input type="radio" name="questionary-answer" value="no">
+                        <label for="">No</label>
+                    </div>
+                </div>
+
+                <div class="el-custom--block-terms">
+                    <div class="block-term">
+                        <label class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-terms form-item-terms el-custom--checkbox" for="acept-terms">
+                                <input type="checkbox" id="edit-terms" name="acept-terms" value="1" class="form-checkbox required form-check-input" required="required">
+                                <label class="form-check-label" for="edit-terms">
+                                    He leído Y <a href=""> aceptado los Términos y Condiciones</a> y la <a href="">política de protección de datos personales</a>.
+                                </label>
+                        </label>
+                    </div>
+                    <div class="block-term">
+                        <label class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-terms form-item-terms el-custom--checkbox" for="get-information">
+                                <input type="checkbox" id="get-information" name="get-information" value="1" class="form-checkbox required form-check-input" required="required">
+                                <label class="form-check-label" for="get-information">
+                                    Deseo recibir información comercial y eventos de bud
+                                </label>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-actions js-form-wrapper form-group" id="edit-actions">
+                    <button type="submit " value="PARTICIPAR " class="el-custom--button js-form-submit">
+                            PARTICIPAR
+                        </button>
+                </div>
+            </form>
+        </article>
+    </main>
+</body>
+<script src="assets/vendor/jquery-3.6.0.slim.js"></script>
+<script src="assets/vendor/jquery.nice-select.min.js"></script>
+<script type="text/javascript" src="assets/vendor/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>

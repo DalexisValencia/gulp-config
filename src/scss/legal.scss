@@ -46,6 +46,7 @@
             padding: 20px;
             max-height: max-content;
             font-size: 14px;
+            overflow: unset;
         }
     }
     @include media-sm {

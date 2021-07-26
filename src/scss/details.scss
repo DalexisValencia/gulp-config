@@ -64,6 +64,7 @@
         height: 4.4vw;
         line-height: 4.4vw;
         text-align: center;
+        cursor: pointer;
         font: {
             size: 1.3vw;
         }
@@ -185,6 +186,7 @@
         background-position: top center;
         background-size: 100%;
         z-index: 1;
+        pointer-events: none;
         @include media-xs-range-1 {
             background-image: url("../assets/product/background-wave-mobile.png");
             height: 172vw;

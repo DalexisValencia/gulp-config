@@ -215,7 +215,7 @@ $error_family: '';
     .js-form-item {
         @include form-select();
         &:not(.form-full) {
-            width: 50%;
+            width: 48.8%;
         }
         &.form-full {
             width: 100%;
@@ -349,6 +349,7 @@ article.el-custom--register-page__form {
             }
             display: flex;
             margin-top: 8px;
+            justify-content: space-between;
             @include form-item();
             &.birthday {
                 margin-bottom: 8px;

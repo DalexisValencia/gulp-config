@@ -1,9 +1,28 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi--main-container--home {
+    background-image: url("../assets/home/bg-blue-brikes.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
     padding: 80px 90px;
     @include media-xs {
         padding: 30px 60px;
+    }
+    .abi--main-container--header {
+        border: 1px solid red;
+        max-width: 996px;
+        width: 100%;
+        margin: 0px auto;
+        margin-bottom: 25px;
+        .abi--main-container--header__title {
+            text-transform: uppercase;
+            font: {
+                size: 38.4px;
+                weight: 700;
+            }
+            color: $secondary-brand-color;
+        }
     }
 }
 
@@ -14,6 +33,7 @@
     margin-top: 20px;
     display: flex;
     align-items: center;
+    justify-content: center;
     .abi--main-container--body-sliders {
         max-width: 996px;
         margin: 0px auto;
@@ -32,39 +52,43 @@
     }
     .abi--main-container--body-sliders--navigation {
         position: absolute;
+        max-width: 1036px;
+        margin: 0px auto;
         width: 110%;
-        left: -5%;
+        // left: -5%;
+        display: flex;
         justify-content: space-between;
         z-index: 1;
-        display: none;
-        @include media-md {
-            display: flex;
-            width: 115%;
-            left: -7.5%;
-        }
-        @include media-sm {
-            display: flex;
-            width: 120%;
-            left: -10%;
-        }
-        @include media-xs-range-1 {
-            display: flex;
-            width: 130%;
-            left: -15%;
-        }
+        border: 1px solid red;
+        // display: none;
+        // @include media-md {
+        //     display: flex;
+        //     width: 115%;
+        //     left: -7.5%;
+        // }
+        // @include media-sm {
+        //     display: flex;
+        //     width: 120%;
+        //     left: -10%;
+        // }
+        // @include media-xs-range-1 {
+        //     display: flex;
+        //     width: 130%;
+        //     left: -15%;
+        // }
         // @include media-xs-small {
         //     width: 150%;
         //     left: -25%;
         // }
-        @media (max-width: 450px) {
-            width: 150%;
-            left: -25%;
-        }
+        // @media (max-width: 450px) {
+        //     width: 150%;
+        //     left: -25%;
+        // }
         button {
             font-size: 0px;
             width: 42px;
             height: 42px;
-            background-color: $primary-brand-color;
+            background-color: $secondary-brand-color;
             border: 1px solid transparent;
             border-radius: 5px;
             &:hover,
@@ -74,10 +98,10 @@
                 outline-color: transparent !important;
             }
             &.owl-prev {
-                background-image: url("../assets/icons/slider-prev.svg");
+                background-image: url("../assets/icons/slider-prev-black.svg");
             }
             &.owl-next {
-                background-image: url("../assets/icons/slider-next.svg");
+                background-image: url("../assets/icons/slider-next-black.svg");
             }
             background-position: center;
             background-repeat: no-repeat;

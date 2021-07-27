@@ -60,7 +60,8 @@ $(document).ready(function() {
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
                     960: {
-                        items: 4
+                        items: 4,
+                        navContainer: $(".abi--main-container--body-sliders--navigation")
                     }
                 }
             });

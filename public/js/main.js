@@ -54,17 +54,24 @@ $(document).ready(function() {
                 loop: true,
                 responsive: {
                     0: {
-                        items: 1,
-                        marging: 10,
-                        center: true,
+                        items: 1.5,
+                        margin: 10,
+                        center: false,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
-                    590: {
-                        items: 2,
+                    420: {
+                        margin: 10,
+                        items: 2.8,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
-                    760: {
-                        items: 3,
+                    600: {
+                        margin: 10,
+                        items: 3.5,
+                        navContainer: $(".abi--main-container--body-sliders--navigation")
+                    },
+                    710: {
+                        margin: 10,
+                        items: 4,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
                     960: {

@@ -10,6 +10,13 @@
 // })(jQuery);
 
 $(document).ready(function() {
+    var drawer = $(".abi--main-navigation");
+    $(".open-drawer").on("click", function() {
+        drawer.addClass('active');
+    });
+    $(".close-drawer").on("click", function() {
+        drawer.removeClass('active');
+    });
     var slidersGenreation = $(".abi--main-sliders.owl-carousel");
     if (slidersGenreation.length >= 1) {
         // var isiPad = navigator.userAgent.toLowerCase().indexOf("ipad");

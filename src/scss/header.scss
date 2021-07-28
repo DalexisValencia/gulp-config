@@ -6,18 +6,62 @@
     position: relative;
     width: 100%;
     height: 60px;
-    background-color: $primary-brand-color;
+    background-color: $primary-darken-brand-color;
     overflow: visible;
     display: flex;
+    @include media-xs-range-2 {
+        position: unset;
+        padding: 0px 20px;
+        justify-content: space-between;
+    }
+}
+
+.el-custom--button.open-drawer {
+    display: none;
+    i {
+        color: $secondary-brand-color;
+        font-size: 30px;
+    }
+    @include media-xs-range-2 {
+        display: block;
+    }
+}
+
+.close-drawer {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/icons/close-drawer.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 5;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+    @include media-xs-range-2 {
+        display: block;
+    }
 }
 
 .abi--main-main-header-logo {
     position: relative;
     top: 18px;
     z-index: 1;
-    width: 137px;
-    height: 84px;
     // left: 38px;
+    img {
+        width: 137px;
+        height: 84px;
+        width: 100%;
+    }
+    @include media-xs-range-2 {
+        top: 7px;
+        img {
+            width: 147px;
+            height: 47px;
+        }
+        // width: 77px;
+    }
 }
 
 .abi-ul {
@@ -49,7 +93,6 @@
     width: 385px;
     ul.abi--main-menu {
         width: 100%;
-        // border: 1px solid red;
         justify-content: space-between;
         li.abi--main-menu-item {
             position: relative;
@@ -58,8 +101,17 @@
             text-transform: uppercase;
             a {
                 font: {
-                    size: 16px;
-                    weight: bold;
+                    size: 14px;
+                    weight: 400;
+                    family: 'Helvetica';
+                }
+                @include media-xs-range-2 {
+                    font-size: 25px;
+                    width: 100%;
+                    line-height: 1;
+                    padding: 0px 20px;
+                    color: $seventh-brand-color;
+                    font-family: 'coprgtb';
                 }
             }
             &.active {
@@ -71,8 +123,62 @@
                     background-color: $tertiary-brand-color;
                     bottom: -5px;
                     border-radius: 10px;
+                    @include media-xs-range-2 {
+                        content: unset;
+                    }
+                }
+                @include media-xs-range-2 {
+                    a {
+                        color: $secondary-brand-color;
+                    }
                 }
             }
+            @include media-xs-range-2 {
+                width: 100%;
+                min-height: 71px;
+                justify-content: unset;
+                border-bottom: 2px solid #686868;
+                align-items: center;
+            }
+        }
+        @include media-xs-range-2 {
+            margin-top: 20px;
+            flex-wrap: wrap;
+            height: 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+    .logo-mobile {
+        display: none;
+        width: 137px;
+        height: 85;
+        margin: 0px auto;
+        img {
+            width: 100%;
+        }
+        @include media-xs-range-2 {
+            display: block;
+        }
+    }
+    @include media-sm {
+        width: 320px;
+        margin-left: 20px !important;
+    }
+    @include media-xs-range-2 {
+        display: none;
+        padding: 20px 0px;
+        background-color: $primary-darken-brand-color;
+        position: fixed;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        margin-left: 0px !important;
+        height: 100%;
+        z-index: 4;
+        flex-wrap: wrap;
+        &.active {
+            display: flex;
         }
     }
 }
@@ -84,23 +190,41 @@
     .abi--social-menu {
         justify-content: space-between;
         width: 140px;
+        margin-right: 138px;
         li {
             a {
                 font-size: 20px;
             }
         }
-    }
-    .el-custom--button.register {
-        margin-left: 3vw;
-        border: 1px solid $secondary-brand-color;
-        width: 138px;
-        height: 28px;
-        line-height: 28px;
-        text-decoration: transparent;
-        font: {
-            size: 16px;
-            weight: bold;
+        @include media-sm-range-1 {
+            margin-right: 0px;
         }
+    }
+    .follow-us-copy {
+        display: none;
         color: $secondary-brand-color;
+        font: {
+            weight: 400;
+            family: Roboto, sans-serif;
+            size: 10px;
+        }
+        font-family: Roboto,
+        sans-serif;
+        @include media-xs-range-2 {
+            display: block;
+        }
+    }
+    @include media-xs-range-2 {
+        border-top: 2px solid #686868;
+        position: fixed;
+        z-index: 5;
+        width: 100%;
+        height: 80px;
+        bottom: 0px;
+        right: unset;
+        left: 0px;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: space-between;
     }
 }

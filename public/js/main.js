@@ -76,6 +76,7 @@ $(document).ready(function() {
                     },
                     960: {
                         items: 4,
+                        loop: false,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     }
                 }

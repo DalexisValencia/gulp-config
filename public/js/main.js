@@ -17,6 +17,7 @@ $(document).ready(function() {
     $(".close-drawer").on("click", function() {
         drawer.removeClass('active');
     });
+
     var slidersGenreation = $(".abi--main-sliders.owl-carousel");
     if (slidersGenreation.length >= 1) {
         // var isiPad = navigator.userAgent.toLowerCase().indexOf("ipad");

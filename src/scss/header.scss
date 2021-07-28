@@ -179,6 +179,9 @@
         flex-wrap: wrap;
         &.active {
             display: flex;
+            &~.abi--social {
+                display: flex !important;
+            }
         }
     }
 }
@@ -224,7 +227,8 @@
         right: unset;
         left: 0px;
         padding: 0px 20px;
-        display: flex;
+        // display: flex;
+        display: none;
         justify-content: space-between;
     }
 }

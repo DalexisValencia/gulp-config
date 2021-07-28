@@ -15,9 +15,17 @@
     <main class="abi--main-wrapper">
         <header class="abi--main-main-header">
             <a href="">
-                <img src="assets/logo.svg" alt="" class="abi--main-main-header-logo">
+                <picture class="abi--main-main-header-logo">
+                    <source media="(min-width:600px)" srcset="assets/logo.svg">
+                    <img src="assets/logo-mobile.svg" alt="">
+                </picture>
+                <!-- <img src="assets/logo.svg" alt="" class="abi--main-main-header-logo"> -->
             </a>
             <nav class="abi--main-navigation">
+                <span class="close-drawer"></span>
+                <a href="" class="logo-mobile">
+                    <img src="assets/logo.svg" alt="">
+                </a>
                 <ul class="abi--main-menu abi-ul">
                     <li class="abi--main-menu-item active">
                         <a href="">HOME</a>
@@ -31,6 +39,9 @@
                 </ul>
             </nav>
             <nav class="abi--social">
+                <div class="follow-us-copy">
+                    Follow us
+                </div>
                 <ul class="abi--social-menu abi-ul">
                     <li class="abi--social-menu-item">
                         <a href="">
@@ -53,13 +64,13 @@
                         </a>
                     </li>
                 </ul>
-                <button class="el-custom--button register">
-                    REGISTRO
-                </button>
             </nav>
+            <button class="el-custom--button open-drawer">
+                <i class="icon-burger-menu"></i>
+            </button>
         </header>
 
-        <section class="abi--internal-section">
+        <section class="abi--internal-section page-404">
             <div class="abi--404-section__box">
                 <header class="abi--404-section__box-header">
                     <h2 class="abi--404-section__box-header--title">

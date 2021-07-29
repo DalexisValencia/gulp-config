@@ -116,15 +116,13 @@
 .abi--main-main-footer-social {
     position: absolute;
     top: 31px;
-    left: 5vw;
     max-width: max-content;
     background-color: $primary-darken-brand-color;
+    padding-left: 5vw;
     ul {
         display: flex;
-        // border: 1px dashed white;
         li {
             margin-right: 7px;
-            // &:not(:first-child) {}
             a {
                 text-decoration: none;
                 i {
@@ -138,6 +136,7 @@
         text-align: center;
         color: $secondary-brand-color;
         margin-bottom: 35px;
+        font-family: 'Nunito', sans-serif;
         font: {
             size: 14px;
             weight: 800;

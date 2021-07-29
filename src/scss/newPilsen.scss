@@ -83,10 +83,10 @@
 
 .abi--center-banner-details {
     background-color: #fff;
-    background-image: url("../assets/pExtra/base-details.png");
-    background-size: 100%;
-    background-position: center top;
-    background-repeat: no-repeat;
+    // background-image: url("../assets/pExtra/base-details.png");
+    // background-size: 100%;
+    // background-position: center top;
+    // background-repeat: no-repeat;
     width: 100%;
     height: 31vw;
     // display: flex;
@@ -97,10 +97,13 @@
             width: 100%;
         }
     }
+    @include media-xs-range-2 {
+        height: auto;
+        // padding: 20px 25px;
+    }
 }
 
 .abi--center-banner-details-ref-can {
-    border: 1px solid red;
     position: absolute;
     top: 4.7vw;
     left: 6vw;
@@ -116,22 +119,41 @@
         }
         .abi--center-banner-details-ref-can--abi-highlighted {
             font-size: 3.1vw;
-            color: red;
+            color: $fithteen-brand-color;
+            @include media-xs-range-2 {
+                font-size: 30px;
+            }
         }
         .abi--center-banner-details-ref-can--title {
-            color: magenta;
+            color: $fourty-brand-color;
             font-size: 1.82vw;
+            @include media-xs-range-2 {
+                font-size: 24px;
+            }
         }
         .abi--center-banner-details-ref-can--description {
             margin-top: 2.2vw;
             line-height: 1.4;
             font-size: 1.35vw;
-            color: red;
+            color: $fourty-brand-color;
             font: {
                 family: 'Nunito', sans-serif;
-                weight: bold;
+                weight: 500;
+            }
+            @include media-xs-range-2 {
+                font-size: 16px;
             }
         }
+    }
+    @include media-xs-range-2 {
+        position: unset;
+        width: 100%;
+        top: unset;
+        left: unset;
+        display: flex;
+        padding: 20px 0px 20px 25px;
+        // max-width: 400px;
+        margin: 0px auto;
     }
 }
 
@@ -140,21 +162,26 @@
     top: -4.8vw;
     left: 14vw;
     width: 21vw;
+    @include media-xs-range-2 {
+        position: unset;
+        min-width: 202px;
+    }
+    @include media-xs-small {
+        min-width: 144px;
+    }
 }
 
 .abi--center-banner-details-ref-cup {
     position: absolute;
-    border: 1px solid blue;
     top: 4.6vw;
     left: 48vw;
     .abi--center-banner-details-ref-cup--properties {
-        border: 1px solid magenta;
         .abi--center-banner-details-ref-cup--property {
             font: {
                 family: 'coprgtb';
                 weight: bold;
             }
-            color: red;
+            color: $fithteen-brand-color;
             font-size: 1.7vw;
             line-height: 1;
             margin-bottom: 2.7vw;
@@ -170,8 +197,27 @@
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
+                @include media-xs-range-2 {
+                    width: 19vw;
+                    height: 10.5vw;
+                    left: -21vw;
+                }
+            }
+            @include media-xs-range-2 {
+                font-size: 4.5vw;
+                height: 17vw;
             }
         }
+        @include media-xs-range-2 {
+            position: relative;
+            left: -21.5vw;
+        }
+    }
+    @include media-xs-range-2 {
+        display: flex;
+        position: relative;
+        top: unset;
+        left: unset;
     }
 }
 
@@ -180,10 +226,14 @@
     // top: -4.8vw;
     left: -20vw;
     width: 20vw;
+    @include media-xs-range-2 {
+        position: unset;
+        left: unset;
+        width: unset;
+    }
 }
 
 .abi--center-banner-details-ingredients {
-    border: 1px dashed darkcyan;
     width: 20vw;
     position: absolute;
     right: 6vw;
@@ -191,10 +241,26 @@
     * {
         font-family: 'coprgtb';
     }
+    &::before {
+        content: "";
+        position: absolute;
+        left: -6vw;
+        top: 10.5vw;
+        width: 1.5vw;
+        height: 5vw;
+        // border: 1px solid radius;
+        background-image: url('../assets/icons/marker-ingredients.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
     .abi--center-banner-details-ingredients--title {
         font-size: 2vw;
         line-height: 1;
-        color: green;
+        color: $primary-darken-brand-color;
+    }
+    @include media-xs-range-2 {
+        display: none;
     }
 }
 
@@ -204,9 +270,8 @@
         display: flex;
         margin-top: 0.7vw;
         align-items: center;
-        border: 1px solid green;
         .abi--center-banner-details-ingredients--list-item__img {
-            background-color: red;
+            background-color: $seventh-brand-color;
             width: 6vw;
             height: 6vw;
             min-width: 6vw;
@@ -221,6 +286,103 @@
             margin-left: 2vw;
             font-size: 1.4vw;
             line-height: 1.2;
+            color: $fithteen-brand-color;
         }
+    }
+}
+
+.abi--center-banner-description {
+    position: relative;
+    picture {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.abi--center-banner-description--detail,
+.abi--center-banner-description--image,
+.abi--center-banner-description--detail--properties {
+    position: absolute;
+}
+
+.abi--center-banner-description--image {
+    width: 33vw;
+    left: 37.5vw;
+    top: 4vw;
+}
+
+.abi--center-banner-description--detail--properties {
+    border: 1px solid orange;
+    right: 10vw;
+    right: 13.8vw;
+    width: 21.8vw;
+    top: 6vw;
+    padding: 2vw;
+    * {
+        color: red;
+    }
+    .abi--center-banner-description--detail--properties__list {
+        .abi--center-banner-description--detail--properties__list-item {
+            border: 1px dashed white;
+            margin-bottom: 0.7vw;
+            &:nth-child(3),
+            &:nth-child(4) {
+                // background-color: red;
+                margin-top: 2vw;
+            }
+            .abi--center-banner-description--detail--properties__list-item--title {
+                font-family: 'coprgtb';
+                font-size: 1.2vw;
+                text-transform: uppercase;
+                // line-height: 1;
+                span {
+                    display: block;
+                }
+            }
+            .abi--center-banner-description--detail--properties__list-item--values {
+                background-color: blue;
+                margin-top: 1vw;
+                display: flex;
+                align-items: center;
+                i {
+                    font-size: 2.4vw;
+                    &.icon-amargor-filled {
+                        font-size: 3.8vw;
+                    }
+                    &:not(:last-child) {
+                        margin-right: 0.6vw;
+                    }
+                }
+            }
+            .abi--center-banner-description--detail--properties__list-item--description {
+                margin-top: 0.2vw;
+                font-size: 1.3vw;
+                font-family: 'Nunito', sans-serif;
+            }
+        }
+    }
+}
+
+.abi--center-banner-description--detail {
+    background-color: rgba($primary-darken-brand-color, 0.30);
+    border: 1px solid #EFDD9B;
+    left: 6vw;
+    width: 30vw;
+    top: 14vw;
+    padding: 2.2vw;
+    .abi--center-banner-description--detail--title {
+        font-family: 'coprgtb';
+        font-size: 2.3vw;
+        line-height: 1.05;
+        text-transform: uppercase;
+        color: $secondary-brand-color;
+    }
+    .abi--center-banner-description--detail--p {
+        font-family: 'Nunito', sans-serif;
+        margin-top: 1.2vw;
+        font-size: 1.6vw;
+        color: #E5E5E5;
     }
 }

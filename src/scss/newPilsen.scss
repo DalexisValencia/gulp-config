@@ -293,11 +293,24 @@
 
 .abi--center-banner-description {
     position: relative;
+    background-image: url("../assets/pExtra/detail-cup-banner-desktop.png");
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 41vw;
     picture {
         img {
             width: 100%;
             object-fit: cover;
         }
+    }
+    @include media-xs-range-2 {
+        background-image: url("../assets/pExtra/detail-cup-banner-mobile.png");
+        background-size: cover;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -305,27 +318,46 @@
 .abi--center-banner-description--image,
 .abi--center-banner-description--detail--properties {
     position: absolute;
+    @include media-xs-range-2 {
+        position: unset !important;
+    }
 }
 
 .abi--center-banner-description--image {
     width: 33vw;
     left: 37.5vw;
     top: 4vw;
+    @include media-xs-range-2 {
+        width: 100%;
+        margin: 20px 0px;
+        top: unset;
+        left: unset;
+        right: unset;
+        display: flex;
+        justify-content: center;
+        img {
+            max-width: 400px;
+            margin: 0px auto;
+            width: 289.27px !important;
+            height: 316px;
+            margin-left: 31vw;
+            @include media-xs {
+                margin-left: 25vw;
+            }
+        }
+    }
 }
 
 .abi--center-banner-description--detail--properties {
-    border: 1px solid orange;
+    background-color: rgba($primary-darken-brand-color, 0.6);
+    border: 1px solid #EFDD9B;
     right: 10vw;
     right: 13.8vw;
     width: 21.8vw;
     top: 6vw;
     padding: 2vw;
-    * {
-        color: red;
-    }
     .abi--center-banner-description--detail--properties__list {
         .abi--center-banner-description--detail--properties__list-item {
-            border: 1px dashed white;
             margin-bottom: 0.7vw;
             &:nth-child(3),
             &:nth-child(4) {
@@ -333,6 +365,7 @@
                 margin-top: 2vw;
             }
             .abi--center-banner-description--detail--properties__list-item--title {
+                color: $secondary-brand-color;
                 font-family: 'coprgtb';
                 font-size: 1.2vw;
                 text-transform: uppercase;
@@ -340,33 +373,58 @@
                 span {
                     display: block;
                 }
+                @include media-xs-range-2 {
+                    font-size: 14px;
+                }
             }
             .abi--center-banner-description--detail--properties__list-item--values {
-                background-color: blue;
                 margin-top: 1vw;
                 display: flex;
                 align-items: center;
+                color: $secondary-brand-color;
                 i {
                     font-size: 2.4vw;
                     &.icon-amargor-filled {
                         font-size: 3.8vw;
+                        @include media-xs-range-2 {
+                            font-size: 23px;
+                        }
                     }
                     &:not(:last-child) {
                         margin-right: 0.6vw;
                     }
+                    @include media-xs-range-2 {
+                        font-size: 14px;
+                        &:not(:last-child) {
+                            margin-right: 8px;
+                        }
+                    }
                 }
             }
             .abi--center-banner-description--detail--properties__list-item--description {
+                color: $secondary-brand-color;
                 margin-top: 0.2vw;
                 font-size: 1.3vw;
                 font-family: 'Nunito', sans-serif;
+                @include media-xs-range-2 {
+                    font-size: 12px;
+                }
+            }
+            @include media-xs-range-2 {
+                margin-bottom: 20px;
             }
         }
+    }
+    @include media-xs-range-2 {
+        width: 100%;
+        max-width: 251px;
+        margin: 0px auto;
+        padding: 20px;
     }
 }
 
 .abi--center-banner-description--detail {
-    background-color: rgba($primary-darken-brand-color, 0.30);
+    background-color: rgba($primary-darken-brand-color, 0.6);
     border: 1px solid #EFDD9B;
     left: 6vw;
     width: 30vw;
@@ -378,11 +436,24 @@
         line-height: 1.05;
         text-transform: uppercase;
         color: $secondary-brand-color;
+        @include media-xs-range-2 {
+            font-size: 30px;
+        }
     }
     .abi--center-banner-description--detail--p {
         font-family: 'Nunito', sans-serif;
         margin-top: 1.2vw;
         font-size: 1.6vw;
         color: #E5E5E5;
+        @include media-xs-range-2 {
+            font-size: 18px;
+        }
+    }
+    @include media-xs-range-2 {
+        max-width: 344px;
+        margin: 0px auto;
+        left: unset;
+        width: auto;
+        padding: 20px;
     }
 }

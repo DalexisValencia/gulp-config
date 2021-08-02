@@ -35,4 +35,3 @@ $("button.el-custom--button").on("click", function(event) {
 // for (const button of buttons) {
 //     button.addEventListener("click", createRipple);
 // }
-var r = 'robot';

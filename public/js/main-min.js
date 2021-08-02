@@ -1,1 +1,1 @@
-var a="example",r="robot";
+function createRipple(t){const e=t.currentTarget,l=document.createElement("span"),n=Math.max(e.clientWidth,e.clientHeight),o=n/2;l.style.width=l.style.height=`${n}px`,l.style.left=`${t.clientX-e.offsetLeft-o}px`,l.style.top=`${t.clientY-e.offsetTop-o}px`,l.classList.add("ripple");const c=e.getElementsByClassName("ripple")[0];c&&c.remove(),e.appendChild(l)}$("button.el-custom--button").on("click",function(){console.log("i'm ready")});var r="robot";

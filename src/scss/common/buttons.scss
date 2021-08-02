@@ -3,6 +3,9 @@ a.el-custom--button,
 button[class*="el-custom"],
 input[type="button"].el-custom--button,
 button.el-custom--button {
+    position: relative;
+    overflow: hidden;
+    transition: background 400ms;
     flex: 0 0 auto;
     align-items: center;
     display: inline-flex;
@@ -36,3 +39,21 @@ button.el-custom--button {
 // input[class*="el-custom"],
 // input.el-custom--button {
 // }
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.el-custom--button.ripple {
+    background-color: red;
+}

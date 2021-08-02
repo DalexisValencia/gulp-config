@@ -27,7 +27,3 @@ function createRipple(event) {
 $("button.el-custom--button").on("click", function(event) {
     createRipple(event);
 });
-// const buttons = document.getElementsByTagName("button");
-// for (const button of buttons) {
-//     button.addEventListener("click", createRipple);
-// }

@@ -50,6 +50,8 @@ span.ripple {
     transform: scale(0);
     animation: ripple 600ms linear;
     background-color: rgba(255, 255, 255, 0.5);
+    // min-width: 50px;
+    // min-height: 50px;
 }
 
 // .el-custom--button:active {

@@ -13,7 +13,7 @@ $(document).ready(function() {
             } else if (iconChild.hasClass(closeClassName)) { //if exists close burger menu class
                 drawer.removeClass('active');
                 $(this).removeClass("now-im-close");
-                $("body").removeClass("no-scroll")
+                $("body").removeClass("no-scroll");
                 iconChild.removeClass(closeClassName).addClass("icon-burger-menu");
             }
         });
@@ -21,6 +21,20 @@ $(document).ready(function() {
         //     drawer.removeClass('active');
         // });
         // Sliders social network on new pilsen extra
+
+        const openForm = $(".register-now");
+        const closeForm = $(".abi--overlay-register--form-close");
+
+        openForm.click(function() {
+            $(".abi--overlay-register").addClass("active");
+            $("body").addClass("no-scroll");
+        });
+
+        closeForm.click(function() {
+            $(".abi--overlay-register").removeClass("active");
+            $("body").removeClass("no-scroll");
+        });
+
         var sliderCarouselNewPilsenExtra = $(".abi--center-banner-social--gallery-wrapper-sliders.owl-carousel")
         if (sliderCarouselNewPilsenExtra.length >= 1) {
 

@@ -1,0 +1,14 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--overlay-register {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    // background-color: rgba(250, 250, 250, 0.5);
+    // filter: blur(8px);
+    // -webkit-filter: blur(8px);
+    z-index: 3;
+}

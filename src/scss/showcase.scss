@@ -29,6 +29,9 @@
         background-size: cover;
         &:first-child {
             background-image: url("../assets/showcase/cards-login-here.png");
+            .abi--main-showcase--card-title {
+                top: 25px;
+            }
             @include media-md-range-1 {
                 .abi--main-showcase--card-title {
                     top: 2vw !important;
@@ -37,26 +40,31 @@
             @include media-xs-range-2 {
                 .abi--main-showcase--card-title {
                     top: 8vw !important;
+                    right: 7vw;
                 }
             }
         }
         &:last-child {
             background-image: url("../assets/showcase/cards-buy-here.png");
+            .abi--main-showcase--card-title {
+                top: 58px;
+            }
             @include media-md-range-1 {
                 .abi--main-showcase--card-title {
-                    top: 4 vw !important;
+                    top: 5.4vw !important;
                 }
             }
             @include media-xs-range-2 {
                 .abi--main-showcase--card-title {
                     top: 10vw !important;
+                    right: 7vw;
                 }
             }
         }
         .abi--main-showcase--card-title {
             user-select: none;
             position: absolute;
-            right: 20px;
+            right: 30px;
             top: 25px;
             text-align: right;
             text-transform: uppercase;

@@ -17,6 +17,9 @@ picture {
     }
 }
 
-body.no-scroll {
-    overflow: hidden !important;
+body {
+    scroll-behavior: smooth !important;
+    &.no-scroll {
+        overflow: hidden !important;
+    }
 }

@@ -6,9 +6,194 @@
     right: 0px;
     width: 100%;
     height: 100%;
-    background-color: red;
-    // background-color: rgba(250, 250, 250, 0.5);
-    // filter: blur(8px);
-    // -webkit-filter: blur(8px);
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(2px);
     z-index: 3;
+    padding: 40px 0px;
+    overflow-y: scroll;
+}
+
+.abi--overlay-register--form {
+    margin: 0px auto;
+    background-color: #fff;
+    border-radius: 16px !important;
+    max-width: 500px;
+    position: relative;
+    background-image: url("../assets/form/Burbujas.png");
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 235px;
+    overflow: hidden;
+    .abi--overlay-register--form-header {
+        background-color: #FAFAFA;
+        padding: 10px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .abi--overlay-register--form--header-logo {
+            border: 2px dashed #FF5005;
+            width: 240px;
+            height: 47px;
+            text-align: center;
+            line-height: 47px;
+            margin-bottom: 10px;
+        }
+        .abi--overlay-register--form--header-copy {
+            text-align: center;
+            width: 100%;
+            font: {
+                size: 16px;
+                weight: 400;
+            }
+            span {
+                color: #FF5005;
+            }
+        }
+    }
+}
+
+.abi--overlay-register--form-close {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-image: url("../assets/form/icon-close-form.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.abi--overlay-register--form-body {
+    padding: 40px 10px;
+    .abi--overlay-register--form-body--title {
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+        color: #FF5005;
+        font: {
+            size: 16px;
+            weight: 700;
+        }
+    }
+}
+
+.abi--overlay-register--form-body-social-options {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0px 10px;
+    .el-custom--button {
+        margin: 0px auto;
+        width: 100%;
+        max-width: 280px;
+        height: 48px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        .social-logo {
+            position: absolute;
+            left: 10px;
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            min-height: 28px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &.facebook {
+            .social-logo {
+                background-image: url("../assets/form/facebook-logo.svg");
+            }
+        }
+        &.google {
+            .social-logo {
+                background-image: url("../assets/form/google-logo.svg");
+            }
+        }
+    }
+}
+
+.abi--overlay-register--form-body-separator {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    margin: 0px auto;
+    font-size: 16px;
+    &::before {
+        content: "";
+        right: 0;
+        top: 10px;
+        position: absolute;
+        width: 100%;
+        height: 1.5px;
+        background-color: #C4C4C4;
+    }
+    .indicate {
+        position: relative;
+        display: inline-block;
+        background-color: white;
+        padding: 0px 3px;
+        z-index: 1;
+    }
+}
+
+.el-custom-abi-register-form {
+    width: 100%;
+    max-width: 280px;
+    margin: 0px auto;
+    margin-top: 25px;
+    fieldset.js-form-item {
+        border-color: transparent !important;
+        padding: 0px !important;
+        margin: 0px !important;
+        line-height: 1;
+        label:not(.error) {
+            color: #C4C4C4;
+            font: {
+                size: 16px;
+                weight: 500;
+            }
+        }
+        label.error {
+            color: red;
+            font: {
+                size: 12px;
+                weight: 500;
+            }
+        }
+        input {
+            border: 1px solid #000;
+            border-radius: 8px;
+            color: lighten(#000, 40);
+            font-size: 16px;
+            &::placeholder {
+                color: #C4C4C4;
+            }
+        }
+    }
+    .form-actions {
+        margin-top: 10px;
+        .el-custom--button {
+            border-radius: 8px;
+            width: 100%;
+            background-color: #FF5005;
+            color: #fff;
+            height: 48px;
+            line-height: 48px;
+            font: {
+                size: 16px;
+                weight: 500;
+            }
+        }
+    }
 }

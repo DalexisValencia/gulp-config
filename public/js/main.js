@@ -25,10 +25,10 @@ $(document).ready(function() {
         const openForm = $(".register-now");
         const closeForm = $(".abi--overlay-register--form-close");
 
-        openForm.click(function() {
-            $(".abi--overlay-register").addClass("active");
-            $("body").addClass("no-scroll");
-        });
+        // openForm.click(function() {
+        //     $(".abi--overlay-register").addClass("active");
+        //     $("body").addClass("no-scroll");
+        // });
 
         closeForm.click(function() {
             $(".abi--overlay-register").removeClass("active");
@@ -147,8 +147,10 @@ function createRipple(event, elem) {
         ripple.remove();
     }
     if (button.find(".ripple").length) {
-        button.remove(".ripple");
+        button.find(".ripple").remove();
     }
+
+    console.warn(button)
 
     // console.warn(button.find(".ripple").length, 'child')
 

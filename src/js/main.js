@@ -25,10 +25,10 @@ $(document).ready(function() {
         const openForm = $(".register-now");
         const closeForm = $(".abi--overlay-register--form-close");
 
-        openForm.click(function() {
-            $(".abi--overlay-register").addClass("active");
-            $("body").addClass("no-scroll");
-        });
+        // openForm.click(function() {
+        //     $(".abi--overlay-register").addClass("active");
+        //     $("body").addClass("no-scroll");
+        // });
 
         closeForm.click(function() {
             $(".abi--overlay-register").removeClass("active");

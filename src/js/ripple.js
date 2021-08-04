@@ -22,8 +22,10 @@ function createRipple(event, elem) {
         ripple.remove();
     }
     if (button.find(".ripple").length) {
-        button.remove(".ripple");
+        button.find(".ripple").remove();
     }
+
+    console.warn(button)
 
     // console.warn(button.find(".ripple").length, 'child')
 

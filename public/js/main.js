@@ -1,12 +1,25 @@
 // jQuery(document).ready(function() {
 $(document).ready(function() {
         var drawer = $(".abi--main-navigation");
-        $(".open-drawer").on("click", function() {
-            drawer.addClass('active');
+        var closeClassName = "icon-pluss";
+        $(".open-drawer").on("click", function(event) {
+            // console.info(event.currentTarget);
+            var iconChild = $(this).find('i');
+            if (iconChild.hasClass("icon-burger-menu")) { //if exists burger menu class
+                drawer.addClass("active");
+                iconChild.removeClass("icon-burger-menu").addClass(closeClassName);
+                $(this).addClass("now-im-close");
+                $("body").addClass("no-scroll")
+            } else if (iconChild.hasClass(closeClassName)) { //if exists close burger menu class
+                drawer.removeClass('active');
+                $(this).removeClass("now-im-close");
+                $("body").removeClass("no-scroll")
+                iconChild.removeClass(closeClassName).addClass("icon-burger-menu");
+            }
         });
-        $(".close-drawer").on("click", function() {
-            drawer.removeClass('active');
-        });
+        // $(".close-drawer").on("click", function() {
+        //     drawer.removeClass('active');
+        // });
         // Sliders social network on new pilsen extra
         var sliderCarouselNewPilsenExtra = $(".abi--center-banner-social--gallery-wrapper-sliders.owl-carousel")
         if (sliderCarouselNewPilsenExtra.length >= 1) {
@@ -96,3 +109,32 @@ $(document).ready(function() {
         }
     })
     // })(jQuery);
+function createRipple(event) {
+    const current_color = $(event.currentTarget).css("background-color");
+    // const match = /rgba?\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(,\s*\d+[\.\d+]*)*\)/g.exec(current_color);
+    // const rippleBackground = "rgba(" + [match[1], match[2], match[3], 0.8].join(',') + ")";
+    const button = event.currentTarget;
+
+    const circle = document.createElement("span");
+    // const circle = $("<span></span>");
+
+    const diameter = Math.max(button.clientWidth, button.clientHeight);
+    const radius = diameter / 2;
+    circle.style.width = circle.style.height = diameter + "px";
+    circle.style.left = event.clientX - button.offsetLeft - radius + "px";
+    circle.style.top = event.clientY - button.offsetTop - radius + "px";
+    // circle.style.backgroundColor = rippleBackground;
+    circle.classList.add("ripple");
+
+    const ripple = button.getElementsByClassName("ripple")[0];
+
+    if (ripple) {
+        ripple.remove();
+    }
+
+    button.appendChild(circle);
+}
+
+$(".el-custom--button").on("click", function(event) {
+    createRipple(event);
+});

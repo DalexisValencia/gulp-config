@@ -10,6 +10,13 @@
     }
 }
 
+picture {
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
 body.no-scroll {
     overflow: hidden !important;
 }

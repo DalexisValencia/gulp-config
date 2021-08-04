@@ -1,0 +1,142 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--main-showcase-wrapper {
+    background-image: url("../assets/showcase/showcase-desktop.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 10px 20px;
+    @include media-xs-range-2 {
+        padding: 40px 10px 15px;
+    }
+}
+
+.abi--main-showcase--cards {
+    max-width: 1106px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    .abi--main-showcase--card {
+        position: relative;
+        cursor: pointer;
+        // border: 1px solid green;
+        box-shadow: 0px 3px 5px rgba($fourty-brand-color, 0.6);
+        width: 518px;
+        height: 238px;
+        border-radius: 5px;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &:first-child {
+            background-image: url("../assets/showcase/cards-login-here.png");
+            @include media-md-range-1 {
+                .abi--main-showcase--card-title {
+                    top: 2vw !important;
+                }
+            }
+            @include media-xs-range-2 {
+                .abi--main-showcase--card-title {
+                    top: 8vw !important;
+                }
+            }
+        }
+        &:last-child {
+            background-image: url("../assets/showcase/cards-buy-here.png");
+            @include media-md-range-1 {
+                .abi--main-showcase--card-title {
+                    top: 4 vw !important;
+                }
+            }
+            @include media-xs-range-2 {
+                .abi--main-showcase--card-title {
+                    top: 10vw !important;
+                }
+            }
+        }
+        .abi--main-showcase--card-title {
+            user-select: none;
+            position: absolute;
+            right: 20px;
+            top: 25px;
+            text-align: right;
+            text-transform: uppercase;
+            color: $secondary-brand-color;
+            span.marker {
+                color: $tertiary-brand-color;
+            }
+            font: {
+                size: 40px;
+                weight: 700;
+                family: 'Oswald', sans-serif;
+            }
+            @include media-md-range-1 {
+                font-size: 3.2vw;
+            }
+            @include media-xs-range-2 {
+                font-size: 5.8vw;
+            }
+        }
+        @include media-md-range-1 {
+            // border: 2px solid white;
+            width: 46vw;
+            height: 21vw;
+        }
+        @include media-xs-range-2 {
+            width: 90vw;
+            height: 42vw;
+            margin-bottom: 20px;
+        }
+    }
+    @include media-md-range-1 {
+        // border: 2px dashed white;
+        padding: 0px 10px;
+    }
+    @include media-xs-range-2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        // max-width: 400px;
+    }
+}
+
+.abi--main-showcase--search {
+    max-width: 1106px;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 88px;
+    .abi--main-showcase--search-title {
+        color: $secondary-brand-color;
+        font: {
+            size: 40px;
+            family: 'Oswald', sans-serif;
+            weight: 700;
+        }
+        @include media-xs-range-2 {
+            font-size: 32px;
+            max-width: 617px;
+            margin: 0px auto;
+        }
+    }
+    .abi--main-showcase--search-input {
+        max-width: 620px;
+        margin: 0px auto;
+        margin-top: 20px;
+        border-radius: 50px;
+        background-color: transparent;
+        border: 1.5px solid $tertiary-brand-color;
+        color: $secondary-brand-color;
+        font-size: 16px;
+        &::placeholder {
+            color: rgba(#fff, 0.8);
+        }
+        background-image: url("../assets/icons/search.svg");
+        // background-position: right;
+        background-position-x: 96%;
+        background-position-y: center;
+        // background-position: right;
+        background-repeat: no-repeat;
+        background-size: 20px 100%;
+    }
+    @include media-xs-range-2 {
+        margin-top: 50px !important;
+    }
+}

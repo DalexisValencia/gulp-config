@@ -1,0 +1,132 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--main-bannervideo-wrapper {
+    position: relative;
+    background-color: $fourty-brand-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-xs-range-2 {
+        flex-wrap: wrap;
+        padding-bottom: 190px;
+    }
+}
+
+.abi--main-bannervideo--header {
+    position: absolute;
+    top: 16vw;
+    left: 5vw;
+    z-index: 1;
+    // border: 2px dashed red;
+    .abi--main-bannervideo--header-title {
+        pointer-events: none;
+        line-height: 1;
+        font: {
+            // size: 70px;
+            size: 5vw;
+            weight: 700;
+            family: Oswald, sans-serif;
+        }
+        color: $secondary-brand-color;
+        span.marker {
+            color: $tertiary-brand-color;
+        }
+        @include media-xs-range-2 {
+            font-size: 40px;
+        }
+    }
+    .el-custom--button.register-now {
+        margin-top: 20px;
+        border-radius: 8px;
+        padding: 10px 35px;
+        min-height: 40px;
+        min-width: 213px;
+        background-color: $primary-brand-color;
+        color: $secondary-brand-color;
+        font: {
+            size: 14px;
+            weight: 700;
+            family: Oswald, sans-serif;
+        }
+        @include media-xs-range-2 {
+            position: absolute !important;
+            bottom: 100px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            width: 40%;
+            border-radius: 50px;
+        }
+    }
+    @include media-xs-range-2 {
+        padding: 40px 10px;
+        position: unset;
+        width: 100%;
+        top: unset;
+        left: unset;
+        text-align: center;
+    }
+}
+
+.abi--main-bannervideo--preview {
+    position: relative;
+    picture {
+        width: 100%;
+    }
+}
+
+.abi--main-bannervideo--play-btn.el-custom--button {
+    position: absolute !important;
+    width: 50px;
+    height: 50px;
+    background-image: url("../assets/icons/play-video.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.abi--main-bannervideo--seemore-btn.el-custom--button {
+    position: absolute !important;
+    width: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    bottom: 20px;
+    span {
+        width: 100%;
+        font: {
+            family: Oswald, sans-serif;
+            size: 14px;
+            weight: 700;
+        }
+        text-align: center;
+        color: $secondary-brand-color;
+        display: block;
+        margin-bottom: 20px;
+        @include media-xs-range-2 {
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+    }
+    i.icon {
+        font-size: 20px;
+        &::before {
+            color: $primary-brand-color !important;
+        }
+        @include media-xs-range-2 {
+            font-size: 15px;
+        }
+    }
+    // @include media-xs-range-2 {
+    //     size: 12px;
+    // }
+}

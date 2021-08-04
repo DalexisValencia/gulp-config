@@ -52,14 +52,15 @@ span.ripple {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+// .el-custom--button:active {
+//     background-color: rgba(255, 255, 255, 0.5) !important;
+//     background-size: 100% !important;
+//     transition: background 0s !important;
+//     animation: ripple 600ms linear;
+// }
 @keyframes ripple {
     to {
         transform: scale(4);
         opacity: 0;
     }
 }
-
-// .el-custom--button.ripple {
-//     padding: 10px 20px;
-//     background-color: red;
-// }

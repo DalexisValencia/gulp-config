@@ -75,6 +75,14 @@
                     <li class="abi--main-menu-item active">
                         <a href="">HOME</a>
                     </li>
+
+                    <li class="abi--main-menu-item active">
+                        <a href="">PROMOS</a>
+                    </li>
+
+                    <li class="abi--main-menu-item active">
+                        <a href="">ENCUENTRA TU PILSEN</a>
+                    </li>
                 </ul>
             </nav>
             <nav class="abi--social">
@@ -110,13 +118,13 @@
                     LA FERIA <span class="marker">SE PARCHA <br>
                     EN EL</span> BARRIO
                 </h3>
-                <button class="el-custom--button register-now">
+                <a class="el-custom--button register-now" href="">
                     Registrarme ahora
-                </button>
+                </a>
             </header>
             <picture class="abi--main-bannervideo--preview">
                 <source media="(min-width:710px)" srcset="assets/bannervideo/prev-video-desktop.png">
-                <img src="assets/bannervideo/prev-video-mobile.png" alt="">
+                <img src="assets/bannervideo/prev-video-mobile-1.png" alt="">
                 <button class="abi--main-bannervideo--play-btn el-custom--button"></button>
                 <div class="abi--main-bannervideo--video">
                     <iframe src="https://www.youtube.com/embed/Y6aYx_KKM7A" title="" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
@@ -150,7 +158,12 @@
                     ENCONTRÁ EL LITRAZO AL PRECIO QUE ES
                 </h2>
 
-                <input type="text" class="el-custom--input abi--main-showcase--search-input" placeholder="">
+                <form class="abi--main-showcase--search-input--wrapper">
+                    <input type="text" class="el-custom--input abi--main-showcase--search-input" placeholder="Ingresa tu dirección">
+                    <button class="el-custom--button search-now">
+                        Buscar
+                    </button>
+                </form>
             </div>
         </section>
 

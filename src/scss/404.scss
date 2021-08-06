@@ -1,13 +1,20 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi--internal-section.page-404 {
-    background-image: url('../assets/showcase/showcase-desktop.png');
+    background-image: url('../assets/404/404-background-desktop.png');
     background-position: center;
     background-size: cover;
     background-position: center top;
-    @include media-xs-small {
+    @include media-xs {
+        background-image: url('../assets/404/404-background-mobile.png');
         min-height: 200vw;
         height: auto;
+    }
+}
+
+.abi--internal-section.thanks {
+    @include media-xs {
+        height: auto !important;
     }
 }
 
@@ -21,28 +28,30 @@
         justify-content: center;
         .abi--404-section__box-header--title {
             color: $secondary-brand-color;
+            width: 100%;
             line-height: 1;
             font: {
                 family: 'Oswald';
-                size: 8em;
-                weight: 400;
+                size: 150px;
+                weight: bold;
             }
             @include media-xs-range-2 {
-                font-size: 4em;
+                font-size: 100px;
             }
         }
         .abi--404-section__box-header--subtitle {
             max-width: max-content;
-            margin: 5px 0px 10px;
+            margin: 40px 0px 20px;
+            line-height: 1;
             color: $secondary-brand-color;
-            text-transform: uppercase;
+            // text-transform: uppercase;
             font: {
-                size: 38px;
+                size: 16px;
                 weight: 400;
-                family: 'Oswald';
+                family: 'Manrope', sans-serif;
             }
             @include media-xs-range-2 {
-                font-size: 2em;
+                font-size: 16px;
             }
         }
         .abi--404-section__box-header--description {
@@ -63,7 +72,7 @@
         max-width: 250px;
         width: 100%;
         display: flex;
-        background-color: $fourty-brand-color;
+        background-color: $primary-brand-color;
         color: $secondary-brand-color;
         // width: 194px;
         height: 49px;

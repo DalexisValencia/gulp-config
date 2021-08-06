@@ -1,11 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+
+
+/* font-family: 'Manrope', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @font-face {
-    font-family: 'Helvetica';
-    src: url('../assets/fonts/Helvetica.ttf');
+    font-family: 'Oswald';
+    src: url('../assets/fonts/Oswald-VariableFont_wght.ttf');
 }
 
 body.agegate-visible {
-    background: #f3efe6;
+    background: #EC1D22;
+    overflow: hidden !important;
+}
+
+body.agegate-visible #age-gate-01 {
+    background-color: #EC1D22;
 }
 
 
@@ -13,21 +23,15 @@ body.agegate-visible {
 
 body.agegate-visible #age-gate-01::-webkit-scrollbar {
     width: 7px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #EC1D22;
 }
 
 body.agegate-visible #agv2 .el-custom--footer {
     width: 100%;
 }
 
-
-/*calc(100% - 135px)*/
-
-
-/* Handle */
-
 body.agegate-visible #age-gate-01::-webkit-scrollbar-thumb {
-    background: #ffc627;
+    background: black;
 }
 
 body.agegate-visible .dialog-off-canvas-main-canvas #page-wrapper #page #main-wrapper {
@@ -50,8 +54,7 @@ body.agegate-visible #agv2 {
     left: 0;
     z-index: 9999;
     font-size: 16px !important;
-    font-family: Roboto, sans-serif;
-    /* height: calc(100vh - 187px); */
+    /* font-family: Roboto, sans-serif; */
     height: 100%;
 }
 
@@ -61,17 +64,19 @@ body.agegate-visible #agv2 .agv2__container {
     background-position: center !important;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     align-items: flex-end;
     text-align: center;
     padding: 0 0 4rem;
     flex-wrap: wrap;
-    /* align-items: flex-end; */
     margin-bottom: 0px;
     padding-bottom: 0px;
     overflow-x: hidden;
     overflow-y: auto;
     /* height: calc(100vh - 187px); */
+}
+
+body.agegate-visible #agv2 .agv2__container.vertically-center {
+    align-items: center !important;
 }
 
 .agegate-visible #agv2 .agv2__container footer.site-footer {
@@ -83,8 +88,6 @@ body.agegate-visible #agv2 .agv2__wrapper {
     padding: 2rem 1rem;
     max-width: 700px;
     margin: 0 auto;
-    /* background-color: #FFFFFF; */
-    /* box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); */
     margin: 20px 0px;
 }
 
@@ -99,26 +102,16 @@ body.agegate-visible #agv2 .agv2__brand img {
     width: 100%;
 }
 
-
-/* body.agegate-visible #agv2 .agv2__p {
-    font-size: 0.9rem;
-} */
-
 body.agegate-visible #agv2 .agv2__p.small {
-    /* display: none; */
-    /* font-size: 0.9rem; */
     text-align: left;
     font-size: 12px;
     color: #fff;
-    font-family: 'Helvetica';
+    font-family: 'Manrope', sans-serif;
+    display: none;
 }
 
 body.agegate-visible #agv2 .agv2__p.small a {
     color: #fff;
-}
-
-body.agegate-visible #agv2 .agv2__p.bold {
-    font-weight: 500;
 }
 
 .agegate-visible #agv2 .agv2__input {
@@ -169,6 +162,7 @@ body.agegate-visible #agv2 .agv2__checkbox {
     font-size: 2.5rem;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 body.agegate-visible #agv2 .agv2__checkbox--disabled {
@@ -248,14 +242,14 @@ body.agegate-visible #agv2 .agv2__checkbox .checkbox__input input:disabled+.chec
     font-weight: 700;
     color: #fff;
     margin-left: 18px;
-    font-family: 'Helvetica';
+    font-family: 'Manrope', sans-serif;
 }
 
 .agegate-visible #agv2 .agv2__label--optional {
     font-size: 12px;
     text-align: left;
     color: white;
-    font-family: 'Helvetica';
+    font-family: 'Manrope', sans-serif;
     width: 255px;
     position: relative;
     left: 149px;
@@ -277,26 +271,30 @@ body.agegate-visible #agv2 .agv2__checkbox .checkbox__input input:disabled+.chec
     width: 100%;
     text-align: center;
     color: #fff;
-    font-family: 'Helvetica';
-    font-size: 23px;
+    font-family: 'Oswald';
+    font-size: 40px;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-.agegate-visible #agv2 .form-age .form-age__header .welcome-description {
+
+/* .agegate-visible #agv2 .form-age .form-age__header .welcome-description {
     width: 100%;
     text-align: center;
     color: #fff;
-    font-family: 'Helvetica';
-    font-size: 15px;
-    font-weight: 400;
-}
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    display: none;
+} */
 
 .agegate-visible #agv2 .form-age .form-age__header p.agv2__p.bold {
     max-width: 100%;
-    /* font-size: 25px; */
     line-height: 1;
     margin-top: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    color: #fff;
 }
 
 .agegate-visible #agv2 .form-age::before {
@@ -315,12 +313,12 @@ body.agegate-visible #agv2 .agv2__checkbox .checkbox__input input:disabled+.chec
 .agegate-visible #agv2 .form-age__content {
     margin: 1rem 0;
     position: relative;
-    border: 8px solid #fff;
+    /* border: 8px solid #fff; */
     max-width: -moz-max-content;
     margin: 0px auto;
     padding: 10px;
     margin-top: 30px;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4); */
     position: relative;
 }
 
@@ -348,29 +346,29 @@ body.agegate-visible #agv2 .agv2__checkbox .checkbox__input input:disabled+.chec
 } */
 
 .agegate-visible #agv2 .form-age__content button {
-    background-image: url("../assets/inactive.svg");
-    background-position: center;
-    background-size: contain;
-    /* background-color: red; */
+    background-color: transparent;
     color: #FFF;
-    font-family: 'HelveticaNeueLTStd-BdCn';
-    font-size: 70px;
-    font-weight: 500;
-    min-width: 159px;
-    height: 167px;
-    border: 0px solid transparent;
-    border-radius: 5px;
-    transition: 0.5s all;
+    font-family: 'Oswald';
+    font-size: 40px;
+    font-weight: bold;
+    min-width: 101px;
+    height: 127px;
+    /* border: 0px solid transparent; */
+    border-radius: 0px;
+    transition: 0.3s all;
+    text-transform: uppercase;
+    border: 1.5px solid white;
     text-transform: uppercase;
 }
 
 .agegate-visible #agv2 .form-age__content button:first-child {
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .agegate-visible #agv2 .form-age__content button:hover,
 .agegate-visible #agv2 .form-age__content button:active {
-    background-image: url("../assets/active.svg");
+    background-color: black;
+    color: white;
 }
 
 .agegate-visible #agv2 .form-age__content button:first-child {
@@ -473,14 +471,6 @@ body.agegate-visible #age-gate-02 .error-year,
 #age-gate-03 .error-year {
     font-weight: bold;
     color: white;
-}
-
-.agegate-visible #agv2 .agv2__p.bold {
-    color: #fff;
-    /* text-transform: capitalize; */
-    font-size: 15px;
-    font-family: 'Helvetica';
-    font-weight: 400;
 }
 
 body.agegate-visible .buttons {
@@ -637,6 +627,9 @@ body.agegate-visible .right-layer--3 {
 }
 
 @media (max-width: 640px) {
+    .agegate-visible #agv2 .form-age .form-age__header .welcome-message {
+        font-size: 30px;
+    }
     body.agegate-visible #agv2 .form-age__navigation {
         top: 34% !important;
     }
@@ -651,15 +644,12 @@ body.agegate-visible .right-layer--3 {
     body.agegate-visible #agv2 .agv2__checkbox {
         justify-content: flex-start;
     }
-    body.agegate-visible #agv2 .agv2__p.small {
-        margin-left: 47px;
-    }
     .agegate-visible #agv2 .form-age__content button {
-        width: 126.48px;
-        height: 132.84px;
+        width: 101px;
+        height: 127px;
         background-repeat: no-repeat;
         min-width: unset;
-        font-size: 60px !important;
+        font-size: 40px !important;
     }
     .agegate-visible #agv2 .agv2__brand {
         max-width: 200px;
@@ -675,16 +665,10 @@ body.agegate-visible .right-layer--3 {
         position: fixed;
         /* min-height: 680px; */
     }
-    .agegate-visible #agv2 .agv2__label {
-        font-size: 12px
-    }
     .agegate-visible #agv2 #agv2 .agegate__btn.main {
         height: 54px;
         width: 170px
     }
-    /* .agegate-visible #agv2 .form-age__content .year {
-        margin: 0px 2rem;
-    } */
     .agegate-visible #agv2 .form-age::before {
         top: -50px;
         background-size: 78%;
@@ -713,7 +697,7 @@ body.agegate-visible .right-layer--3 {
         display: flex;
         justify-content: center;
     }
-    .agegate-visible #agv2 .form-age__content button {
+    /* .agegate-visible #agv2 .form-age__content button {
         width: 126.48px;
         height: 132.84px;
         min-width: 126.48px;
@@ -723,7 +707,7 @@ body.agegate-visible .right-layer--3 {
         background-repeat: no-repeat;
         min-width: unset;
         font-size: 50px !important;
-    }
+    } */
 }
 
 @media (max-width: 320px) {

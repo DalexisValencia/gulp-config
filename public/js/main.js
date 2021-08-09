@@ -1,5 +1,11 @@
 // jQuery(document).ready(function() {
 $(document).ready(function() {
+        //addinf lateral teselation only new pilse extra page
+        var areIncorrectPage = $(".abi--top-banner-pilsenextra").length
+        console.info(areIncorrectPage)
+        if (areIncorrectPage) {
+            $("footer.abi--main-main-footer").addClass("lateral-tessellation");
+        }
         var drawer = $(".abi--main-navigation");
         $(".open-drawer").on("click", function() {
             drawer.addClass('active');

@@ -8,6 +8,10 @@ body.agegate-visible {
     background: #f3efe6;
 }
 
+body.agegate-visible .dialog-off-canvas-main-canvas {
+    opacity: 0;
+}
+
 
 /* width */
 
@@ -27,7 +31,7 @@ body.agegate-visible #agv2 .el-custom--footer {
 /* Handle */
 
 body.agegate-visible #age-gate-01::-webkit-scrollbar-thumb {
-    background: #ffc627;
+    background: #EA0029;
 }
 
 body.agegate-visible .dialog-off-canvas-main-canvas #page-wrapper #page #main-wrapper {
@@ -729,5 +733,8 @@ body.agegate-visible .right-layer--3 {
 @media (max-width: 320px) {
     .agegate-visible #agv2 .agv2__input {
         margin: 0.5rem 5px !important;
+        height: 63px !important;
+        width: 38px !important;
+        font-size: 25px !important;
     }
 }

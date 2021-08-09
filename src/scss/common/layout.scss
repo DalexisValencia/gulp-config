@@ -1,11 +1,17 @@
-*[class*="--flex"]{
+*[class*="--flex"] {
     display: flex;
-    &.justify-between{
+    &.justify-between {
         justify-content: space-between;
         align-items: center;
     }
-    &.center{
+    &.center {
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+.abi--main-wrapper {
+    .node__content.clearfix {
+        margin-top: 0px !important;
     }
 }

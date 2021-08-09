@@ -6,6 +6,25 @@
     width: 100%;
     background-color: $primary-darken-brand-color;
     padding-top: 40px;
+    &.lateral-tessellation {
+        &::before {
+            pointer-events: none;
+            content: "";
+            background-image: url("../assets/lateral-teselation.png");
+            background-position: center;
+            background-repeat: repeat-y;
+            background-size: contain;
+            position: absolute;
+            right: 0px;
+            top: -250vh;
+            width: 1vw;
+            height: 250vh;
+            z-index: 2;
+            @include media-xs-range-2 {
+                background-image: unset;
+            }
+        }
+    }
     @include media-xs-range-2 {
         padding-top: 20px;
         border-top: 10px solid $tenth-brand-color;

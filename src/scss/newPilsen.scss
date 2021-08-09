@@ -1,13 +1,33 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
+.abi--top-banner-pilsenextra--background {
+    background-color: #1d2c42;
+    position: relative;
+}
+
 .abi--top-banner-pilsenextra {
     width: 100%;
     position: relative;
+    z-index: 3;
     picture {
         img {
             object-fit: cover;
             width: 100%;
         }
+    }
+    &::before {
+        pointer-events: none;
+        content: "";
+        background-image: url("../assets/lateral-teselation.png");
+        background-position: center;
+        background-repeat: repeat-y;
+        background-size: contain;
+        position: absolute;
+        right: 0px;
+        top: -250vh;
+        width: 1vw;
+        height: 250vh;
+        z-index: 2;
     }
 }
 
@@ -258,9 +278,18 @@
         font-size: 2vw;
         line-height: 1;
         color: $primary-darken-brand-color;
+        @include media-xs-range-2 {
+            font-size: 25px;
+        }
     }
     @include media-xs-range-2 {
-        display: none;
+        // display: none;
+        position: unset;
+        width: 100%;
+        max-width: 310px;
+        padding: 0px 20px;
+        margin: 0px auto;
+        padding-bottom: 50px;
     }
 }
 
@@ -281,13 +310,27 @@
                 width: 100%;
                 object-fit: cover;
             }
+            @include media-xs-range-2 {
+                width: 50px;
+                height: 50px;
+                min-width: 50px;
+                min-height: 50px;
+            }
         }
         .abi--center-banner-details-ingredients--list-item__name {
             margin-left: 2vw;
             font-size: 1.4vw;
             line-height: 1.2;
             color: $fithteen-brand-color;
+            @include media-xs-range-2 {
+                font-size: 18px;
+            }
         }
+    }
+    @include media-xs-range-2 {
+        // border: 1px solid red;
+        margin-top: 30px;
+        margin-left: 10vw;
     }
 }
 

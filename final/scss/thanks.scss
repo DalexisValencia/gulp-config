@@ -1,0 +1,111 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--internal-section.thanks {
+    background-image: url('../assets/thanks/thanks-background.png');
+    background-position: center;
+    background-size: cover;
+    background-position: center top;
+    @include media-xs-range-2 {
+        position: relative;
+        background-image: url('../assets/thanks/thanks-background-mobile.png');
+    }
+}
+
+.abi--internal-section {
+    // background-color: $secondary-brand-color;
+    width: 100%;
+    min-height: 800px;
+    height: 80vh;
+    // height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-xs-range-2 {
+        height: 83vw;
+        min-height: unset;
+        // background-color: red;
+        padding: 10px;
+    }
+    @include media-xs-small {
+        height: 160vw;
+    }
+}
+
+.abi--thanks-section__box {
+    max-width: 1022px;
+    overflow: hidden;
+    .abi--thanks-section__box-header {
+        .abi--thanks-section__box-header--title {
+            text-align: center;
+            color: $secondary-brand-color;
+            line-height: 1;
+            text-transform: uppercase;
+            font: {
+                size: 48px;
+                family: 'Oswald';
+                weight: bold;
+            }
+            @include media-xs-range-2 {
+                font-size: 24px;
+            }
+        }
+    }
+    .el-custom--button.goto-home {
+        border-radius: 50px;
+        line-height: 1;
+        color: $secondary-brand-color;
+        background-color: $primary-brand-color;
+        padding: 20px 30px;
+        width: 329px;
+        height: 52px;
+        margin: 0px auto;
+        margin-top: 30px;
+        font: {
+            size: 16px;
+            weight: 700;
+            family: 'Oswald';
+        }
+        @include media-xs-range-2 {
+            border-radius: 50px;
+            width: 180px;
+        }
+    }
+    .abi--thanks-section__box-content,
+    .abi--thanks-section__box-hashtag {
+        &:not(.abi--thanks-section__box-hashtag) {
+            margin-top: 25px;
+        }
+        line-height: 1.2;
+        text-align: center;
+        // background-color: $eight-brand-color;
+        color: $secondary-brand-color;
+        text-transform: uppercase;
+        font: {
+            size: 48px;
+            weight: 700;
+            family: 'Oswald';
+        }
+        @include media-xs-range-2 {
+            font-size: 24px;
+        }
+    }
+    .abi--thanks-section__box-hashtag {
+        text-align: center;
+        text-transform: uppercase;
+        color: $secondary-brand-color;
+        font: {
+            size: 48px;
+            weight: 700;
+            family: 'Oswald';
+        }
+        span {
+            color: $tertiary-brand-color;
+        }
+    }
+    // @include media-xs-range-2 {
+    //     max-width: 329px;
+    //     position: absolute;
+    //     width: 98%;
+    //     top: 15vw;
+    // }
+}

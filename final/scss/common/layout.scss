@@ -1,0 +1,25 @@
+*[class*="--flex"] {
+    display: flex;
+    &.justify-between {
+        justify-content: space-between;
+        align-items: center;
+    }
+    &.center {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+picture {
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+body {
+    scroll-behavior: smooth !important;
+    &.no-scroll {
+        overflow: hidden !important;
+    }
+}

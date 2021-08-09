@@ -1,0 +1,92 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--internal-section.page-404 {
+    background-image: url('../assets/404/404-background-desktop.png');
+    background-position: center;
+    background-size: cover;
+    background-position: center top;
+    @include media-xs {
+        background-image: url('../assets/404/404-background-mobile.png');
+        min-height: 200vw;
+        height: auto;
+    }
+}
+
+.abi--internal-section.thanks {
+    @include media-xs {
+        height: auto !important;
+    }
+}
+
+.abi--404-section__box {
+    .abi--404-section__box-header {
+        max-width: 760px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .abi--404-section__box-header--title {
+            color: $secondary-brand-color;
+            width: 100%;
+            line-height: 1;
+            font: {
+                family: 'Oswald';
+                size: 150px;
+                weight: bold;
+            }
+            @include media-xs-range-2 {
+                font-size: 100px;
+            }
+        }
+        .abi--404-section__box-header--subtitle {
+            max-width: max-content;
+            margin: 40px 0px 20px;
+            line-height: 1;
+            color: $secondary-brand-color;
+            font: {
+                size: 16px;
+                weight: 400;
+                family: 'Manrope', sans-serif;
+            }
+            @include media-xs-range-2 {
+                font-size: 16px;
+            }
+        }
+        .abi--404-section__box-header--description {
+            color: $secondary-brand-color;
+            max-width: 587px;
+            width: 100%;
+            margin: 10px auto;
+            font: {
+                family: 'Oswald';
+                size: 18px;
+            }
+            @include media-xs-range-2 {
+                font-size: 1em;
+            }
+        }
+    }
+    .el-custom--button.goHome_404 {
+        max-width: 250px;
+        width: 100%;
+        display: flex;
+        background-color: $primary-brand-color;
+        color: $secondary-brand-color;
+        // width: 194px;
+        height: 49px;
+        margin: 20px auto;
+        border-radius: 8px;
+        font: {
+            size: 16px;
+            weight: 900;
+            family: 'Oswald';
+        }
+        @include media-xs-range-2 {
+            font-size: 18px;
+        }
+    }
+    @include media-xs-range-2 {
+        margin: 50px 0px;
+    }
+}

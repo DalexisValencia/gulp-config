@@ -1,0 +1,104 @@
+@import "variables";
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?sg949y');
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?sg949y#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?sg949y') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?sg949y') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?sg949y##{$icomoon-font-family}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-see-more {
+    &:before {
+        content: $icon-arrow-see-more;
+        color: #fff;
+    }
+}
+
+.icon-burger-menu {
+    &:before {
+        content: $icon-burger-menu;
+        color: #fff;
+    }
+}
+
+.icon-facebook-circle {
+    &:before {
+        content: $icon-facebook-circle;
+        color: #fff;
+    }
+}
+
+.icon-facebook-outline {
+    &:before {
+        content: $icon-facebook-outline;
+        color: #fff;
+    }
+}
+
+.icon-instagram-circle {
+    &:before {
+        content: $icon-instagram-circle;
+        color: #fff;
+    }
+}
+
+.icon-instagram-outline {
+    &:before {
+        content: $icon-instagram-outline;
+        color: #fff;
+    }
+}
+
+.icon-less {
+    &:before {
+        content: $icon-less;
+        color: #fff;
+    }
+}
+
+.icon-pluss {
+    &:before {
+        content: $icon-pluss;
+        color: #fff;
+    }
+}
+
+.icon-search {
+    &:before {
+        content: $icon-search;
+        color: #fff;
+    }
+}
+
+.icon-twitter-circle {
+    &:before {
+        content: $icon-twitter-circle;
+        color: #fff;
+    }
+}
+
+.icon-twitter-outline {
+    &:before {
+        content: $icon-twitter-outline;
+        color: #fff;
+    }
+}

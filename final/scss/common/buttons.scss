@@ -1,0 +1,68 @@
+a[class*="el-custom"],
+a.el-custom--button,
+button[class*="el-custom"],
+input[type="button"].el-custom--button,
+button.el-custom--button {
+    position: relative !important;
+    overflow: hidden;
+    transition: background 400ms;
+    flex: 0 0 auto;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 0px;
+    font-weight: 500;
+    letter-spacing: .0892857143em;
+    justify-content: center;
+    outline: 0;
+    text-decoration: none;
+    text-indent: .0892857143em;
+    text-transform: uppercase;
+    transition-duration: .28s;
+    transition-property: box-shadow, transform, opacity;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    border: 0px solid transparent;
+    text-decoration: none !important;
+    vertical-align: middle;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: 0;
+        outline-color: transparent !important;
+    }
+}
+
+a[class*="el-custom"],
+a.el-custom--button {
+    display: flex;
+}
+
+// input[class*="el-custom"],
+// input.el-custom--button {
+// }
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    background-color: rgba(255, 255, 255, 0.5);
+    // min-width: 50px;
+    // min-height: 50px;
+}
+
+// .el-custom--button:active {
+//     background-color: rgba(255, 255, 255, 0.5) !important;
+//     background-size: 100% !important;
+//     transition: background 0s !important;
+//     animation: ripple 600ms linear;
+// }
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}

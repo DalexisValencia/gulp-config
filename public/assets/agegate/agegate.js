@@ -2,7 +2,7 @@ jQuery(document).ready(function() {
     const agegateVisible = $("body.agegate-visible");
 
     if (agegateVisible) {
-        const Originalfooter = agegateVisible.find("footer.el-custom--footer").clone();
+        const Originalfooter = agegateVisible.find("footer.abi--main-main-footer").clone();
 
         if (Originalfooter.length == 0) {
             agegateVisible.find("#age-gate-01").addClass("vertically-center");

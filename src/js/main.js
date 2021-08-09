@@ -2,8 +2,8 @@
 $(document).ready(function() {
         //addinf lateral teselation only new pilse extra page
         var areIncorrectPage = $(".abi--top-banner-pilsenextra").length
-        console.info(areIncorrectPage)
-        if (areIncorrectPage) {
+        console.info(areIncorrectPage, 'encontrada')
+        if (areIncorrectPage && ($("body.agegate-visible").length == 0)) {
             $("footer.abi--main-main-footer").addClass("lateral-tessellation");
         }
         var drawer = $(".abi--main-navigation");

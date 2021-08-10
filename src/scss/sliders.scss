@@ -1,237 +1,90 @@
     @import './vars/colors.scss';
     @import './common/queries.scss';
-    .abi--doblemalta-wrapper-generationThatBroke--full-container {
+    .abi--clubcolombia-wrapper-bottombanner--full-container {
         background-color: $fifth-brand-color;
         width: 100%;
         padding-bottom: 170px;
     }
     
-    .abi--doblemalta-wrapper-generationThatBroke--full-container--title {
+    .abi--clubcolombia-wrapper-bottombanner--full-container--title {
         background-color: $primary-brand-color;
-        font-size: 30px;
+        font-size: 16px;
         text-align: center;
         font-family: 'Bodoni-regular';
         padding: 20px 10px;
         color: $fourty-brand-color;
+        display: none;
         @include media-xs-range-1 {
-            display: none;
+            display: block;
         }
     }
     
-    .generationThatBrokeSliders-navigation {
-        display: none;
-        position: absolute;
-        z-index: 2;
-        pointer-events: none;
+    .abi--clubcolombia-wrapper-bottombanner {
+        // background-image: url("../assets/bases/bottom-banner.png");
+        // background-repeat: no-repeat;
+        // background-size: 100%;
+        // background-position: center top;
         width: 100%;
-        display: none;
-        padding: 0px 20px;
-        @include media-xs-range-1 {
-            margin-top: -35vw;
-            display: flex;
-            justify-content: space-between;
-        }
-        button {
-            pointer-events: all;
-            color: $secondary-brand-color;
-            font-size: 0px;
-            color: transparent;
-            width: 10vw;
-            height: 10vw;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            border-color: transparent !important;
-            &.owl-next {
-                background-image: url("../assets/icons/arrow-next.svg");
-            }
-            &.owl-prev {
-                background-image: url("../assets/icons/arrow-back.svg");
-            }
-            &:hover,
-            &:focus,
-            &:active {
-                outline: 0;
-                outline-color: transparent !important;
-            }
-        }
-    }
-    
-    .abi--doblemalta-wrapper-generationThatBroke {
+        height: 57.6vw;
         position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        background-color: $fifth-brand-color;
-        .abi--doblemalta-wrapper-generationThatBroke--full-modal {
-            width: 100%;
-        }
-        .abi--doblemalta-wrapper-generationThatBroke--wrapper-cases {
-            .generationThatBroke--case {
-                z-index: 1;
-                cursor: pointer;
-                &:hover {
-                    .generationThatBroke--case-description {
-                        transform: translateY(-16vw);
-                        opacity: 1;
-                        @include media-xs-range-1 {
-                            transform: unset;
-                        }
-                        @include media-for-ipadpro {
-                            transform: unset;
-                        }
-                        @include media-md-custom {
-                            transform: translateY(-20vw);
-                        }
-                    }
-                }
-                .generationThatBroke--case-description {
-                    transition: 0.6s all;
-                    transition-timing-function: all 0s cubic-bezier(.95, .05, .8, .04) 0s;
-                    position: absolute;
-                    transform: translateY(10px);
-                    opacity: 0;
-                    z-index: 2;
-                    padding: 0px 30px;
-                    padding-bottom: 40px;
-                    width: 100%;
-                    @include media-xs-range-1 {
-                        transform: unset;
-                        bottom: 0px;
-                        opacity: 1;
-                    }
-                    @include media-for-ipadpro {
-                        transform: unset;
-                        bottom: 45px;
-                        opacity: 1;
-                    }
-                    @include media-md-custom {
-                        padding: 0px 5px;
-                    }
-                    @include media-for-ipadpro {
-                        padding: 0px 30px;
-                    }
-                    .generationThatBroke--case-description__title {
-                        font: {
-                            size: 45px;
-                            family: 'Bodoni-regular';
-                        }
-                        line-height: 0.9;
-                        @include media-md-custom {
-                            font-size: 3.4vw;
-                        }
-                        @include media-for-ipadpro {
-                            font-size: 45px;
-                        }
-                    }
-                    .generationThatBroke--case-description__ocupation {
-                        margin-top: 10px;
-                        font: {
-                            size: 14px;
-                            family: 'Futura-book';
-                        }
-                        @include media-for-ipadpro {
-                            font-size: 14px;
-                        }
-                    }
-                    .generationThatBroke--case-description__shortdescription {
-                        margin-top: 20px;
-                        font: {
-                            size: 14px;
-                            family: 'Futura-book';
-                        }
-                        @include media-md-custom {
-                            font-size: 1.5vw;
-                        }
-                        @include media-for-ipadpro {
-                            font-size: 14px;
-                        }
-                    }
-                    * {
-                        text-align: center;
-                        color: $secondary-brand-color;
-                        text-shadow: 0px 0px 1px $tertiary-brand-color;
-                    }
-                }
-                &.small-letter {
-                    .generationThatBroke--case-description {
-                        .generationThatBroke--case-description__title {
-                            font-size: 34px;
-                            @include media-md-custom {
-                                font-size: 2.5vw;
-                            }
-                            @include media-xs-range-1 {
-                                font-size: 33px;
-                            }
-                            @include media-for-ipadpro {
-                                font-size: 33px;
-                            }
-                        }
-                    }
-                }
-                .play-gallery-video {
-                    z-index: 2;
-                    position: absolute;
-                    border-radius: 50%;
-                    background-image: url('../assets/icons/play.svg');
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                    width: 77px;
-                    height: 77px;
-                    margin: auto;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    bottom: 0;
-                    right: 0;
-                }
-            }
-        }
     }
     
-    .abi--doblemalta-wrapper-generationThatBroke--video {
+    .abi--clubcolombia-wrapper-bottombanner--header {
         position: absolute;
-        overflow: hidden;
-        width: 12px;
-        height: 12px;
-        opacity: 0;
-        z-index: 1000;
-        transition: 0.5s all;
-        background-color: $primary-brand-color;
-        border-radius: 50%;
-        opacity: 0;
-        &.start-animatio,
-        &.show-video-animation {
-            border-radius: 0;
-            opacity: 1;
-        }
-        &.start-animation {
-            transform: scale(300);
-        }
-        &.show-video-animation {
-            width: 120%;
-            height: 120%;
-            transform: scale(1);
-            top: 0px !important;
-            left: 0px !important;
-            iframe {
-                opacity: 1;
-            }
-            &::after {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 100%;
-                background-color: $primary-brand-color;
-                transform: translateX(-57%);
+        top: 13.6vw;
+        left: 12vw;
+        width: 74vw;
+        .abi--clubcolombia-wrapper-bottombanner--header-title {
+            font-size: 4.72vw;
+            font-weight: 700;
+            line-height: 1;
+            font-family: 'Bodoni-regular';
+            color: $secondary-brand-color;
+            // color: magenta;
+            @include media-xs-range-1 {
+                // color: red;
+                font-size: 6.4vw;
+                line-height: 1.25;
             }
         }
-        iframe {
-            width: 83.5%;
-            height: 83.5%;
-            opacity: 0;
+        .abi--clubcolombia-wrapper-bottombanner--header-description {
+            margin-left: 1vw;
+            line-height: 1.1;
+            margin-top: 0.8vw;
+            font-size: 1.86vw;
+            color: $secondary-brand-color;
+            font-family: 'Futura-bold';
+            @include media-xs-range-1 {
+                line-height: 1.6;
+                margin-top: 2vw;
+                margin-left: 0px;
+                width: 46vw;
+                // color: red;
+                font-size: 3.2vw;
+                // line-height: 1.25;
+            }
+        }
+        .el-custom--button.btn-know-more {
+            color: $fourty-brand-color;
+            margin-top: 3.8vw;
+            border-radius: 3px;
+            width: 13vw;
+            height: 3.2vw;
+            font-family: 'Futura-book';
+            font-weight: 500;
+            line-height: 1;
+            font-size: 1.1vw;
+            background-color: $primary-brand-color;
+            @include media-xs-range-1 {
+                border-radius: 6px;
+                margin-top: 4.4vw;
+                width: 50.5vw;
+                height: 14.2vw;
+                font-size: 4.2vw;
+            }
+        }
+        @include media-xs-range-1 {
+            top: 9.6vw;
+            left: 11vw;
         }
     }

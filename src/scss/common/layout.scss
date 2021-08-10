@@ -1,11 +1,18 @@
-*[class*="--flex"]{
+*[class*="--flex"] {
     display: flex;
-    &.justify-between{
+    &.justify-between {
         justify-content: space-between;
         align-items: center;
     }
-    &.center{
+    &.center {
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+picture {
+    width: 100%;
+    img {
+        width: 100%;
     }
 }

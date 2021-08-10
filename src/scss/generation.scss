@@ -25,23 +25,26 @@
             width: 100%;
             font-size: 7vw;
             margin: 0px auto;
-            padding: 0px 20vw;
+            padding: 0px 5vw;
             top: 9vw;
             line-height: 0.99;
         }
     }
     .abi--doblemalta-wrapper-generation__description {
+        width: 38vw;
+        margin: 0px auto;
         color: $eight-brand-color;
         text-align: center;
         margin-top: 5.3vw;
         font: {
             size: 1.8vw;
-            family: 'Futura-book';
+            family: 'Futura-bold';
         }
         @include media-xs-range-1 {
             margin-top: 19vw;
             font-size: 2.93vw;
             line-height: 1.37;
+            width: 90%;
         }
     }
     .abi--doblemalta-wrapper-generation__wrapper-video {
@@ -53,9 +56,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        // background-color: red !important;
         @include media-xs-range-1 {
             width: 100%;
-            height: 53.95vw;
+            height: 52vw;
             margin-top: 9.6vw;
         }
         iframe,
@@ -66,7 +70,7 @@
         .video-play {
             position: absolute;
             z-index: 2;
-            background-image: url("../assets/icons/play-grey.svg");
+            background-image: url("../assets/icons/play-gold.svg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -74,7 +78,7 @@
             height: 5.5vw;
             border-radius: 50%;
             display: block;
-            margin-top: -5vw;
+            // margin-top: -5vw;
             @include media-xs-range-1 {
                 background-image: url("../assets/icons/play.svg");
                 width: 20.5vw;
@@ -105,25 +109,27 @@
     }
     .abi--doblemalta-wrapper-generation__social-links {
         display: none;
+        background-color: $primary-brand-color;
         .abi--doblemalta-wrapper-generation__social-links--title {
             text-align: center;
             color: $fifth-brand-color;
-            margin-top: 17vw;
+            // margin-top: 17vw;
             font-size: 4vw;
             font: {
                 family: 'HelveticaNeue-Condensed';
-                weight: 700;
+                weight: 400;
             }
         }
         ul {
             list-style: none;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             margin: 0px auto;
-            width: 38vw;
+            width: 100%;
             padding: 0px;
-            margin-top: 3vw;
+            margin-top: 5vw;
             li {
+                margin: 0px 8px;
                 &,
                 *,
                 .social-icon {
@@ -152,8 +158,12 @@
             }
         }
         @include media-xs-range-1 {
-            display: block;
-            margin-top: 3vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 3.5vw;
             height: 30vw;
         }
     }

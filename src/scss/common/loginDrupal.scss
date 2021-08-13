@@ -1,0 +1,31 @@
+@import '../vars/colors.scss';
+@import '../common/queries.scss';
+@import './buttons.scss';
+#user-login-form.user-login-form {
+    max-width: 690px;
+    margin: 50px auto;
+    .js-form-item {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        input {
+            width: 100%;
+        }
+        div.description {
+            width: 100%;
+            font-size: 12px;
+            color: red !important;
+        }
+    }
+    .form-actions {
+        text-align: center;
+        .button {
+            width: 100%;
+            border-radius: 0px;
+            @extend .el-custom--button;
+            background-color: $primary-brand-color;
+            color: $secondary-brand-color;
+        }
+    }
+}

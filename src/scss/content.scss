@@ -35,14 +35,13 @@
         @include media-xs-range-1 {
             line-height: 1;
             position: relative;
-            top: 18vw;
+            top: 39vw;
             width: 93%;
             margin-top: unset;
-            // color: red;
             font-size: 4.9vw;
         }
     }
     @include media-xs-range-1 {
-        top: 43vw;
+        top: 26vw;
     }
 }

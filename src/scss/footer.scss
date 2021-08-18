@@ -25,6 +25,19 @@
     }
     @include media-sm {
         height: auto;
+        &::before {
+            border: 1px solid red;
+            max-width: 690px;
+            width: 90%;
+            height: 50px;
+            content: "";
+            position: absolute;
+            top: 15px;
+            background-image: url("../assets/footer-lines.svg");
+            background-position: top;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
     }
 }
 
@@ -43,7 +56,7 @@
     display: none;
     width: 154px;
     height: 60px;
-    margin: 30px auto 20px;
+    margin: 20px auto;
     @include media-sm {
         display: block;
     }

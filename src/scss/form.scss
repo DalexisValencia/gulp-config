@@ -1,66 +1,113 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
-$height_input: 39px; // using in selects as well
+$height_input: 58px; // using in selects as well
+$background_input: rgba($primary-brand-color, 0.28);
+$border_input: 3px solid $primary-brand-color;
 $error_family: '';
-//Ajuste a todos los inputs
-.apply-to-form-inputs {
-    font-size: 15px;
-    font-family: Roboto, sans-serif;
-    color: $fifth-brand-color;
+// Estilos para todos los inputs
+.abi-input--custom {
+    caret-color: $tertiary-brand-color;
+    border-radius: 6px;
+    height: $height_input;
+    width: 100%;
+    border: 0px solid transparent;
+    padding-left: 15px;
+    margin-bottom: 0px !important;
+    margin-top: 10px !important;
+    border: $border_input;
+    background-color: $background_input;
+    color: $primary-brand-color;
+    transition: 0.3s all;
+    font-family: 'SS Nickson N.6';
+    font-size: 16px;
+    &:focus,
+    &:active {
+        outline: 0;
+        outline-color: transparent !important;
+        outline-width: 0 !important;
+    }
+    &::placeholder {
+        color: rgba($primary-brand-color, 0.7) !important;
+    }
+    &[type="number"] {
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        -moz-appearance: textfield;
+    }
+    &[type="number"] {
+        -webkit-appearance: none;
+        margin: 0;
+        -moz-appearance: textfield;
+    }
 }
 
-.simple-questionary {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 12px;
-    margin-bottom: 8px;
-    .field-label {
-        width: 100%;
-        font: {
-            size: 11px;
-            weight: 400;
-        }
-        color: $secondary-brand-color;
-        margin-bottom: 3px;
-        font-family: Roboto,
-        sans-serif;
+.form-error {
+    margin-top: 5px;
+    color: red;
+    font-size: 13px;
+    width: 100%;
+    &::first-letter {
+        text-transform: uppercase;
     }
-    div.answer {
-        width: 60px;
-        display: flex;
-        align-items: center;
-        input[type="radio"] {
-            border: 1px solid $secondary-brand-color !important;
-            cursor: pointer;
-            height: 20px;
-            width: 20px;
-            min-height: 20px;
-            min-width: 20px;
-            -webkit-appearance: none;
-            border-radius: 0px;
-            margin-top: 3px;
-            &:checked {
-                background-color: transparent;
-                background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.12075 0.215994C9.55376 0.558799 9.62689 1.18773 9.28409 1.62074L4.53409 7.62074C4.34402 7.86083 4.05442 8.0006 3.74821 8.00004C3.44199 7.99948 3.15291 7.85865 2.96372 7.61786L0.213724 4.11786C-0.127489 3.68359 -0.0520506 3.05494 0.382221 2.71372C0.816493 2.37251 1.44515 2.44795 1.78636 2.88222L3.75301 5.38522L7.716 0.379337C8.0588 -0.0536794 8.68773 -0.12681 9.12075 0.215994Z' fill='white'/%3E%3C/svg%3E%0A");
-                background-position: center;
-                background-size: 60% !important;
-                background-repeat: no-repeat;
-            }
+}
+
+.abi--brand-wrapper-form {
+    background-color: rgba(250, 250, 250, 0.8);
+    margin: 0px auto;
+    margin-top: -5px;
+    margin-bottom: 60px;
+    width: 95%;
+    max-width: 747px;
+    padding: 10px 40px 40px;
+    border-radius: 15px;
+}
+
+.abi--brand-wrapper-form--header {
+    .abi--brand-wrapper-form--header-title {
+        line-height: 1;
+        text-align: center;
+        color: $primary-brand-color;
+        font: {
+            family: 'SS Nickson N.6';
+            weight: 400;
+            size: 61px;
         }
-        label:not(.error) {
+        @include media-xs-range-1 {
+            font-size: 43px;
+        }
+    }
+    .abi--brand-wrapper-form--header-subtitle {
+        margin-top: 10px;
+        text-align: center;
+        line-height: 1;
+        color: $tertiary-brand-color;
+        font: {
+            weight: 400;
+            size: 30px;
+            family: 'SS Nickson N.6';
+        }
+        @include media-xs-range-1 {
+            font-size: 21px;
+        }
+        span.breakword {
             display: block;
-            color: $secondary-brand-color;
-            font-size: 11px;
-            margin-left: 5px;
-            font-family: Roboto, sans-serif;
+            @include media-xs-range-1 {
+                display: inline;
+            }
         }
     }
 }
 
 @mixin block-terms() {
     .el-custom--block-terms {
-        margin: 10px 0px;
+        margin: 30px 0px 10px;
         .block-term {
+            max-width: 390px;
+            margin: 0px auto;
+            margin-bottom: 10px;
             .js-form-item {
                 position: relative;
                 margin-bottom: 6px;
@@ -68,22 +115,21 @@ $error_family: '';
                 align-items: center;
                 .form-check-label {
                     align-items: center;
-                    font-family: Roboto, sans-serif;
-                    font-size: 10px;
-                    color: $fifth-brand-color;
+                    font-family: 'SS Nickson N.6';
+                    font-size: 15px;
+                    color: $tertiary-brand-color;
                     margin-left: 10px;
+                    @include media-xs-range-1 {
+                        font-size: 12px;
+                    }
                 }
-                // }
                 a {
                     margin: 0px 4px;
                     text-decoration: underline !important;
-                    color: $fifth-brand-color;
+                    color: $tertiary-brand-color;
                 }
                 label.error {
-                    color: $seventh-brand-color;
-                    position: relative;
-                    font-size: 10px;
-                    @media (max-width: 599px) {}
+                    @extend .form-error;
                 }
             }
         }
@@ -92,24 +138,51 @@ $error_family: '';
 
 @mixin form-actions {
     .form-actions {
+        margin-top: 20px;
         text-align: center;
-        // margin-top: 52px;
         button.el-custom--button,
         input.el-custom--button {
-            font-family: 'Futura-heavy';
-            border-radius: 0px;
-            color: $secondary-brand-color;
-            background-color: $nineth-brand-color;
-            // font-family: 'Matthan-sans-regular';
-            font-size: 13px;
+            border-radius: 50px;
+            color: $tertiary-brand-color;
+            font-size: 25px;
             font-weight: 500;
+            max-width: 253px;
             width: 100%;
-            height: 37px;
+            font-family: 'SS Nickson N.6';
+            border: 2px solid $tertiary-brand-color;
+            padding: 15px 10px;
         }
     }
 }
 
 @mixin nice-select-for-drupal {
+    // .nice-select {
+    //     @include nice-select-for-drupal;
+    //     // width: 100%;
+    //     border-radius: 0px;
+    //     border: 1px solid transparent;
+    //     border-bottom: 1px solid $primary-brand-color;
+    //     height: 46.4px;
+    //     padding: 0px;
+    //     * {
+    //         @extend .apply-to-form-inputs;
+    //     }
+    //     span.current {
+    //         font-weight: bolder;
+    //         color: rgba(#454D58, 0.5);
+    //         font-size: 14px;
+    //         height: 100%;
+    //         display: block;
+    //         display: flex;
+    //         align-items: center;
+    //     }
+    //     ul {
+    //         width: 100%;
+    //         border-radius: 0px;
+    //         max-height: 200px;
+    //         overflow: scroll;
+    //     }
+    // }
     -webkit-tap-highlight-color: transparent;
     background-color: transparent !important;
     border-radius: 5px;
@@ -140,55 +213,27 @@ $error_family: '';
 }
 
 @mixin form-select {
-    // .nice-select {
-    //     @include nice-select-for-drupal;
-    //     // width: 100%;
-    //     border-radius: 0px;
-    //     border: 1px solid transparent;
-    //     border-bottom: 1px solid $primary-brand-color;
-    //     height: 46.4px;
-    //     padding: 0px;
-    //     * {
-    //         @extend .apply-to-form-inputs;
-    //     }
-    //     span.current {
-    //         font-weight: bolder;
-    //         color: rgba(#454D58, 0.5);
-    //         font-size: 14px;
-    //         height: 100%;
-    //         display: block;
-    //         display: flex;
-    //         align-items: center;
-    //     }
-    //     ul {
-    //         width: 100%;
-    //         border-radius: 0px;
-    //         max-height: 200px;
-    //         overflow: scroll;
-    //     }
-    // }
     select {
-        border: 1px solid transparent;
-        background-color: transparent;
-        background-image: url("../assets/icons/arrow-select.svg");
+        font-family: 'SS Nickson N.6';
+        border-radius: 6px;
+        border: 3px solid $primary-brand-color;
+        background-color: rgba($primary-brand-color, 0.28);
+        background-image: url("../assets/icons/select-arrow.svg");
         background-repeat: no-repeat, repeat !important;
         background-position: right .7em top 50%, 0 0 !important;
-        background-size: .65em auto, 100% !important;
-        height: 40px;
+        background-size: .85em auto, 100% !important;
+        height: 58px;
         width: 100%;
-        border-radius: 0px;
-        margin-top: 8px;
-        margin-top: 0px;
+        margin-top: 10px !important;
         padding: 5px 0px;
         padding-left: 13px;
-        // font-family: Roboto, sans-serif;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 500;
         transition: 0.2s all;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        color: $secondary-brand-color;
+        color: rgba($primary-brand-color, 1);
         &:hover,
         &:focus,
         &:focus-visible,
@@ -197,26 +242,24 @@ $error_family: '';
             outline-color: transparent !important;
             // border-bottom: 1px solid #008F4F !important;
         }
-        font: {
-            size: 11px;
-        }
         optgroup {
             font-size: 40px;
         }
         option {
             font-size: 14px;
             padding: 5px;
-            background: #c5c5c5;
+            color: $tertiary-brand-color;
+            background: rgba($primary-brand-color, 0.28);
         }
-    }
-    select option:checked {
-        color: $secondary-brand-color;
-        font-weight: 700;
     }
 }
 
 @mixin form-item {
     .js-form-item {
+        border: 0px solid transparent !important;
+        &:not(.form-item-birthday) {
+            flex-direction: column;
+        }
         @include form-select();
         &:not(.form-full) {
             width: 48.8%;
@@ -224,160 +267,70 @@ $error_family: '';
         &.form-full {
             width: 100%;
         }
-        &:not(.js-form-item-birthday) {
-            border: 1px solid $secondary-brand-color !important;
-        }
-        &.js-form-item-birthday {
-            border: 0px solid transparent !important;
-        }
         display: flex;
         flex-wrap: wrap;
         position: relative;
         margin: 0px;
         padding: 0px !important;
-        legend {
-            font-size: 11px;
-            color: $secondary-brand-color;
-            margin-left: 15px;
-            padding: 0px 10px;
-            font-family: Roboto, sans-serif;
-        }
         &.form-item-birthday {
-            justify-content: space-between;
+            // border: 1px solid red;
             display: flex;
-            select,
-            input {
+            justify-content: space-between;
+            // border: 0px solid transparent !important;
+            fieldset {
+                margin: 0px;
+                margin-top: 10px !important;
+                padding: 0px !important;
+                border: 0px solid transparent !important;
+                input,
+                select {
+                    margin-top: 0px !important;
+                    @extend .abi-input--custom;
+                    width: 100%;
+                }
+            }
+            fieldset {
                 width: 30%;
-                border: 1px solid $secondary-brand-color;
             }
         }
         label {
             &.error {
-                color: red;
-                // position: absolute;
-                // bottom: -11px;
-                font-size: 10px;
-                // height: 10px;
-                // font-family: 'Roboto, sans-serif';
-                // font-weight: bolder;
-                width: 100%;
+                @extend .form-error;
             }
             &:not(.error) {
+                height: fit-content;
                 width: 100%;
-                color: $secondary-brand-color;
+                color: $tertiary-brand-color;
                 font: {
-                    size: 11px;
+                    size: 17px;
                     weight: 400;
+                    family: 'SS Nickson N.6';
                 }
-                font-family: Roboto,
-                sans-serif;
             }
         }
         input:not(.form-checkbox) {
-            // height: 100%;
-            height: 30px;
-            width: 100%;
-            border: 0px solid transparent;
-            padding-left: 15px;
-            margin-bottom: 0px !important;
-            margin-top: 0px !important;
-            background-color: transparent !important;
-            @extend .apply-to-form-inputs;
-            color: $fifth-brand-color;
-            transition: 0.3s all;
-            font-family: 'Roboto', sans-serif;
-            font-size: 11px;
-            &:focus,
-            &:active {
-                color: $fifth-brand-color !important;
-                // border-bottom: 1px solid $sixth-brand-color !important;
-                color: $secondary-brand-color !important;
-                font-weight: 700;
-            }
-            &::placeholder {
-                color: #fff;
-                font-size: 13px;
-                font-weight: bold;
-            }
-            &[type="number"] {
-                &::-webkit-outer-spin-button,
-                &::-webkit-inner-spin-button {
-                    -webkit-appearance: none;
-                    margin: 0;
-                }
-                -moz-appearance: textfield;
-            }
-            &[type="number"] {
-                -webkit-appearance: none;
-                margin: 0;
-                -moz-appearance: textfield;
-            }
+            @extend .abi-input--custom;
+        }
+        @include media-xs-range-1 {
+            width: 100% !important;
         }
     }
-}
-
-.js-form-item-tyc {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-    label.error {
-        &#tyc-error {
-            font-size: 10px;
-            display: block;
-            padding-top: 10px;
-            color: $seventh-brand-color;
-            width: 100%;
-        }
-    }
-}
-
-.el-custom-register-page {
-    transition: 1s all;
-    background-repeat: no-repeat;
-    background-image: url('../assets/fondo-registro.png');
-    background-position: center;
-    background-size: cover;
 }
 
 article.el-custom--register-page__form {
     width: 100%;
     padding: 20px 30px;
-    .el-custom--register-page__form--title {
-        color: $secondary-brand-color;
-        font: {
-            size: 13px;
-            weight: 500;
-            family: 'Futura-heavy';
-        }
-    }
-    .el-custom-abi-register-form {
-        .block-form-group {
-            &:not(.birthday) {
-                min-height: 45px;
-            }
-            display: flex;
-            margin-top: 8px;
-            justify-content: space-between;
-            @include form-item();
-            &.birthday {
-                margin-bottom: 8px;
-                height: fit-content;
-                .js-form-item-birthday-fieldset {
-                    width: 30%;
-                    input {
-                        &:focus,
-                        &:active,
-                        &:visited {
-                            border-color: transparent !important;
-                            outline-width: 0 !important;
-                            outline: none;
-                        }
-                    }
-                }
-                select {
-                    height: 45px !important;
-                }
-            }
+}
+
+.el-custom-abi-register-form {
+    margin-top: 20px;
+    .block-form-group {
+        display: flex;
+        margin-top: 8px;
+        justify-content: space-between;
+        @include form-item();
+        @include media-xs-range-1 {
+            flex-wrap: wrap;
         }
     }
     @include block-terms();

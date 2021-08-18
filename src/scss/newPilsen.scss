@@ -140,13 +140,11 @@
         }
         .abi--center-banner-details-ref-can--abi-highlighted {
             font-size: 3.1vw;
-            color: $fithteen-brand-color;
             @include media-xs-range-2 {
                 font-size: 30px;
             }
         }
         .abi--center-banner-details-ref-can--title {
-            color: $fourty-brand-color;
             font-size: 1.82vw;
             @include media-xs-range-2 {
                 font-size: 24px;
@@ -202,7 +200,6 @@
                 family: 'coprgtb';
                 weight: bold;
             }
-            color: $fithteen-brand-color;
             font-size: 1.7vw;
             line-height: 1;
             margin-bottom: 2.7vw;
@@ -278,7 +275,7 @@
     .abi--center-banner-details-ingredients--title {
         font-size: 2vw;
         line-height: 1;
-        color: $primary-darken-brand-color;
+        // color: $primary-darken-brand-color;
         @include media-xs-range-2 {
             font-size: 25px;
         }
@@ -301,7 +298,7 @@
         margin-top: 0.7vw;
         align-items: center;
         .abi--center-banner-details-ingredients--list-item__img {
-            background-color: $seventh-brand-color;
+            // background-color: $seventh-brand-color;
             width: 6vw;
             height: 6vw;
             min-width: 6vw;
@@ -322,7 +319,6 @@
             margin-left: 2vw;
             font-size: 1.4vw;
             line-height: 1.2;
-            color: $fithteen-brand-color;
             @include media-xs-range-2 {
                 font-size: 18px;
             }
@@ -393,7 +389,7 @@
 }
 
 .abi--center-banner-description--detail--properties {
-    background-color: rgba($primary-darken-brand-color, 0.6);
+    // background-color: rgba($primary-darken-brand-color, 0.6);
     border: 1px solid #EFDD9B;
     right: 10vw;
     right: 13.8vw;
@@ -468,7 +464,7 @@
 }
 
 .abi--center-banner-description--detail {
-    background-color: rgba($primary-darken-brand-color, 0.6);
+    // background-color: rgba($primary-darken-brand-color, 0.6);
     border: 1px solid #EFDD9B;
     left: 6vw;
     width: 30vw;
@@ -503,7 +499,7 @@
 }
 
 .abi--center-banner-social--gallery {
-    background-color: $primary-darken-brand-color;
+    // background-color: $primary-darken-brand-color;
     padding: 40px 0px;
     .abi--center-banner-social--gallery-title {
         padding: 0px 80px;

@@ -11,6 +11,13 @@
 }
 
 .abi--main-wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/general-background.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // padding: 0px 10px 40px;
     .node__content.clearfix {
         margin-top: 0px !important;
     }

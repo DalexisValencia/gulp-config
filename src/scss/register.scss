@@ -1,18 +1,10 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
+// .abi--main-wrapper.register-screen {
+//     padding: 40px 10px;
+// }
 .abi--banner-pilsen-extra__wrapper {
     background-color: $fifth-brand-color;
-}
-
-.abi--banner-pilsen-extra {
-    width: 100%;
-    display: flex;
-    picture {
-        img {
-            width: 100%;
-            object-fit: cover;
-        }
-    }
 }
 
 .abi--banner-pilsen-extra--headline {
@@ -26,7 +18,7 @@
         text-align: center;
         font-family: 'coprgtb';
         font-size: 20px;
-        color: $secondary-brand-color;
+        color: $primary-brand-color;
     }
     .abi--banner-pilsen-extra--headline-img {
         width: 201px;
@@ -45,7 +37,6 @@
     width: 390px;
     min-width: 390px;
     // height: 100%;
-    background-color: $eight-brand-color;
     @include media-xs-range-1 {
         margin-top: 50px;
         width: 100%;
@@ -63,7 +54,7 @@
             line-height: 1;
             font-family: 'coprgtb';
             font-size: 41px;
-            color: $primary-darken-brand-color;
+            // color: $primary-darken-brand-color;
         }
         .abi--banner-pilsen-extra__prizes--header-subtitle {
             line-height: 1.1;

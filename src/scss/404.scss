@@ -1,66 +1,84 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi--internal-section.page-404 {
-    background-image: url('../assets/404-background.png');
+    background-image: url('../assets/general-background.png');
     background-position: center;
     background-size: cover;
     background-position: center top;
+    padding: 10px;
     @include media-xs-range-2 {
-        background-image: url('../assets/404-background-mobile.png');
+        position: relative;
+        background-image: url('../assets/thanks-background-mobile.png');
     }
 }
 
 .abi--404-section__box {
-    background-color: rgba($color: #0C284C, $alpha: 0.6);
-    backdrop-filter: blur(2px);
-    padding: 30px;
+    background-color: rgba(#fff, 0.8);
+    width: 100%;
+    max-width: 607px;
+    border-radius: 15px;
+    padding: 70px 20px;
+    overflow: hidden;
     .abi--404-section__box-header {
-        max-width: 265px;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         .abi--404-section__box-header--title {
-            color: $secondary-brand-color;
+            width: 100%;
+            color: $tertiary-brand-color;
             line-height: 1;
             font: {
-                family: 'Helvetica';
-                size: 34px;
-                weight: bold;
+                family: 'SS Nickson N.6';
+                size: 100px;
+                weight: 400;
             }
             @include media-xs-range-2 {
-                font-size: 28px;
+                font-size: 80px;
             }
         }
         .abi--404-section__box-header--subtitle {
             width: max-content;
-            margin: 10px 0px 10px;
-            color: $secondary-brand-color;
+            margin: 30px 0px 20px;
+            color: $tertiary-brand-color;
             text-transform: uppercase;
             font: {
-                size: 38px;
-                weight: 400;
-                family: 'Helvetica';
+                size: 30px;
+                weight: 200;
+                family: 'SS Nickson N.6';
             }
-            // @include media-xs-range-1 {
-            //     visibility: hidden;
-            // }
+            @include media-xs-range-1 {
+                margin: 15px 0px 10px;
+                font-family: 'CaponiDisplayRoman';
+                font-size: 20px;
+                text-transform: lowercase;
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
         }
     }
     .el-custom--button.goHome_404 {
         display: flex;
-        background-color: $twelve-brand-color;
-        color: $secondary-brand-color;
-        // width: 194px;
-        height: 49px;
+        color: $tertiary-brand-color;
+        width: 100%;
+        max-width: 253px;
         margin: 0px auto;
+        margin-top: 30px;
+        border-radius: 50px;
+        border: 3px solid $tertiary-brand-color;
+        padding: 10px 7px;
         font: {
-            size: 16px;
-            weight: 900;
-            family: 'Helvetica';
+            size: 25px;
+            weight: 400;
+            family: 'SS Nickson N.6';
         }
         @include media-xs-range-2 {
             font-size: 18px;
         }
+    }
+    @include media-xs-range-2 {
+        padding: 50px 15px;
+        margin: 100px 0px;
     }
 }

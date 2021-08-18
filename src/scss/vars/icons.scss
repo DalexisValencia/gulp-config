@@ -1,8 +1,8 @@
 @import "variables";
 @font-face {
     font-family: '#{$icomoon-font-family}';
-    src : url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?kblfwa');
-    src : url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?kblfwa#iefix') format('embedded-opentype'),
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?kblfwa');
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?kblfwa#iefix') format('embedded-opentype'),
     url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?kblfwa') format('truetype'),
     url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?kblfwa') format('woff'),
     url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?kblfwa##{$icomoon-font-family}') format('svg');

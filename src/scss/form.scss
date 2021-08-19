@@ -1,16 +1,57 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
-$height_input: 58px; // using in selects as well
-$background_input: rgba($primary-brand-color, 0.28);
-$border_input: 3px solid $primary-brand-color;
-$error_family: '';
+$height_input: 33px; // using in selects as well
+$background_input: $secondary-brand-color;
+$border_input: 1px solid rgba(black, 0.4);
+$family_input: 'Roboto',
+sans-serif;
+$radius_input: 6px;
+$size_text_input: 14px;
+//
+$error_family: 'Roboto',
+sans-serif;
+.abi--main-wrapper {
+    display: flex;
+}
+
+.abi--brand-wrapper-form--lateral-tessellation {
+    width: 50%;
+    // height: 100%;
+    background-color: red;
+    background-image: url("../assets/form-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+textarea.el-custom--input {
+    margin-top: 10px;
+    padding: 8px 10px;
+    width: 100%;
+    max-height: 111px;
+    min-height: 111px;
+    height: 111px;
+    font-family: $family_input;
+    font-size: $size_text_input;
+    border: $border_input;
+    border-radius: $radius_input;
+    resize: none;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: 0;
+        outline-color: transparent !important;
+    }
+    &::placeholder {
+        color: rgba($fourty-brand-color, 0.7) !important;
+    }
+}
+
 // Estilos para todos los inputs
 .abi-input--custom {
-    caret-color: $tertiary-brand-color;
-    border-radius: 6px;
+    caret-color: $fourty-brand-color;
+    border-radius: $radius_input;
     height: $height_input;
     width: 100%;
-    border: 0px solid transparent;
     padding-left: 15px;
     margin-bottom: 0px !important;
     margin-top: 10px !important;
@@ -18,8 +59,8 @@ $error_family: '';
     background-color: $background_input;
     color: $primary-brand-color;
     transition: 0.3s all;
-    font-family: 'SS Nickson N.6';
-    font-size: 16px;
+    font-family: $family_input;
+    font-size: $size_text_input;
     &:focus,
     &:active {
         outline: 0;
@@ -27,7 +68,7 @@ $error_family: '';
         outline-width: 0 !important;
     }
     &::placeholder {
-        color: rgba($primary-brand-color, 0.7) !important;
+        color: rgba($fourty-brand-color, 0.7) !important;
     }
     &[type="number"] {
         &::-webkit-outer-spin-button,
@@ -49,50 +90,55 @@ $error_family: '';
     color: red;
     font-size: 13px;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
     &::first-letter {
         text-transform: uppercase;
     }
 }
 
 .abi--brand-wrapper-form {
-    background-color: rgba(250, 250, 250, 0.8);
-    margin: 0px auto;
+    background-color: $primary-brand-color;
+    // margin: 0px auto;
     margin-top: -5px;
     margin-bottom: 60px;
-    width: 95%;
-    max-width: 747px;
-    padding: 10px 40px 40px;
-    border-radius: 15px;
+    height: max-content;
+    max-width: 770px;
+    padding: 50px 40px 40px;
+    // border-radius: 15px;
 }
 
 .abi--brand-wrapper-form--header {
     .abi--brand-wrapper-form--header-title {
         line-height: 1;
         text-align: center;
-        color: $primary-brand-color;
+        color: $secondary-brand-color;
         font: {
-            family: 'SS Nickson N.6';
+            family: 'Roboto', sans-serif;
             weight: 400;
-            size: 61px;
+            size: 40px;
         }
         @include media-xs-range-1 {
             font-size: 43px;
         }
     }
     .abi--brand-wrapper-form--header-subtitle {
-        margin-top: 10px;
+        // border: 1px solid red;
+        width: 100%;
+        max-width: 612px;
+        margin: 20px auto;
         text-align: center;
-        line-height: 1;
-        color: $tertiary-brand-color;
+        line-height: 1.1;
+        color: $secondary-brand-color;
         font: {
             weight: 400;
-            size: 30px;
-            family: 'SS Nickson N.6';
+            size: 20px;
+            family: 'Roboto', sans-serif;
         }
         @include media-xs-range-1 {
             font-size: 21px;
         }
         span.breakword {
+            margin-top: 25px;
             display: block;
             @include media-xs-range-1 {
                 display: inline;
@@ -127,10 +173,11 @@ $error_family: '';
                 }
                 .form-check-label {
                     align-items: center;
-                    font-family: 'SS Nickson N.6';
-                    font-size: 15px;
-                    color: $tertiary-brand-color;
-                    margin-left: 10px;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 14px;
+                    color: $secondary-brand-color;
+                    margin-top: 3px;
+                    margin-left: 20px;
                     @include media-xs-range-1 {
                         font-size: 12px;
                     }
@@ -138,7 +185,7 @@ $error_family: '';
                 a {
                     margin: 0px 4px;
                     text-decoration: underline !important;
-                    color: $tertiary-brand-color;
+                    color: $secondary-brand-color;
                 }
                 label.error {
                     @extend .form-error;
@@ -154,15 +201,15 @@ $error_family: '';
         text-align: center;
         button.el-custom--button,
         input.el-custom--button {
-            border-radius: 50px;
-            color: $tertiary-brand-color;
-            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            background-color: $tertiary-brand-color;
+            color: $secondary-brand-color;
+            font-size: 16px;
             font-weight: 500;
-            max-width: 253px;
+            max-width: 125px;
             width: 100%;
-            font-family: 'SS Nickson N.6';
-            border: 2px solid $tertiary-brand-color;
             padding: 15px 10px;
+            text-transform: inherit;
         }
     }
 }
@@ -226,20 +273,20 @@ $error_family: '';
 
 @mixin form-select {
     select {
-        font-family: 'SS Nickson N.6';
-        border-radius: 6px;
-        border: 3px solid $primary-brand-color;
-        background-color: rgba($primary-brand-color, 0.28);
+        font-family: $family_input;
+        border-radius: $radius_input;
+        border: $border_input;
+        background-color: $background_input;
         background-image: url("../assets/icons/select-arrow.svg");
         background-repeat: no-repeat, repeat !important;
         background-position: right .7em top 50%, 0 0 !important;
         background-size: .85em auto, 100% !important;
-        height: 58px;
+        height: $height_input;
         width: 100%;
         margin-top: 10px !important;
         padding: 5px 0px;
         padding-left: 13px;
-        font-size: 16px;
+        font-size: $size_text_input;
         font-weight: 500;
         transition: 0.2s all;
         -webkit-appearance: none;
@@ -276,12 +323,13 @@ $error_family: '';
             flex-direction: column;
         }
         @include form-select();
-        &:not(.form-full) {
-            width: 48.8%;
-        }
-        &.form-full {
-            width: 100%;
-        }
+        // &:not(.form-full) {
+        //     width: 48.8%;
+        // }
+        // &.form-full {
+        //     width: 100%;
+        // }
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         position: relative;
@@ -313,13 +361,17 @@ $error_family: '';
                 @extend .form-error;
             }
             &:not(.error) {
+                text-transform: lowercase;
+                &::first-letter {
+                    text-transform: uppercase;
+                }
                 height: fit-content;
                 width: 100%;
-                color: $tertiary-brand-color;
+                color: $secondary-brand-color;
                 font: {
-                    size: 17px;
-                    weight: 400;
-                    family: 'SS Nickson N.6';
+                    size: 16px;
+                    weight: 500;
+                    family: 'Roboto', sans-serif;
                 }
             }
         }
@@ -339,7 +391,11 @@ article.el-custom--register-page__form {
 }
 
 .el-custom-abi-register-form {
-    margin-top: 20px;
+    // border: 1px solid red;
+    width: 100%;
+    max-width: 425px;
+    margin: 20px auto 0px;
+    // margin-top: 20px;
     .block-form-group {
         display: flex;
         margin-top: 8px;

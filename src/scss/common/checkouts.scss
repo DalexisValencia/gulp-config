@@ -26,16 +26,16 @@
         min-height: 20px;
         min-width: 20px;
         -webkit-appearance: none;
-        border: 1px solid $tertiary-brand-color !important;
+        border: 3px solid #F7ACA1 !important;
         // -webkit-box-shadow: 0px 0px 0px 1px #fff;
         // box-shadow: 0px 0px 0px 1px #fff;
         border-radius: 4px;
         margin-top: 3px;
         position: absolute;
-        left: -31px;
+        left: -17px;
         top: 0px;
         &:checked {
-            background-color: #fff;
+            // background-color: #fff;
             background-image: url("../assets/icons/mark-checkbox.svg");
             background-position: center;
             background-size: 60% !important;

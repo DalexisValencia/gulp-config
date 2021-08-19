@@ -157,7 +157,8 @@
     .show-mobile {
         display: none;
     }
-    div {
+    div,
+    a {
         width: 100%;
         padding: 0px 1px;
         color: $sixth-brand-color;

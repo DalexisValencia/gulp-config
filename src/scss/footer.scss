@@ -25,31 +25,26 @@
     }
     @include media-sm {
         height: auto;
-        &::before {
-            // border: 1px solid red;
+        &::before,
+        &::after {
             max-width: 690px;
             width: 90%;
             height: 50px;
             content: "";
             position: absolute;
-            top: 15px;
-            background-image: url("../assets/footer-lines.svg");
-            background-position: top;
             background-size: 100%;
             background-repeat: no-repeat;
         }
-        &::after {
+        &::before {
             // border: 1px solid red;
-            max-width: 690px;
-            width: 90%;
-            height: 50px;
-            content: "";
-            position: absolute;
+            top: 15px;
+            background-image: url("../assets/footer-lines.svg");
+            background-position: top;
+        }
+        &::after {
             bottom: 10px;
             background-image: url("../assets/footer-lines-bottom.svg");
             background-position: bottom;
-            background-size: 100%;
-            background-repeat: no-repeat;
         }
     }
 }

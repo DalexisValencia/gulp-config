@@ -32,7 +32,7 @@
 
 .abi--thanks-section__box {
     width: 100%;
-    max-width: 747px;
+    max-width: 971px;
     background-color: rgba(#fff, 0.8);
     border-radius: 15px;
     padding: 50px 20px;
@@ -53,22 +53,66 @@
                 font-size: 35px;
             }
         }
+        .abi--thanks-section__box-header--subtitle {
+            text-align: center;
+            color: $tertiary-brand-color;
+            font: {
+                size: 32px;
+                family: 'SS Nickson N.6';
+                weight: 400;
+            }
+        }
+    }
+    .abi--thanks-section__box-steps {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        font: {
+            size: 18px;
+            family: 'CaponiDisplayRoman';
+            weight: 400;
+        }
+        .abi--thanks-section__box-step {
+            margin-bottom: 5px;
+            display: block;
+            color: $tertiary-brand-color;
+            .check-icon {
+                display: inline-block;
+                margin-right: 15px;
+                width: 21px;
+                height: 21px;
+                background-image: url("../assets/icons/check-thankyou.svg");
+                background-position: center;
+                background-size: 90%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .abi--thanks-section__box-warning {
+        font-size: 16px;
+        font-family: 'CaponiDisplayRoman';
+        max-width: 594px;
+        width: 100%;
+        margin: 0px auto;
+        margin-top: 30px;
+        text-align: center;
+        color: $tertiary-brand-color;
     }
     .abi--thanks-section__box-content {
         width: 100%;
-        max-width: 507px;
+        max-width: 493px;
         line-height: 1.2;
-        padding: 30px 20px;
         color: $tertiary-brand-color;
         text-align: center;
         font: {
-            size: 25px;
-            weight: 200;
-            family: 'CaponiDisplayRoman';
+            size: 32px;
+            weight: 400;
+            family: 'SS Nickson N.6';
         }
+        margin: 0px auto;
         margin-top: 20px;
         @include media-xs-range-2 {
-            font-size: 16px;
+            font-size: 28px;
             margin-top: 0px;
         }
     }
@@ -94,5 +138,14 @@
     }
     @include media-xs-range-2 {
         margin: 100px 0px;
+    }
+}
+
+.logo-thankyou {
+    width: 100%;
+    margin: 15px auto;
+    max-width: 391px;
+    img {
+        width: 100%;
     }
 }

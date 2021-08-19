@@ -113,6 +113,18 @@ $error_family: '';
                 margin-bottom: 6px;
                 display: flex;
                 align-items: center;
+                div.js-form-item {
+                    width: 100%;
+                    // border: 1px solid blue;
+                    flex-wrap: wrap;
+                    flex-direction: column-reverse;
+                    label:not(.error) {
+                        margin-left: 10px;
+                        @include media-xs {
+                            margin-left: 30px;
+                        }
+                    }
+                }
                 .form-check-label {
                     align-items: center;
                     font-family: 'SS Nickson N.6';
@@ -256,6 +268,9 @@ $error_family: '';
 
 @mixin form-item {
     .js-form-item {
+        div.js-form-item {
+            width: 100%;
+        }
         border: 0px solid transparent !important;
         &:not(.form-item-birthday) {
             flex-direction: column;
@@ -313,6 +328,7 @@ $error_family: '';
         }
         @include media-xs-range-1 {
             width: 100% !important;
+            margin-bottom: 10px !important;
         }
     }
 }

@@ -1,19 +1,18 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
-.abi--internal-section.thanks {
-    background-image: url('../assets/general-background.png');
-    background-position: center;
-    background-size: cover;
-    background-position: center top;
-    padding: 10px;
-    @include media-xs-range-2 {
-        position: relative;
-        background-image: url('../assets/thanks-background-mobile.png');
-    }
-}
-
+// .abi--internal-section.thanks {
+//     background-image: url('../assets/general-background.png');
+//     background-position: center;
+//     background-size: cover;
+//     background-position: center top;
+//     padding: 10px;
+//     @include media-xs-range-2 {
+//         position: relative;
+//         background-image: url('../assets/thanks-background-mobile.png');
+//     }
+// }
 .abi--internal-section {
-    background-color: $secondary-brand-color;
+    // background-color: $secondary-brand-color;
     width: 100%;
     min-height: 700px;
     height: 100%;

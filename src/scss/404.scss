@@ -1,17 +1,16 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
-.abi--internal-section.page-404 {
-    background-image: url('../assets/general-background.png');
-    background-position: center;
-    background-size: cover;
-    background-position: center top;
-    padding: 10px;
-    @include media-xs-range-2 {
-        position: relative;
-        background-image: url('../assets/thanks-background-mobile.png');
-    }
-}
-
+// .abi--internal-section.page-404 {
+//     background-image: url('../assets/general-background.png');
+//     background-position: center;
+//     background-size: cover;
+//     background-position: center top;
+//     padding: 10px;
+//     @include media-xs-range-2 {
+//         position: relative;
+//         background-image: url('../assets/thanks-background-mobile.png');
+//     }
+// }
 .abi--404-section__box {
     background-color: rgba(#fff, 0.8);
     width: 100%;

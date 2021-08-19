@@ -17,8 +17,6 @@ sans-serif;
 .simple-questionary {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 12px;
-    margin-bottom: 8px;
     margin-top: 10px;
     .field-label {
         text-transform: lowercase;
@@ -67,20 +65,31 @@ sans-serif;
         label:not(.error) {
             display: block;
             color: $secondary-brand-color;
-            font-size: 11px;
-            margin-left: 5px;
+            font-size: 14px;
+            margin-left: 10px;
             font-family: Roboto, sans-serif;
         }
     }
 }
 
 .abi--brand-wrapper-form--lateral-tessellation {
-    width: 50%;
+    width: 100%;
     // height: 100%;
-    background-color: red;
+    background-color: #3a3b82;
     background-image: url("../assets/form-background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    .llaxbecker-logo {
+        max-width: 510px;
+        width: 100%;
+    }
+    @include media-sm-range-1 {
+        display: none !important;
+    }
 }
 
 textarea.el-custom--input {
@@ -117,7 +126,7 @@ textarea.el-custom--input {
     margin-top: 10px !important;
     border: $border_input;
     background-color: $background_input;
-    color: $primary-brand-color;
+    color: rgba($fourty-brand-color, 0.9);
     transition: 0.3s all;
     font-family: $family_input;
     font-size: $size_text_input;
@@ -160,7 +169,11 @@ textarea.el-custom--input {
     background-color: $primary-brand-color;
     height: max-content;
     max-width: 770px;
-    padding: 50px 40px 40px;
+    min-width: 680px;
+    padding: 50px 40px 60px;
+    @include media-sm-range-1 {
+        min-width: 100%;
+    }
     // border-radius: 15px;
 }
 
@@ -175,7 +188,7 @@ textarea.el-custom--input {
             size: 40px;
         }
         @include media-xs-range-1 {
-            font-size: 43px;
+            font-size: 30px;
         }
     }
     .abi--brand-wrapper-form--header-subtitle {
@@ -192,7 +205,7 @@ textarea.el-custom--input {
             family: 'Roboto', sans-serif;
         }
         @include media-xs-range-1 {
-            font-size: 21px;
+            font-size: 16px;
         }
         span.breakword {
             margin-top: 25px;
@@ -206,7 +219,7 @@ textarea.el-custom--input {
 
 @mixin block-terms() {
     .el-custom--block-terms {
-        margin: 30px 0px 10px;
+        margin: 15px 0px 10px;
         .block-term {
             max-width: 390px;
             margin: 0px auto;
@@ -236,7 +249,9 @@ textarea.el-custom--input {
                     margin-top: 3px;
                     margin-left: 20px;
                     @include media-xs-range-1 {
-                        font-size: 12px;
+                        // font-size: 12px;
+                        margin-top: 7px;
+                        margin-left: 34px;
                     }
                 }
                 a {
@@ -349,7 +364,7 @@ textarea.el-custom--input {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        color: rgba($primary-brand-color, 1);
+        color: $fourty-brand-color;
         &:hover,
         &:focus,
         &:focus-visible,
@@ -362,10 +377,13 @@ textarea.el-custom--input {
             font-size: 40px;
         }
         option {
+            &:first-of-type {
+                color: red !important;
+            }
             font-size: 14px;
             padding: 5px;
-            color: $tertiary-brand-color;
-            background: rgba($primary-brand-color, 0.28);
+            color: $fourty-brand-color;
+            // background: rgba($primary-brand-color, 0.28);
         }
     }
 }

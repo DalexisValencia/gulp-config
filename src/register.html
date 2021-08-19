@@ -13,7 +13,7 @@
 <body>
     <main class="abi--main-wrapper">
         <aside class="abi--brand-wrapper-form--lateral-tessellation">
-
+            <img src="assets/LLAxBECKER-logo.svg" alt="" class="llaxbecker-logo">
         </aside>
         <section class="abi--brand-wrapper-form">
             <header class="abi--brand-wrapper-form--header">
@@ -57,7 +57,7 @@
                         <label for="birthday">Fecha de nacimiento</label>
                         <fieldset class="js-form-item-birthday-fieldset">
                             <select autocomplete="off" name="day" class="form-select required form-control el-custom--input" required="required" id="day">
-                                <option value="" hidden selected>DD</option>
+                                <option value="" hidden selected disabled>DD</option>
                                 <option value="01">01</option>
                                 <option value="02">02</option>
                             </select>
@@ -65,11 +65,11 @@
                             <label class="error">este es un ejemplo de un error demasiado largo </label>
                         </fieldset>
                         <fieldset class="js-form-item-birthday-fieldset">
-                            <input placeholder="MM" autocomplete="off" name="birthday-day" value="MM" class="form-day" required="required">
+                            <input placeholder="MM" autocomplete="off" name="birthday-day" value="" class="form-day" required="required">
                             <!-- <label class="error">este es un ejemplo de un error demasiado largo </label> -->
                         </fieldset>
                         <fieldset class="js-form-item-birthday-fieldset">
-                            <input placeholder="AAAA" autocomplete="off" name="birthday-day" value="AAAA" class="form-day" required="required">
+                            <input placeholder="AAAA" autocomplete="off" name="birthday-day" value="" class="form-day" required="required">
                             <!-- <label class="error">este es un ejemplo de un error demasiado largo </label> -->
                         </fieldset>
                         <!-- <select autocomplete="off" name="day" class="form-select required form-control el-custom--input" required="required" id="day">
@@ -107,23 +107,17 @@
                         ¿Cuándo disfrutas más tomar una cerveza?
                     </label>
                     <div class="option">
-                        <input type="radio" name="questionary-answer" value="yes">
-                        <label for="">Yes</label>
+                        <input type="radio" name="questionary-answer" value="gamerChair">
+                        <label for="">Silla Gamer</label>
                     </div>
                     <div class="option">
-                        <input type="radio" name="questionary-answer" value="no">
-                        <label for="">No</label>
+                        <input type="radio" name="questionary-answer" value="PC">
+                        <label for="">PC</label>
                     </div>
-                </div>
-
-                <div class="block-form-group">
-                    <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-lastname form-item-lastname form-no-label form-group">
-                        <label for="beerquestion">¿Cuándo disfrutas más tomar una cerveza?</label>
-                        <textarea placeholder="INGRESA TU USUARIO DE INSTAGRAM" autocomplete="off" id="beerquestion" name="beerquestion" class="required form-control el-custom--input">
-
-                        </textarea>
-                        <label class="error">este es un ejemplo de un error demasiado largo </label>
-                    </fieldset>
+                    <div class="option">
+                        <input type="radio" name="questionary-answer" value="games">
+                        <label for="">Juegos</label>
+                    </div>
                 </div>
 
                 <div class="el-custom--block-terms">

@@ -6,7 +6,6 @@
     position: relative;
     width: 100%;
     height: 60px;
-    background-color: $primary-darken-brand-color;
     overflow: visible;
     display: flex;
     @include media-xs-range-2 {
@@ -36,6 +35,7 @@
     width: 20px;
     height: 20px;
     background-image: url("../assets/icons/close-drawer.svg");
+    background-size: 95%;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 5;
@@ -94,7 +94,7 @@
 
 .abi--main-navigation {
     margin-left: 5vw !important;
-    width: 385px;
+    width: auto;
     ul.abi--main-menu {
         width: 100%;
         justify-content: space-between;
@@ -103,6 +103,7 @@
             display: flex;
             justify-content: center;
             text-transform: uppercase;
+            margin: 20px;
             a {
                 font: {
                     size: 14px;
@@ -114,7 +115,6 @@
                     width: 100%;
                     line-height: 1;
                     padding: 0px 20px;
-                    color: $seventh-brand-color;
                     font-family: 'coprgtb';
                 }
             }
@@ -172,7 +172,6 @@
     @include media-xs-range-2 {
         display: none;
         padding: 20px 0px;
-        background-color: $primary-darken-brand-color;
         position: fixed;
         width: 100%;
         left: 0px;
@@ -190,15 +189,24 @@
     }
 }
 
+.el-custom--button.register {
+    display: flex;
+    background-color: $primary-brand-color;
+    color: $secondary-brand-color;
+    font-family: 'Encode Sans', sans-serif;
+}
+
 .abi--social {
-    position: absolute;
-    right: 40px;
-    height: 100%;
+    border: 1px solid red;
+    // position: absolute;
+    // right: 40px;
+    // height: 100%;
     .abi--social-menu {
         justify-content: space-between;
-        width: 140px;
-        margin-right: 138px;
+        width: auto;
+        max-width: max-content;
         li {
+            margin: 0px 7px;
             a {
                 font-size: 20px;
             }

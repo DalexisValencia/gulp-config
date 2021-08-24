@@ -18,13 +18,11 @@
 
 .abi--clubcolombia-iframe-banner__wrapper-video {
     position: absolute;
-    background-color: $sixth-brand-color;
     opacity: 0.5;
     // opacity: 0.5;
     width: 73.5vw;
     height: 47.1vw;
     top: 0.8vw;
-    border-radius: 2.5px solid $fifth-brand-color;
     iframe {
         width: 100%;
         height: 100%;
@@ -36,7 +34,6 @@
         width: 16.8vw;
         border-radius: 5px;
         display: flex;
-        background-color: $sixth-brand-color;
         .banner__wrapper-video__likes--label {
             position: relative;
             display: flex;
@@ -242,7 +239,6 @@
 
 .abi--clubcolombia-flavor-travel {
     padding-top: 230px;
-    background-color: $nineth-brand-color;
     @include media-xs {
         padding-top: 20px;
     }
@@ -377,9 +373,7 @@
             .add-to-car {
                 width: 100%;
                 height: 43.15px;
-                background-color: $eight-brand-color;
                 border-radius: 5px;
-                color: $seventh-brand-color;
                 font: {
                     family: 'Futura-medium-condensed';
                     size: 18px;
@@ -394,7 +388,6 @@
     margin-top: 70px;
     margin: 0px auto;
     display: block;
-    background-color: $eight-brand-color;
     border-radius: 4px;
     width: 156.34px;
     height: 48.76px;

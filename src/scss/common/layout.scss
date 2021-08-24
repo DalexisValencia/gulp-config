@@ -15,3 +15,15 @@
         margin-top: 0px !important;
     }
 }
+
+body {
+    scroll-behavior: smooth !important;
+    &.no-scroll {
+        overflow: hidden !important;
+    }
+}
+
+#block-footer-menu,
+#block-mainnavigation-menu {
+    display: none;
+}

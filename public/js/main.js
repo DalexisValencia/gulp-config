@@ -8,9 +8,11 @@ $(document).ready(function() {
         }
         var drawer = $(".abi--main-navigation");
         $(".open-drawer").on("click", function() {
+            $('body').addClass('no-scroll');
             drawer.addClass('active');
         });
         $(".close-drawer").on("click", function() {
+            $('body').removeClass('no-scroll');
             drawer.removeClass('active');
         });
         // Sliders social network on new pilsen extra

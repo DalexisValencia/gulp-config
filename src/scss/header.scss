@@ -1,13 +1,18 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi--main-main-header {
+    background-color: $secondary-brand-color;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
     z-index: 4;
     padding: 0px 40px;
     position: relative;
     width: 100%;
-    height: 60px;
+    height: 72px;
     overflow: visible;
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
     @include media-xs-range-2 {
         position: unset;
         padding: 0px 20px;
@@ -22,7 +27,7 @@
 .el-custom--button.open-drawer {
     display: none;
     i {
-        color: $secondary-brand-color;
+        color: $primary-brand-color;
         font-size: 30px;
     }
     @include media-xs-range-2 {
@@ -49,22 +54,17 @@
 }
 
 .abi--main-main-header-logo {
-    position: relative;
-    top: 18px;
+    position: absolute;
+    left: 40px;
     z-index: 1;
-    // left: 38px;
     img {
-        width: 137px;
-        height: 84px;
+        width: 96px;
+        height: 51px;
         width: 100%;
     }
     @include media-xs-range-2 {
-        top: 7px;
-        img {
-            width: 147px;
-            height: 47px;
-        }
-        // width: 77px;
+        position: unset;
+        left: unset;
     }
 }
 
@@ -93,6 +93,7 @@
 }
 
 .abi--main-navigation {
+    background-color: $secondary-brand-color;
     margin-left: 5vw !important;
     width: auto;
     ul.abi--main-menu {
@@ -105,20 +106,22 @@
             text-transform: uppercase;
             margin: 20px;
             a {
+                color: $primary-brand-color;
                 font: {
                     size: 14px;
                     weight: 400;
                     family: 'Helvetica';
                 }
                 @include media-xs-range-2 {
-                    font-size: 25px;
+                    font-size: 20px;
                     width: 100%;
                     line-height: 1;
                     padding: 0px 20px;
-                    font-family: 'coprgtb';
+                    color: $secondary-brand-color;
                 }
             }
             &.active {
+                font-weight: bold;
                 &::before {
                     content: "";
                     position: absolute;
@@ -139,9 +142,9 @@
             }
             @include media-xs-range-2 {
                 width: 100%;
-                min-height: 71px;
+                min-height: 20px;
                 justify-content: unset;
-                border-bottom: 2px solid #686868;
+                // border-bottom: 2px solid #686868;
                 align-items: center;
             }
         }
@@ -170,6 +173,8 @@
         margin-left: 20px !important;
     }
     @include media-xs-range-2 {
+        background: rgb(1, 93, 186);
+        background: linear-gradient( 180deg, rgba(1, 93, 186, 1) 0%, rgba(28, 110, 193, 1) 38%, rgba(255, 255, 255, 1) 68%);
         display: none;
         padding: 20px 0px;
         position: fixed;
@@ -186,6 +191,20 @@
                 display: flex !important;
             }
         }
+        &::after {
+            position: absolute;
+            bottom: -20px;
+            content: "";
+            width: 100%;
+            height: 38vw;
+            background-image: url("../assets/drawer/drawer-mountains.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            @include media-xs {
+                height: 72vw;
+            }
+        }
     }
 }
 
@@ -194,10 +213,25 @@
     background-color: $primary-brand-color;
     color: $secondary-brand-color;
     font-family: 'Encode Sans', sans-serif;
+    width: 138px;
+    height: 37px;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-left: 18px;
+    @include media-xs-range-2 {
+        color: $secondary-brand-color;
+        background-color: transparent;
+        border: 1.5px solid $secondary-brand-color;
+        border-radius: 50px;
+        width: 195px;
+        height: 53px;
+    }
 }
 
 .abi--social {
-    border: 1px solid red;
+    position: relative;
+    // border: 1px solid red;
     // position: absolute;
     // right: 40px;
     // height: 100%;
@@ -209,7 +243,19 @@
             margin: 0px 7px;
             a {
                 font-size: 20px;
+                i {
+                    color: $primary-brand-color;
+                }
+                @include media-xs-range-2 {
+                    font-size: 35px;
+                    i {
+                        color: $primary-brand-color;
+                    }
+                }
             }
+        }
+        @include media-xs-range-2 {
+            margin-top: 30px;
         }
         @include media-sm-range-1 {
             margin-right: 0px;
@@ -230,17 +276,17 @@
         }
     }
     @include media-xs-range-2 {
-        border-top: 2px solid #686868;
         position: fixed;
         z-index: 5;
         width: 100%;
         height: 80px;
-        bottom: 0px;
+        bottom: 290px;
         right: unset;
         left: 0px;
         padding: 0px 20px;
         // display: flex;
         display: none;
         justify-content: space-between;
+        flex-direction: column-reverse;
     }
 }

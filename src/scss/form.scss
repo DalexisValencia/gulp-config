@@ -357,6 +357,26 @@ textarea.form-textarea {
     }
 }
 
+.form-submit {
+    font-family: 'Inter', sans-serif;
+    background-color: $tertiary-brand-color;
+    color: $secondary-brand-color;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 125px;
+    width: 100%;
+    padding: 15px 10px;
+    text-transform: inherit;
+    transition: 0.5s all;
+    &:hover {
+        background-color: darken($tertiary-brand-color, 10) !important;
+        color: $secondary-brand-color !important
+    }
+    @include media-xs-range-1 {
+        max-width: 100%;
+    }
+}
+
 @mixin nice-select-for-drupal {
     // .nice-select {
     //     @include nice-select-for-drupal;

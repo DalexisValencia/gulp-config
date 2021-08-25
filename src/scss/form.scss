@@ -15,7 +15,8 @@ sans-serif;
     margin-top: 3rem;
 }
 
-.simple-questionary {
+.simple-questionary,
+.block-form-group {
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
@@ -43,6 +44,8 @@ sans-serif;
                 .js-form-type-radio {
                     display: flex;
                     align-items: center;
+                    justify-content: flex-start;
+                    flex-direction: inherit !important;
                     input.form-radio,
                     input[type="radio"] {
                         border-radius: 50%;
@@ -53,7 +56,7 @@ sans-serif;
                         min-height: 20px;
                         min-width: 20px;
                         -webkit-appearance: none;
-                        margin-top: 3px;
+                        margin-top: 2.7px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -65,11 +68,13 @@ sans-serif;
                                 height: 14px;
                                 background-color: $fifth-brand-color;
                                 border-radius: 50%;
+                                top: 7px;
                             }
                         }
                     }
                     .form-check-label {
-                        display: block;
+                        width: max-content;
+                        display: inline-block;
                         color: $secondary-brand-color;
                         font-size: 14px;
                         padding-left: 10px !important;
@@ -184,40 +189,42 @@ textarea.form-textarea {
 
 // Estilos para todos los inputs
 .abi-input--custom {
-    caret-color: $fourty-brand-color;
-    border-radius: $radius_input;
-    height: $height_input;
-    width: 100%;
-    padding-left: 15px;
-    margin-bottom: 0px !important;
-    margin-top: 10px !important;
-    border: $border_input;
-    background-color: $background_input;
-    color: rgba($fourty-brand-color, 0.9);
-    transition: 0.3s all;
-    font-family: $family_input;
-    font-size: $size_text_input;
-    &:focus,
-    &:active {
-        outline: 0;
-        outline-color: transparent !important;
-        outline-width: 0 !important;
-    }
-    &::placeholder {
-        color: rgba($fourty-brand-color, 0.7) !important;
-    }
-    &[type="number"] {
-        &::-webkit-outer-spin-button,
-        &::-webkit-inner-spin-button {
+    &:not([type="radio"]) {
+        caret-color: $fourty-brand-color;
+        border-radius: $radius_input;
+        height: $height_input;
+        width: 100%;
+        padding-left: 15px;
+        margin-bottom: 0px !important;
+        margin-top: 10px !important;
+        border: $border_input;
+        background-color: $background_input;
+        color: rgba($fourty-brand-color, 0.9);
+        transition: 0.3s all;
+        font-family: $family_input;
+        font-size: $size_text_input;
+        &:focus,
+        &:active {
+            outline: 0;
+            outline-color: transparent !important;
+            outline-width: 0 !important;
+        }
+        &::placeholder {
+            color: rgba($fourty-brand-color, 0.7) !important;
+        }
+        &[type="number"] {
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            -moz-appearance: textfield;
+        }
+        &[type="number"] {
             -webkit-appearance: none;
             margin: 0;
+            -moz-appearance: textfield;
         }
-        -moz-appearance: textfield;
-    }
-    &[type="number"] {
-        -webkit-appearance: none;
-        margin: 0;
-        -moz-appearance: textfield;
     }
 }
 
@@ -259,7 +266,6 @@ textarea.form-textarea {
         }
     }
     .abi--brand-wrapper-form--header-subtitle {
-        // border: 1px solid red;
         width: 100%;
         max-width: 612px;
         margin: 20px auto;
@@ -568,7 +574,6 @@ article.el-custom--register-page__form {
 }
 
 .el-custom-abi-register-form {
-    // border: 1px solid red;
     width: 100%;
     max-width: 425px;
     margin: 20px auto 0px;

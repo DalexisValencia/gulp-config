@@ -23,7 +23,17 @@ body {
     }
 }
 
+.abi--gContain {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0px auto;
+}
+
 #block-footer-menu,
 #block-mainnavigation-menu {
     display: none;
+}
+
+.abi--main-wrapper--body {
+    padding-top: 65px !important;
 }

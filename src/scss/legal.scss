@@ -5,11 +5,13 @@
     background-color: $secondary-brand-color;
     width: 100%;
     .abi--legal-title {
-        font-family: 'coprgtb';
+        color: $fourty-brand-color;
+        text-transform: uppercase;
+        // font-family: 'coprgtb';
         text-align: center;
         font: {
             weight: 900;
-            size: 36px;
+            size: 30px;
         }
         @include media-xs-range-1 {
             font-size: 24px;

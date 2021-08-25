@@ -1,0 +1,83 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--internal-section.thanks {
+    background-image: url('../assets/thanks-background.png');
+    background-position: center;
+    background-size: cover;
+    background-position: center top;
+    @include media-xs-range-2 {
+        position: relative;
+        background-image: url('../assets/thanks-background-mobile.png');
+    }
+}
+
+.abi--internal-section {
+    background-color: $secondary-brand-color;
+    width: 100%;
+    min-height: 700px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-xs-range-2 {
+        height: 160vw;
+        min-height: unset;
+        // background-color: red;
+        padding: 10px;
+    }
+    @include media-xs-small {
+        height: 220vw;
+    }
+}
+
+.abi--thanks-section__box {
+    max-width: 369px;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    .abi--thanks-section__box-header {
+        position: relative;
+        height: 108px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            color: $fourty-brand-color;
+        }
+        .abi--thanks-section__box-header--title {
+            color: $fourty-brand-color;
+            font: {
+                size: 42px;
+                family: 'coprgtb';
+                weight: 400;
+            }
+            line-height: 1;
+            @include media-xs-range-2 {
+                font-size: 39px;
+            }
+        }
+    }
+    .abi--thanks-section__box-content {
+        line-height: 1.2;
+        padding: 30px 20px;
+        color: $secondary-brand-color;
+        font: {
+            size: 16px;
+            weight: 400;
+            family: 'Nunito', sans-serif;
+        }
+        @include media-xs-range-2 {
+            font-size: 15px;
+        }
+    }
+    @include media-xs-range-2 {
+        max-width: 329px;
+        position: absolute;
+        width: 98%;
+        top: 15vw;
+    }
+}

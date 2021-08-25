@@ -1,0 +1,78 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--banner-pilsen-extra__wrapper {}
+
+.abi--banner-pilsen-extra {
+    width: 100%;
+    display: flex;
+    picture {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.abi--banner-pilsen-extra--headline {
+    width: 30%;
+    min-width: 250px;
+    background-color: #102032;
+    text-align: center;
+    .abi--banner-pilsen-extra--headline-title {
+        margin-top: 140px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-family: 'coprgtb';
+        font-size: 20px;
+        color: $secondary-brand-color;
+    }
+    .abi--banner-pilsen-extra--headline-img {
+        width: 201px;
+        margin: 0px auto;
+    }
+}
+
+.abi--banner-pilsen-extra--reference {
+    width: 60%;
+    background-image: url("../assets/register/reference-right.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.abi--banner-pilsen-extra__form {
+    width: 390px;
+    min-width: 390px;
+    @include media-xs-range-1 {
+        margin-top: 50px;
+        width: 100%;
+    }
+}
+
+.abi--banner-pilsen-extra__prizes {
+    // border: 1px solid red;
+    background-color: $secondary-brand-color;
+    padding: 50px 80px;
+    display: flex;
+    .abi--banner-pilsen-extra__prizes--header {
+        margin-top: 50px;
+        .abi--banner-pilsen-extra__prizes--header-title {
+            line-height: 1;
+            font-family: 'coprgtb';
+            font-size: 41px;
+        }
+        .abi--banner-pilsen-extra__prizes--header-subtitle {
+            line-height: 1.1;
+            margin-top: 20px;
+            font-family: 'Nunito', sans-serif;
+            max-width: 340px;
+            font-size: 16px;
+        }
+    }
+    picture {
+        margin-left: 120px;
+        max-width: 485px;
+        img {
+            width: 100%;
+        }
+    }
+}

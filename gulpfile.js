@@ -52,14 +52,14 @@ function clearCss() {
 }
 
 function compileNormalize() {
-    return src('src/scss/normalize.scss')
+    return src('src/scss/common/normalize.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(dest('public/css/'))
         .pipe(connect.reload());
 }
 
 function compileScss() {
-    return src(['src/scss/**/*.scss', 'src/scss/**/*.scss', '!src/scss/normalize.scss'])
+    return src(['src/scss/**/*.scss', 'src/scss/**/*.scss', '!src/scss/common/normalize.scss'])
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('main.css'))
         .pipe(cleanCSS())

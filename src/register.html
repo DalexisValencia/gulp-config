@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::Testing Gulp::</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="assets/vendor/owlcarousel/owl.carousel.min.css">
+</head>
+
+<body>
+    <main class="abi--main-wrapper">
+        <header class="abi--main-main-header">
+            <a href="">
+                <picture class="abi--main-main-header-logo">
+                    <source media="(min-width:710px)" srcset="assets/logo.svg">
+                    <img src="assets/logo-mobile.svg" alt="">
+                </picture>
+                <!-- <img src="assets/logo.svg" alt="" class="abi--main-main-header-logo"> -->
+            </a>
+            <nav class="abi--main-navigation">
+                <span class="close-drawer"></span>
+                <a href="" class="logo-mobile">
+                    <img src="assets/logo.svg" alt="">
+                </a>
+                <ul class="abi--main-menu abi-ul">
+                    <li class="abi--main-menu-item active">
+                        <a href="">HOME</a>
+                    </li>
+                    <li class="abi--main-menu-item">
+                        <a href="">PILSEN EXTRA</a>
+                    </li>
+                    <li class="abi--main-menu-item">
+                        <a href="">MERCADO PILSEN</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="abi--social">
+                <div class="follow-us-copy">
+                    Follow us
+                </div>
+                <ul class="abi--social-menu abi-ul">
+                    <li class="abi--social-menu-item">
+                        <a href="">
+                            <i class="icon-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="abi--main-menu-item">
+                        <a href="">
+                            <i class="icon-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="abi--main-menu-item">
+                        <a href="">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="abi--main-menu-item">
+                        <a href="">
+                            <i class="icon-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="el-custom--button open-drawer">
+                <i class="icon-burger-menu"></i>
+            </button>
+        </header>
+        <section class="abi--banner-pilsen-extra__wrapper">
+            <div class="abi--banner-pilsen-extra">
+                <div class="abi--banner-pilsen-extra--headline">
+                    <h3 class="abi--banner-pilsen-extra--headline-title">
+                        NUEVA PILSEN <br> EXTRA
+                    </h3>
+                    <img class="abi--banner-pilsen-extra--headline-img" src="assets/register/headline-copy.png" alt="">
+                </div>
+                <section class="abi--banner-pilsen-extra__form">
+                    <article class="el-custom--register-page__form">
+                        <h3 class="el-custom--register-page__form--title">
+                            INGRESA TUS DATOS PARA RECIBIR NUESTRO NEWSLETTER
+                        </h3>
+                        <form class="el-custom-abi-register-form" action="/" method="post" accept-charset="UTF-8">
+                            <div class="block-form-group">
+                                <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name form-no-label form-group">
+                                    <legend>Ingresa tu nombre</legend>
+                                    <input placeholder="Sebastian" autocomplete="off" type="text" id="register-name" name="name" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                                    <!-- <label class="error">este es un ejemplo de un error demasiado largo </label> -->
+                                </fieldset>
+
+                                <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-lastname form-item-lastname form-no-label form-group">
+                                    <legend>Ingresa tu apellido</legend>
+                                    <input placeholder="Másmela" autocomplete="off" type="text" id="register-lastname" name="lastname" value="" size="60" maxlength="100" class="required form-control el-custom--input" required="required">
+                                </fieldset>
+                            </div>
+
+                            <div class="block-form-group">
+                                <fieldset class="js-form-item js-form-type-select form-type-select js-form-item-gender form-item-gender form-no-label form-group form-full">
+                                    <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                        <option value="" hide>Selecciona tu Genero </option>
+                                        <option value="F">Femenino</option>
+                                        <option value="M">Masculino</option>
+                                    </select>
+                                    <!-- <label class="error">este es un ejemplo de un error demasiado largo </label> -->
+                                </fieldset>
+                            </div>
+
+                            <div class="block-form-group">
+                                <fieldset class="js-form-item js-form-type-email form-type-email js-form-item-email form-item-email form-no-label form-group form-full">
+                                    <legend>Ingresa tu correo electrónico</legend>
+                                    <input placeholder="Sebastian.masmela@ab-inbev.com" autocomplete="off" type="email" id="register-email" name="email" value=" " size="60" maxlength="50" class="form-email required form-control el-custom--input error" required="required">
+                                    <!-- <label class="error">este es un ejemplo de un error demasiado largo </label> -->
+                                </fieldset>
+                            </div>
+
+                            <div class="block-form-group birthday">
+                                <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-birthday form-item-birthday form-group form-full">
+                                    <label for="birthday">Fecha de nacimiento</label>
+                                    <fieldset class="js-form-item-birthday-fieldset">
+                                        <input placeholder="DD" autocomplete="off" name="birthday-day" value="DD" class="form-day" required="required">
+                                        <!-- <label class="error">este es un ejemplo de un error demasiado largo </label> -->
+                                    </fieldset>
+                                    <fieldset class="js-form-item-birthday-fieldset">
+                                        <input placeholder="MM" autocomplete="off" name="birthday-day" value="MM" class="form-day" required="required">
+                                        <!-- <label class="error">este es un ejemplo de un error demasiado largo </label> -->
+                                    </fieldset>
+                                    <fieldset class="js-form-item-birthday-fieldset">
+                                        <input placeholder="AAAA" autocomplete="off" name="birthday-day" value="AAAA" class="form-day" required="required">
+                                        <!-- <label class="error">este es un ejemplo de un error demasiado largo </label> -->
+                                    </fieldset>
+                                    <!-- <select autocomplete="off" name="day" class="form-select required form-control el-custom--input" required="required" id="day">
+                                        <option value="" hidden selected>DD</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                    </select> -->
+                                    <!-- <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                        <option value="" hidden selected>MM</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                    </select>
+                                    <select autocomplete="off" name="gender" class="form-select required form-control el-custom--input" required="required">
+                                        <option value="" hidden selected>AAAA</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                    </select> -->
+                                    <!-- <label class="error">este es un ejemplo de un error demasiado largo </label> -->
+
+                                </fieldset>
+                            </div>
+
+                            <div class="simple-questionary">
+                                <label class="field-label">
+                                    ¿Ya probaste la nueva <b>Pilsen Extra</b>?
+                                </label>
+                                <div class="yes answer">
+                                    <input type="radio" name="questionary-answer" value="yes">
+                                    <label for="">Yes</label>
+                                </div>
+                                <div class="no answer">
+                                    <input type="radio" name="questionary-answer" value="no">
+                                    <label for="">No</label>
+                                </div>
+                            </div>
+
+                            <div class="el-custom--block-terms">
+                                <div class="block-term">
+                                    <label class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-terms form-item-terms el-custom--checkbox" for="acept-terms">
+                                            <input type="checkbox" id="edit-terms" name="acept-terms" value="1" class="form-checkbox required form-check-input" required="required">
+                                            <label class="form-check-label" for="edit-terms">
+                                                He leído Y <a href=""> aceptado los Términos y Condiciones</a> y la <a href="">política de protección de datos personales</a>.
+                                            </label>
+                                    </label>
+                                </div>
+                                <div class="block-term">
+                                    <label class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-terms form-item-terms el-custom--checkbox" for="get-information">
+                                            <input type="checkbox" id="get-information" name="get-information" value="1" class="form-checkbox required form-check-input" required="required">
+                                            <label class="form-check-label" for="get-information">
+                                                Deseo recibir información comercial y eventos de bud
+                                            </label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-actions js-form-wrapper form-group" id="edit-actions">
+                                <button type="submit " value="PARTICIPAR " class="el-custom--button js-form-submit">
+                                    PARTICIPAR
+                                </button>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+                <div class="abi--banner-pilsen-extra--reference"></div>
+            </div>
+        </section>
+
+        <section class="abi--banner-pilsen-extra__prizes">
+            <header class="abi--banner-pilsen-extra__prizes--header">
+                <h3 class="abi--banner-pilsen-extra__prizes--header-title">
+                    Premios
+                </h3>
+                <p class="abi--banner-pilsen-extra__prizes--header-subtitle">
+                    MATOA Way Kambas - This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its.
+                </p>
+            </header>
+
+            <picture class="abi--banner-pilsen-extra__prizes--image">
+                <source media="(min-width:600px)" srcset="assets/register/prize.png">
+                <img src="assets/register/prize.png" alt="">
+            </picture>
+        </section>
+
+        <footer class="abi--main-main-footer">
+            <nav class="abi--main-main-footer-navigation">
+                <ul class="abi-ul">
+                    <li>
+                        <a href="">
+                            ANHEUSER-BUSCH INBEV S.A @2020
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Tap into your beer
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Términos y condiciones
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Aviso de privacidad y política de uso
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Contáctanos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <section class="abi--main-main-footer-copy">
+                <div>TOMAR BEBIDAS ALCOHÓLICAS EN EXCESO ES DANIÑO </div>
+                <div>NO COMPARTA ESTA PÁGINA CON MENORES DE EDAD</div>
+            </section>
+            <nav class="abi--main-main-footer-social">
+                <h3 class="abi--main-main-footer-social--follow-us">
+                    ¡SÍGUENOS!
+                </h3>
+                <ul class="abi-ul">
+                    <li><a href=""><i class="icon-instagram"></i></a></li>
+                    <li><a href=""><i class="icon-twitter-circle"></i></a></li>
+                    <li><a href=""><i class="icon-instagram-circle"></i></a></li>
+                </ul>
+            </nav>
+        </footer>
+    </main>
+</body>
+<script src="assets/vendor/jquery.min.js"></script>
+<script src="assets/vendor/owlcarousel/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>

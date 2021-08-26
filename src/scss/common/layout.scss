@@ -24,14 +24,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vw;
+    height: 53vw;
     @include media-xs-range-2 {
         background-image: url('../assets/404/404-background-desktop.svg');
-        // height: 96vw;
-        // height: 600px;
         min-height: 600px;
-        // background-color: red;
-        padding: 10px;
+        padding: 10px 20px;
     }
     @include media-xs-small {
         height: 220vw;

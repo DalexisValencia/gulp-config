@@ -34,6 +34,9 @@
             }
             @include media-xs-range-2 {
                 font-size: 42px;
+                width: 100%;
+                border-radius: 0px;
+                padding: 20px 0px;
             }
         }
         .abi--404-section__box-header--subtitle {
@@ -49,11 +52,13 @@
             @include media-xs-range-2 {
                 font-size: 18px;
                 margin-bottom: 40px;
+                width: 100%;
             }
         }
         @include media-xs-range-2 {
             // border: 1px solid red !important;
             flex-direction: column-reverse;
+            width: 100%;
         }
     }
     .el-custom--button.goHome_404 {

@@ -1,3 +1,5 @@
+@import '../vars/colors.scss';
+@import './queries.scss';
 *[class*="--flex"] {
     display: flex;
     &.justify-between {
@@ -7,6 +9,32 @@
     &.center {
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+.abi--internal-section {
+    background-color: $secondary-brand-color;
+    background-image: url('../assets/404/404-background-desktop.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    min-height: 700px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vw;
+    @include media-xs-range-2 {
+        background-image: url('../assets/404/404-background-desktop.svg');
+        // height: 96vw;
+        // height: 600px;
+        min-height: 600px;
+        // background-color: red;
+        padding: 10px;
+    }
+    @include media-xs-small {
+        height: 220vw;
     }
 }
 

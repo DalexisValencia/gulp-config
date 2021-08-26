@@ -1,50 +1,59 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
-.abi--internal-section.page-404 {
-    background-image: url('../assets/404-background.png');
-    background-position: center;
-    background-size: cover;
-    background-position: center top;
-    @include media-xs-range-2 {
-        background-image: url('../assets/404-background-mobile.png');
-    }
-}
-
+// .abi--internal-section.page-404 {}
 .abi--404-section__box {
-    background-color: rgba($color: #0C284C, $alpha: 0.6);
+    background: rgb(0, 92, 185);
+    background: linear-gradient(180deg, rgba(0, 92, 185, 1) 0%, rgba(0, 92, 185, 1) 87%, rgba(255, 255, 255, 1) 100%);
+    // background-color: rgba($color: #0C284C, $alpha: 0.6);
     backdrop-filter: blur(2px);
     padding: 30px;
+    height: 100%;
+    max-width: 491px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
     .abi--404-section__box-header {
-        max-width: 265px;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
         .abi--404-section__box-header--title {
+            border: 5px solid $secondary-brand-color;
+            border-radius: 10px;
+            padding: 20px 50px;
             color: $secondary-brand-color;
             line-height: 1;
             font: {
-                family: 'Helvetica';
-                size: 34px;
+                family: 'Montserrat', sans-serif;
+                size: 50px;
                 weight: bold;
             }
             @include media-xs-range-2 {
-                font-size: 28px;
+                font-size: 42px;
             }
         }
         .abi--404-section__box-header--subtitle {
             width: max-content;
             margin: 10px 0px 10px;
             color: $secondary-brand-color;
-            text-transform: uppercase;
+            // text-transform: uppercase;
             font: {
-                size: 38px;
+                size: 16px;
                 weight: 400;
-                family: 'Helvetica';
+                family: 'Montserrat', sans-serif;
             }
-            // @include media-xs-range-1 {
-            //     visibility: hidden;
-            // }
+            @include media-xs-range-2 {
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+        }
+        @include media-xs-range-2 {
+            // border: 1px solid red !important;
+            flex-direction: column-reverse;
         }
     }
     .el-custom--button.goHome_404 {

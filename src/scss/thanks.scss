@@ -3,42 +3,54 @@
 // .abi--internal-section.thanks {
 // }
 .abi--thanks-section__box {
-    max-width: 491px;
+    max-width: 520px;
+    padding: 30px 90px;
     overflow: hidden;
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
     background: rgb(0, 92, 185);
     background: linear-gradient(180deg, rgba(0, 92, 185, 1) 0%, rgba(0, 92, 185, 1) 87%, rgba(255, 255, 255, 1) 100%);
     .abi--thanks-section__box-header {
         position: relative;
-        height: 108px;
+        width: 100%;
+        // height: 108px;
         padding: 10px 20px;
         display: flex;
         align-items: center;
-        .close {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            font-size: 20px;
-            text-decoration: none;
-            color: $fourty-brand-color;
-        }
+        border: 5px solid $secondary-brand-color;
+        border-radius: 10px;
+        padding: 20px 50px;
+        flex-wrap: wrap;
         .abi--thanks-section__box-header--title {
-            color: $fourty-brand-color;
+            width: 100%;
+            text-align: center;
+            color: $secondary-brand-color;
+            text-transform: uppercase;
             font: {
                 size: 42px;
-                family: 'coprgtb';
+                family: 'Montserrat', sans-serif;
                 weight: 400;
             }
             line-height: 1;
             @include media-xs-range-2 {
-                font-size: 39px;
+                font-size: 31px;
             }
+        }
+        @include media-xs-range-2 {
+            padding: 20px 10px;
         }
     }
     .abi--thanks-section__box-content {
+        margin-top: 10px;
         line-height: 1.2;
-        padding: 30px 20px;
+        text-align: center;
+        width: 100%;
+        // padding: 30px 20px;
         color: $secondary-brand-color;
         font: {
             size: 16px;
@@ -46,13 +58,13 @@
             family: 'Nunito', sans-serif;
         }
         @include media-xs-range-2 {
-            font-size: 15px;
+            font-size: 13px;
         }
     }
     @include media-xs-range-2 {
-        max-width: 329px;
-        position: absolute;
-        width: 98%;
-        top: 15vw;
+        padding: 30px 50px;
+    }
+    @include media-xs-small {
+        padding: 30px 20px;
     }
 }

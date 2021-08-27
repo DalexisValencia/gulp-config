@@ -156,7 +156,7 @@ sans-serif;
     .llaxbecker-logo {
         max-width: 510px;
         width: 100%;
-        margin-top: -220px;
+        margin-top: -30px;
     }
     @include media-sm-range-1 {
         display: none !important;
@@ -263,7 +263,7 @@ textarea.form-textarea {
         color: $secondary-brand-color;
         font: {
             family: 'Roboto', sans-serif;
-            weight: 400;
+            weight: bold;
             size: 40px;
         }
         @include media-xs-range-1 {

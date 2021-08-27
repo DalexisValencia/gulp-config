@@ -156,6 +156,7 @@ sans-serif;
     .llaxbecker-logo {
         max-width: 510px;
         width: 100%;
+        margin-top: -220px;
     }
     @include media-sm-range-1 {
         display: none !important;
@@ -237,6 +238,10 @@ textarea.form-textarea {
     &::first-letter {
         text-transform: uppercase;
     }
+    &::before,
+    &::after {
+        content: unset;
+    }
 }
 
 .abi--brand-wrapper-form {
@@ -302,6 +307,7 @@ textarea.form-textarea {
                 margin-bottom: 6px;
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
                 div.js-form-item {
                     width: 100%;
                     // border: 1px solid blue;
@@ -319,13 +325,6 @@ textarea.form-textarea {
                     font-family: 'Inter', sans-serif;
                     font-size: 14px;
                     color: $secondary-brand-color;
-                    // margin-top: 3px;
-                    // margin-left: 20px;
-                    // @include media-xs-range-1 {
-                    //     // font-size: 12px;
-                    //     margin-top: 7px;
-                    //     margin-left: 34px;
-                    // }
                     &::before,
                     &::after {
                         content: unset;
@@ -338,6 +337,11 @@ textarea.form-textarea {
                 }
                 label.error {
                     @extend .form-error;
+                    position: absolute;
+                    bottom: -7px;
+                    ~.form-check-label {
+                        margin-bottom: 11px;
+                    }
                 }
             }
         }
@@ -384,33 +388,6 @@ textarea.form-textarea {
 }
 
 @mixin nice-select-for-drupal {
-    // .nice-select {
-    //     @include nice-select-for-drupal;
-    //     // width: 100%;
-    //     border-radius: 0px;
-    //     border: 1px solid transparent;
-    //     border-bottom: 1px solid $primary-brand-color;
-    //     height: 46.4px;
-    //     padding: 0px;
-    //     * {
-    //         @extend .apply-to-form-inputs;
-    //     }
-    //     span.current {
-    //         font-weight: bolder;
-    //         color: rgba(#454D58, 0.5);
-    //         font-size: 14px;
-    //         height: 100%;
-    //         display: block;
-    //         display: flex;
-    //         align-items: center;
-    //     }
-    //     ul {
-    //         width: 100%;
-    //         border-radius: 0px;
-    //         max-height: 200px;
-    //         overflow: scroll;
-    //     }
-    // }
     -webkit-tap-highlight-color: transparent;
     background-color: transparent !important;
     border-radius: 5px;
@@ -495,12 +472,6 @@ textarea.form-textarea {
             flex-direction: column;
         }
         @include form-select();
-        // &:not(.form-full) {
-        //     width: 48.8%;
-        // }
-        // &.form-full {
-        //     width: 100%;
-        // }
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -577,7 +548,6 @@ article.el-custom--register-page__form {
     width: 100%;
     max-width: 425px;
     margin: 20px auto 0px;
-    // margin-top: 20px;
     .block-form-group {
         display: flex;
         margin-top: 8px;

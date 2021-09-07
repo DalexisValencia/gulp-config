@@ -19,7 +19,7 @@
 .abi--clubcolombia-iframe-banner__wrapper-video {
     position: absolute;
     background-color: $sixth-brand-color;
-    opacity: 0.5;
+    opacity: 1;
     // opacity: 0.5;
     width: 73.5vw;
     height: 47.1vw;
@@ -28,6 +28,8 @@
     iframe {
         width: 100%;
         height: 100%;
+        position: absolute;
+        top: 0;
         // display: none;
     }
     .banner__wrapper-video__likes {
@@ -37,6 +39,8 @@
         border-radius: 5px;
         display: flex;
         background-color: $sixth-brand-color;
+        position: relative;
+        z-index: 2;
         .banner__wrapper-video__likes--label {
             position: relative;
             display: flex;
@@ -212,6 +216,7 @@
     bottom: -230px;
     z-index: 2;
     img.logo-flavor-travel {
+        margin: 0px auto;
         width: 388px;
         @include media-xs {
             // width: 243px;

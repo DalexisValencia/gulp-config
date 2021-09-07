@@ -5,6 +5,7 @@
     background-position: center;
     background-size: cover;
     background-position: center top;
+    flex-direction: column;
     @include media-xs-range-2 {
         position: relative;
         background-image: url('../assets/thanks-background-mobile.png');
@@ -81,5 +82,27 @@
         position: absolute;
         width: 98%;
         top: 15vw;
+    }
+}
+
+.el-custom--button.go-home {
+    margin-top: 30px;
+    border: 1px solid $secondary-brand-color;
+    background-color: $primary-darken-brand-color;
+    font-size: 13px;
+    width: 100%;
+    max-width: 271px;
+    padding: 15px 5px;
+    border-radius: 15px;
+    font-family: 'Nunito', sans-serif;
+    color: $secondary-brand-color;
+    font-weight: 800;
+    @include media-xs-range-2 {
+        position: absolute;
+        // top: 55vw;
+        top: 275px;
+    }
+    @include media-xs-small {
+        top: 226px;
     }
 }

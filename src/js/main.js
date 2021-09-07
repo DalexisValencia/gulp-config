@@ -66,43 +66,44 @@ $(document).ready(function() {
             });
 
             // Sliders social network on home
-            var slidersHome = $(".abi--main-container--body-sliders.owl-carousel");
-            if (slidersHome.length >= 1) {
-                console.info("generado")
-                slidersHome.owlCarousel({
-                    items: 4,
-                    loop: true,
-                    video: true,
-                    responsive: {
-                        0: {
-                            items: 1.5,
-                            margin: 10,
-                            center: false,
-                            navContainer: $(".abi--main-container--body-sliders--navigation")
-                        },
-                        420: {
-                            margin: 10,
-                            items: 2.8,
-                            navContainer: $(".abi--main-container--body-sliders--navigation")
-                        },
-                        600: {
-                            margin: 10,
-                            items: 3.5,
-                            navContainer: $(".abi--main-container--body-sliders--navigation")
-                        },
-                        710: {
-                            margin: 10,
-                            items: 4,
-                            navContainer: $(".abi--main-container--body-sliders--navigation")
-                        },
-                        960: {
-                            items: 4,
-                            loop: false,
-                            navContainer: $(".abi--main-container--body-sliders--navigation")
-                        }
+        }
+        var slidersHome = $(".abi--main-container--body-sliders.owl-carousel");
+        console.info("aqui?")
+        if (slidersHome.length >= 1) {
+            console.info("generado")
+            slidersHome.owlCarousel({
+                items: 4,
+                loop: true,
+                video: true,
+                responsive: {
+                    0: {
+                        items: 1.5,
+                        margin: 4,
+                        center: false,
+                        navContainer: $(".abi--main-container--body-sliders--navigation")
+                    },
+                    420: {
+                        margin: 4,
+                        items: 2.8,
+                        navContainer: $(".abi--main-container--body-sliders--navigation")
+                    },
+                    600: {
+                        margin: 4,
+                        items: 3.5,
+                        navContainer: $(".abi--main-container--body-sliders--navigation")
+                    },
+                    710: {
+                        margin: 4,
+                        items: 4,
+                        navContainer: $(".abi--main-container--body-sliders--navigation")
+                    },
+                    960: {
+                        items: 4,
+                        loop: false,
+                        navContainer: $(".abi--main-container--body-sliders--navigation")
                     }
-                });
-            }
+                }
+            });
         }
     })
     // })(jQuery);

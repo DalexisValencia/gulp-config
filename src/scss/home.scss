@@ -1,21 +1,147 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi-main--home-wrapper {
+    background-color: white;
     border: 1px solid red;
     min-height: 700px;
-    padding-top: 75px; //revisar esto
+    height: 81.5vw;
+    position: relative;
+    top: 75px; //revisar esto
+    background-image: url('../assets/bases/components-5.png');
+    background-size: 100%;
+}
+
+.abi-main--home-lateral-image {
+    // border: 1px solid red;
+    pointer-events: none;
+    // background-color: blue;
+    opacity: 0.5;
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    height: 74vw;
+    // width: 100px;
+    // height: 200px;
+    img {
+        position: absolute;
+        // top: -6.5vw;
+        right: 5vw;
+        width: 54vw;
+    }
 }
 
 .abi-main--home-wrapper--container {
     border: 2px dashed black;
+    background-color: red;
+    opacity: 0.5;
+    height: 40vw;
+    width: 100%;
+    // padding: 0px 7vw;
+    position: absolute;
+    top: 0px;
+    .abi-main--home-wrapper--container--background-img {
+        border: 1px solid white;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 16.5vw;
+        background-image: url("../assets/home/altiplano-move-to-right.png");
+        background-position: left bottom;
+        background-size: cover;
+        background-repeat: repeat-x;
+    }
+}
+
+.abi-main--home-wrapper--container-bottom {
+    // background-color: red;
+    border: 1px solid yellow;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    height: 41.5vw;
+}
+
+.abi-main--home-wrapper--container-bottom-header {
+    border: 1px solid black;
+    position: relative;
+    margin-left: 6.2vw;
+    margin-top: 3vw;
+    width: 15vw;
+    .abi-main--home-wrapper--container-bottom-header--description {
+        font-size: 1.66vw;
+        color: red;
+    }
+    .el-custom--button.more {
+        display: flex;
+        width: 16vw;
+        background-color: red;
+        height: 3.8vw;
+        margin-top: 1vw;
+        // opacity: 0.5;
+        border-radius: 5px;
+        font-size: 1vw;
+    }
+}
+
+.abi-main--home-wrapper--container-header {
+    border: 1px solid white;
+    display: flex;
+    color: white;
+    margin-left: 6.5vw;
+    margin-top: 7vw;
+    .abi-main--home-wrapper--container-header--lateral {
+        border: 1px dashed white;
+        width: 17vw;
+        .abi-main--home-wrapper--container-header--lateral--title {
+            line-height: 1;
+            font-size: 1.5vw;
+            text-transform: uppercase;
+        }
+        .el-custom--button.more {
+            background-color: white;
+            width: 15.4vw;
+            margin-top: 0.8vw;
+            height: 3.8vw;
+            border-radius: 5px;
+            font-size: 1.3vw;
+            color: black;
+            display: flex;
+        }
+        // font-size: 12px;
+    }
+    .abi-main--home-wrapper--container-header--lateral-right {
+        line-height: 1;
+        border: 1px solid white;
+        width: 27vw;
+        font-size: 1.6vw;
+        margin-left: 1vw;
+    }
+}
+
+.abi-main--home-wrapper--container-bottom--background-img {
+    position: absolute;
+    bottom: 0px;
+    border: 1px solid black;
+    height: 18.5vw;
+    width: 100%;
+    background-image: url("../assets/home/altiplano-move-to-left-cut.png");
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    background-color: white;
 }
 
 .abi--main-container--home {
-    background-image: url("../assets/home/bg-blue-brikes.png");
+    background-color: $secondary-brand-color;
+    background-image: url("../assets/bases/unetealclube.png");
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: cover;
-    padding: 80px 90px;
+    background-size: 100%;
+    // padding: 80px 90px;
+    position: relative;
+    top: 76px;
+    height: 59vw;
+    // background: red;
+    // height: ;
     @include media-xs {
         padding: 30px 60px;
     }
@@ -23,119 +149,141 @@
         // border: 1px solid red;
         padding-right: 0px;
     }
+    .abi--gContain {
+        border: 1px dashed black;
+    }
     .abi--main-container--header {
         // border: 1px solid red;
         // max-width: 996px;
         width: 100%;
         margin: 0px auto;
         margin-bottom: 25px;
+        padding: 0px 5vw;
+        display: flex;
+        margin-top: 15.5vw;
         .abi--main-container--header__title {
             padding-left: 1.2vw;
             text-transform: uppercase;
             font: {
-                size: 38.4px;
+                size: 2.6vw;
                 weight: 700;
                 family: 'Helvetica';
             }
-            color: $secondary-brand-color;
+            color: $primary-brand-color;
             @include media-xs-range-2 {
                 padding-left: 0px;
                 font-size: 20px;
+            }
+        }
+        .abi--main-container--header__social {
+            // border: 1px solid red;
+            margin-left: 3vw;
+            margin-top: -0.2vw;
+            a {
+                cursor: pointer;
+                margin-right: 0.95vw;
+                // color: $primary-brand-color;
+                text-decoration: none;
+                i {
+                    font-size: 2.7vw;
+                }
             }
         }
     }
 }
 
 .abi--main-container--body-sliders__wrapper {
-    // border: 1px solid red;
+    border: 1px solid red;
     position: relative;
     width: 100%;
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    .abi--main-container--body-sliders {
-        // max-width: 996px;
-        margin: 0px auto;
-        &.owl-carousel {
-            .owl-stage-outer {
-                .owl-stage {
-                    display: flex;
-                    .owl-item {
-                        display: flex;
-                        justify-content: center;
-                    }
-                }
-            }
-        }
-    }
-    .abi--main-container--body-sliders--navigation {
-        position: absolute;
-        // max-width: 1036px;
-        margin: 0px auto;
-        width: 103%;
-        // left: -5%;
-        display: flex;
-        justify-content: space-between;
-        z-index: 1;
-        // top: 8vw;
-        pointer-events: none;
-        // border: 1px solid red;
-        @include media-xs-range-2 {
-            display: none;
-        }
-        button {
-            pointer-events: all;
-            font-size: 0px;
-            width: 3vw;
-            height: 3vw;
-            background-color: $secondary-brand-color;
-            border: 1px solid transparent;
-            border-radius: 5px;
-            &:hover,
-            &:focus,
-            &:active {
-                outline: 0;
-                outline-color: transparent !important;
-            }
-            &.owl-prev {
-                background-image: url("../assets/icons/slider-prev-black.svg");
-            }
-            &.owl-next {
-                background-image: url("../assets/icons/slider-next-black.svg");
-            }
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 30%;
-            @include media-xs-range-2 {
-                width: 5vw;
-                height: 5vw;
-            }
-        }
-    }
+    height: 22vw;
+    // .abi--main-container--body-sliders {
+    //     // max-width: 996px;
+    //     // display: flex;
+    //     margin: 0px auto;
+    //     &.owl-carousel {
+    //         .owl-stage-outer {
+    //             .owl-stage {
+    //                 display: flex;
+    //                 .owl-item {
+    //                     display: flex;
+    //                     justify-content: center;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    // .abi--main-container--body-sliders--navigation {
+    //     position: absolute;
+    //     // max-width: 1036px;
+    //     margin: 0px auto;
+    //     width: 103%;
+    //     // left: -5%;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     z-index: 1;
+    //     // top: 8vw;
+    //     pointer-events: none;
+    //     // border: 1px solid red;
+    //     @include media-xs-range-2 {
+    //         display: none;
+    //     }
+    //     button {
+    //         pointer-events: all;
+    //         font-size: 0px;
+    //         width: 3vw;
+    //         height: 3vw;
+    //         background-color: $secondary-brand-color;
+    //         border: 1px solid transparent;
+    //         border-radius: 5px;
+    //         &:hover,
+    //         &:focus,
+    //         &:active {
+    //             outline: 0;
+    //             outline-color: transparent !important;
+    //         }
+    //         &.owl-prev {
+    //             background-image: url("../assets/icons/slider-prev-black.svg");
+    //         }
+    //         &.owl-next {
+    //             background-image: url("../assets/icons/slider-next-black.svg");
+    //         }
+    //         background-position: center;
+    //         background-repeat: no-repeat;
+    //         background-size: 30%;
+    //         @include media-xs-range-2 {
+    //             width: 5vw;
+    //             height: 5vw;
+    //         }
+    //     }
+    // }
 }
 
-.abi--main-container--body-sliders__slide {
-    // width: 222.02px;
-    width: 20vw;
-    // height: 207.98px;
-    picture {
-        img {
-            width: 100%;
-        }
-    }
-    iframe,
-    video {
-        width: 100%;
-        height: 100%;
-    }
-    @include media-xs-range-2 {
-        width: 24vw;
-    }
-    @include media-xs {
-        width: 30vw;
-    }
-    @media (max-width: 420px) {
-        width: 53vw;
-    }
-}
+// .abi--main-container--body-sliders__slide {
+//     // width: 222.02px;
+//     width: 20vw;
+//     // height: 207.98px;
+//     picture {
+//         img {
+//             width: 100%;
+//         }
+//     }
+//     iframe,
+//     video {
+//         width: 100%;
+//         height: 100%;
+//     }
+//     @include media-xs-range-2 {
+//         width: 24vw;
+//     }
+//     @include media-xs {
+//         width: 30vw;
+//     }
+//     @media (max-width: 420px) {
+//         width: 53vw;
+//     }
+// }

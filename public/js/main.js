@@ -68,9 +68,11 @@ $(document).ready(function() {
             // Sliders social network on home
             var slidersHome = $(".abi--main-container--body-sliders.owl-carousel");
             if (slidersHome.length >= 1) {
+                console.info("generado")
                 slidersHome.owlCarousel({
                     items: 4,
                     loop: true,
+                    video: true,
                     responsive: {
                         0: {
                             items: 1.5,

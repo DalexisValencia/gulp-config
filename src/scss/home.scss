@@ -1,5 +1,15 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
+.abi-main--home-wrapper {
+    border: 1px solid red;
+    min-height: 700px;
+    padding-top: 75px; //revisar esto
+}
+
+.abi-main--home-wrapper--container {
+    border: 2px dashed black;
+}
+
 .abi--main-container--home {
     background-image: url("../assets/home/bg-blue-brikes.png");
     background-repeat: no-repeat;

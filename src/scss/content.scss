@@ -28,7 +28,7 @@
     iframe {
         width: 100%;
         height: 100%;
-        display: none;
+        // display: none;
     }
     .banner__wrapper-video__likes {
         border: 2px solid $secondary-brand-color;
@@ -375,6 +375,7 @@
                 }
             }
             .add-to-car {
+                display: flex;
                 width: 100%;
                 height: 43.15px;
                 background-color: $eight-brand-color;
@@ -393,7 +394,7 @@
 .el-custom-button.show-more {
     margin-top: 70px;
     margin: 0px auto;
-    display: block;
+    display: flex;
     background-color: $eight-brand-color;
     border-radius: 4px;
     width: 156.34px;

@@ -77,19 +77,19 @@ $(document).ready(function() {
                 video: true,
                 responsive: {
                     0: {
-                        items: 1.5,
+                        items: 1,
                         margin: 4,
                         center: false,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
                     420: {
                         margin: 4,
-                        items: 2.8,
+                        items: 2,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
                     600: {
                         margin: 4,
-                        items: 3.5,
+                        items: 2,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
                     710: {

@@ -92,8 +92,8 @@ $(document).ready(function() {
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
                     710: {
+                        items: 4,
                         margin: 10,
-                        items: 10,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
                     960: {

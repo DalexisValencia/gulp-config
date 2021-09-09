@@ -15,6 +15,9 @@
     @include media-min-width {
         height: 1000px;
     }
+    @include media-sm {
+        min-height: auto;
+    }
 }
 
 .abi-main--home-lateral-image {
@@ -69,7 +72,7 @@
     left: 0px;
     width: 100%;
     background-repeat: repeat-x;
-    background-color: red;
+    // background-color: red;
 }
 
 .abi-main--home-wrapper--bottom-mountains-scroll {
@@ -80,7 +83,10 @@
     background-repeat: repeat-x;
     @include media-min-width {
         height: 215px;
-        background-size: 165%;
+        background-size: 160%;
+    }
+    @include media-sm {
+        background-size: cover;
     }
 }
 
@@ -118,7 +124,7 @@
         display: flex;
         width: 16vw;
         background-color: $primary-brand-color;
-        border: 2px solid $tertiary-brand-color;
+        border: 0.6vw solid $tertiary-brand-color;
         height: 3.91vw;
         margin-top: 1vw;
         border-radius: 5px;
@@ -126,6 +132,7 @@
         border-radius: 5px;
         font-size: 1vw;
         color: $secondary-brand-color;
+        cursor: pointer;
         @include media-min-width {
             font-size: 13px;
             max-width: 184px;
@@ -287,7 +294,7 @@
         }
     }
     @include media-max-width {
-        padding-bottom: 60px;
+        padding-bottom: 140px;
         height: auto;
     }
     @include media-xs-range-2 {

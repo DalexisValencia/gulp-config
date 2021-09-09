@@ -115,35 +115,44 @@ $(document).ready(function() {
                 var scrollDirection = $(this).scrollTop();
                 var positionBeforeChangeOnMiddle = 0;
                 var positionBeforeChangeOnBottom = 0;
+                var width = $(window).width();
 
                 var scrollDirection = $(this).scrollTop();
-                var width = $(window).width();
-                if (scrollDirection > lastScrollTop) {
-                    // downscroll code
-                    if (width >= 1280) {
-                        positionBeforeChangeOnBottom = createNewPosition(bottomMountains.css("background-position-x"), "plus", 3);
-                        positionBeforeChangeOnMiddle = createNewPosition(middleMountains.css("background-position-x"), "plus", 10);
-                    } else if (width < 1280) {
-                        positionBeforeChangeOnBottom = createNewPosition(bottomMountains.css("background-position-x"), "plus", 3);
-                        positionBeforeChangeOnMiddle = createNewPosition(middleMountains.css("background-position-x"), "minus", 10);
+                if (width > 599) {
+                    if (scrollDirection > lastScrollTop) {
+                        // downscroll code
+                        if (width >= 1280) {
+                            positionBeforeChangeOnBottom = createNewPosition(bottomMountains.css("background-position-x"), "plus", 3);
+                            positionBeforeChangeOnMiddle = createNewPosition(middleMountains.css("background-position-x"), "plus", 10);
+                        } else if (width < 1280) {
+                            positionBeforeChangeOnBottom = createNewPosition(bottomMountains.css("background-position-x"), "plus", 3);
+                            positionBeforeChangeOnMiddle = createNewPosition(middleMountains.css("background-position-x"), "minus", 10);
+                        }
+                    } else {
+                        // upscroll code
+                        if (width >= 1280) {
+                            positionBeforeChangeOnBottom = createNewPosition(bottomMountains.css("background-position-x"), "minus", 3);
+                            positionBeforeChangeOnMiddle = createNewPosition(middleMountains.css("background-position-x"), "minus", 10);
+                        } else if (width < 1280) {
+                            positionBeforeChangeOnMiddle += createNewPosition(middleMountains.css("background-position-x"), "plus", 10);
+                            positionBeforeChangeOnBottom = createNewPosition(bottomMountains.css("background-position-x"), "minus", 3);
+                        }
                     }
+                    lastScrollTop = scrollDirection;
+                    middleMountains.css({
+                        "background-position-x": positionBeforeChangeOnMiddle + "%",
+                    })
+                    bottomMountains.css({
+                        "background-position-x": positionBeforeChangeOnBottom + "%",
+                    })
                 } else {
-                    // upscroll code
-                    if (width >= 1280) {
-                        positionBeforeChangeOnBottom = createNewPosition(bottomMountains.css("background-position-x"), "minus", 3);
-                        positionBeforeChangeOnMiddle = createNewPosition(middleMountains.css("background-position-x"), "minus", 10);
-                    } else if (width < 1280) {
-                        positionBeforeChangeOnMiddle += createNewPosition(middleMountains.css("background-position-x"), "plus", 10);
-                        positionBeforeChangeOnBottom = createNewPosition(bottomMountains.css("background-position-x"), "minus", 3);
-                    }
+                    middleMountains.css({
+                        "background-position-x": 0,
+                    })
+                    bottomMountains.css({
+                        "background-position-x": "center",
+                    })
                 }
-                lastScrollTop = scrollDirection;
-                middleMountains.css({
-                    "background-position-x": positionBeforeChangeOnMiddle + "%",
-                })
-                bottomMountains.css({
-                    "background-position-x": positionBeforeChangeOnBottom + "%",
-                })
             })
 
             function createNewPosition(el, action, amount) {

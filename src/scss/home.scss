@@ -131,31 +131,19 @@
 }
 
 .abi--main-container--home {
+    background-image: url('../assets/social-background.png');
+    background-position: top center;
+    background-size: 200%;
+    background-repeat: no-repeat;
     background-color: white;
-    // background-color: $secondary-brand-color;
-    // background-image: url("../assets/bases/unetealclube.png");
-    // background-repeat: no-repeat;
-    // background-position: center top;
-    // background-size: 100%;
-    // padding: 80px 90px;
     position: relative;
     top: 76px;
     height: 59vw;
-    // background: red;
-    // height: ;
-    // @include media-xs {
-    //     padding: 30px 60px;
-    // }
-    // @include media-xs-range-2 {
-    //     // border: 1px solid red;
-    //     padding-right: 0px;
-    // }
+    max-height: 750px;
     .abi--gContain {
         border: 1px dashed black;
     }
     .abi--main-container--header {
-        // border: 1px solid red;
-        // max-width: 996px;
         width: 100%;
         margin: 0px auto;
         margin-bottom: 25px;
@@ -163,25 +151,28 @@
         display: flex;
         margin-top: 15.5vw;
         .abi--main-container--header__title {
-            // padding-left: 1.2vw;
             text-transform: uppercase;
             font: {
                 size: 2.6vw;
                 weight: 700;
                 family: 'Helvetica';
             }
-            // color: $primary-brand-color;
-            color: red;
+            font-family: 'TTNorms-Bold';
+            color: $primary-brand-color;
             @include media-xs-range-2 {
                 width: 100%;
                 padding-left: 0px;
                 font-size: 30px;
             }
+            @include media-min-width {
+                font-size: 30px;
+            }
         }
         .abi--main-container--header__social {
-            // border: 1px solid red;
             margin-left: 3vw;
             margin-top: -0.2vw;
+            display: flex;
+            align-items: center;
             a {
                 cursor: pointer;
                 margin-right: 0.95vw;
@@ -192,12 +183,21 @@
                     @include media-xs-range-2 {
                         font-size: 30px;
                     }
+                    @include media-min-width {
+                        font-size: 35px;
+                    }
                 }
+            }
+            @include media-min-width {
+                margin-left: 30px;
             }
             @include media-xs-range-2 {
                 margin-left: 0px;
                 margin-top: 0px;
             }
+        }
+        @include media-min-width {
+            margin-top: 170px;
         }
         @include media-xs-range-2 {
             flex-wrap: wrap;
@@ -207,6 +207,9 @@
         padding-bottom: 60px;
         height: auto;
         border: 1px solid blue;
+    }
+    @include media-xs-range-2 {
+        background-size: 500%;
     }
 }
 

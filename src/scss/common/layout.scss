@@ -36,6 +36,8 @@
 }
 
 .abi--main-wrapper {
+    // overflow: hidden;
+    position: relative;
     .node__content.clearfix {
         margin-top: 0px !important;
     }

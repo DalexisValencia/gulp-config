@@ -105,5 +105,50 @@ $(document).ready(function() {
                 }
             });
         }
+
+        //move mountains on scroll
+        var lastScrollTop = 0;
+        const middleMountains = $(".abi-main--home-wrapper--middle-mountains-scroll");
+        const bottomMountains = $(".abi-main--home-wrapper--bottom-mountains-scroll");
+        if (middleMountains.length && bottomMountains.length) {
+            $(window).on("scroll", function() {
+                var scrollDirection = $(this).scrollTop();
+                var positionBeforeChangeOnMiddle = 0;
+                var positionBeforeChangeOnBottom = 0;
+
+                var scrollDirection = $(this).scrollTop();
+                var width = $(window).width();
+                if (scrollDirection > lastScrollTop) {
+                    // downscroll code
+                    if (width >= 1280) {
+                        positionBeforeChangeOnBottom = createNewPosition(bottomMountains.css("background-position-x"), "plus", 3);
+                        positionBeforeChangeOnMiddle = createNewPosition(middleMountains.css("background-position-x"), "plus", 10);
+                    } else if (width < 1280) {
+                        positionBeforeChangeOnBottom = createNewPosition(bottomMountains.css("background-position-x"), "plus", 3);
+                        positionBeforeChangeOnMiddle = createNewPosition(middleMountains.css("background-position-x"), "minus", 10);
+                    }
+                } else {
+                    // upscroll code
+                    if (width >= 1280) {
+                        positionBeforeChangeOnBottom = createNewPosition(bottomMountains.css("background-position-x"), "minus", 3);
+                        positionBeforeChangeOnMiddle = createNewPosition(middleMountains.css("background-position-x"), "minus", 10);
+                    } else if (width < 1280) {
+                        positionBeforeChangeOnMiddle += createNewPosition(middleMountains.css("background-position-x"), "plus", 10);
+                        positionBeforeChangeOnBottom = createNewPosition(bottomMountains.css("background-position-x"), "minus", 3);
+                    }
+                }
+                lastScrollTop = scrollDirection;
+                middleMountains.css({
+                    "background-position-x": positionBeforeChangeOnMiddle + "%",
+                })
+                bottomMountains.css({
+                    "background-position-x": positionBeforeChangeOnBottom + "%",
+                })
+            })
+
+            function createNewPosition(el, action, amount) {
+                return action == "plus" ? parseInt(el.replace("%", "").replace("-", "")) + amount : parseInt(el.replace("%", "").replace("-", "")) - amount
+            }
+        }
     })
     // })(jQuery);

@@ -58,7 +58,9 @@
     }
     @include media-sm {
         width: 70%;
-        min-width: 180px;
+        padding-right: 8px;
+        // border: 1px solid red;
+        // min-width: 180px;
     }
 }
 
@@ -132,7 +134,7 @@
     @include media-sm {
         max-width: 50%;
         width: 50%;
-        min-width: 100px;
+        // min-width: 100px;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;

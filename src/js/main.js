@@ -67,10 +67,9 @@ $(document).ready(function() {
 
             // Sliders social network on home
         }
+        //social slider
         var slidersHome = $(".abi--main-container--body-sliders.owl-carousel");
-        console.info("aqui?")
         if (slidersHome.length >= 1) {
-            console.info("generado")
             slidersHome.owlCarousel({
                 items: 4,
                 loop: true,
@@ -78,27 +77,28 @@ $(document).ready(function() {
                 responsive: {
                     0: {
                         items: 1,
-                        margin: 4,
+                        margin: 10,
                         center: false,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
                     420: {
-                        margin: 4,
+                        margin: 10,
                         items: 2,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
                     600: {
-                        margin: 4,
+                        margin: 10,
                         items: 2,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
                     710: {
-                        margin: 4,
-                        items: 4,
+                        margin: 10,
+                        items: 10,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
                     960: {
                         items: 4,
+                        margin: 10,
                         loop: false,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     }

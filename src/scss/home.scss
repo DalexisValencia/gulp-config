@@ -2,30 +2,28 @@
 @import './common/queries.scss';
 .abi-main--home-wrapper {
     background-color: white;
-    border: 1px solid red;
     min-height: 700px;
     height: 81.5vw;
     position: relative;
     top: 75px; //revisar esto
     background-image: url('../assets/bases/components-5.png');
     background-size: 100%;
+    .abi--gContain {
+        position: relative;
+        height: inherit;
+    }
 }
 
 .abi-main--home-lateral-image {
-    // border: 1px solid red;
-    pointer-events: none;
-    // background-color: blue;
+    z-index: 3;
     opacity: 0.5;
     position: sticky;
     top: 0px;
     right: 0px;
     height: 74vw;
-    // width: 100px;
-    // height: 200px;
     img {
         position: absolute;
-        // top: -6.5vw;
-        right: 5vw;
+        right: 3vw;
         width: 54vw;
     }
 }
@@ -39,18 +37,35 @@
     // padding: 0px 7vw;
     position: absolute;
     top: 0px;
-    .abi-main--home-wrapper--container--background-img {
-        border: 1px solid white;
-        position: absolute;
-        bottom: 0px;
-        width: 100%;
-        height: 16.5vw;
-        // max-height: 200px;
-        background-image: url("../assets/home/altiplano-move-to-right.png");
-        background-position: left bottom;
-        background-size: cover;
-        background-repeat: repeat-x;
-    }
+}
+
+.abi-main--home-wrapper--middle-mountains-scroll {
+    top: 23vw;
+    left: 0px;
+    width: 100%;
+    height: 16.5vw;
+    // max-height: 200px;
+    background-image: url("../assets/home/altiplano-move-to-right.png");
+    background-position: left bottom;
+    background-size: cover;
+}
+
+.abi-main--home-wrapper--middle-mountains-scroll,
+.abi-main--home-wrapper--bottom-mountains-scroll {
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    width: 100%;
+    background-repeat: repeat-x;
+    background-color: red;
+}
+
+.abi-main--home-wrapper--bottom-mountains-scroll {
+    bottom: 0px;
+    height: 18.5vw;
+    background-image: url("../assets/home/altiplano-move-to-left-cut.png");
+    background-position: center bottom;
+    background-repeat: repeat-x;
 }
 
 .abi-main--home-wrapper--container-bottom {
@@ -65,33 +80,47 @@
 .abi-main--home-wrapper--container-bottom-header {
     border: 1px solid black;
     position: relative;
-    margin-left: 6.2vw;
-    margin-top: 3vw;
-    width: 15vw;
+    padding-left: 4.8vw;
+    padding-top: 3vw;
+    height: 41vw;
     .abi-main--home-wrapper--container-bottom-header--description {
-        font-size: 1.66vw;
-        color: red;
+        width: 15vw;
+        line-height: 1.07;
+        font: {
+            size: 1.49vw;
+            family: 'Open Sans', sans-serif;
+            weight: 400;
+        }
+        color: $fifth-brand-color;
+        // border: 1px dashed red;
     }
     .el-custom--button.more {
         display: flex;
         width: 16vw;
-        background-color: red;
-        height: 3.8vw;
+        background-color: $primary-brand-color;
+        border: 2px solid $tertiary-brand-color;
+        height: 3.91vw;
         margin-top: 1vw;
-        // opacity: 0.5;
+        border-radius: 5px;
+        font-family: 'TTNorms-Medium';
         border-radius: 5px;
         font-size: 1vw;
+        color: $secondary-brand-color;
     }
 }
 
 .abi-main--home-wrapper--container-header {
-    border: 1px solid white;
+    border: 1px solid black;
     display: flex;
-    margin-left: 6.5vw;
-    margin-top: 7vw;
+    padding-left: 5vw;
+    padding-top: 7vw;
+    // opacity: 0.5;
+    background-color: grey;
+    height: 40vw;
     .abi-main--home-wrapper--container-header--lateral {
         border: 1px dashed white;
         width: 17vw;
+        height: max-content; //maybe error?
         .abi-main--home-wrapper--container-header--lateral--title {
             line-height: 1;
             font-size: 1.5vw;
@@ -126,37 +155,30 @@
         }
     }
     .abi-main--home-wrapper--container-header--lateral-right {
-        line-height: 1;
-        border: 1px solid white;
+        line-height: 1.2;
+        border: 1px dashed white;
         width: 27vw;
         margin-left: 1vw;
+        margin-top: 0.4vw;
         color: $fifth-brand-color;
+        height: max-content; //maybe error?
+        // color: red;
         font: {
             family: 'Open Sans', sans-serif;
-            size: 1.6vw;
-            weight: 700;
+            size: 1.4vw;
+            weight: 400;
         }
         @include media-min-width {
             width: 320px;
             font-size: 16px;
+            line-height: 1;
+            margin-top: 0px;
         }
     }
     @include media-min-width {
         margin-left: 0px;
         margin-top: 100px;
     }
-}
-
-.abi-main--home-wrapper--container-bottom--background-img {
-    position: absolute;
-    bottom: 0px;
-    border: 1px solid black;
-    height: 18.5vw;
-    width: 100%;
-    background-image: url("../assets/home/altiplano-move-to-left-cut.png");
-    background-position: center bottom;
-    background-repeat: repeat-x;
-    background-color: white;
 }
 
 .abi--main-container--home {

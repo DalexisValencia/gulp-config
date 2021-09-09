@@ -6,17 +6,20 @@
     height: 81.5vw;
     position: relative;
     top: 75px; //revisar esto
-    background-image: url('../assets/bases/components-5.png');
+    // background-image: url('../assets/bases/components-5.png');
     background-size: 100%;
     .abi--gContain {
         position: relative;
         height: inherit;
     }
+    @include media-min-width {
+        height: 1000px;
+    }
 }
 
 .abi-main--home-lateral-image {
+    pointer-events: none;
     z-index: 3;
-    opacity: 0.5;
     position: sticky;
     top: 0px;
     right: 0px;
@@ -25,16 +28,20 @@
         position: absolute;
         right: 3vw;
         width: 54vw;
+        @include media-min-width {
+            right: 100px;
+            width: 600px;
+        }
+    }
+    @include media-min-width {
+        height: 800px;
     }
 }
 
 .abi-main--home-wrapper--container {
-    border: 2px dashed black;
     background-color: white;
-    // opacity: 0.5;
     height: 40vw;
     width: 100%;
-    // padding: 0px 7vw;
     position: absolute;
     top: 0px;
 }
@@ -48,6 +55,11 @@
     background-image: url("../assets/home/altiplano-move-to-right.png");
     background-position: left bottom;
     background-size: cover;
+    @include media-min-width {
+        top: 290px;
+        height: 215px;
+        background-size: 75%;
+    }
 }
 
 .abi-main--home-wrapper--middle-mountains-scroll,
@@ -66,6 +78,10 @@
     background-image: url("../assets/home/altiplano-move-to-left-cut.png");
     background-position: center bottom;
     background-repeat: repeat-x;
+    @include media-min-width {
+        height: 215px;
+        background-size: 165%;
+    }
 }
 
 .abi-main--home-wrapper--container-bottom {
@@ -78,11 +94,13 @@
 }
 
 .abi-main--home-wrapper--container-bottom-header {
-    border: 1px solid black;
-    position: relative;
+    position: absolute;
     padding-left: 4.8vw;
     padding-top: 3vw;
     height: 41vw;
+    top: 40vw;
+    width: -moz-available;
+    padding-right: 20px;
     .abi-main--home-wrapper--container-bottom-header--description {
         width: 15vw;
         line-height: 1.07;
@@ -92,7 +110,9 @@
             weight: 400;
         }
         color: $fifth-brand-color;
-        // border: 1px dashed red;
+        @include media-min-width {
+            font-size: 16px;
+        }
     }
     .el-custom--button.more {
         display: flex;
@@ -106,19 +126,31 @@
         border-radius: 5px;
         font-size: 1vw;
         color: $secondary-brand-color;
+        @include media-min-width {
+            font-size: 13px;
+            max-width: 184px;
+            padding: 15px 10px;
+            height: auto;
+        }
+    }
+    @include media-min-width {
+        top: 500px;
+        height: 480px;
+        padding-left: 0px;
+        padding-top: 80px;
     }
 }
 
 .abi-main--home-wrapper--container-header {
-    border: 1px solid black;
+    position: absolute;
+    width: -moz-available;
+    padding-right: 20px;
+    top: 0px;
     display: flex;
     padding-left: 5vw;
     padding-top: 7vw;
-    // opacity: 0.5;
-    background-color: grey;
     height: 40vw;
     .abi-main--home-wrapper--container-header--lateral {
-        border: 1px dashed white;
         width: 17vw;
         height: max-content; //maybe error?
         .abi-main--home-wrapper--container-header--lateral--title {
@@ -156,7 +188,6 @@
     }
     .abi-main--home-wrapper--container-header--lateral-right {
         line-height: 1.2;
-        border: 1px dashed white;
         width: 27vw;
         margin-left: 1vw;
         margin-top: 0.4vw;
@@ -176,8 +207,9 @@
         }
     }
     @include media-min-width {
-        margin-left: 0px;
-        margin-top: 100px;
+        padding-left: 0px;
+        padding-top: 80px;
+        height: 500px;
     }
 }
 
@@ -288,7 +320,6 @@
         }
     }
     .abi--main-container--body-sliders--navigation {
-        border: 1px dashed black;
         position: absolute;
         margin: 0px auto;
         width: 100%;

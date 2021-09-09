@@ -42,6 +42,7 @@
 }
 
 body {
+    background-color: white;
     scroll-behavior: smooth !important;
     &.no-scroll {
         overflow: hidden !important;

@@ -1,0 +1,278 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--main-wrapper--sliders {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .abi--main-sliders {
+        width: 100%;
+        position: relative;
+    }
+}
+
+.abi--main-slide {
+    overflow: hidden;
+    position: relative;
+    picture.abi--main-slide--background {
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    .abi--main-slide--body {
+        position: absolute;
+        z-index: 1;
+        .abi--main-slide--body-title {
+            font: {
+                size: 53px;
+                family: 'coprgtb';
+            }
+            line-height: 0.9;
+            &.white {
+                color: $secondary-brand-color;
+            }
+            &.black {
+                color: $fourty-brand-color;
+            }
+        }
+        .abi--main-slide--body-content {
+            line-height: 1;
+            font: {
+                family: 'Nunito', sans-serif;
+                weight: 400;
+            }
+        }
+        .el-custom--button.slider-btn {
+            display: flex;
+            &.secondary {
+                color: #fff;
+                font-family: 'Nunito', sans-serif;
+            }
+        }
+    }
+    .abi--main-slide--decoration-image {
+        position: absolute;
+    }
+    &.first-slide {
+        // border: 2px solid deeppink;
+        .abi--main-slide--body {
+            left: 18vw;
+            top: 13vw;
+            height: auto;
+            .abi--main-slide--body-title {
+                font-size: 4vw;
+                @include media-xs-range-2 {
+                    font-size: 8.7vw;
+                }
+            }
+            .el-custom--button.slider-btn {
+                margin-top: 1vw;
+                height: 3.8vw;
+                width: 15vw;
+                font-size: 1.3vw;
+                // opacity: 0.5;
+                @include media-xs-range-2 {
+                    height: 10.8vw;
+                    width: 44vw;
+                    font-size: 4.3vw;
+                }
+            }
+            @include media-xs-range-2 {
+                left: 7vw;
+                top: 15vw;
+            }
+        }
+        .abi--main-slide--decoration-image {
+            pointer-events: none;
+            position: absolute;
+            top: 10.8vw;
+            width: 56vw;
+            right: 1.8vw;
+            img {
+                // border: 10px solid blue;
+                width: 100%;
+            }
+            @include media-xs-range-2 {
+                top: unset;
+                width: 80vw;
+                right: 1.8vw;
+                bottom: -1vw;
+            }
+        }
+    }
+    &.second-slide {
+        .abi--main-slide--body {
+            top: 11vw;
+            left: 13vw;
+            .abi--main-slide--body-title {
+                letter-spacing: 5px;
+                font-size: 4vw;
+                span {
+                    display: block;
+                }
+                @include media-xs-range-2 {
+                    font-size: 7vw;
+                    span {
+                        display: inline;
+                    }
+                }
+            }
+            .abi--main-slide--body-content {
+                line-height: 1.3;
+                margin-top: 1.4vw;
+                font-size: 1.4vw;
+                @include media-xs-range-2 {
+                    margin-top: 2.4vw;
+                    font-size: 4.6vw;
+                }
+            }
+            .el-custom--button.slider-btn {
+                width: 18vw;
+                height: 4.3vw;
+                margin-top: 1.5vw;
+                color: $secondary-brand-color;
+                font-size: 1.24vw;
+                font-weight: bold;
+                background-color: $primary-brand-color;
+                @include media-xs-range-2 {
+                    width: 54.2vw;
+                    height: 12.3vw;
+                    margin-top: 4.5vw;
+                    font-size: 3.7vw;
+                }
+            }
+            @include media-xs-range-2 {
+                top: 13vw;
+                left: 5vw;
+            }
+        }
+        .abi--main-slide--decoration-image {
+            top: 7.5vw;
+            right: 18.5vw;
+            width: 31vw;
+            @include media-xs-range-2 {
+                top: unset;
+                right: 18.5vw;
+                width: 66vw;
+                bottom: 5vw;
+            }
+        }
+    }
+    &.third-slide {
+        .abi--main-slide--body {
+            top: 9.8vw;
+            left: 13vw;
+            .abi--main-slide--body-title {
+                color: $secondary-brand-color;
+                font-size: 5.1vw;
+                line-height: 0.8;
+                letter-spacing: 2px;
+                font-weight: 400;
+                span {
+                    display: block;
+                }
+                @include media-xs-range-2 {
+                    color: $fourty-brand-color;
+                    font-size: 11vw;
+                    span {
+                        display: inline;
+                    }
+                }
+            }
+            .abi--main-slide--body-content {
+                line-height: 1.3;
+                margin-top: 3vw;
+                font-size: 1.5vw;
+                color: $secondary-brand-color;
+                @include media-xs-range-2 {
+                    color: $fourty-brand-color;
+                    font-size: 4.6vw;
+                    margin-top: 8.4vw;
+                }
+            }
+            @include media-xs-range-2 {
+                top: 12.8vw;
+                left: 7vw;
+            }
+        }
+    }
+}
+
+.abi--main-sliders-navigation {
+    position: absolute;
+    width: 100%;
+    padding: 0px 4vw;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    pointer-events: none;
+    // background-color: red;
+    button {
+        font-size: 0px;
+        pointer-events: auto;
+        border: 1px solid transparent;
+        width: 3.7vw;
+        height: 3.6vw;
+        border-radius: 10px;
+        background-color: $primary-brand-color;
+        border: 1px solid $secondary-brand-color;
+        // opacity: 0.5;
+        color: transparent;
+        &:hover,
+        &:focus,
+        &:active {
+            outline: 0;
+            outline-color: transparent !important;
+        }
+        &.owl-prev {
+            background-image: url("../assets/icons/slider-prev.svg");
+        }
+        &.owl-next {
+            background-image: url("../assets/icons/slider-next.svg");
+        }
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30%;
+    }
+    @include media-xs-range-2 {
+        bottom: 34vw;
+        button {
+            width: 12vw;
+            height: 12vw;
+        }
+    }
+}
+
+.abi--main-sliders-dots {
+    position: absolute;
+    padding: 0px 3vw;
+    // border: 1px solid red;
+    width: 100%;
+    z-index: 2;
+    right: 0px;
+    bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    button {
+        margin: 0px 6px;
+        &:hover,
+        &:focus,
+        &:active {
+            outline: 0;
+            outline-color: transparent !important;
+        }
+        width: 100px;
+        height: 7px;
+        border: 1px solid transparent;
+        &.active {
+            background-color: $primary-brand-color;
+        }
+        &:not(.active) {
+            background-color: $secondary-brand-color;
+        }
+    }
+    @include media-xs-range-2 {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,79 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+// .abi--internal-section.page-404 {}
+.abi--404-section__box {
+    background: rgb(0, 92, 185);
+    background: linear-gradient(180deg, rgba(0, 92, 185, 1) 0%, rgba(0, 92, 185, 1) 87%, rgba(255, 255, 255, 1) 100%);
+    // background-color: rgba($color: #0C284C, $alpha: 0.6);
+    backdrop-filter: blur(2px);
+    padding: 30px;
+    height: 100%;
+    max-width: 491px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    .abi--404-section__box-header {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .abi--404-section__box-header--title {
+            border: 5px solid $secondary-brand-color;
+            border-radius: 10px;
+            padding: 20px 50px;
+            color: $secondary-brand-color;
+            line-height: 1;
+            font: {
+                family: 'Montserrat', sans-serif;
+                size: 50px;
+                weight: bold;
+            }
+            @include media-xs-range-2 {
+                font-size: 42px;
+                width: 100%;
+                border-radius: 0px;
+                padding: 20px 0px;
+            }
+        }
+        .abi--404-section__box-header--subtitle {
+            width: max-content;
+            margin: 10px 0px 10px;
+            color: $secondary-brand-color;
+            // text-transform: uppercase;
+            font: {
+                size: 16px;
+                weight: 400;
+                family: 'Montserrat', sans-serif;
+            }
+            @include media-xs-range-2 {
+                font-size: 18px;
+                margin-bottom: 40px;
+                width: 100%;
+            }
+        }
+        @include media-xs-range-2 {
+            // border: 1px solid red !important;
+            flex-direction: column-reverse;
+            width: 100%;
+        }
+    }
+    .el-custom--button.goHome_404 {
+        display: flex;
+        color: $secondary-brand-color;
+        // width: 194px;
+        height: 49px;
+        margin: 0px auto;
+        font: {
+            size: 16px;
+            weight: 900;
+            family: 'Helvetica';
+        }
+        @include media-xs-range-2 {
+            font-size: 18px;
+        }
+    }
+}

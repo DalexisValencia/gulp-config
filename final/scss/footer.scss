@@ -1,0 +1,145 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--main-main-footer {
+    background-color: $secondary-brand-color;
+    background-image: url("../assets/desktop-footer-background.png");
+    background-position: top bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    padding-top: 60px;
+    @include media-sm {
+        background-image: url("../assets/mobile-footer-background.png");
+        background-size: 100%;
+        background-position: top;
+    }
+}
+
+.abi--main-main-footer-wrapper-nav {
+    @include media-sm {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.abi--main-main-footer-navigation {
+    ul {
+        margin: 0px auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0px;
+        margin-bottom: 10px;
+        li {
+            text-align: center;
+            line-height: 1;
+            a {
+                color: $primary-brand-color;
+                text-decoration: none;
+                font: {
+                    size: 10px;
+                    weight: 700;
+                    family: 'Encode Sans', sans-serif;
+                }
+                @include media-xs-small {
+                    font-size: 9px;
+                }
+            }
+            @include media-sm {
+                text-align: left !important;
+                width: 100%;
+            }
+        }
+        @include media-sm {
+            flex-wrap: wrap;
+        }
+    }
+    @include media-sm {
+        width: 70%;
+        padding-right: 8px;
+        // border: 1px solid red;
+        // min-width: 180px;
+    }
+}
+
+.abi--main-main-footer-copy,
+.abi--main-main-footer-copy .field__item {
+    background-color: $tertiary-brand-color;
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+    div,
+    a {
+        text-transform: uppercase;
+        padding: 0px 20px;
+        color: $secondary-brand-color;
+        font: {
+            size: 9px;
+            weight: 700;
+            family: 'Encode Sans', sans-serif;
+        }
+        &:first-child {
+            border-right: 2px solid $secondary-brand-color;
+        }
+        @include media-xs-range-2 {
+            text-align: center;
+        }
+    }
+}
+
+.abi--main-main-footer-social--logo {
+    position: relative;
+    width: 96px;
+    height: 52px;
+    margin-bottom: 8px;
+}
+
+.abi--main-main-footer-social {
+    margin: 0px auto;
+    max-width: max-content;
+    padding-left: 5vw;
+    ul {
+        display: flex;
+        li {
+            margin-right: 7px;
+            a {
+                text-decoration: none;
+                i {
+                    color: $primary-brand-color;
+                    font-size: 22px;
+                }
+            }
+        }
+        @include media-sm {
+            width: 100%;
+            justify-content: flex-end;
+        }
+    }
+    .abi--main-main-footer-social--follow-us {
+        text-align: center;
+        color: $secondary-brand-color;
+        margin-bottom: 35px;
+        font-family: 'Nunito', sans-serif;
+        font: {
+            size: 14px;
+            weight: 800;
+        }
+        display: none;
+        @include media-xs-range-2 {
+            display: block;
+        }
+    }
+    @include media-sm {
+        max-width: 50%;
+        width: 50%;
+        // min-width: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-content: center;
+        align-items: center;
+        padding-right: 20px;
+    }
+}

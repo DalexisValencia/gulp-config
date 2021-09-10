@@ -1,0 +1,75 @@
+@import '../vars/colors.scss';
+@import './queries.scss';
+*[class*="--flex"] {
+    display: flex;
+    &.justify-between {
+        justify-content: space-between;
+        align-items: center;
+    }
+    &.center {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.abi--internal-section {
+    background-color: $secondary-brand-color;
+    background-image: url('../assets/404/404-background-desktop.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    min-height: 700px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 53vw;
+    @include media-xs-range-2 {
+        background-image: url('../assets/404/404-background-desktop.svg');
+        min-height: 600px;
+        padding: 10px 20px;
+    }
+    @include media-xs-small {
+        height: 220vw;
+    }
+}
+
+.abi--main-wrapper {
+    // overflow: hidden;
+    position: relative;
+    .node__content.clearfix {
+        margin-top: 0px !important;
+    }
+}
+
+body {
+    background-color: white;
+    scroll-behavior: smooth !important;
+    &.no-scroll {
+        overflow: hidden !important;
+    }
+}
+
+.abi--gContain {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0px auto;
+    padding: 0px 20px;
+    // border: 1px dashed black;
+}
+
+#block-footer-menu,
+#block-mainnavigation-menu {
+    display: none;
+}
+
+.abi--main-wrapper--body {
+    padding-top: 65px !important;
+}
+
+picture {
+    img {
+        width: 100%;
+    }
+}

@@ -2,6 +2,7 @@
 @import './common/queries.scss';
 .abi-main--ourcause-wrapper {
     background-size: 100%;
+    overflow: hidden;
 }
 
 .abi-main--ourcause-banner {
@@ -41,6 +42,7 @@
     .abi-main--ourcause-ours-section--header {
         margin-top: 4vw;
         width: 31vw;
+        margin-left: 2.5vw;
         .abi-main--ourcause-ours-section--header__title {
             color: $primary-brand-color;
             text-transform: uppercase;
@@ -79,6 +81,7 @@
         @include media-min-width {
             width: 400px;
             margin-top: 50px;
+            margin-left: 0px;
         }
         @include media-xs {
             width: 100%;

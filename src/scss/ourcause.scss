@@ -1,7 +1,6 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi-main--ourcause-wrapper {
-    border: 1px solid red;
     background-size: 100%;
 }
 
@@ -281,7 +280,7 @@
                 font-size: 15px;
             }
             @include media-xs {
-                margin-top: 10vw;
+                margin-top: 6vw;
                 font-size: 4.7vw;
                 text-align: left;
             }
@@ -368,6 +367,7 @@
         }
         @include media-xs {
             width: 50%;
+            margin-bottom: 5vw !important;
         }
     }
     @include media-min-width {

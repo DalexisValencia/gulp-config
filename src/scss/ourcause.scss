@@ -20,12 +20,15 @@
         color: #fff;
         text-transform: uppercase;
         font-size: 5.5vw;
+        @include media-xs {
+            font-size: 14.5vw;
+            margin-top: 2vw;
+        }
     }
     @include media-min-width {
         margin: auto;
         left: 0;
         right: 0;
-        border: 1px solid red !important;
     }
 }
 
@@ -49,6 +52,9 @@
             @include media-min-width {
                 font-size: 39px;
             }
+            @include media-xs {
+                font-size: 11.5vw;
+            }
         }
         .abi-main--ourcause-ours-section--header__description {
             color: $fifth-brand-color;
@@ -66,10 +72,18 @@
                 font-size: 15px;
                 margin-top: 8px;
             }
+            @include media-xs {
+                font-size: 4.9vw;
+                margin-left: 2.3vw;
+            }
         }
         @include media-min-width {
             width: 400px;
             margin-top: 50px;
+        }
+        @include media-xs {
+            width: 100%;
+            margin-top: 10vw;
         }
     }
     .abi-main--ourcause-ours-section--video {
@@ -122,9 +136,15 @@
             height: 380px;
             margin-top: 50px;
         }
+        @include media-xs {
+            display: none;
+        }
     }
     @include media-min-width {
         height: 500px;
+    }
+    @include media-xs {
+        min-height: 161.5vw;
     }
 }
 
@@ -135,6 +155,9 @@
     .abi--gContain {
         display: flex;
         justify-content: space-between;
+        @include media-xs {
+            flex-wrap: wrap;
+        }
     }
     .abi-main--ourcause-ours-three-section--header {
         width: 22vw;
@@ -151,6 +174,9 @@
             @include media-min-width {
                 font-size: 30px;
             }
+            @include media-xs {
+                font-size: 8.1vw;
+            }
         }
         .abi-main--ourcause-ours-three-section--header__description {
             margin-top: 0.5vw;
@@ -162,11 +188,33 @@
             @include media-min-width {
                 font-size: 15px;
             }
+            @include media-xs {
+                font-size: 4.9vw;
+            }
+        }
+        .el-custom--button.knowmore {
+            display: none;
+            @include media-xs {
+                background-color: $secondary-brand-color;
+                color: $primary-brand-color;
+                font-family: 'TTNorms-Medium';
+                height: 12vw;
+                width: 50vw;
+                display: block;
+                border-radius: 2vw;
+                font-size: 3vw;
+                margin-top: 7vw;
+                display: flex;
+            }
         }
         @include media-min-width {
             width: 270px;
             margin-left: 0;
             margin-top: 100px;
+        }
+        @include media-xs {
+            width: 100%;
+            margin-top: 5vw;
         }
     }
     .abi-main--ourcause-ours-three-banner {
@@ -179,9 +227,16 @@
             margin-right: 20px;
             margin-top: 80px;
         }
+        @include media-xs {
+            width: 100%;
+        }
     }
     @include media-min-width {
         height: 580px;
+    }
+    @include media-xs {
+        background: linear-gradient( 180deg, $primary-brand-color 0%, $primary-brand-color 70%, rgba(255, 255, 255, 1) 100%);
+        min-height: 142.5vw;
     }
 }
 
@@ -208,6 +263,11 @@
             @include media-min-width {
                 font-size: 34px;
             }
+            @include media-xs {
+                font-size: 8vw;
+                text-align: left;
+                line-height: 1;
+            }
         }
         .abi-main--ourcause-ourprogram--header__description {
             color: $fifth-brand-color;
@@ -220,14 +280,29 @@
             @include media-min-width {
                 font-size: 15px;
             }
+            @include media-xs {
+                margin-top: 10vw;
+                font-size: 4.7vw;
+                text-align: left;
+            }
         }
         @include media-min-width {
             width: 655px;
+        }
+        @include media-xs {
+            width: 100%;
         }
     }
     @include media-min-width {
         height: 900px;
         background-size: 160%;
+    }
+    @include media-xs {
+        background-image: url("../assets/ourcause/altiplano-background-mobile.png");
+        background-size: 150%;
+        // background-position: top;
+        // background: linear-gradient( 180deg, $primary-brand-color 0%, $primary-brand-color 70%, rgba(255, 255, 255, 1) 100%);
+        min-height: 229.5vw;
     }
 }
 
@@ -254,6 +329,11 @@
                 width: 90px;
                 height: 90px;
             }
+            @include media-xs {
+                width: 22vw;
+                height: 22vw;
+                margin-bottom: 2vw;
+            }
         }
         .abi-main--ourcause-ourprogram--feature__title {
             margin-top: 1.6vw;
@@ -264,6 +344,9 @@
             }
             @include media-min-width {
                 font-size: 25px;
+            }
+            @include media-xs {
+                font-size: 5.9vw;
             }
         }
         .abi-main--ourcause-ourprogram--feature__description {
@@ -280,11 +363,22 @@
             @include media-min-width {
                 font-size: 15px;
             }
+            @include media-xs {
+                font-size: 3.7vw;
+                width: 100%;
+            }
+        }
+        @include media-xs {
+            width: 50%;
         }
     }
     @include media-min-width {
         margin-top: 80px;
         width: 800px;
+    }
+    @include media-xs {
+        flex-wrap: wrap;
+        width: 100%;
     }
 }
 
@@ -365,5 +459,8 @@
         @include media-xs-range-2 {
             display: flex;
         }
+    }
+    @include media-xs {
+        padding: 0px 50px;
     }
 }

@@ -375,7 +375,7 @@
     }
     @include media-min-width {
         margin-top: 80px;
-        width: 800px;
+        width: auto;
     }
     @include media-xs {
         flex-wrap: wrap;

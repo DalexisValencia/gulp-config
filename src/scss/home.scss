@@ -282,6 +282,7 @@
     @include media-xs {
         flex-wrap: wrap;
         padding-right: 0px !important;
+        height: auto;
     }
 }
 

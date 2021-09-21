@@ -91,6 +91,9 @@
         }
         .abi-main--ourcause-ours-section--header__description:nth-child(3) {
             margin-top: 2vw;
+            @include media-xs {
+                margin-top: 7vw;
+            }
         }
         @include media-min-width {
             width: 400px;

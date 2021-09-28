@@ -89,7 +89,7 @@
     left: 0px;
     width: 100%;
     background-repeat: repeat-x;
-    // pointer-events: none;
+    pointer-events: none;
 }
 
 .abi-main--home-wrapper--bottom-mountains-scroll {
@@ -128,6 +128,16 @@
     top: 40vw;
     width: -moz-available;
     padding-right: 20px;
+    z-index: 3;
+    .abi-main--home-wrapper--container-bottom-header--image {
+        width: 19vw;
+        @include media-min-width {
+            width: 230px;
+        }
+        @include media-xs {
+            width: 46vw;
+        }
+    }
     .abi-main--home-wrapper--container-bottom-header--description {
         width: 15vw;
         line-height: 1.07;
@@ -150,9 +160,10 @@
         display: flex;
         width: 16vw;
         background-color: $primary-brand-color;
-        border: 0.3vw solid $tertiary-brand-color;
+        // border: 0.3vw solid $tertiary-brand-color;
         height: 3.91vw;
         margin-top: 1vw;
+        margin-left: 1.2vw;
         border-radius: 5px;
         font-family: 'TTNorms-Medium';
         border-radius: 5px;
@@ -160,6 +171,7 @@
         color: $secondary-brand-color;
         cursor: pointer;
         @include media-min-width {
+            margin-left: 25px;
             font-size: 13px;
             max-width: 184px;
             padding: 15px 10px;
@@ -172,14 +184,14 @@
             margin-top: 4vw;
             width: 46vw;
             font-size: 3vw;
-            border: 1.5vw solid $tertiary-brand-color;
+            // border: 1.5vw solid $tertiary-brand-color;
         }
     }
     @include media-min-width {
         top: 500px;
         height: 480px;
         padding-left: 0px;
-        padding-top: 80px;
+        padding-top: 10px;
     }
     @include media-xs {
         top: 146vw;
@@ -203,12 +215,12 @@
         height: max-content; //maybe error?
         .abi-main--home-wrapper--container-header--lateral--title {
             line-height: 1;
-            font-size: 1.5vw;
+            font-size: 1.6vw;
             text-transform: uppercase;
             font-family: 'TTNorms-Bold';
             color: $primary-brand-color;
             @include media-min-width {
-                font-size: 18px;
+                font-size: 20px;
             }
             @include media-xs {
                 font-size: 5.1vw;
@@ -259,12 +271,12 @@
         // color: red;
         font: {
             family: 'Open Sans', sans-serif;
-            size: 1.4vw;
+            size: 1.5vw;
             weight: 400;
         }
         @include media-min-width {
             width: 320px;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1;
             margin-top: 0px;
         }
@@ -275,7 +287,7 @@
         }
     }
     @include media-min-width {
-        padding-left: 0px;
+        padding-left: 50px;
         padding-top: 80px;
         height: 500px;
     }

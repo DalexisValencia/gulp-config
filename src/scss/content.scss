@@ -108,7 +108,29 @@
         top: 0px;
         height: 73.1vw;
         width: 100%;
-        border: 2px solid blue;
+        // border: 2px solid blue;
+    }
+}
+
+.abi--clubcolombia-flavor-rectangle__copy {
+    position: absolute;
+    width: 73.5vw;
+    // background-color: $tenth-brand-color;
+    top: 42.5vw;
+    z-index: 2;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1vw 10px;
+    font: {
+        size: 1.25vw;
+        family: 'Futura-medium-condensed';
+        weight: bold;
+    }
+    @include media-xs {
+        width: 100%;
+        font-size: 3.4vw;
+        top: 59.5vw;
+        padding: 1vw 1.5vw;
     }
 }
 

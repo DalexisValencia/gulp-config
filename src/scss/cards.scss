@@ -1,0 +1,93 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--main--brand-wrapper-restaurants {
+    background-image: url("../assets/cards/background-desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @mixin media-xs-range-1 {
+        background-size: 200%;
+        background-image: url("../assets/cards/background-mobile.png");
+    }
+}
+
+.background-anchors {
+    background-image: url("../assets/cards/anchors.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.abi--brand-wrapper-restaurants {
+    max-width: 750px;
+    margin: 0px auto;
+    padding: 25px 20px;
+}
+
+.abi--brand-wrapper-restaurants--drinks__header,
+.abi--brand-wrapper-restaurants__header {
+    text-align: center;
+    .abi--brand-wrapper-restaurants__header--title,
+    .abi--brand-wrapper-restaurants--drinks__header--title {
+        @extend .background-anchors;
+        font: {
+            size: 30px;
+            family: 'SS Nickson N.6';
+        }
+        color: $tertiary-brand-color;
+    }
+    .abi--brand-wrapper-restaurants__header--description {
+        margin-top: 20px;
+        color: #333333;
+        font: {
+            size: 16px;
+            family: 'Montserrat', sans-serif;
+            weight: 100;
+            style: normal;
+        }
+    }
+}
+
+.abi--brand-wrapper-restaurants--drinks__header--title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 200px;
+        top: -31px;
+        height: 84px;
+        background-image: url("../assets/cards/fish-icon.svg");
+        // background-color: rgba($color: red, $alpha: .5);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.abi--brand-wrapper-restaurants__cards-wrapper {
+    max-width: 500px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .abi--brand-wrapper-restaurants__cards-wrapper--card {
+        cursor: pointer;
+        margin-bottom: 1%;
+        width: 49%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.abi--brand-wrapper-restaurants--drinks__card {
+    max-width: 500px;
+    margin: 40px auto;
+    img {
+        width: 100%;
+    }
+}

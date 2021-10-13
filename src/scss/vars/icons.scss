@@ -1,8 +1,8 @@
 @import "variables";
 @font-face {
     font-family: '#{$icomoon-font-family}';
-    src : url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?kblfwa');
-    src : url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?kblfwa#iefix') format('embedded-opentype'),
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?kblfwa');
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?kblfwa#iefix') format('embedded-opentype'),
     url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?kblfwa') format('truetype'),
     url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?kblfwa') format('woff'),
     url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?kblfwa##{$icomoon-font-family}') format('svg');
@@ -26,104 +26,90 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-agegate-back {
-    &:before {
-        content: $icon-agegate-back;
+.abi--main-wrapper--mxvideos {
+    .icon-agegate-back {
+        &:before {
+            content: $icon-agegate-back;
+        }
     }
-}
-
-.icon-amargor-filled {
-    &:before {
-        content: $icon-amargor-filled;
+    .icon-amargor-filled {
+        &:before {
+            content: $icon-amargor-filled;
+        }
     }
-}
-
-.icon-amargor-outline {
-    &:before {
-        content: $icon-amargor-outline;
+    .icon-amargor-outline {
+        &:before {
+            content: $icon-amargor-outline;
+        }
     }
-}
-
-.icon-burger-menu {
-    &:before {
-        content: $icon-burger-menu;
+    .icon-burger-menu {
+        &:before {
+            content: $icon-burger-menu;
+        }
     }
-}
-
-.icon-close {
-    &:before {
-        content: $icon-close;
+    .icon-close {
+        &:before {
+            content: $icon-close;
+        }
     }
-}
-
-.icon-corpo-filled {
-    &:before {
-        content: $icon-corpo-filled;
+    .icon-corpo-filled {
+        &:before {
+            content: $icon-corpo-filled;
+        }
     }
-}
-
-.icon-corpo-outline {
-    &:before {
-        content: $icon-corpo-outline;
+    .icon-corpo-outline {
+        &:before {
+            content: $icon-corpo-outline;
+        }
     }
-}
-
-.icon-dashed-indicator {
-    &:before {
-        content: $icon-dashed-indicator;
+    .icon-dashed-indicator {
+        &:before {
+            content: $icon-dashed-indicator;
+        }
     }
-}
-
-.icon-facebook {
-    &:before {
-        content: $icon-facebook;
+    .icon-facebook {
+        &:before {
+            content: $icon-facebook;
+        }
     }
-}
-
-.icon-facebook-circle {
-    &:before {
-        content: $icon-facebook-circle;
+    .icon-facebook-circle {
+        &:before {
+            content: $icon-facebook-circle;
+        }
     }
-}
-
-.icon-instagram {
-    &:before {
-        content: $icon-instagram;
+    .icon-instagram {
+        &:before {
+            content: $icon-instagram;
+        }
     }
-}
-
-.icon-instagram-circle {
-    &:before {
-        content: $icon-instagram-circle;
+    .icon-instagram-circle {
+        &:before {
+            content: $icon-instagram-circle;
+        }
     }
-}
-
-.icon-slider-next {
-    &:before {
-        content: $icon-slider-next;
+    .icon-slider-next {
+        &:before {
+            content: $icon-slider-next;
+        }
     }
-}
-
-.icon-slider-prev {
-    &:before {
-        content: $icon-slider-prev;
+    .icon-slider-prev {
+        &:before {
+            content: $icon-slider-prev;
+        }
     }
-}
-
-.icon-twitter {
-    &:before {
-        content: $icon-twitter;
+    .icon-twitter {
+        &:before {
+            content: $icon-twitter;
+        }
     }
-}
-
-.icon-twitter-circle {
-    &:before {
-        content: $icon-twitter-circle;
+    .icon-twitter-circle {
+        &:before {
+            content: $icon-twitter-circle;
+        }
     }
-}
-
-.icon-youtube {
-    &:before {
-        content: $icon-youtube;
+    .icon-youtube {
+        &:before {
+            content: $icon-youtube;
+        }
     }
 }

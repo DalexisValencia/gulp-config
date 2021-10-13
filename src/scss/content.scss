@@ -145,7 +145,7 @@
         margin-bottom: 2vw;
         font: {
             family: 'Futura-book';
-            size: 1.7vw;
+            size: 1.5vw;
         }
         span {
             display: block;
@@ -193,7 +193,7 @@
 .abi--clubcolombia-flavor-travel {
     position: relative;
     width: 100%;
-    padding: 30px 10px 70px;
+    padding: 30px 50px 70px;
     &::before,
     &::after {
         content: "";
@@ -271,18 +271,22 @@
     padding-top: 340px;
     background-color: $nineth-brand-color;
     @include media-xs {
+        padding-left: 10px;
+        padding-right: 10px;
         padding-top: 20px;
     }
 }
 
 .abi--clubcolombia-flavor-travel__carousel-nav {
     position: absolute;
-    width: 108%;
-    display: none;
+    width: 112%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1;
     pointer-events: none;
+    // border: 1px solid red;
+    margin-left: -0.5%;
     button {
         width: 37px;
         height: 37px;
@@ -334,12 +338,12 @@
     margin-top: 20px;
     text-align: center;
     padding-bottom: 70px;
-    @media (max-width: 960px) {
-        max-width: 763px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    // @media (max-width: 960px) {
+    max-width: 793px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // }
     @include media-xs {
         padding-bottom: 30px;
     }
@@ -441,9 +445,14 @@
             display: flex;
             align-content: stretch;
             .owl-item {
+                padding: 5px;
                 height: auto;
                 .abi--clubcolombia-flavor-travel__product-card {
                     height: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    flex-direction: column;
                 }
             }
         }

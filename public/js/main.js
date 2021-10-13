@@ -16,6 +16,7 @@ $(document).ready(function() {
 
         slidersGenreation.owlCarousel({
             items: 4,
+            autoplay: true,
             loop: true,
             responsive: {
                 0: {
@@ -26,14 +27,18 @@ $(document).ready(function() {
                 },
                 590: {
                     items: 2,
+                    marging: 10,
                     navContainer: $(".abi--clubcolombia-flavor-travel__carousel-nav")
                 },
                 760: {
                     items: 3,
+                    marging: 10,
                     navContainer: $(".abi--clubcolombia-flavor-travel__carousel-nav")
                 },
                 960: {
-                    items: 4
+                    items: 4,
+                    marging: 10,
+                    navContainer: $(".abi--clubcolombia-flavor-travel__carousel-nav")
                 }
             }
         });

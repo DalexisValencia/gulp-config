@@ -1,6 +1,28 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi--main-wrapper--mxvideos {
+    .abi-main--home-wrapper {
+        background-color: white;
+        min-height: 700px;
+        // height: 81.5vw;
+        position: relative;
+        // top: 75px; //revisar esto
+        background-size: 100%;
+        .abi--gContain {
+            position: relative;
+            height: inherit;
+        }
+        // @include media-min-width {
+        //     // height: 1000px;
+        // }
+        // @include media-sm {
+        //     min-height: auto;
+        //     // background-image: url("../assets/bases/base-mobile.png");
+        // }
+        // @include media-xs {
+        //     height: 260vw;
+        // }
+    }
     .abi-main--big-video-container {
         margin-top: 30px;
         border-radius: 15px;

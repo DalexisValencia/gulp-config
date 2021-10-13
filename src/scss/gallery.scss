@@ -1,8 +1,10 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi--main-wrapper--mxvideos {
+    background-image: url("../assets/banner/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     .abi-main--home-wrapper {
-        background-color: white;
         min-height: 700px;
         // height: 81.5vw;
         position: relative;
@@ -233,5 +235,8 @@
                 }
             }
         }
+    }
+    @include media-xs-range-1 {
+        background-image: url("../assets/banner/background-mobile.png");
     }
 }

@@ -1,0 +1,177 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--main-wrapper--mxvideos {
+    .abi--main-main-footer {
+        background-color: $primary-brand-color;
+        z-index: 2;
+        position: relative;
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 98%;
+            height: 95%;
+            border: 1px solid $secondary-brand-color;
+            top: 2.5%;
+        }
+        @include media-sm {
+            &::before {
+                width: 95% !important;
+                border: 1px solid $secondary-brand-color;
+            }
+        }
+    }
+    .abi--main-main-footer-wrapper-nav {
+        @include media-sm {
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            max-width: 500px !important;
+            width: 80% !important;
+        }
+    }
+    .abi--main-main-footer-navigation {
+        ul {
+            margin: 0px auto;
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+            margin: 0px auto 10px;
+            li {
+                text-align: center;
+                line-height: 1;
+                a {
+                    color: $secondary-brand-color;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font: {
+                        size: 14px;
+                        weight: 300;
+                        family: 'Apercu-Light';
+                    }
+                    @include media-xs-small {
+                        font-size: 12px;
+                    }
+                    @include media-sm {
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                @include media-sm {
+                    width: 100%;
+                    margin: 7px 0px;
+                }
+                &.hide-desktop {
+                    display: none;
+                    @include media-sm {
+                        display: block;
+                    }
+                }
+            }
+            @include media-sm {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+        }
+        @include media-sm {
+            width: 100%;
+            padding-right: 8px;
+        }
+    }
+    .abi--main-main-footer-copy,
+    .abi--main-main-footer-copy .field__item {
+        // background-color: $tertiary-brand-color;
+        display: flex;
+        justify-content: center;
+        padding: 20px 20px;
+        div,
+        a {
+            text-align: center;
+            text-transform: uppercase;
+            padding: 0px 20px;
+            color: $secondary-brand-color;
+            font: {
+                size: 14px;
+                weight: 300;
+                family: 'Apercu-Light';
+            }
+            @include media-xs-range-2 {
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+    .abi--main-main-footer-social--logo {
+        position: relative;
+        max-width: 395px;
+        width: 100%;
+        img {
+            margin-bottom: 20px;
+            max-width: 395px;
+            width: 100%;
+            @include media-sm {
+                max-width: 211px;
+            }
+        }
+        @include media-sm {
+            max-width: 211px;
+            margin: 0px auto;
+        }
+    }
+    .abi--main-main-footer-social {
+        margin: 0px auto;
+        max-width: max-content;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            // border: 1px solid white;
+            width: 50%;
+            margin: 0px auto 30px;
+            li {
+                a {
+                    text-decoration: none;
+                    i {
+                        color: $secondary-brand-color;
+                        font-size: 22px;
+                    }
+                }
+            }
+            @include media-sm {
+                width: 100%;
+                max-width: 190px;
+                justify-content: space-between;
+            }
+        }
+        .abi--main-main-footer-social--follow-us {
+            text-align: center;
+            color: $secondary-brand-color;
+            margin-bottom: 35px;
+            font-family: 'Nunito', sans-serif;
+            font: {
+                size: 14px;
+                weight: 800;
+            }
+            display: none;
+            @include media-xs-range-2 {
+                display: block;
+            }
+        }
+        @include media-sm {
+            max-width: 100%;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}

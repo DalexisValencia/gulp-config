@@ -51,12 +51,12 @@
                     text-decoration: none;
                     text-transform: uppercase;
                     font: {
-                        size: 10px;
-                        weight: 700;
-                        family: 'Encode Sans', sans-serif;
+                        size: 14px;
+                        weight: 300;
+                        family: 'Apercu-Light';
                     }
                     @include media-xs-small {
-                        font-size: 9px;
+                        font-size: 12px;
                     }
                     @include media-sm {
                         display: block;
@@ -93,16 +93,18 @@
         padding: 20px 20px;
         div,
         a {
+            text-align: center;
             text-transform: uppercase;
             padding: 0px 20px;
             color: $secondary-brand-color;
             font: {
-                size: 9px;
-                weight: 700;
-                family: 'Encode Sans', sans-serif;
+                size: 14px;
+                weight: 300;
+                family: 'Apercu-Light';
             }
             @include media-xs-range-2 {
                 text-align: center;
+                font-size: 14px;
             }
         }
     }

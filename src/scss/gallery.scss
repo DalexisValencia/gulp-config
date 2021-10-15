@@ -39,7 +39,6 @@
         overflow: hidden;
         .abi-main--big-video-iframe,
         .abi-main--big-video-description {
-            border-top: 2px solid $tertiary-brand-color;
             width: 100%;
             iframe.video {
                 position: absolute;
@@ -60,13 +59,15 @@
             }
         }
         @include media-min-width {
-            max-height: 736px;
-            height: 736px;
+            max-height: 738px;
+            height: 752px;
             border-radius: 26px;
             min-height: unset;
+            background-color: $fourty-brand-color;
         }
     }
     .abi-main--big-video-description {
+        border-top: 2px solid $tertiary-brand-color;
         position: relative;
         z-index: 1;
         padding: 15px 25px;
@@ -78,6 +79,7 @@
             font: {
                 weight: bold;
                 size: 20px;
+                family: 'Apercu-regular';
             }
             @include media-sm {
                 font-size: 13px;
@@ -89,8 +91,9 @@
         .abi-main--big-video-description--character {
             color: $fifth-brand-color;
             font: {
-                weight: 400;
+                weight: 200;
                 size: 20px;
+                family: 'Apercu-Light';
             }
             @include media-sm {
                 font-size: 13px;
@@ -168,6 +171,10 @@
                         font: {
                             weight: bold;
                             size: 12px;
+                            family: 'Apercu-regular';
+                        }
+                        @include media-sm {
+                            font-size: 11px;
                         }
                     }
                     .abi-main--gallery-videos--item--description--character {
@@ -175,6 +182,10 @@
                         font: {
                             weight: 400;
                             size: 12px;
+                            family: 'Apercu-regular';
+                        }
+                        @include media-sm {
+                            font-size: 11px;
                         }
                     }
                 }

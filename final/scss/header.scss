@@ -1,0 +1,34 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi--main-wrapper--mxvideos {
+    .abi--main-main-header {
+        background-color: $secondary-brand-color;
+        border-bottom-left-radius: 9px;
+        border-bottom-right-radius: 9px;
+        z-index: 4;
+        padding: 0px 40px;
+        // position: sticky;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 72px;
+        overflow: visible;
+        display: flex;
+        align-items: center;
+        .abi--main-main-header-contain {
+            // border: 1px solid red;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        >a {
+            display: block;
+            width: 130px;
+        }
+    }
+    .abi-ul {
+        list-style: none;
+        padding: 0px;
+    }
+}

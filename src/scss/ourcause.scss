@@ -177,9 +177,10 @@
 }
 
 .abi-main--ourcause-ours-three-section {
-    background: $tertiary-brand-color;
-    background: linear-gradient( 180deg, $tertiary-brand-color 0%, $tertiary-brand-color 52%, rgba(255, 255, 255, 1) 83%);
-    height: 43vw;
+    background-color: $tertiary-brand-color;
+    // background: linear-gradient( 180deg, $tertiary-brand-color 0%, $tertiary-brand-color 52%, rgba(255, 255, 255, 1) 83%);
+    min-height: 43vw;
+    padding: 30px 0px;
     .abi--gContain {
         display: flex;
         justify-content: space-between;
@@ -247,6 +248,7 @@
     }
     .abi-main--ourcause-ours-three-banner {
         width: 55.4vw;
+        max-height: 31vw;
         margin-right: 2.8vw;
         margin-top: 7vw;
         @include media-min-width {

@@ -1,9 +1,10 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi-main--home-wrapper {
-    background-color: white;
+    background-color: $fifth-brand-color;
+    // border: 1px solid red;
     min-height: 700px;
-    height: 81.5vw;
+    // height: 81.5vw;
     position: relative;
     // top: 75px; //revisar esto
     background-size: 100%;
@@ -11,16 +12,16 @@
         position: relative;
         height: inherit;
     }
-    @include media-min-width {
-        height: 1000px;
-    }
-    @include media-sm {
-        min-height: auto;
-        // background-image: url("../assets/bases/base-mobile.png");
-    }
-    @include media-xs {
-        height: 260vw;
-    }
+    // @include media-min-width {
+    //     height: 1000px;
+    // }
+    // @include media-sm {
+    //     min-height: auto;
+    //     // background-image: url("../assets/bases/base-mobile.png");
+    // }
+    // @include media-xs {
+    //     height: 260vw;
+    // }
 }
 
 .abi-main--home-lateral-image {

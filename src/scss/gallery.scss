@@ -1,0 +1,57 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi-main--home--section-gallery {
+    border: 1px solid red;
+    display: flex;
+}
+
+.abi-main--home--section-gallery--highlight-singer {
+    border: 1px solid white;
+    width: 100%;
+    max-width: 283px;
+    height: 415px;
+}
+
+.abi-main--home--section-gallery--singers__container {
+    border: 1px dashed white;
+    width: 100%;
+}
+
+.abi-main--home--section-gallery--singers__container--header {
+    .abi-main--home--section-gallery--singers__container--header-title {
+        color: $fourty-brand-color;
+        margin-top: 20px;
+        font: {
+            size: 18px;
+            family: 'AbolitionW00-Regular';
+        }
+        text-align: center;
+    }
+}
+
+.abi-main--home--section-gallery--singers__container--gallery {
+    border: 2px solid red;
+    max-width: 600px;
+    margin: 0px auto;
+    margin-top: 50px;
+}
+
+.abi-main--home--section-gallery--singers__item {
+    border: 1px solid white;
+    padding: 10px 20px;
+    .abi-main--home--section-gallery--singers__item-singername {
+        width: 100%;
+        margin-top: 10px;
+        border: 1px solid blue;
+        color: $fourty-brand-color;
+        text-align: center;
+        font: {
+            family: 'AbolitionW00-Regular';
+            size: 18px;
+        }
+    }
+    img {
+        // bord er: 3px solid linear-gradient(183deg, rgba(255, 158, 24, 1) 45%, rgba(255, 71, 19, 1) 100%);
+        border-radius: 50%;
+    }
+}

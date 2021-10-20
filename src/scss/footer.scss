@@ -1,55 +1,92 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi--main-main-footer {
-    background-color: $secondary-brand-color;
-    background-image: url("../assets/desktop-footer-background.png");
-    background-position: top bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: $fifth-brand-color;
     z-index: 2;
     position: relative;
     width: 100%;
-    padding-top: 60px;
-    @include media-sm {
-        background-image: url("../assets/mobile-footer-background.png");
+    padding: 50px 0px;
+    &::before,
+    &::after {
+        transition: 0.5s all;
+        position: absolute;
+        content: "";
+        width: 280px;
+        height: 240px;
+        background-position: center;
         background-size: 100%;
-        background-position: top;
+        background-repeat: no-repeat;
+        top: 50px;
+        @include media-min-width {
+            width: 320px;
+            height: 280px;
+        }
+        @include media-sm {
+            width: 220px;
+            height: 180px;
+        }
+        @include media-xs-range-2 {
+            width: 40vw;
+            height: 31vw;
+            z-index: -1;
+        }
+        @include media-xs-small {
+            width: 40vw;
+            height: 38vw;
+            top: 13vw;
+        }
     }
-}
-
-.abi--main-main-footer-wrapper-nav {
+    &::before {
+        right: 0px;
+        background-image: url("../assets/iconsv2/footer-right-flowers.svg");
+    }
+    &::after {
+        left: 0px;
+        background-image: url("../assets/iconsv2/footer-left-flowers.svg");
+    }
     @include media-sm {
-        display: flex;
-        flex-direction: row-reverse;
+        padding-bottom: 0px;
     }
 }
 
 .abi--main-main-footer-navigation {
+    margin-top: 15px;
+    position: relative;
     ul {
         margin: 0px auto;
-        width: 100%;
+        width: 60%;
         display: flex;
         justify-content: space-between;
         padding: 10px 0px;
         margin-bottom: 10px;
         li {
+            padding: 0px 10px;
+            position: relative;
             text-align: center;
             line-height: 1;
+            width: 100%;
+            margin-bottom: 5px;
+            &:not(:last-child) {
+                border-right: 1px solid white;
+            }
             a {
-                color: $primary-brand-color;
+                color: $secondary-brand-color;
                 text-decoration: none;
                 font: {
-                    size: 10px;
-                    weight: 700;
-                    family: 'Encode Sans', sans-serif;
+                    size: 13px;
+                    weight: 400;
+                    family: 'AbolitionW00-Regular';
                 }
+                letter-spacing: 0.5px;
                 @include media-xs-small {
                     font-size: 9px;
                 }
             }
             @include media-sm {
-                text-align: left !important;
+                text-align: center;
                 width: 100%;
+                font-size: 12px;
+                border-right: 1px solid transparent !important;
             }
         }
         @include media-sm {
@@ -57,64 +94,110 @@
         }
     }
     @include media-sm {
-        width: 70%;
-        padding-right: 8px;
-        // border: 1px solid red;
-        // min-width: 180px;
+        width: 100%;
     }
 }
 
 .abi--main-main-footer-copy,
 .abi--main-main-footer-copy .field__item {
-    background-color: $tertiary-brand-color;
-    display: flex;
-    justify-content: center;
+    background-color: $fifth-brand-color;
+    // display: flex;
+    // justify-content: center;
+    text-align: center;
     padding: 20px 20px;
     div,
     a {
         text-transform: uppercase;
-        padding: 0px 20px;
+        // padding: 0px 20px;
         color: $secondary-brand-color;
         font: {
-            size: 9px;
-            weight: 700;
-            family: 'Encode Sans', sans-serif;
+            size: 13px;
+            weight: 100;
+            family: 'AbolitionW00-Regular';
         }
-        &:first-child {
-            border-right: 2px solid $secondary-brand-color;
-        }
+        letter-spacing: 0.5px;
         @include media-xs-range-2 {
             text-align: center;
         }
+        @include media-sm {
+            &.hide-mobile {
+                display: none;
+            }
+        }
+    }
+    @include media-sm {
+        margin-top: 15px;
+        background-color: $sixth-brand-color;
     }
 }
 
 .abi--main-main-footer-social--logo {
     position: relative;
-    width: 96px;
-    height: 52px;
     margin-bottom: 8px;
+    img {
+        width: 96px;
+        height: 52px;
+        width: 100%;
+    }
+    // border: 4px solid orange;
 }
 
 .abi--main-main-footer-social {
     margin: 0px auto;
-    max-width: max-content;
-    padding-left: 5vw;
+    // max-width: max-content;
+    width: 100%;
+    text-align: center;
+    // padding-left: 5vw;
     ul {
+        position: relative;
+        width: 100%;
+        max-width: 170px;
+        margin: 0px auto;
         display: flex;
+        justify-content: space-between;
         li {
             margin-right: 7px;
             a {
                 text-decoration: none;
                 i {
-                    color: $primary-brand-color;
+                    color: $secondary-brand-color;
                     font-size: 22px;
                 }
             }
         }
         @include media-sm {
             width: 100%;
-            justify-content: flex-end;
+        }
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 70px;
+            height: 26px;
+            @include media-xs-small {
+                width: 60px;
+                height: 23px;
+            }
+        }
+        &::after {
+            background-image: url("../assets/iconsv2/leaf-left.svg");
+            left: -85px;
+            @include media-xs-small {
+                left: -75px;
+            }
+        }
+        &::before {
+            background-image: url("../assets/iconsv2/leaf-right.svg");
+            right: -85px;
+            @include media-xs-small {
+                right: -75px;
+            }
+        }
+        @include media-xs-small {
+            max-width: 140px;
         }
     }
     .abi--main-main-footer-social--follow-us {
@@ -132,14 +215,7 @@
         }
     }
     @include media-sm {
-        max-width: 50%;
-        width: 50%;
-        // min-width: 100px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-content: center;
-        align-items: center;
-        padding-right: 20px;
+        max-width: 100%;
+        width: 100%;
     }
 }

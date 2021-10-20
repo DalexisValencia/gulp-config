@@ -11,7 +11,7 @@ $(document).ready(function() {
             drawer.removeClass('active');
         });
         //social slider
-        var slidersHome = $(".abi--main-container--body-sliders.owl-carousel");
+        var slidersHome = $(".abi-main--home--section-gallery--singers__container--gallery.owl-carousel");
         if (slidersHome.length >= 1) {
             slidersHome.owlCarousel({
                 items: 4,
@@ -22,26 +22,26 @@ $(document).ready(function() {
                         items: 1,
                         margin: 10,
                         center: false,
-                        navContainer: $(".abi--main-container--body-sliders--navigation")
+                        navContainer: $(".abi-main--home--section-gallery--singers--navArrows")
                     },
                     420: {
                         margin: 10,
                         items: 2,
-                        navContainer: $(".abi--main-container--body-sliders--navigation")
+                        navContainer: $(".abi-main--home--section-gallery--singers--navArrows")
                     },
                     600: {
                         margin: 10,
-                        items: 2,
-                        navContainer: $(".abi--main-container--body-sliders--navigation")
+                        items: 3,
+                        navContainer: $(".abi-main--home--section-gallery--singers--navArrows")
                     },
                     710: {
-                        items: 4,
+                        items: 3,
                         margin: 10,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     },
                     960: {
-                        items: 4,
-                        margin: 10,
+                        items: 3,
+                        margin: 50,
                         loop: false,
                         navContainer: $(".abi--main-container--body-sliders--navigation")
                     }

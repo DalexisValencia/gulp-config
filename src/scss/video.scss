@@ -78,7 +78,7 @@
 
 .abi-main--home--section-video {
     width: 100%;
-    min-height: 37vw;
+    min-height: 34vw;
     position: relative;
     iframe {
         width: 100%;
@@ -101,6 +101,12 @@
         @include media-xs-range-1 {
             bottom: -7.6vw;
             left: 2vw;
+        }
+        @include media-sm {
+            bottom: -11.6vw;
+            left: -4vw;
+            width: 14vw;
+            max-width: 60px;
         }
     }
     &::after {

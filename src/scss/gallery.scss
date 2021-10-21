@@ -2,8 +2,8 @@
 @import './common/queries.scss';
 @import './common/buttons.scss';
 .abi-main--home--section-gallery {
-    margin-top: 60px;
-    padding: 30px 10px;
+    margin-top: 20px;
+    padding: 15px 10px 30px;
     >.abi--gContain {
         display: flex;
         align-items: center;
@@ -42,6 +42,9 @@
             family: 'AbolitionW00-Regular';
         }
         text-align: center;
+        @include media-sm {
+            margin-top: 0px;
+        }
     }
 }
 
@@ -119,6 +122,9 @@
     padding: 0px 60px 20px;
     @include media-xs {
         padding: 0px 0px 20px 10px;
+    }
+    @include media-sm {
+        margin-top: 20px;
     }
 }
 

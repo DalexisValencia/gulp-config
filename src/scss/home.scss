@@ -1,12 +1,40 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi-main--home-wrapper {
+    position: relative;
     background-color: $fifth-brand-color;
     min-height: 700px;
     position: relative;
-    background-size: 100%;
     .abi--gContain {
         position: relative;
         height: inherit;
+    }
+}
+
+.abi-main--home-wrapper--highlight-bg {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    top: 450px;
+    height: 40vw;
+    min-height: 800px;
+    background-image: url("../assets/video/background.png");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: 3000px;
+    background-position-y: -500px;
+    @include media-md {
+        top: 26vw;
+        background-size: 282vw;
+    }
+    @include media-sm {
+        height: 105vw;
+        top: 8vw;
+        background-size: 326vw;
+        background-position-y: center;
+    }
+    @include media-xs-small {
+        background-size: 435vw;
+        top: -25vw;
     }
 }

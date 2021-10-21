@@ -1,0 +1,16 @@
+COMPILADO DEL SASS
+
+1. Instalar GULP globalmente: npm install gulp -g
+
+2. Instalar GULP localmente (en esta carpeta): npm install --save-dev gulp
+
+3. Correr npm install (en la consola)
+
+4. Correr Gulp default (en la consola)
+  Esto activa un watcher que compilará CADA cambio del sass
+	- En la consola verá un mensaje como Strating 'default...'
+
+  Así solo debe correrlo solo una vez, hacer un cambio, guardar y probar que funciona.
+
+
+5. Cuando termine control c (en la consola) esto cerrará Gulp

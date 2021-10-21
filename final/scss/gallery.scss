@@ -1,0 +1,233 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+@import './common/buttons.scss';
+.abi-main--home--section-gallery {
+    margin-top: 20px;
+    padding: 15px 10px 30px;
+    position: relative;
+    // overflow: visible;
+    >.abi--gContain {
+        display: flex;
+        align-items: center;
+        position: relative;
+        @include media-sm {
+            padding: 0px;
+        }
+    }
+    @include media-sm {
+        padding: 0px;
+    }
+    &::after {
+        pointer-events: none;
+        position: absolute;
+        content: "";
+        right: 0;
+        width: 173px;
+        height: 237px;
+        bottom: -80px;
+        background-image: url("../assets/gallery/bg-decoration.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include media-md {
+            width: 143px;
+            height: 207px;
+        }
+        @include media-sm {
+            content: unset;
+        }
+    }
+}
+
+.abi-main--home--section-gallery--highlight-singer {
+    width: 100%;
+    max-width: 323px;
+    min-width: 233px;
+    margin-left: 10px;
+    // height: 415px;
+    @include media-sm {
+        display: none;
+    }
+}
+
+.abi-main--home--section-gallery--singers__container {
+    width: 100%;
+    height: min-content;
+}
+
+.abi-main--home--section-gallery--singers__container--header {
+    .abi-main--home--section-gallery--singers__container--header-title {
+        color: $fourty-brand-color;
+        margin-top: 20px;
+        font: {
+            size: 18px;
+            family: 'AbolitionW00-Regular';
+        }
+        text-align: center;
+        @include media-sm {
+            margin-top: 0px;
+        }
+    }
+}
+
+
+/*Navigation dead singers*/
+
+.abi-main--home--section-gallery--singers__navigation {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    top: -55px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    button {
+        pointer-events: all;
+        width: 40px;
+        height: 40px;
+        @include owlNavBtn;
+        &.owl-prev {
+            background-image: url("../assets/iconsv2/slider-arrow-prev.svg");
+        }
+        &.owl-next {
+            background-image: url("../assets/iconsv2/slider-arrow-next.svg");
+        }
+    }
+    @include media-xs {
+        display: none;
+    }
+}
+
+.abi-main--home--section-interestyou__gallery__navigation--dots,
+.abi-main--home--section-gallery--singers__navigation--dots {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+        position: relative;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        margin: 0px 8px;
+        @include owlNavBtn;
+        background-color: #4A4A4A;
+        &.active {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            background-color: $primary-brand-color;
+            &::before {
+                top: -7px;
+                position: absolute;
+                width: 23px;
+                height: 23px;
+                content: "";
+                border-radius: 50%;
+                border: 1.5px solid $primary-brand-color;
+            }
+        }
+    }
+}
+
+.abi-main--home--section-interestyou__gallery__navigation--dots {
+    display: none !important;
+    @include media-xs-range-2 {
+        display: flex !important;
+    }
+}
+
+.abi-main--home--section-gallery--singers {
+    position: relative;
+    max-width: 600px;
+    margin: 0px auto;
+    margin-top: 50px;
+    padding: 0px 60px 20px;
+    @include media-xs {
+        padding: 0px 0px 20px 10px;
+    }
+    @include media-sm {
+        margin-top: 20px;
+    }
+}
+
+.abi-main--home--section-gallery--singers__item {
+    padding: 5px 10px;
+    .abi-main--home--section-gallery--singers__item-singername {
+        width: 100%;
+        margin-top: 10px;
+        color: $fourty-brand-color;
+        text-align: center;
+        font: {
+            family: 'AbolitionW00-Regular';
+            size: 18px;
+        }
+    }
+    img {
+        border-radius: 50%;
+    }
+    @include media-xs {
+        padding: 0px 10px;
+    }
+}
+
+.abi-main--home--section-gallery--singers__container--gallery {
+    .owl-stage-outer {
+        .owl-stage {
+            .owl-item {
+                &:nth-child(odd) {
+                    .abi-main--home--section-gallery--singers__item-picture {
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            background-image: url("../assets/iconsv2/video-leaft-left.svg");
+                            background-size: 100%;
+                            width: 66px;
+                            height: 44px;
+                            left: 58px;
+                            top: 96px;
+                            z-index: 1;
+                            @include media-xs {
+                                width: 15vw;
+                                height: 12vw;
+                                right: -11vw;
+                                top: 18vw;
+                                left: unset;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(even) {
+                    .abi-main--home--section-gallery--singers__item-picture {
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            background-image: url("../assets/iconsv2/video-leaf-right.svg");
+                            background-size: 100%;
+                            width: 66px;
+                            height: 44px;
+                            left: -22px;
+                            top: 10px;
+                            z-index: 1;
+                            @include media-xs {
+                                width: 15vw;
+                                height: 12vw;
+                                left: -2vw;
+                                top: 5vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi-main--breadcumb {
+    width: 100%;
+    margin-top: 30px;
+    .abi-ul {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        * {
+            color: $fourty-brand-color;
+            font: {
+                size: 16px;
+                family: 'AbolitionW00-Regular';
+            }
+            @include media-sm {
+                font-size: 14px;
+            }
+        }
+        li {
+            padding: 0 5px;
+            &.separator,
+            &.active {
+                &,
+                * {
+                    color: $primary-brand-color;
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+            &.go-back {
+                a {
+                    .icon-arrow-back {
+                        width: 20px;
+                        height: 24px;
+                        background-image: url("../assets/iconsv2/arrow-back-breadcumbs.svg");
+                        background-position: center;
+                        background-size: 100%;
+                        display: block;
+                    }
+                }
+                @include media-sm {
+                    position: absolute;
+                    left: 0px;
+                    top: -4px;
+                }
+            }
+        }
+        @include media-sm {
+            flex-wrap: wrap;
+            padding-left: 30px;
+        }
+    }
+}

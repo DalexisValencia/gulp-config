@@ -54,7 +54,10 @@
     position: relative;
     ul {
         margin: 0px auto;
-        width: 60%;
+        width: 70%;
+        @include media-md {
+            width: 60%;
+        }
         display: flex;
         justify-content: space-between;
         padding: 10px 0px;

@@ -1,7 +1,6 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
 .abi-main--home--nasty-background {
-    border: 1px dashed red;
     position: relative;
     &::before {
         position: absolute;

@@ -4,6 +4,8 @@
 .abi-main--home--section-gallery {
     margin-top: 20px;
     padding: 15px 10px 30px;
+    position: relative;
+    // overflow: visible;
     >.abi--gContain {
         display: flex;
         align-items: center;
@@ -14,6 +16,26 @@
     }
     @include media-sm {
         padding: 0px;
+    }
+    &::after {
+        pointer-events: none;
+        position: absolute;
+        content: "";
+        right: 0;
+        width: 173px;
+        height: 237px;
+        bottom: -80px;
+        background-image: url("../assets/gallery/bg-decoration.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include media-md {
+            width: 143px;
+            height: 207px;
+        }
+        @include media-sm {
+            content: unset;
+        }
     }
 }
 
@@ -82,6 +104,7 @@
     }
 }
 
+.abi-main--home--section-interestyou__gallery__navigation--dots,
 .abi-main--home--section-gallery--singers__navigation--dots {
     margin-top: 30px;
     width: 100%;
@@ -111,6 +134,13 @@
                 border: 1.5px solid $primary-brand-color;
             }
         }
+    }
+}
+
+.abi-main--home--section-interestyou__gallery__navigation--dots {
+    display: none !important;
+    @include media-xs-range-2 {
+        display: flex !important;
     }
 }
 

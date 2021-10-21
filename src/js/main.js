@@ -61,6 +61,47 @@ $(document).ready(function() {
             });
         }
 
+        //Singers sliders
+        var slidersInterestU = $(".abi-main--home--section-interestyou__gallery.owl-carousel");
+        var slidersInterestUDotsNavigation = $(".abi-main--home--section-interestyou__gallery__navigation--dots")
+        if (slidersInterestU.length >= 1 && slidersInterestUDotsNavigation.length >= 1) {
+            slidersInterestU.owlCarousel({
+                items: 4,
+                loop: true,
+                video: true,
+                responsive: {
+                    0: {
+                        margin: 10,
+                        items: 1.5,
+                        nav: false,
+                        dotsContainer: slidersInterestUDotsNavigation,
+                    },
+                    600: {
+                        margin: 10,
+                        items: 2.5,
+                        nav: false,
+                        // navContainer: slidersInterestUDotsNavigation,
+                        dotsContainer: slidersInterestUDotsNavigation,
+                    },
+                    710: {
+                        items: 3,
+                        margin: 10,
+                        nav: false,
+                        // navContainer: slidersInterestUDotsNavigation,
+                        dotsContainer: slidersInterestUDotsNavigation,
+                    },
+                    960: {
+                        items: 3,
+                        margin: 50,
+                        loop: true,
+                        nav: false,
+                        // navContainer: slidersInterestUDotsNavigation,
+                        dotsContainer: slidersInterestUDotsNavigation,
+                    }
+                }
+            });
+        }
+
 
         var playButton = $(".el-custom--button.play-video");
 

@@ -1,0 +1,104 @@
+@import './vars/colors.scss';
+@import './common/queries.scss';
+.abi-main--home--section-interestyou {
+    padding: 50px 0px;
+}
+
+.abi-main--home--section-interestyou__header {
+    margin-bottom: 55px;
+    .abi-main--home--section-interestyou__header--title {
+        position: relative;
+        margin: 0px auto 40px;
+        max-width: max-content;
+        width: 100%;
+        color: $primary-brand-color;
+        text-align: center;
+        font: {
+            size: 20px;
+            family: 'DrukWide-Bold';
+        }
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            width: 86px;
+            height: 62px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            top: -19px;
+            @include media-xs-range-2 {
+                content: unset;
+            }
+        }
+        &::before {
+            background-image: url("../assets/iconsv2/bird-title-right.svg");
+            right: -100px;
+        }
+        &::after {
+            background-image: url("../assets/iconsv2/bird-title-left.svg");
+            left: -100px;
+        }
+        @include media-xs-range-2 {
+            max-width: 100%;
+        }
+    }
+}
+
+.abi-main--home--section-interestyou__gallery--item {
+    position: relative;
+    background: rgb(255, 158, 24);
+    background: linear-gradient(0deg, rgba(255, 158, 24, 1) 45%, rgba(255, 71, 19, 1) 100%);
+    border-radius: 25px;
+    padding: 2px;
+    .abi-main--home--section-interestyou__gallery--item-title {
+        width: 100%;
+        top: 40px;
+        position: absolute;
+        text-align: center;
+        color: $fourty-brand-color;
+        font: {
+            family: 'DrukWide-Bold';
+            size: 16px;
+        }
+        @include media-max-width {
+            font-size: 1.7vw;
+            top: 3.5vw;
+        }
+        @include media-xs-small {
+            font-size: 4vw;
+            top: 4.8vw;
+        }
+    }
+    .el-custom--button.action-btn {
+        position: absolute;
+        bottom: 30px;
+        width: 194px;
+        height: 47px;
+        color: $primary-brand-color;
+        border: 2px solid $primary-brand-color;
+        border-radius: 50px;
+        font: {
+            family: 'AbolitionW00-Regular';
+            size: 20px;
+        }
+        margin: 0px auto;
+        left: 0;
+        right: 0;
+        @include media-max-width {
+            font-size: 2vw;
+            width: 23vw;
+            height: 5vw;
+            bottom: 2vw;
+        }
+        @include media-xs-small {
+            font-size: 3.8vw;
+            width: 40vw;
+            height: 8vw;
+            bottom: 5vw;
+        }
+    }
+    @include media-max-width {
+        // border: 2px solid red;
+        border-radius: 2vw;
+    }
+}

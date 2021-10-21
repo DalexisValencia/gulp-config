@@ -1,19 +1,33 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
+@import './common/buttons.scss';
 .abi-main--home--section-gallery {
+    margin-top: 60px;
+    padding: 30px 10px;
     border: 1px solid red;
-    display: flex;
+    >.abi--gContain {
+        display: flex;
+        @include media-sm {
+            padding: 0px;
+        }
+    }
+    @include media-sm {
+        padding: 0px;
+    }
 }
 
 .abi-main--home--section-gallery--highlight-singer {
-    border: 1px solid white;
     width: 100%;
-    max-width: 283px;
-    height: 415px;
+    max-width: 323px;
+    min-width: 233px;
+    margin-left: 10px;
+    // height: 415px;
+    @include media-sm {
+        display: none;
+    }
 }
 
 .abi-main--home--section-gallery--singers__container {
-    border: 1px dashed white;
     width: 100%;
 }
 
@@ -29,20 +43,91 @@
     }
 }
 
-.abi-main--home--section-gallery--singers__container--gallery {
-    border: 2px solid red;
+
+/*Navigation dead singers*/
+
+.abi-main--home--section-gallery--singers__navigation {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    top: -55px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    button {
+        pointer-events: all;
+        width: 40px;
+        height: 40px;
+        @include owlNavBtn;
+        &.owl-prev {
+            background-image: url("../assets/iconsv2/slider-arrow-prev.svg");
+        }
+        &.owl-next {
+            background-image: url("../assets/iconsv2/slider-arrow-next.svg");
+        }
+    }
+    @include media-xs {
+        display: none;
+    }
+}
+
+.abi-main--home--section-gallery--singers__navigation--dots {
+    margin-top: 30px;
+    width: 100%;
+    border: 1px solid dashed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+        position: relative;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        margin: 0px 8px;
+        @include owlNavBtn;
+        background-color: #4A4A4A;
+        &.active {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            background-color: $primary-brand-color;
+            &::before {
+                top: -7px;
+                position: absolute;
+                width: 23px;
+                height: 23px;
+                content: "";
+                border-radius: 50%;
+                border: 1.5px solid $primary-brand-color;
+            }
+        }
+    }
+}
+
+.abi-main--home--section-gallery--singers {
+    position: relative;
     max-width: 600px;
     margin: 0px auto;
     margin-top: 50px;
+    padding: 0px 60px 20px;
+    @include media-xs {
+        border: 1px solid white;
+        padding: 0px 0px 20px 10px;
+    }
 }
 
 .abi-main--home--section-gallery--singers__item {
-    border: 1px solid white;
-    padding: 10px 20px;
+    border: 1px dashed white;
+    padding: 0px 20px;
     .abi-main--home--section-gallery--singers__item-singername {
         width: 100%;
         margin-top: 10px;
-        border: 1px solid blue;
         color: $fourty-brand-color;
         text-align: center;
         font: {

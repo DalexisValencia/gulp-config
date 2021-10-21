@@ -39,6 +39,28 @@ a.el-custom--button {
     display: block;
 }
 
+@mixin owlNavBtn {
+    pointer-events: all;
+    font-size: 0px;
+    // width: 5vw;
+    // height: 5vw;
+    // max-width: 70px;
+    // max-height: 70px;
+    // border-radius: 50%;
+    // background-color: $tertiary-brand-color;
+    border: 1px solid transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: transparent;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: 0;
+        outline-color: transparent !important;
+    }
+}
+
 // input[class*="el-custom"],
 // input.el-custom--button {
 // }

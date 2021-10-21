@@ -12,38 +12,50 @@ $(document).ready(function() {
         });
         //social slider
         var slidersHome = $(".abi-main--home--section-gallery--singers__container--gallery.owl-carousel");
-        if (slidersHome.length >= 1) {
+        var sliderHomeNavigation = $(".abi-main--home--section-gallery--singers__navigation");
+        var sliderHomeDotsNavigation = $(".abi-main--home--section-gallery--singers__navigation--dots")
+        if (slidersHome.length >= 1 && sliderHomeNavigation.length >= 1) {
             slidersHome.owlCarousel({
                 items: 4,
                 loop: true,
                 video: true,
                 responsive: {
+                    // 0: {
+                    //     items: 1,
+                    //     margin: 10,
+                    //     center: false,
+                    //     nav: true,
+                    //     navContainer: sliderHomeNavigation,
+                    //     dotsContainer: sliderHomeDotsNavigation,
+                    // },
                     0: {
-                        items: 1,
                         margin: 10,
-                        center: false,
-                        navContainer: $(".abi-main--home--section-gallery--singers--navArrows")
-                    },
-                    420: {
-                        margin: 10,
-                        items: 2,
-                        navContainer: $(".abi-main--home--section-gallery--singers--navArrows")
+                        items: 2.5,
+                        nav: true,
+                        navContainer: sliderHomeNavigation,
+                        dotsContainer: sliderHomeDotsNavigation,
                     },
                     600: {
                         margin: 10,
-                        items: 3,
-                        navContainer: $(".abi-main--home--section-gallery--singers--navArrows")
+                        items: 2.5,
+                        nav: true,
+                        navContainer: sliderHomeNavigation,
+                        dotsContainer: sliderHomeDotsNavigation,
                     },
                     710: {
                         items: 3,
                         margin: 10,
-                        navContainer: $(".abi--main-container--body-sliders--navigation")
+                        nav: true,
+                        navContainer: sliderHomeNavigation,
+                        dotsContainer: sliderHomeDotsNavigation,
                     },
                     960: {
                         items: 3,
                         margin: 50,
-                        loop: false,
-                        navContainer: $(".abi--main-container--body-sliders--navigation")
+                        loop: true,
+                        nav: true,
+                        navContainer: sliderHomeNavigation,
+                        dotsContainer: sliderHomeDotsNavigation,
                     }
                 }
             });

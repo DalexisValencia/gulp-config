@@ -52,6 +52,12 @@
                 </button>
             </div>
         </header>
+        <div class="overlay-modal">
+            <div class="wrapper-iframe-video">
+                <button class="close-video"></button>
+                <iframe id="iframeVideo" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
         <section class="abi-main--home-wrapper">
             <div class="abi-main--home-wrapper--highlight-bg"></div>
             <section class="abi--gContain">
@@ -61,12 +67,6 @@
                             <a href="/">
                                 <span class="icon-arrow-back"></span>
                             </a>
-                        </li>
-                        <li>
-                            <a href="/">Inicio</a>
-                        </li>
-                        <li class="separator">
-                            <span class="separator-icon"> / </span>
                         </li>
                         <li class="active">
                             <a href="/">VIVE El sabor del reencuentro</a>
@@ -84,16 +84,16 @@
                         LA VOZ DEL REENCUENTRO
                     </h1>
                     <h2 class="abi-main--home--section-headline--subtitle">
-                        Mira el concierto
+                        CONCIERTO ESPECIAL
                     </h2>
                     <p class="abi-main--home--section-headline--description">
-                        YA ESTÁ DISPONIBLE EL Concierto con los mejores artistas <br> de todos los tiempos, un cruce entre la vida y la muerte.
+                        VIVE este 2 y 3 de noviembre UN REENCUENTRO ÚNICO CON JUAN GABRIEL
                     </p>
                 </header>
                 <section class="abi-main--home--section-video">
                     <iframe src="" frameborder="0"></iframe>
                     <picture class="abi-main--home--section-video--thumbnail">
-                        <button class="el-custom--button play-video"></button>
+                        <button class="el-custom--button play-video" data-attr-url="https://www.youtube.com/embed/Q628ue9Cq7U"></button>
                         <source media="(min-width:710px)" srcset="assets/video/thumbnail-desktop.png">
                         <img src="assets/video/thumbnail-mobile.png" alt="">
                     </picture>
@@ -109,44 +109,57 @@
                         </picture>
                     </aside>
                     <section class="abi-main--home--section-gallery--singers__container">
-                        <header class="abi-main--home--section-gallery--singers__container--header">
-                            <h2 class="abi-main--home--section-gallery--singers__container--header-title">
-                                NO TE PIERDAS ESTA EXPERIENCIA JUNTO A:
-                            </h2>
-                        </header>
-                        <div class="abi-main--home--section-gallery--singers">
-                            <div class="abi-main--home--section-gallery--singers__navigation"></div>
-                            <div class="abi-main--home--section-gallery--singers__container--gallery owl-carousel">
-                                <div class="abi-main--home--section-gallery--singers__item">
-                                    <picture class="abi-main--home--section-gallery--singers__item-picture">
-                                        <source media="(min-width:710px)" srcset="assets/gallery/item-desktop.png">
-                                        <img src="assets/gallery/item-mobile.png" alt="">
-                                    </picture>
-                                    <h3 class="abi-main--home--section-gallery--singers__item-singername">Nombre Artista</h3>
+                        <div>
+                            <header class="abi-main--home--section-gallery--singers__container--header">
+                                <h2 class="abi-main--home--section-gallery--singers__container--header-title">
+                                    JUAN GABRIEL A DUETO CON:
+                                </h2>
+                            </header>
+                            <div class="abi-main--home--section-gallery--singers">
+                                <div class="abi-main--home--section-gallery--singers__navigation"></div>
+                                <div class="abi-main--home--section-gallery--singers__container--gallery owl-carousel">
+                                    <div class="abi-main--home--section-gallery--singers__item">
+                                        <picture class="abi-main--home--section-gallery--singers__item-picture">
+                                            <source media="(min-width:710px)" srcset="assets/gallery/item-1.png">
+                                            <img src="assets/gallery/item-1.png" alt="">
+                                        </picture>
+                                        <h3 class="abi-main--home--section-gallery--singers__item-singername">LILA DOWNS</h3>
+                                    </div>
+                                    <div class="abi-main--home--section-gallery--singers__item">
+                                        <picture class="abi-main--home--section-gallery--singers__item-picture">
+                                            <source media="(min-width:710px)" srcset="assets/gallery/item-2.png">
+                                            <img src="assets/gallery/item-2.png" alt="">
+                                        </picture>
+                                        <h3 class="abi-main--home--section-gallery--singers__item-singername">MARíA JOSÉ</h3>
+                                    </div>
+                                    <div class="abi-main--home--section-gallery--singers__item">
+                                        <picture class="abi-main--home--section-gallery--singers__item-picture">
+                                            <source media="(min-width:710px)" srcset="assets/gallery/item-3.png">
+                                            <img src="assets/gallery/item-3.png" alt="">
+                                        </picture>
+                                        <h3 class="abi-main--home--section-gallery--singers__item-singername">MODERATTO</h3>
+                                    </div>
                                 </div>
-                                <div class="abi-main--home--section-gallery--singers__item">
-                                    <picture class="abi-main--home--section-gallery--singers__item-picture">
-                                        <source media="(min-width:710px)" srcset="assets/gallery/item-desktop.png">
-                                        <img src="assets/gallery/item-mobile.png" alt="">
-                                    </picture>
-                                    <h3 class="abi-main--home--section-gallery--singers__item-singername">Nombre Artista</h3>
-                                </div>
-                                <div class="abi-main--home--section-gallery--singers__item">
-                                    <picture class="abi-main--home--section-gallery--singers__item-picture">
-                                        <source media="(min-width:710px)" srcset="assets/gallery/item-desktop.png">
-                                        <img src="assets/gallery/item-mobile.png" alt="">
-                                    </picture>
-                                    <h3 class="abi-main--home--section-gallery--singers__item-singername">Nombre Artista</h3>
-                                </div>
-                                <div class="abi-main--home--section-gallery--singers__item">
-                                    <picture class="abi-main--home--section-gallery--singers__item-picture">
-                                        <source media="(min-width:710px)" srcset="assets/gallery/item-desktop.png">
-                                        <img src="assets/gallery/item-mobile.png" alt="">
-                                    </picture>
-                                    <h3 class="abi-main--home--section-gallery--singers__item-singername">Nombre Artista</h3>
-                                </div>
+                                <div class="abi-main--home--section-gallery--singers__navigation--dots"></div>
                             </div>
-                            <div class="abi-main--home--section-gallery--singers__navigation--dots"></div>
+                        </div>
+                        <div>
+                            <header class="abi-main--home--section-gallery--singers__container--header">
+                                <h2 class="abi-main--home--section-gallery--singers__container--header-title">
+                                    PRESENTADO POR:
+                                </h2>
+                            </header>
+
+                            <div class="abi-main--home--section-gallery--singers__containerRibbon">
+                                <picture class="abi-main--home--section-gallery--singers__containerRibbon-picture">
+                                    <source media="(min-width:710px)" srcset="assets/gallery/ribbon-canfinflas.svg">
+                                    <img src="assets/gallery/ribbon-canfinflas.svg" alt="">
+                                </picture>
+                                <picture class="abi-main--home--section-gallery--singers__containerRibbon-picture">
+                                    <source media="(min-width:710px)" srcset="assets/gallery/ribbon-bluedemon.svg">
+                                    <img src="assets/gallery/ribbon-bluedemon.svg" alt="">
+                                </picture>
+                            </div>
                         </div>
 
                     </section>

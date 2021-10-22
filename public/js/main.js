@@ -115,7 +115,7 @@ $(document).ready(function() {
                 const iframe = overlay.find("iframe#iframeVideo")
                 console.error(url)
                 overlay.addClass("active")
-                    // iframe.attr(videoUrl);
+                iframe.attr(videoUrl);
             })
             $(".close-video").on("click", function() {
                 $(".overlay-modal").removeClass("active");

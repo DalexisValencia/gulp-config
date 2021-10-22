@@ -16,9 +16,11 @@ $(document).ready(function() {
         var sliderHomeDotsNavigation = $(".abi-main--home--section-gallery--singers__navigation--dots")
         if (slidersHome.length >= 1 && sliderHomeNavigation.length >= 1) {
             slidersHome.owlCarousel({
-                items: 4,
+                items: 3,
                 loop: true,
                 video: true,
+                touchDrag: false,
+                mouseDrag: false,
                 responsive: {
                     // 0: {
                     //     items: 1,
@@ -30,14 +32,14 @@ $(document).ready(function() {
                     // },
                     0: {
                         margin: 10,
-                        items: 2.5,
+                        items: 3,
                         nav: true,
                         navContainer: sliderHomeNavigation,
                         dotsContainer: sliderHomeDotsNavigation,
                     },
                     600: {
                         margin: 10,
-                        items: 2.5,
+                        items: 3,
                         nav: true,
                         navContainer: sliderHomeNavigation,
                         dotsContainer: sliderHomeDotsNavigation,
@@ -51,7 +53,7 @@ $(document).ready(function() {
                     },
                     960: {
                         items: 3,
-                        margin: 50,
+                        margin: 10,
                         loop: true,
                         nav: true,
                         navContainer: sliderHomeNavigation,
@@ -107,12 +109,16 @@ $(document).ready(function() {
 
         if (playButton.length) {
             playButton.on("click", function() {
-                const image = playButton.siblings(".abi-main--ourcause-ours-section--video__img");
-                const iframe = playButton.siblings(".abi-main--ourcause-ours-section--video__iframe");
-                image.addClass('playing');
-                iframe.addClass('playing');
-                $(this).addClass('playing');
-                iframe.attr("src", iframe.attr("src") + "?autoplay=true");
+                const url = $(this).attr("data-attr-url");
+                const videoUrl = url + '?autoplay=true'
+                const overlay = $(".overlay-modal");
+                const iframe = overlay.find("iframe#iframeVideo")
+                console.error(url)
+                overlay.addClass("active")
+                iframe.attr(videoUrl);
+            })
+            $(".close-video").on("click", function() {
+                $(".overlay-modal").removeClass("active");
             })
         }
     })

@@ -179,7 +179,8 @@
             width: 100%;
         }
         @include media-xs-range-2 {
-            margin-bottom: 30px;
+            // margin-bottom: 30px;
+            margin: 15px 0px;
         }
     }
     @include media-xs-range-2 {

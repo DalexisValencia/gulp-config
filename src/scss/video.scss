@@ -24,14 +24,16 @@
         color: $primary-brand-color;
         font-family: 'DrukWide-Bold';
         font-size: 25px;
+        letter-spacing: 0.8px;
         @include media-xs-range-1 {
             font-size: 5vw;
         }
     }
     .abi-main--home--section-headline--subtitle {
-        color: $primary-brand-color;
+        margin-top: 10px;
+        color: $fourty-brand-color;
         font-family: 'DrukWide-Bold';
-        font-size: 20px;
+        font-size: 17px;
         @include media-xs-range-1 {
             font-size: 4.8vw;
         }
@@ -54,7 +56,7 @@
         height: 62px;
         background-size: cover;
         background-repeat: no-repeat;
-        top: 35px;
+        top: -25px;
         @include media-xs-range-1 {
             top: 2vw;
             width: 16vw;
@@ -64,11 +66,11 @@
     }
     &::before {
         background-image: url('../assets/iconsv2/bird-title-right.svg');
-        right: 0px;
+        right: -95px;
     }
     &::after {
         background-image: url('../assets/iconsv2/bird-title-left.svg');
-        left: 0px;
+        left: -95px;
     }
     @include media-xs-range-1 {
         width: 100%;
@@ -87,6 +89,7 @@
         display: none;
     }
     &::before {
+        display: none;
         content: "";
         position: absolute;
         bottom: 0px;
@@ -98,39 +101,33 @@
         width: 60px;
         height: 29px;
         z-index: 1;
-        // @include media-xs-range-1 {
-        //     bottom: -7.6vw;
-        //     left: 2vw;
-        // }
         @include media-xs-range-1 {
-            bottom: -11.6vw;
+            display: block;
+            bottom: 0;
             left: -4vw;
             width: 14vw;
             max-width: 60px;
-        }
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: -27px;
-        right: -4px;
-        background-image: url("../assets/iconsv2/video-leaf-right.svg");
-        background-size: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 66px;
-        height: 48px;
-        z-index: 1;
-        @include media-xs-range-1 {
-            content: unset;
         }
     }
     @include media-max-width {
         min-height: 34vw;
     }
     @include media-xs-range-1 {
-        padding: 0px 10px;
+        padding: 0px 0px;
         margin-bottom: 40px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -7vw;
+            right: 0;
+            background-image: url("../assets/gallery/bg-decoration.png");
+            background-size: contain;
+            background-position: center right;
+            background-repeat: no-repeat;
+            width: 25vw;
+            height: 28vw;
+            z-index: 1;
+        }
     }
 }
 

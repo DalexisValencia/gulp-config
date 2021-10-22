@@ -8,11 +8,8 @@
     // overflow: visible;
     >.abi--gContain {
         display: flex;
-        align-items: center;
+        // align-items: center;
         position: relative;
-        @include media-sm {
-            padding: 0px;
-        }
     }
     @include media-sm {
         padding: 0px;
@@ -22,16 +19,16 @@
         position: absolute;
         content: "";
         right: 0;
-        width: 173px;
-        height: 237px;
+        width: 133px;
+        height: 184px;
         bottom: -80px;
         background-image: url("../assets/gallery/bg-decoration.png");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         @include media-md {
-            width: 143px;
-            height: 207px;
+            width: 91px;
+            height: 120px;
         }
         @include media-sm {
             content: unset;
@@ -52,7 +49,10 @@
 
 .abi-main--home--section-gallery--singers__container {
     width: 100%;
-    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 40px 0px;
 }
 
 .abi-main--home--section-gallery--singers__container--header {
@@ -61,11 +61,15 @@
         margin-top: 20px;
         font: {
             size: 18px;
-            family: 'AbolitionW00-Regular';
+            family: 'DrukWide-Bold';
         }
         text-align: center;
-        @include media-sm {
-            margin-top: 0px;
+        // @include media-sm {
+        //     margin-top: 0px;
+        // }
+        @include media-xs-range-2 {
+            font-size: 16px;
+            margin-bottom: 40px;
         }
     }
 }
@@ -74,10 +78,11 @@
 /*Navigation dead singers*/
 
 .abi-main--home--section-gallery--singers__navigation {
+    display: none;
     position: absolute;
     left: 0px;
     height: 20px;
-    display: flex;
+    // display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
@@ -137,6 +142,10 @@
     }
 }
 
+.abi-main--home--section-gallery--singers__navigation--dots {
+    display: none !important;
+}
+
 .abi-main--home--section-interestyou__gallery__navigation--dots {
     display: none !important;
     @include media-xs-range-2 {
@@ -149,12 +158,34 @@
     max-width: 600px;
     margin: 0px auto;
     margin-top: 50px;
-    padding: 0px 60px 20px;
+    padding: 0px 30px 20px;
     @include media-xs {
         padding: 0px 0px 20px 10px;
     }
     @include media-sm {
         margin-top: 20px;
+    }
+}
+
+.abi-main--home--section-gallery--singers__containerRibbon {
+    margin: 30px 15px 0px;
+    display: flex;
+    justify-content: center;
+    picture.abi-main--home--section-gallery--singers__containerRibbon-picture {
+        margin: 0px 15px;
+        width: 100%;
+        max-width: 280px;
+        img {
+            width: 100%;
+        }
+        @include media-xs-range-2 {
+            margin-bottom: 30px;
+        }
+    }
+    @include media-xs-range-2 {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
     }
 }
 

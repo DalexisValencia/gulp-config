@@ -109,12 +109,16 @@ $(document).ready(function() {
 
         if (playButton.length) {
             playButton.on("click", function() {
-                const image = playButton.siblings(".abi-main--ourcause-ours-section--video__img");
-                const iframe = playButton.siblings(".abi-main--ourcause-ours-section--video__iframe");
-                image.addClass('playing');
-                iframe.addClass('playing');
-                $(this).addClass('playing');
-                iframe.attr("src", iframe.attr("src") + "?autoplay=true");
+                const url = $(this).attr("data-attr-url");
+                const videoUrl = url + '?autoplay=true'
+                const overlay = $(".overlay-modal");
+                const iframe = overlay.find("iframe#iframeVideo")
+                console.error(url)
+                overlay.addClass("active")
+                    // iframe.attr(videoUrl);
+            })
+            $(".close-video").on("click", function() {
+                $(".overlay-modal").removeClass("active");
             })
         }
     })

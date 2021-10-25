@@ -145,6 +145,7 @@
         background-position: center;
         background-size: cover;
         margin-top: -3vw;
+        background-color: transparent !important;
         @include media-xs-range-1 {
             width: 13.4vw;
             height: 15vw;

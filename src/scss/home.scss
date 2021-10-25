@@ -33,11 +33,11 @@
     background-position-y: -500px;
     @include media-md {
         top: 68vw;
-        background-size: 247vw;
+        background-size: 288vw;
     }
     @include media-sm {
         height: 105vw;
-        top: 40vw;
+        top: 91vw;
         background-size: 326vw;
         background-position-y: center;
     }

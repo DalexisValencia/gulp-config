@@ -106,19 +106,20 @@ $(document).ready(function() {
 
 
         var playButton = $(".el-custom--button.play-video");
+        const overlay = $(".overlay-modal");
+        const iframe = overlay.find("iframe#iframeVideo");
 
         if (playButton.length) {
             playButton.on("click", function() {
                 const url = $(this).attr("data-attr-url");
-                const videoUrl = url + '?autoplay=true'
-                const overlay = $(".overlay-modal");
+                const videoUrl = url + '?autoplay=true';
                 const iframe = overlay.find("iframe#iframeVideo")
-                console.error(url)
                 overlay.addClass("active")
-                iframe.attr(videoUrl);
+                iframe.attr("src", videoUrl);
             })
             $(".close-video").on("click", function() {
                 $(".overlay-modal").removeClass("active");
+                iframe.attr("src", "");
             })
         }
     })

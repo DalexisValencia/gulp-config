@@ -23,7 +23,7 @@
     pointer-events: none;
     position: absolute;
     width: 100%;
-    top: 450px;
+    top: 900px;
     height: 40vw;
     min-height: 800px;
     background-image: url("../assets/video/background.png");
@@ -32,17 +32,17 @@
     background-size: 3000px;
     background-position-y: -500px;
     @include media-md {
-        top: 26vw;
+        top: 68vw;
         background-size: 247vw;
     }
     @include media-sm {
         height: 105vw;
-        top: 8vw;
+        top: 40vw;
         background-size: 326vw;
         background-position-y: center;
     }
     @include media-xs-small {
         background-size: 435vw;
-        top: -25vw;
+        top: 90vw;
     }
 }

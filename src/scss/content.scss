@@ -1,5 +1,9 @@
 @import './vars/colors.scss';
 @import './common/queries.scss';
+#header.hiddeScroll {
+    display: none;
+}
+
 .abi--clubcolombia-iframe-banner {
     position: relative;
     background-image: url("../assets/banners/iframe-desktop.png");

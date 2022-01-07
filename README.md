@@ -8,3 +8,5 @@ npm install --save-dev gulp
 
 correr npm install
 
+correr gulp default
+
